@@ -16,6 +16,7 @@
     "@lottiefiles/react-lottie-player": "^3.5.3",
     "@mui/icons-material": "^5.15.18",
     "@mui/material": "^5.15.18",
+    "@next/third-parties": "^14.2.4",
     "@studio-freight/react-lenis": "^0.0.47",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
