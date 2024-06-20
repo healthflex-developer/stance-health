@@ -1,4 +1,5 @@
 'use client'
+import {useRef, useLayoutEffect} from 'react';
 import Image from "next/image";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
