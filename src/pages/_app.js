@@ -20,25 +20,20 @@ import "@/styles/res.scss";
 
 
 function App({ Component, pageProps }) {
-  useEffect( () => {
-
+  useEffect(() => {
     (
-
       async () => {
-
-          const LocomotiveScroll = (await import('locomotive-scroll')).default
-
-          const locomotiveScroll = new LocomotiveScroll();
-
+        const LocomotiveScroll = (await import('locomotive-scroll')).default
+        const locomotiveScroll = new LocomotiveScroll();
       }
-
     )()
-
   }, [])
+
   useEffect(() => {
     require('../../node_modules/jquery/dist/jquery.min.js');
     require('../../node_modules/bootstrap/dist/js/bootstrap.bundle.js');
   }, []);
+
   const selectors = [
     '.sec-head',
     '.banner-con h1',
