@@ -1,0 +1,39 @@
+{
+  "name": "stance-health",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@gsap/react": "^2.1.1",
+    "@lottiefiles/react-lottie-player": "^3.5.3",
+    "@mui/icons-material": "^5.15.18",
+    "@mui/material": "^5.15.18",
+    "@studio-freight/react-lenis": "^0.0.47",
+    "axios": "^1.7.2",
+    "bootstrap": "^5.3.3",
+    "framer-motion": "^11.2.10",
+    "gsap": "^3.12.5",
+    "jquery": "^3.7.1",
+    "lenis": "^1.0.45",
+    "locomotive-scroll": "^5.0.0-beta.12",
+    "lottie-react": "^2.4.0",
+    "masonry-layout": "^4.2.2",
+    "next": "14.2.3",
+    "nodemailer": "^6.9.13",
+    "react": "^18",
+    "react-bootstrap": "^2.10.2",
+    "react-dom": "^18",
+    "react-masonry-css": "^1.0.16",
+    "react-masonry-list": "^1.0.6",
+    "sass": "^1.77.1",
+    "swiper": "^11.1.1"
+  }
+}
