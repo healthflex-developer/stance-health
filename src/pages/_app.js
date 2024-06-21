@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import dynamic from "next/dynamic";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Head from "next/head";
 
 // Dynamically import Navbar and Footer components if they rely on 'document'
 const Navbar = dynamic(() => import("@/components/Navbar"), { ssr: true });
@@ -39,6 +40,15 @@ function App({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+        <title>Page Title</title>
+        <meta property="og:title" content="Stance" />
+        <meta
+          property="og:description"
+          content="Evidence-backed Orthopaedic Rehab, where Medical Science & Technology are tailored for your performance and recovery"
+        />
+        <meta property="og:image" content="/public/assets/images/og.jpg" />
+      </Head>
       <ButtonEffect />
       <Navbar />
       <SmoothScrolling>
