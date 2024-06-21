@@ -47,7 +47,10 @@ function App({ Component, pageProps }) {
           property="og:description"
           content="Evidence-backed Orthopaedic Rehab, where Medical Science & Technology are tailored for your performance and recovery"
         />
-        <meta property="og:image" content="/public/assets/images/og.jpg" />
+        <meta
+          property="og:image"
+          content="https://www.stance.health/assets/images/og.jpg"
+        />
       </Head>
       <ButtonEffect />
       <Navbar />
