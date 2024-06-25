@@ -1,26 +1,32 @@
-import { useEffect } from "react";
+import Head from "next/head";
+import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Head from "next/head";
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 
-// Dynamically import Navbar and Footer components if they rely on 'document'
 const Navbar = dynamic(() => import("@/components/Navbar"), { ssr: true });
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
-const Layout = dynamic(() => import("../../node_modules/react-masonry-list"), {
-  ssr: false,
-});
-
-// Importing CSS directly, these should not cause any issues
-import "../../node_modules/bootstrap/dist/css/bootstrap.css";
-import ButtonEffect from "@/components/ButtonEffect";
-import useAnimateOnIntersection from "@/components/useAnimateOnIntersection";
-import SmoothScrolling from "@/components/SmoothScrolling";
+const Layout = dynamic(() => import("../../node_modules/react-masonry-list"), { ssr: false });
 
 import "@/styles/main.scss";
 import "@/styles/res.scss";
+import "../../node_modules/bootstrap/dist/css/bootstrap.css";
+
+import { gtmPageView } from "./hooks/gtm";
+import ButtonEffect from "@/components/ButtonEffect";
+import SmoothScrolling from "@/components/SmoothScrolling";
+import useAnimateOnIntersection from "@/components/useAnimateOnIntersection";
+
 
 function App({ Component, pageProps }) {
+  React.useEffect(() => {
+    const props = {
+      page_title: pageProps.slug || null,
+    };
+    gtmPageView(props);
+  }, [pageProps]);
+
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
@@ -51,6 +57,7 @@ function App({ Component, pageProps }) {
           property="og:image"
           content="https://www.stance.health/assets/images/og.jpg"
         />
+        <GoogleTagManager gtmId="GTM-KBBN732J" />
       </Head>
       <ButtonEffect />
       <Navbar />
@@ -60,6 +67,7 @@ function App({ Component, pageProps }) {
       <Footer />
       <Analytics />
       <SpeedInsights />
+      <GoogleAnalytics gaId="G-DZWCZWH78P" />
     </>
   );
 }
