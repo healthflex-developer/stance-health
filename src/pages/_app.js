@@ -9,8 +9,6 @@ const Navbar = dynamic(() => import("@/components/Navbar"), { ssr: true });
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
 const Layout = dynamic(() => import("../../node_modules/react-masonry-list"), { ssr: false });
 
-import "@/styles/main.scss";
-import "@/styles/res.scss";
 import "../../node_modules/bootstrap/dist/css/bootstrap.css";
 
 import { gtmPageView } from "../hooks/gtm";
@@ -18,6 +16,8 @@ import ButtonEffect from "@/components/ButtonEffect";
 import SmoothScrolling from "@/components/SmoothScrolling";
 import useAnimateOnIntersection from "@/components/useAnimateOnIntersection";
 
+import "@/styles/main.scss";
+import "@/styles/res.scss";
 
 function App({ Component, pageProps }) {
   React.useEffect(() => {
