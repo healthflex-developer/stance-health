@@ -13,7 +13,7 @@ import "@/styles/main.scss";
 import "@/styles/res.scss";
 import "../../node_modules/bootstrap/dist/css/bootstrap.css";
 
-import { gtmPageView } from "./hooks/gtm";
+import { gtmPageView } from "../hooks/gtm";
 import ButtonEffect from "@/components/ButtonEffect";
 import SmoothScrolling from "@/components/SmoothScrolling";
 import useAnimateOnIntersection from "@/components/useAnimateOnIntersection";
