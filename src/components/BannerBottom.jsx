@@ -80,7 +80,7 @@ useLayoutEffect(() => {
 
       const slideContent = [
         {
-            imageSrc: "/assets/images/asses.svg",
+            imageSrc: "/assets/images/assess.png",
             imageAlt: "Assess",
             title: "Assess",
             description: "Evaluate your MSK health comprehensively with Stance's advanced diagnostic tools and expert tests, gaining insights into your body's needs while discovering root causes for conditions. Our assessments pave the way for recovery and performance with personalized treatment plans tailored to your unique requirements."

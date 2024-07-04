@@ -40,17 +40,17 @@ const Footer = () => {
                         <h3 className="mt-30 ft-head">Follow Us</h3>
                         <ul className="soc-list">
                             <li>
-                                <Link href="/">
+                                <Link href="https://www.facebook.com/profile.php?id=61560825009195" target='_blank'>
                                 <Image src="/assets/images/facebook.svg" alt="" width={24} height={24} />
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
-                                <Image src="/assets/images/twitter.svg" alt="" width={24} height={24} />
+                                <Link href="https://www.linkedin.com/company/stancehealth/?originalSubdomain=in" target='_blank'>
+                                <Image src="/assets/images/linkedin.svg" alt="" width={32} height={32} />
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
+                                <Link href="https://www.instagram.com/stance.health/" target='_blank'>
                                 <Image src="/assets/images/insta.svg" alt="" width={24} height={24} />
                                 </Link>
                             </li>

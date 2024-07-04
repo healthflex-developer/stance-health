@@ -59,13 +59,13 @@ const TechSlider = () => {
         {
             imageSrc: "/assets/images/force.svg",
             imageAlt: "Re-engage",
-            title: "Vald : <span>Force Frame</span>",
+            title: "VALD : <span>Force Frame</span>",
             description: " Accurate testing of isometric strength across various muscle groups. ",
         },
         {
             imageSrc: "/assets/images/deck.svg",
             imageAlt: "Enhance",
-            title: "Vald : <span>Force Decks</span>",
+            title: "VALD : <span>Force Decks</span>",
             description: " Dual, Uniaxial Force Plates for assessing power, balance & movement.",
         },
         {
