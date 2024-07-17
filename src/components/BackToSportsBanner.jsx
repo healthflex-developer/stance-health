@@ -7,7 +7,7 @@ const BackToSportsBanner = () => {
   
   const bannerdata = [
     {
-      title: 'Return To <span>Play</span>',
+      title: 'Reclaim Your <span>Game</span>',
       description: "Our return-to-play program leverages the latest in sports health and physiotherapy to maximize your recovery and performance.<br /> We ensure setbacks don't hold you down",
       buttonLink: "/book-now",
       buttonLabel: "Book an Appointment",

@@ -22,7 +22,7 @@ const InjuryManagementPage = () => {
           <div className='row'>
             <div className='col-md-12'>
                <div className='center-con center'>
-                  <h3 className='sec-head'>Why Join <span>our Prevention & recovery</span> Program?</h3>
+                  <h3 className='sec-head'>Why Join <span>our Pain Management</span> Program?</h3>
                   <p className='para'>At Stance, we prioritize accurate diagnosis as the cornerstone of effective injury and pain management. Our<br /> advanced clinical and technology-based evaluations allow us to identify the root cause and contributing factors.<br /> Not only does this help in recovery but helps prevent future injuries.</p>
                </div>
                   

@@ -163,9 +163,9 @@ Technology</h3>
               </h3>
               <p className='para'>Our physiotherapy services include a detailed evaluation using cutting-edge sport science technology, catering to individuals from professional athletes to grassroots participants.</p>
               <ul>
-                <li><img src="/assets/images/tick.svg" />MSK assessment: Conduct an audit on muscles and joints to identify at-risk and potential risk conditions.</li>
-                <li><img src="/assets/images/tick.svg" />Injury management: Addressing injuries through manual therapy techniques for effective pain management.</li>
-                <li><img src="/assets/images/tick.svg" />Injury prevention: Offering a progressive and customized set of active exercises tailored to each individual's needs</li>
+                <li><img src="/assets/images/tick.svg" /><span style={{ color: '#03ffb3', fontSize:'23px' }} >MSK assessment: <p style={{color:'white' ,fontSize:'18px'}}> Conduct an audit on muscles and joints to identify at-risk and potential risk conditions.</p></span> </li>
+                <li><img src="/assets/images/tick.svg" /><span style={{ color: '#03ffb3', fontSize:'23px' }} >Injury management:<p style={{color:'white' ,fontSize:'18px'}}> Addressing injuries through manual therapy techniques for effective pain management.</p></span></li>
+                <li><img src="/assets/images/tick.svg" /><span style={{ color: '#03ffb3', fontSize:'23px' }} >Injury prevention:<p style={{color:'white' ,fontSize:'18px'}}> Offering a progressive and customized set of active exercises tailored to each individual's needs</p></span></li>
               </ul>
                </div>
         </div>
@@ -182,14 +182,14 @@ Technology</h3>
            </div>
         </div>
         <div className='col-md-6'>
-        <div className='side-con'>
+        <div className='side-con '>
                <h3 className="sec-head">
                Strength and <span>Conditioning</span>
               </h3>
               <p className='para'>Our S&C programs help individuals reach outcomes based on their goals. While goals can be across functional activities or returning to sport, strength, and conditioning is a crucial element that helps ensure better management of MSK issues.</p>
               <ul>
-                <li><img src="/assets/images/tick.svg" />Seamless Everyday Routines: Breeze through daily tasks effortlessly. Our functional strength and conditioning programs ensure you are ready to fulfill everyday activities effortlessly.</li>
-                <li><img src="/assets/images/tick.svg" />Elevated Sporting Excellence: Unlock your full potential in sports with training designed for athletes across various sporting disciplines.  We ensure this by accurately measuring progress using advanced technologies and modifying regimens basis your progress.</li>
+                <li><img src="/assets/images/tick.svg" /><span style={{ color: '#03ffb3', fontSize:'23px' }} >Seamless Everyday Routines: <p style={{color:'white' ,fontSize:'18px'}}>Breeze through daily tasks effortlessly. Our functional strength and conditioning programs ensure you are ready to fulfill everyday activities effortlessly.</p></span> </li>
+                <li><img src="/assets/images/tick.svg" /><span style={{ color: '#03ffb3', fontSize:'23px' }} >Elevated Sporting Excellence:<p style={{color:'white' ,fontSize:'18px'}}> Unlock your full potential in sports with training designed for athletes across various sporting disciplines.  We ensure this by accurately measuring progress using advanced technologies and modifying regimens basis your progress.</p></span></li>
               </ul>
                </div>
         </div>
@@ -314,7 +314,7 @@ Technology</h3>
                                             <div className='featue-div'>
                    
                    <div className='feature-div-con'>
-                     <h3>Multi-Disciplinar</h3>
+                     <h3>Multidisiplinar</h3>
                      <p> We combine elements of Sports Orthopaedics, Physical Therapy, and Strength & Conditioning, to ensure we help you recover faster across all phases of your journey. Ranging from Post-surgical, Chronic to Performance Improvement our approach ensures we are with you every step of the way.</p>
                    </div>
                    <div className='feature-div-img'>
@@ -374,7 +374,7 @@ Technology</h3>
                  <div className='featue-div'>
                    
                    <div className='feature-div-con'>
-                     <h3>Multi-Disciplinar</h3>
+                     <h3>Multidisiplinar</h3>
                      <p> We combine elements of Sports Orthopaedics, Physical Therapy, and Strength & Conditioning, to ensure we help you recover faster across all phases of your journey. Ranging from Post-surgical, Chronic to Performance Improvement our approach ensures we are with you every step of the way.</p>
                    </div>
                    <div className='feature-div-img'>

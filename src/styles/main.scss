@@ -966,7 +966,7 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.08);
    list-style: none;
    display: flex;
    flex-direction: column;
-   gap: 30px;
+   gap: 16px;
    margin-top: 40px;
 }
 .side-con ul li{
@@ -980,6 +980,10 @@ display: flex;
 gap: 15px;
 align-items: flex-start
 }
+.small-white-text {
+    font-size: 12px; /* Adjust the size as needed */
+    color: white;
+  }
 .items-center{
     align-items: center;
 }
