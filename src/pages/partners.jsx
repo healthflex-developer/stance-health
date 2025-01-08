@@ -1,16 +1,16 @@
-'use client'
-import {useState, useEffect, useRef} from 'react';
+"use client";
+import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import PartnersBanner from "@/components/PartnersBanner";
 import "swiper/css";
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import axios from 'axios';
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import axios from "axios";
 
 const PartnerPage = () => {
-    const sliderRef = useRef(null);
+  const sliderRef = useRef(null);
 
-    const [offset, setOffset] = useState(0);
+  const [offset, setOffset] = useState(0);
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
@@ -18,9 +18,9 @@ const PartnerPage = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -32,17 +32,17 @@ const PartnerPage = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll1);
+    window.addEventListener("scroll", handleScroll1);
     return () => {
-      window.removeEventListener('scroll', handleScroll1);
+      window.removeEventListener("scroll", handleScroll1);
     };
   }, []);
 
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    occupation: '',
+    name: "",
+    email: "",
+    phone: "",
+    occupation: "",
   });
 
   const handleChange = (e) => {
@@ -58,31 +58,33 @@ const PartnerPage = () => {
       //   method: 'POST',
       //   headers: { "Content-Type": "application/json", Accept: "application/json" },
       //   body: JSON.stringify(formData),
-        
+
       // });
       // const res = await axios.get('/api/hello')
-      const response = await axios.post('https://ytxz2i2mxd.execute-api.us-west-2.amazonaws.com/prod/v1/send/email',  JSON.stringify(formData),
-      {
-        headers: {
-          'Content-Type': 'application/json'
+
+      const response = await axios.post(
+        "/api/submitForm",
+        JSON.stringify(formData),
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
-      }
-      )
+      );
 
       const responseData = await response.json();
-      console.log('res', responseData);
+      console.log("res", responseData);
       if (response.ok) {
-        alert('Email sent successfully');
+        alert("Request Sent successfully");
       } else {
-        alert('Error sending email: ' + responseData.message);
+        alert("Error sending request: " + responseData.message);
       }
-    }
-     catch (error) {
-      console.error('Error:', error);
-      alert('Email Sent Successfully');
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Request Sent Successfully");
     }
   };
- 
+
   return (
     <>
       <Head>
@@ -92,92 +94,134 @@ const PartnerPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PartnersBanner />
-      <section className='side-img-sec sec'>
+      <section className="side-img-sec sec">
         <img className="vec-grad" src="/assets/images/grad.svg" />
         <div className="container">
-           <div className="row items-center">
-           <div className="col-md-6">
-               <div className='side-con'>
-               <h3 className="sec-head">
-               Building Long-Term <span>Partnerships</span>
-              </h3>
-              <ul>
-                <li><img src="/assets/images/tick.svg" /><span><b>Medical Professionals:</b> We specialize in elevating services for Orthopedic Specialists, Physiotherapists & Hospitals. Our focus on Assessments, Outcome -Centric Treatment protocols, and At-home engagement improve quality of care.</span></li>
-                <li><img src="/assets/images/tick.svg" /><span><b>Sports Academies and Clubs:</b> Amateur Clubs or Professional - leagues, we help in ensuring athletes reach their potential. Building sport specific protocols, we have had experience in mentoring entire teams while also focusing on individual athlete performance.</span></li>
-                <li><img src="/assets/images/tick.svg" /><span><b>Corporate Entities:</b> By combining in-office MSK Assessments, High-Quality experts and technology-first at-home solutions, we ensure your employees are always building themselves for a better tomorrow.</span></li>
-              </ul>
-               </div>
-             </div>
-             <div className="col-md-6">
-               <div className='side-img side-img-right items-center'>
-                <img style={{ transform: `translateY(${offset}px)` }} src='/assets/images/partner-image-1.png' />
-                <img style={{ transform: `translateY(${offset1}px)` }} src='/assets/images/partner-image-2.png' />
-               </div>
-             </div>
-             
-           </div>
+          <div className="row items-center">
+            <div className="col-md-6">
+              <div className="side-con">
+                <h3 className="sec-head">
+                  Building Long-Term <span>Partnerships</span>
+                </h3>
+                <ul>
+                  <li>
+                    <img src="/assets/images/tick.svg" />
+                    <span>
+                      <b>Medical Professionals:</b> We specialize in elevating
+                      services for Orthopedic Specialists, Physiotherapists &
+                      Hospitals. Our focus on Assessments, Outcome -Centric
+                      Treatment protocols, and At-home engagement improve
+                      quality of care.
+                    </span>
+                  </li>
+                  <li>
+                    <img src="/assets/images/tick.svg" />
+                    <span>
+                      <b>Sports Academies and Clubs:</b> Amateur Clubs or
+                      Professional - leagues, we help in ensuring athletes reach
+                      their potential. Building sport specific protocols, we
+                      have had experience in mentoring entire teams while also
+                      focusing on individual athlete performance.
+                    </span>
+                  </li>
+                  <li>
+                    <img src="/assets/images/tick.svg" />
+                    <span>
+                      <b>Corporate Entities:</b> By combining in-office MSK
+                      Assessments, High-Quality experts and technology-first
+                      at-home solutions, we ensure your employees are always
+                      building themselves for a better tomorrow.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="side-img side-img-right items-center">
+                <img
+                  style={{ transform: `translateY(${offset}px)` }}
+                  src="/assets/images/partner-image-1.png"
+                />
+                <img
+                  style={{ transform: `translateY(${offset1}px)` }}
+                  src="/assets/images/partner-image-2.png"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-  
-<div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div className="modal-dialog modal-dialog-centered">
-    <div className="modal-content">
-      <div className="modal-header">
-        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div className="modal-body">
-        <h3 className='dark'>Contact Us</h3>
-        <Form className='form-styles' onSubmit={handleSubmit}>
-      <Form.Group className="mb-3" controlId="formBasicName">
-        <Form.Control
-          type="text"
-          placeholder="Name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-        />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Control
-          type="email"
-          placeholder="Email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicPhone">
-        <Form.Control
-          type="number"
-          placeholder="Phone no."
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-        />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicOccupation">
-        <Form.Select
-          name="occupation"
-          value={formData.occupation}
-          onChange={handleChange}
-        >
-          <option value="">Occupation</option>
-          <option value="Doctor">Doctor</option>
-          <option value="Physiotherapist">Physiotherapist</option>
-          <option value="Sports Academy">Sports Academy</option>
-          <option value="Corporate">Corporate</option>
-        </Form.Select>
-      </Form.Group>
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
-      </div>
-    </div>
-  </div>
-</div>
-    </>
-  )
-}
 
-export default PartnerPage
+      <div
+        className="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-header">
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">
+              <h3 className="dark">Contact Us</h3>
+              <Form className="form-styles" onSubmit={handleSubmit}>
+                <Form.Group className="mb-3" controlId="formBasicName">
+                  <Form.Control
+                    type="text"
+                    placeholder="Name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                  />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPhone">
+                  <Form.Control
+                    type="number"
+                    placeholder="Phone no."
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                  />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicOccupation">
+                  <Form.Select
+                    name="occupation"
+                    value={formData.occupation}
+                    onChange={handleChange}
+                  >
+                    <option value="">Occupation</option>
+                    <option value="Doctor">Doctor</option>
+                    <option value="Physiotherapist">Physiotherapist</option>
+                    <option value="Sports Academy">Sports Academy</option>
+                    <option value="Corporate">Corporate</option>
+                  </Form.Select>
+                </Form.Group>
+                <Button variant="primary" type="submit">
+                  Submit
+                </Button>
+              </Form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default PartnerPage;

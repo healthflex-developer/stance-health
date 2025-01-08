@@ -314,7 +314,7 @@ Technology</h3>
                                             <div className='featue-div'>
                    
                    <div className='feature-div-con'>
-                     <h3>Multidisiplinar</h3>
+                     <h3>Multidisciplinary</h3>
                      <p> We combine elements of Sports Orthopaedics, Physical Therapy, and Strength & Conditioning, to ensure we help you recover faster across all phases of your journey. Ranging from Post-surgical, Chronic to Performance Improvement our approach ensures we are with you every step of the way.</p>
                    </div>
                    <div className='feature-div-img'>
@@ -374,7 +374,7 @@ Technology</h3>
                  <div className='featue-div'>
                    
                    <div className='feature-div-con'>
-                     <h3>Multidisiplinar</h3>
+                     <h3>Multidisciplinary</h3>
                      <p> We combine elements of Sports Orthopaedics, Physical Therapy, and Strength & Conditioning, to ensure we help you recover faster across all phases of your journey. Ranging from Post-surgical, Chronic to Performance Improvement our approach ensures we are with you every step of the way.</p>
                    </div>
                    <div className='feature-div-img'>
