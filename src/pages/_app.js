@@ -3,11 +3,13 @@ import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 const Navbar = dynamic(() => import("@/components/Navbar"), { ssr: true });
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
-const Layout = dynamic(() => import("../../node_modules/react-masonry-list"), { ssr: false });
+const Layout = dynamic(() => import("../../node_modules/react-masonry-list"), {
+  ssr: false,
+});
 
 import "../../node_modules/bootstrap/dist/css/bootstrap.css";
 

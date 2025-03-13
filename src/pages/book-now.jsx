@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
@@ -6,8 +6,6 @@ import BookNowBanner from "@/components/BookNowBanner";
 import "swiper/css";
 
 const BookNowPage = () => {
-
- 
   return (
     <>
       <Head>
@@ -17,21 +15,30 @@ const BookNowPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <BookNowBanner />
-      <section className='sec booknow-sec'>
-      <Image src={'/assets/images/curve.svg'} alt="" width={1920} height={1080} />
-        <div className='container'>
-          <div className='row items-center'>
-            <div className='col-md-6'>
-              <div className='side-con'>
-                <h3 className='sec-head dark'>Ready to Take the Next Step?</h3>
-                <h3 className='small-head dark'>Book Your Session Today</h3>
-                <p className='para dark'>Experience the difference with Stance Health. Whether you're recovering from surgery, managing a chronic condition, or aiming to enhance your athletic performance, our tailored programs and expert team are here to support you every step of the way.
-</p>
-            
+      <section className="sec booknow-sec">
+        <Image
+          src={"/assets/images/curve.svg"}
+          alt=""
+          width={1920}
+          height={1080}
+        />
+        <div className="container">
+          <div className="row items-center">
+            <div className="col-md-6">
+              <div className="side-con">
+                <h3 className="sec-head dark">Ready to Take the Next Step?</h3>
+                <h3 className="small-head dark">Book Your Session Today</h3>
+                <p className="para dark">
+                  Experience the difference with Stance Health. Whether you're
+                  recovering from surgery, managing a chronic condition, or
+                  aiming to enhance your athletic performance, our tailored
+                  programs and expert team are here to support you every step of
+                  the way.
+                </p>
               </div>
             </div>
-            <div className='col-md-5 offset-md-1'>
-              <div className='book-contact'>
+            <div className="col-md-5 offset-md-1">
+              <div className="book-contact">
                 <ul>
                   <li>
                     <img src="/assets/images/phone-icon.svg" alt="" />
@@ -39,11 +46,19 @@ const BookNowPage = () => {
                   </li>
                   <li>
                     <img src="/assets/images/mail-icon.svg" alt="" />
-                    <Link href="mailto:hsr@stance.health.com">hsr@stance.health.com</Link>
+                    <Link href="mailto:hsr@stance.health.com">
+                      hsr@stance.health.com
+                    </Link>
                   </li>
                   <li>
                     <img src="/assets/images/location-icon.svg" alt="" />
-                    <Link target='_blank' href="https://maps.app.goo.gl/ybtjB2YiqPV9yyUw6?g_st=aw">2nd Floor, 1555, 19th Main Rd, Agara , 1st Sector, HSR Layout, Bengaluru, Karnataka 560102</Link>
+                    <Link
+                      target="_blank"
+                      href="https://maps.app.goo.gl/ybtjB2YiqPV9yyUw6?g_st=aw"
+                    >
+                      2nd Floor, 1555, 19th Main Rd, Agara , 1st Sector, HSR
+                      Layout, Bengaluru, Karnataka 560102
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -51,9 +66,8 @@ const BookNowPage = () => {
           </div>
         </div>
       </section>
-
     </>
-  )
-}
+  );
+};
 
-export default BookNowPage
+export default BookNowPage;
