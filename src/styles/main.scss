@@ -2008,12 +2008,10 @@ ul.sub-menu li a{
     background-color: #04ffb4;
     border-radius: 20px;
   }
+
   .modal-body h3{
     text-align: center;
     margin-bottom: 30px;
-  }
-  .couponModal{
-
   }
   .form-styles button{
     width: 100%;
@@ -2033,6 +2031,7 @@ ul.sub-menu li a{
     border-color: #1d1b4c5c;
     box-shadow: 0 0 0 0.25rem rgb(29 27 76 / 31%);
   }
+  
   input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none;
@@ -2124,6 +2123,57 @@ header.main-header.homepage-banner:after {
     object-position: center center;
 
 }
+
+.coupon-modal{
+    display: flex;
+    margin:10rem 1rem;
+    border-radius: 2rem;
+    z-index: 1;
+    .modal-content{
+        border:1px solid gray;
+        background-color: transparent;
+            .coupon-modal-sub{
+                text-align: center;
+            }
+    }
+}
+
+.coupon-data-modal{
+        padding: 0.5rem 1rem;
+
+        .coupon-data-modal-body{
+            padding: 1rem;
+
+            .coupon-copy-button{
+                background-color: #2e2c63;
+                display: flex;
+                align-items: center;
+                padding: 0.5rem 2rem;
+                border: none;
+            }
+
+            .coupon-copy-button:hover{
+                opacity: 0.9;
+            }
+        
+        }
+}
+
+.coupon-modal-main{
+   
+    .modal-content{
+        border:0.5px solid gray;
+        background-color: transparent;
+        .modal-body{
+            padding: 1rem;
+        }
+        .coupon-modal-sub{
+            text-align: center;
+        }
+    }
+    
+}
+
 @keyframes zoomin {
     0%{
         transform: scale(1);

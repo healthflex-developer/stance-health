@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import CouponForm from "./CouponForm";
 
 const CouponBanner = () => {
   const bannerdata = [
@@ -20,7 +21,13 @@ const CouponBanner = () => {
         const descHtml = { __html: item.description };
         return (
           <section key={index} className="banner-slide">
-            <picture>
+            <picture
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <source srcset={item.mobileImage} media="(max-width:600px)" />
               <Image
                 src={item.image}
@@ -29,6 +36,7 @@ const CouponBanner = () => {
                 alt=""
                 style={{ opacity: 0.5 }}
               />
+              <CouponForm />
             </picture>
             <div className="container">
               <div className="row">

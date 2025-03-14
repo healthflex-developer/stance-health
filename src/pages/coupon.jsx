@@ -1,10 +1,7 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
 import Head from "next/head";
 import CouponBanner from "@/components/CouponBanner";
 import "swiper/css";
-import CouponForm from "@/components/CouponForm";
 
 const CouponPage = () => {
   return (
@@ -15,7 +12,6 @@ const CouponPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <CouponForm />
       <CouponBanner />
     </>
   );
