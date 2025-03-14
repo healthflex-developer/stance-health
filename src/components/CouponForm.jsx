@@ -101,6 +101,11 @@ const CouponForm = () => {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+    if (!isFormValid()) {
+      showMessage("All fields are required.", "error");
+      return;
+    }
+
     setLoading((prev) => ({ ...prev, submitForm: true }));
     try {
       const response = await axios.post("/api/submit-coupon-form", formData);
@@ -124,6 +129,14 @@ const CouponForm = () => {
 
   const handleCouponModalOpen = () => {
     setShowCouponModal(true);
+  };
+
+  const isPhoneValid = (phone) => /^\d{10}$/.test(phone);
+
+  const isFormValid = () => {
+    return (
+      formData.name.trim() && formData.mobile.trim() && formData.address.trim()
+    );
   };
 
   return (
@@ -170,7 +183,6 @@ const CouponForm = () => {
           )}
         </>
       )}
-      ]
     </>
   );
 
@@ -207,7 +219,7 @@ const CouponForm = () => {
             <Form.Group className="mb-3 d-flex align-items-center">
               <Form.Control
                 type="number"
-                placeholder="+91"
+                placeholder="Enter 10 digit number"
                 name="mobile"
                 value={formData.mobile}
                 onChange={handleChange}
@@ -217,7 +229,11 @@ const CouponForm = () => {
               <Button
                 variant="primary"
                 onClick={handleSendOTP}
-                disabled={status !== "initial" || loading.sendOTP}
+                disabled={
+                  status !== "initial" ||
+                  !isPhoneValid(formData.mobile) ||
+                  loading.sendOTP
+                }
                 style={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0 }}
               >
                 {loading.sendOTP ? (
@@ -235,6 +251,7 @@ const CouponForm = () => {
                   value={otp}
                   onChange={(e) => setOtp(e.target.value)}
                   disabled={status === "otpVerified" || status === "submitted"}
+                  required
                 />
               </Form.Group>
             )}
