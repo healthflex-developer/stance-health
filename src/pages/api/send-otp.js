@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         "https://control.msg91.com/api/v5/otp",
         {
           template_id: "6513fc2cd6fc05550671fb42",
-          mobile: mobile,
+          mobile: "+91" + mobile,
           authkey: MSG_91_AUTH_KEY,
         },
         { headers: { "Content-Type": "application/json" } }

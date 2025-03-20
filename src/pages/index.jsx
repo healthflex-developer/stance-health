@@ -10,6 +10,9 @@ import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import BannerBottom from "@/components/BannerBottom";
 import HomePageBanner from "@/components/HomePageBanner";
+import BackedByBanner from "@/components/BackedByBanner";
+import GoogleReviewWidget from "@/components/GoogleReviewWidget";
+import InstagramWidget from "@/components/InstagramWidget";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +27,7 @@ export default function Home() {
       </Head>
       {/* <BannerSlider /> */}
       <HomePageBanner />
+      <BackedByBanner/>
       <BannerBottom />
       {/* <section className="sec off-sec">
         <div className="container">
@@ -335,6 +339,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <InstagramWidget/>
+      <GoogleReviewWidget/>
     </>
   );
 }

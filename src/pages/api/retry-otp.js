@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     try {
       const { mobile } = req.body;
       const response = await axios.get(
-        `https://control.msg91.com/api/v5/otp/retry?authkey=${MSG_91_AUTH_KEY}&retrytype=text&mobile=${mobile}`
+        `https://control.msg91.com/api/v5/otp/retry?authkey=${MSG_91_AUTH_KEY}&retrytype=text&mobile=+91${mobile}`
       );
       return res.status(response.status).json(response.data);
     } catch (error) {

@@ -64,7 +64,7 @@
                 gap: 15px;
                 // max-width: 250px !important;
 
-        
+
             }
         }
     }
@@ -177,7 +177,7 @@
         width: 100%;
         margin-bottom: 20px;
     }
-    
+
     .side-img-right img{
         margin-top: 40px;
         margin-bottom: 0px;
@@ -486,14 +486,14 @@
             bottom: 15px;
             right: 50%;
         }
-        
+
 }
 
 @media screen and (max-width: 1399px) and (min-width: 1200px) {
     .cc-tabs li:nth-child(4) , .cc-tabs li:nth-child(5) {
         width: 48%;
     }
-    
+
 }
 
 @media screen and (max-width: 1500px) and (min-width: 1200px) {
@@ -501,4 +501,15 @@
         width: 85%;
         transform: translate(110% , -50%);
     }
+}
+@media screen and (max-width: 500px){
+    .backed-by-sec{
+        .backed-by-container{
+            background-color:transparent;
+            padding:0;
+            border-radius: 0
+        }
+    }
+
+
 }

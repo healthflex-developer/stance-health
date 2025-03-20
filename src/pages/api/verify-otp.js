@@ -1,5 +1,5 @@
 import axios from "axios";
-import { MSG91_TEMPLATE_ID, MSG_91_AUTH_KEY } from "@/pages/api/send-otp";
+import { MSG_91_AUTH_KEY } from "@/pages/api/send-otp";
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
@@ -7,7 +7,7 @@ export default async function handler(req, res) {
       const { mobile, otp } = req.body;
       console.log("mobile", mobile, "otp", otp);
       const response = await axios.get(
-        `https://control.msg91.com/api/v5/otp/verify?otp=${otp}&mobile=${mobile}`,
+        `https://control.msg91.com/api/v5/otp/verify?otp=${otp}&mobile=+91${mobile}`,
         {
           headers: {
             authkey: MSG_91_AUTH_KEY,
