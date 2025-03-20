@@ -1,5 +1,5 @@
 import axios from "axios";
-import { MSG91_TEMPLATE_ID, MSG_91_AUTH_KEY } from "@/pages/api/send-otp";
+import { MSG_91_AUTH_KEY } from "@/pages/api/send-otp";
 
 export default async function handler(req, res) {
   if (req.method === "POST") {

@@ -87,7 +87,7 @@ const TechSlider = () => {
                                     Technology Blended with Science
                                 </h3>
                                 <p className="dark para sub-txt">
-                                    Data that helps us, help you
+                                    Data that helps us, help you!
                                 </p>
                             </div>
                         </div>

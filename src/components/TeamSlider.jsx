@@ -72,7 +72,7 @@ const TeamSlider = () => {
                                     [...Array(5)].map((item,index)=>{
                                         return( */}
                                             <SwiperSlide>
-                                                <div className="team-card">
+                                                <div className="team-card hover-card">
                                                     <Image src="/assets/images/team-1.svg" width={1500} height={1500} alt="" />
                                                     <div className="con">
                                                         <div className="tp">
@@ -88,7 +88,7 @@ const TeamSlider = () => {
                                                 </div>
                                             </SwiperSlide>
                                             <SwiperSlide>
-                                                <div className="team-card">
+                                                <div className="team-card hover-card">
                                                     <Image src="/assets/images/team-2.svg" width={1500} height={1500} alt="" />
                                                     <div className="con">
                                                         <div className="tp">
@@ -104,7 +104,7 @@ const TeamSlider = () => {
                                                 </div>
                                             </SwiperSlide>
                                             <SwiperSlide>
-                                                <div className="team-card">
+                                                <div className="team-card hover-card">
                                                     <Image src="/assets/images/team-3.svg" width={1500} height={1500} alt="" />
                                                     <div className="con">
                                                         <div className="tp">
@@ -120,7 +120,7 @@ const TeamSlider = () => {
                                                 </div>
                                             </SwiperSlide>
                                             <SwiperSlide>
-                                                <div className="team-card">
+                                                <div className="team-card hover-card">
                                                     <Image src="/assets/images/team-4.svg" width={1500} height={1500} alt="" />
                                                     <div className="con">
                                                         <div className="tp">
@@ -151,7 +151,7 @@ const TeamSlider = () => {
                             <Link href="/about" className='main-btn center'>
                                 <span>Explore Now</span>
                             </Link>
-                            
+
                     </div>
                 </div>
             </div>
