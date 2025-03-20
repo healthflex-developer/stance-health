@@ -86,6 +86,22 @@ const angelsContent = [
         linkedin: "https://www.linkedin.com/in/shan-m-s-9474a1/",
         company_logo: "/assets/images/namma-yatri-logo.png",
     },
+    {
+        name:"Kavikrut",
+        company:"CGO, OYO",
+        imageSrc:"/assets/images/kavikrut-oyo.png",
+        imageAlt:"kavikrut-oyo-image",
+        linkedin: "https://www.linkedin.com/in/kavikrut/",
+        company_logo: "/assets/images/oyo-logo.png",
+    },
+    {
+        name:"Anuj Jindal",
+        company:"SVP, Mediassist",
+        imageSrc:"/assets/images/anuj-jindal-mediassist.png",
+        imageAlt:"anuj-jindal-mediassist-image",
+        linkedin: "https://www.linkedin.com/in/scriptaj/",
+        company_logo: "/assets/images/mediassist logo.jpg",
+    }
 ];
 
 const asSeenInContent = [

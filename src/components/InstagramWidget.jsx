@@ -76,7 +76,7 @@ const InstagramWidget = () => {
                 <div className="row">
                     <div className="col-12 d-flex justify-content-between align-items-center mb-4">
                         <div className="d-flex gap-2 align-items-center instagram-widget-sec-head">
-                            <img src="/assets/images/ig-icon.png" className="instagram-logo"/>
+                            <img src="/assets/images/instagram-icon.png" className="instagram-logo"/>
                             <h3 className="sec-head mb-0 instagram-gradient-text">Stance In Motion</h3>
                         </div>
                         <Button variant="outline-danger" onClick={handleFollowUs} className="main-btn follow-button">
