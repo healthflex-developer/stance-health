@@ -516,14 +516,17 @@
     padding: 3rem 0;
 
     .instagram-widget-sec-head{
+        align-items: center;
         p{
             display: inline;
+            vertical-align: middle;
         }
 
         .instagram-logo{
-            height: 4rem;
+            height: 3.5rem;
             width: auto;
             margin-right: 0.3rem;
+            cursor: pointer;
         }
     }
 
