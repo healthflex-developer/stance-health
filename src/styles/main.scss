@@ -453,6 +453,7 @@
                 display: flex;
                 gap:1rem;
                 align-items: center;
+                justify-content: space-between;
 
                 h4{
                     margin: 0;
@@ -515,13 +516,17 @@
     padding: 3rem 0;
 
     .instagram-widget-sec-head{
+        align-items: center;
         p{
             display: inline;
+            vertical-align: middle;
         }
 
         .instagram-logo{
-            height: 50%;
+            height: 3.5rem;
             width: auto;
+            margin-right: 0.3rem;
+            cursor: pointer;
         }
     }
 
