@@ -140,7 +140,7 @@ export default function BackedByBanner() {
         <Row>
           <Col className="text-center">
             <h3 className="sec-head backed-by-sec-heading dark">
-              Backed by Top VC Firms
+              Top Tier  VC Firms
             </h3>
           </Col>
         </Row>
