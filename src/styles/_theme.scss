@@ -1,0 +1,106 @@
+
+
+$main-color: #0F5E9C;
+$dark-blue: #1D1B4C;
+$green: #04FFB4;
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('/assets/fonts/Gilroy-Bold.ttf');
+}
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('/assets/fonts/Gilroy-Medium.ttf');
+}
+@font-face {
+    font-family: 'Gilroy-Regular';
+    src: url('/assets/fonts/Gilroy-Regular.ttf');
+}
+@font-face {
+    font-family: 'Gilroy-SemiBold';
+    src: url('/assets/fonts/Gilroy-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'Gilroy-Heavy';
+    src: url('/assets/fonts/Gilroy-Heavy.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Gilroy-Regular', sans-serif;
+}
+body{
+    background: $dark-blue !important;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none !important;
+}
+body{
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: white;
+}
+@mixin normalizeButton{
+    position: relative;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.main-btn{
+    position: relative;
+    padding: 12px 25px;
+    background: white;
+    border-radius: 100px;
+    display: inline-block;
+    outline: none;
+    border: none;
+    transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+    &:hover{
+        background: $green;
+
+        span{
+            color: $dark-blue;
+        }
+    }
+
+    &.center{
+        margin: 0 auto;
+        display: block;
+        max-width: max-content;
+    }
+
+    span{
+        color: $dark-blue;
+        font-family: 'Gilroy-Bold', sans-serif;
+    }
+
+    &.white{
+        background: white;
+        
+        span{
+            color: $dark-blue;
+        }
+    }
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Gilroy-Bold', sans-serif;
+
+    span{
+        font-family: 'Gilroy-Bold', sans-serif;
+    }
+}
+
+.para{
+    font-size: 16px;
+    line-height: 140%;
+
+    &.big{
+        font-size: 20px;
+    }
+}

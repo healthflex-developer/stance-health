@@ -1,0 +1,532 @@
+@media(max-width:991px){
+    .menu-btn{
+        display: block;
+    }
+    .main-nav .nav-inner .nav-list{
+        display: none;
+    }
+}
+@media(max-width: 767px){
+    .sec-head.sm{
+        font-size: 28px;
+    }
+    .tech-sec:after{
+        width: 100% !important;
+    }
+    .para.big{
+        font-size: 16px;
+    }
+    .test-card .test-det{
+        padding: 20px 20px;
+    }
+    .test-card::after{
+        transform: skew(0deg);
+    }
+    .test-card .test-det .para, .test-card .test-det .test-bt{
+        transform: skew(0deg);
+    }
+    .test-swiper{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .dots{
+        display: none !important;
+    }
+    .he-col .con > h3{
+        font-size: 26px;
+    }
+    .he-cols{
+        flex-direction: column;
+
+        .he-col{
+            width: 100%;
+            max-height:250px;
+
+            >img{
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            &.active{
+                width: 100%;
+                max-height: 5000px;
+
+                .con{
+                    max-height: 10000px;
+                }
+            }
+
+            .he-cards{
+                // display: block;
+                // flex-direction: column;
+                gap: 15px;
+                // max-width: 250px !important;
+
+
+            }
+        }
+    }
+    .main-nav .nav-inner .head-logo{
+        width: 120px;
+    }
+    .main-btn{
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+    .banner-con{
+        justify-content: center;
+        padding-top: 8em;
+
+        h1{
+            font-size: 42px;
+        }
+    }
+    .off-grid{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+
+        .off-wrap{
+            margin-top: 0 !important;
+            flex: 1 1 auto;
+        }
+    }
+    .off-grid .off-wrap span{
+        font-size: 18px;
+    }
+    .container-left{
+        padding-left: 1em;
+    }
+    .tech-sec > img{
+        object-fit: cover;
+    }
+    .rev-wrap .rev-slider{
+        gap: 20px;
+    }
+    .tech-card .det{
+        padding: 15px ;
+    }
+    .tech-card .det h3{
+        font-size: 20px;
+    }
+    .sec{
+        padding: 3em 0px !important;
+    }
+    .prog-sec{
+        padding-bottom: 0 !important;
+    }
+    .main-footer{
+        padding-top: 2em;
+    }
+    .ft-top-bar{
+        padding-bottom: 0em;
+    }
+    .soc-list li a{
+        width: 40px;
+        height: 40px;
+
+        img{
+            width: 50% !important;
+            height: auto !important;
+        }
+    }
+    .pr-sec{
+        padding-top: 0;
+    }
+    .pr-con{
+        text-align: center;
+    }
+    .con-det{
+        // padding: 10px 0px;
+        // justify-content: center;
+        margin-bottom: 20px;
+        height: auto;
+
+        img{
+            width: 25% !important;
+            height: 100% !important;
+        }
+
+        span{
+            font-size: 13px;
+        }
+    }
+    .sec-head{
+        font-size: 32px;
+    }
+    .cc-tabs{
+        display: flex;
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 15px;
+
+        li{
+            min-width: max-content;
+        }
+    }
+    .off-grid{
+        margin-top: 2em;
+    }
+    .circ-sec{
+        padding-bottom: 0 !important;
+    }
+    .side-img img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .side-img-right img{
+        margin-top: 40px;
+        margin-bottom: 0px;
+    }
+    .running-program-row-1 .running-program-div:nth-child(odd){
+        margin-top: 0px;;
+    }
+    .running-program-div{
+        flex-direction: row;
+        gap: 15px;
+    }
+    .running-program-div h3{
+        font-size: 18px;
+        text-align: left;
+    }
+    .the-grid{
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .the-grid.two{
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .running-program-div img{
+        width: 80px;
+    }
+    .running-program-div h3 br{
+        display: none;
+    }
+    .running-program-row{
+        padding-bottom: 0px;
+    }
+    .pr-img{
+        margin-bottom: 30px;
+    }
+    .btm-list-l{
+        text-align: left;
+    }
+    .running-cta .container{
+        border-radius: 25px;
+        padding: 40px 25px;
+    }
+    .para br{
+        display: none;
+    }
+    .cta-side{
+        gap: 10px;
+    }
+    .main-btn.big{
+        font-size: inherit;
+        padding: 8px 20px;
+    }
+    .right {
+        text-align: left;
+    }
+    .para.big{
+        font-size: 14px;
+    }
+    .btm-list-l span{
+        font-size: 14px;
+    }
+    .link-box{
+        margin-bottom: 50px;
+    }
+    .faq-grp button{
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .faq-grp .accordion-item{
+        padding: 20px;
+    }
+    .icon-grp{
+        width: 70px;
+        height: 70px;
+    }
+    .icon-grp img {
+        width: 40px;
+    }
+    .on-ac-img .ac-img{
+        width: 130px;
+    }
+    .cr-tabs .nav-item:nth-child(3){
+        margin-top: 0px;
+    }
+    .cr-tabs .nav-item:nth-child(4){
+        margin-top: 0px;
+    }
+    .cr-tabs .nav-item:nth-child(5){
+        margin-top: 0px;
+    }
+    .cr-tabs .nav-pills{
+        row-gap: 20px;
+    }
+    section.sec.tab-sec{
+        overflow: hidden;
+    }
+    .feature-div-img img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        object-position: top;
+    }
+    .featue-div{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .feature-row .col-md-6:nth-child(even) .featue-div{
+        flex-direction: column-reverse;
+    }
+    .auth-con h3{
+        font-size: 18px;
+    }
+    .auth-con span{
+        font-size: 14px;
+    }
+    .blog-content-block h3{
+        font-size: 22px;
+    }
+    .blog-inner-sidebar{
+        padding-left: 0px;
+    }
+    .blog-content{
+        margin-bottom: 40px;
+    }
+    .categroy-box{
+        margin-bottom: 0px;
+    }
+    header.main-header.blog-inner-header{
+        padding-top: 100px;
+    }
+    .con{
+        margin-top: 20px;
+    }
+    .tech-card .det p{
+        font-size: 14px;
+    }
+    .item{
+        width: 165px;
+        height: 70px;
+    }
+    #container{
+        top: 0px;
+        height: 50vh;
+    }
+    #image-container{
+        bottom: 0px;
+        height: 100%;
+    }
+    #image-container img{
+        width: 100%;
+    }
+    .circ-sec{
+        height: auto;
+        padding-bottom: 50px !important;
+    }
+    .program-side-anim{
+        margin-top: 130px;
+    }
+    // .soc-list{
+    //     justify-content: center;
+    // }
+    // .ft-logo{
+    //     margin: 0px auto;
+    // }
+    .footer-link {
+        row-gap: 5px;
+        margin-top: 1.2em;
+    }
+    .btm-text{
+        margin-top: 2em;
+    }
+    .he-card ul li{
+        padding-left: 10px;
+        font-size: 12px;
+    }
+    .he-card .ic{
+        width: 50px;
+        height: 50px;
+        transform: translateY(-50%) translateX(-50%);
+    }
+    .he-card h3{
+        font-size: 18px;
+    }
+    .he-card{
+        padding: 1em;
+        padding-top: 4em;
+    }
+    .he-card ul li:after{
+        display: none;
+    }
+    .he-card:after{
+        transform: skewX(0deg);
+    }
+    .he-card ul{
+        transform: skewX(0deg);
+    }
+    .booknow-sec{
+        background: #04ffb4;
+    }
+    .book-contact ul{
+        gap: 20px;
+    }
+    .book-contact{
+        padding: 30px;
+        border-radius: 20px;
+        margin-top: 30px;
+    }
+    .book-contact ul li a{
+        font-size: 15px;
+    }
+    .book-contact ul li img{
+        width: 45px;
+    }
+    .book-contact ul li{
+        gap: 10px;
+    }
+    .banner-con{
+        min-height: 80vh;
+    }
+    .side-img{
+        gap: 20px;
+        justify-content: center;
+    }
+    .side-img-right{
+        align-items: center;
+    }
+    .side-img img{
+        transform: none !important;
+        width: 43%;
+    }
+    .side-img .about-2-img{
+        margin-top: 0px;
+        }
+        .tab-line{
+            position: absolute;
+    top: 52px;
+    width: 83%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: -1;
+        }
+        .tab-line-mob{
+            display: block;
+        }
+        .tab-line-desk{
+            display: none;
+        }
+        .desk-show{
+            display: none;
+        }
+        .mob-show{
+            display: block;
+        }
+        .para , .side-con ul li , .banner-con p.para{
+            font-size: 14px !important;
+        }
+        .banner-con h1 p i{
+            font-size: 42px;
+        }
+        ul.ot-nav a{
+            font-size: 12px;
+        }
+        .banner-slide > picture img{
+            object-position: right;
+        }
+        .mob-ph-slider{
+            display: block;
+        }
+        .feature-row{
+            display: none;
+        }
+        // .featue-div{
+        //     height: 100%;
+        // }
+        .mob-ph-slider .swiper-slide{
+            height: auto;
+        }
+        .mob-ph-slider .swiper-wrapper .swiper-slide:nth-child(even) .featue-div{
+            flex-direction: column-reverse;
+        }
+        .pr-slider-con {
+            text-align: left;
+        }
+        .pr-slider-con h1{
+            text-align: left;
+            font-size: 38px;
+        }
+        .pr-slider-con p{
+            text-align: left;
+        }
+        .pr-slider-con h1 p , .pr-slider-con h1 p i{
+            font-size: 38px;
+            line-height: 46px;
+        }
+        .gif-pr{
+          transform: none;
+          position: unset;
+          margin-top: 40px;
+        }
+        .pr-slider-con{
+        width: 100%;
+        }
+        .program-slider .tech-nav{
+            transform: translateX(50%);
+            bottom: 15px;
+            right: 50%;
+        }
+
+}
+
+@media screen and (max-width: 1399px) and (min-width: 1200px) {
+    .cc-tabs li:nth-child(4) , .cc-tabs li:nth-child(5) {
+        width: 48%;
+    }
+
+}
+
+@media screen and (max-width: 1500px) and (min-width: 1200px) {
+    .gif-pr{
+        width: 85%;
+        transform: translate(110% , -50%);
+    }
+}
+@media screen and (max-width: 500px){
+    .backed-by-sec{
+        .backed-by-container{
+            background-color:transparent;
+            padding:0;
+            border-radius: 0
+        }
+    }
+
+    .instagram-widget-sec{
+        .follow-button{
+            display: none;
+        }
+
+        .instagram-widget-sec-head{
+            .instagram-logo{
+                width:auto;
+                height: 2.3rem;
+            }
+        }
+    }
+
+    .tech-card{
+        height: 20rem;
+    }
+
+
+}
