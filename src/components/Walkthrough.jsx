@@ -6,12 +6,12 @@ const WalkthroughBanner = () => {
   
   const bannerdata = [
     {
-      title: 'Ready to Take a <span>Stance?</span>',
-      description: "<p>Meet our team at Stance, where pain meets resilience and goals become reality. Join us to conquer pain and meet your goals with personalized, expert-led programs.</p>",
+      title: 'Experience <span>Stance</span> in Action!',
+      description: "<p>Join us at Stance to see our approach in action - how we assess, treat, and support recovery with a structured, results-driven process.</p>",
       buttonLink: "https://lu.ma/rseyimqj",
-      buttonLabel: "Book an Appointment",
-      image: "/assets/images/about-banner.svg",
-      mobileImage: "/assets/images/about-banner.svg",
+      buttonLabel: "Book a Walkthrough",
+      image: "/assets/images/about-banner.png",
+      mobileImage: "/assets/images/about-banner.png",
     },
   ]
   return (
