@@ -136,9 +136,59 @@ const asSeenInContent = [
     link:"https://businessreviewlive.com/stance-health-raises-1m-in-pre-seed-round-led-by-general-catalyst/"
   },
   {
-    imageSrc: "/assets/images/times-of-startup-logo.jpeg",
-    imageAlt: "times-of-startup-image",
-    link:"https://www.linkedin.com/company/times-of-startups/posts/?feedView=all"
+    imageSrc: "/assets/images/yourstory-logo.png",
+    imageAlt: "yourstory-image",
+    link:"https://yourstory.com/2025/04/startup-news-and-updates-daily-roundup-april-2-2025"
+  },
+  {
+    imageSrc: "/assets/images/ehealth-logo.png",
+    imageAlt: "ehealth-image",
+    link:"https://ehealth.eletsonline.com/2025/04/stance-health-secures-1-million-pre-seed-funding-to-revolutionize-musculoskeletal-care-in-india/"
+  },
+  {
+    imageSrc: "/assets/images/entrepreneur-logo.jpg",
+    imageAlt: "entrepreneur-image",
+    link:"https://www.entrepreneur.com/en-in/news-and-trends/stance-health-argos-watches-and-yatrikart-secure-fresh/489430"
+  },
+  {
+    imageSrc: "/assets/images/the-week-logo.jpg",
+    imageAlt: "the-week-image",
+    link:"https://www.theweek.in/wire-updates/business/2025/04/02/dcm36-biz-briefs.html"
+  },
+  {
+    imageSrc: "/assets/images/apn-logo.png",
+    imageAlt: "apn-image",
+    link:"https://www.apnnews.com/stance-health-secures-1-million-pre-seed-funding-to-transform-advance-musculoskeletal-care-in-india/s"
+  },
+  {
+    imageSrc: "/assets/images/marca-money-logo.jpg",
+    imageAlt: "marca-money-image",
+    link:"https://www.marcamoney.com/stance-health-raises-1-million-in-pre-seed-funding-led-by-general-catalyst/"
+  },
+  {
+    imageSrc: "/assets/images/foi-logo.png",
+    imageAlt: "finance-outlook-image",
+    link:"https://www.financeoutlookindia.com/news/stance-health-secures-usd-1-million-in-preseed-funding-round-nwid-4804.html#google_vignette",
+  },
+  {
+    imageSrc: "/assets/images/biospectrum-logo.png",
+    imageAlt: "bio-spectrum-image",
+    link:"https://www.biospectrumindia.com/news/104/25925/stance-health-secures-1-m-funding-to-transform-musculoskeletal-care-in-india.htmls"
+  },
+  {
+    imageSrc: "/assets/images/ceo-vine-logo.jpg",
+    imageAlt: "ceovine-image",
+    link:"https://www.ceovine.com/healthtech-startup-stance-health-raised-1-million-in-a-pre-seed-funding-round/",
+  },
+  {
+    imageSrc: "/assets/images/medial-app-logo.webp",
+    imageAlt: "medial-image",
+    link:"https://medial.app/news/healthtech-startup-stance-health-raises-dollar1-million-in-pre-seed-round-led-by-general-catalyst-ecdb1988e17c9"
+  },
+  {
+    imageSrc: "/assets/images/vccircle-logo.png",
+    imageAlt: "vccircle-image",
+    link:"https://www.vccircle.com/avataarleads-chef-robotics-series-a-round-stance-health-better-nutrition-others-snag-funding"
   }
 ];
 
