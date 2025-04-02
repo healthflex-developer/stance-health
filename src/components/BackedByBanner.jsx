@@ -124,6 +124,21 @@ const asSeenInContent = [
     imageSrc: "/assets/images/viestories-logo.webp",
     imageAlt:"viestories-image",
     link:"https://www.linkedin.com/posts/viestories_healthtech-startup-stance-health-raises-1-activity-7313040512842698752-2lgi?utm_source=share&utm_medium=member_android&rcm=ACoAAALSxx0BCnQCRXRaXkephFvaBPSpHVjy0sks"
+  },
+  {
+    imageSrc: "/assets/images/startup_news_logo.png",
+    imageAlt: "startup-news-image",
+    link:"https://startupnews.fyi/2025/04/02/stance-health-secures-1-million-pre-seed-funding-to-transform-advance-musculoskeletal-care-in-india/"
+  },
+  {
+    imageSrc: "/assets/images/business-review-live-logo.jpeg",
+    imageAlt: "business-review-live-image",
+    link:"https://businessreviewlive.com/stance-health-raises-1m-in-pre-seed-round-led-by-general-catalyst/"
+  },
+  {
+    imageSrc: "/assets/images/times-of-startup-logo.jpeg",
+    imageAlt: "times-of-startup-image",
+    link:"https://www.linkedin.com/company/times-of-startups/posts/?feedView=all"
   }
 ];
 
@@ -188,7 +203,7 @@ export default function BackedByBanner() {
                     alt={item.imageAlt}
                     width={140}
                     height={0}
-                    style={{ height: "auto", objectFit: "contain" }}
+                    style={{ width:"100%", height:"100%", objectFit: "contain", aspectRatio:"16/9" }}
                   />
                 </div>
               </SwiperSlide>
@@ -273,36 +288,6 @@ export default function BackedByBanner() {
             </button>
           </div>
         </Row>
-        {/*<Row className="as-seen-in-container">*/}
-        {/*  <Col className="text-center">*/}
-        {/*    <h3 className="sec-head dark">As Seen On</h3>*/}
-        {/*  </Col>*/}
-        {/*  <Col className="as-seen-in-slider">*/}
-        {/*    <Swiper*/}
-        {/*        className="as-seen-in-swiper"*/}
-        {/*        slidesPerView={3}*/}
-        {/*        spaceBetween={20}*/}
-        {/*        loop={true}*/}
-        {/*        autoplay={{ delay: 0, disableOnInteraction: false }}*/}
-        {/*        modules={[Autoplay]}*/}
-        {/*        breakpoints={{*/}
-        {/*          0: { slidesPerView: 2 },*/}
-        {/*          640: { slidesPerView: 2 },*/}
-        {/*          1024: { slidesPerView:2},*/}
-        {/*        }}*/}
-        {/*        freeMode={true}*/}
-        {/*        speed={8000}*/}
-        {/*    >*/}
-        {/*      {asSeenInContent.map((item, index) => (*/}
-        {/*          <SwiperSlide key={index} className="d-flex justify-content-center as-seen-in-slide">*/}
-        {/*            <div className="p-2 border rounded bg-light d-flex align-items-center justify-content-center backed-by-vc-image-container">*/}
-        {/*              <img src={item.imageSrc} alt={item.imageAlt} width={160} height={80} />*/}
-        {/*            </div>*/}
-        {/*          </SwiperSlide>*/}
-        {/*      ))}*/}
-        {/*    </Swiper>*/}
-        {/*  </Col>*/}
-        {/*</Row>*/}
         <Row>
           <Col className="text-center"  style={{margin:"2rem 0"}}>
             <h3 className="sec-head dark">As Seen On</h3>
@@ -336,7 +321,7 @@ export default function BackedByBanner() {
                         alt={item.imageAlt}
                         width={140}
                         height={0}
-                        style={{ height: "auto", objectFit: "contain" }}
+                        style={{ height: "auto", objectFit: "contain"}}
                     />
                   </div>
                 </SwiperSlide>
