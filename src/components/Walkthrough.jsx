@@ -8,7 +8,7 @@ const WalkthroughBanner = () => {
     {
       title: 'Experience <span>Stance</span> in Action!',
       description: "<p>Join us at Stance to see our approach in action - how we assess, treat, and support recovery with a structured, results-driven process.</p>",
-      buttonLink: "https://lu.ma/3femrxy3",
+      buttonLink: "https://lu.ma/j23pyp4l",
       buttonLabel: "Book a Walkthrough",
       image: "/assets/images/about-banner.png",
       mobileImage: "/assets/images/about-banner.png",
