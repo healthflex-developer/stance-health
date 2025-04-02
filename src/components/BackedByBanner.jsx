@@ -108,11 +108,23 @@ const asSeenInContent = [
   {
     imageSrc: "/assets/images/biovoice-logo.png",
     imageAlt: "biovoice-image",
+    link:"https://viewer.joomag.com/biovoice-news-emag-march-2025/0173717001741337728/p38?short="
   },
   {
     imageSrc: "/assets/images/business-world-logo.jpeg",
     imageAlt: "businesswolrd-image",
+    link:"https://www.bwhealthcareworld.com/article/improving-rehabilitation-outcomes-the-role-of-technology-549026"
   },
+  {
+    imageSrc: "/assets/images/et-logo.jpeg",
+    imageAlt:"the-economic-times-image",
+    link:"https://economictimes.indiatimes.com/tech/funding/healthtech-startup-stance-health-raises-1-million-in-pre-seed-round-led-by-general-catalyst/articleshow/119879490.cms?from=mdr"
+  },
+  {
+    imageSrc: "/assets/images/viestories-logo.webp",
+    imageAlt:"viestories-image",
+    link:"https://www.linkedin.com/posts/viestories_healthtech-startup-stance-health-raises-1-activity-7313040512842698752-2lgi?utm_source=share&utm_medium=member_android&rcm=ACoAAALSxx0BCnQCRXRaXkephFvaBPSpHVjy0sks"
+  }
 ];
 
 export default function BackedByBanner() {
@@ -128,6 +140,11 @@ export default function BackedByBanner() {
     sliderRef.current.swiper.slideNext();
   }, []);
 
+  const handleSlideClick = (link) => {
+    if (link) {
+      window.open(link, '_blank');
+    }
+  };
   return (
     <section
       data-scroll
@@ -178,38 +195,7 @@ export default function BackedByBanner() {
             ))}
           </Swiper>
         </Row>
-        {/* DON'T DELETE THIS. KEPT TO ENABLE LATER */}
 
-        {/*<Row className="as-seen-in-container">*/}
-        {/*    <Col className="text-center">*/}
-        {/*        <h3 className="sec-head dark">As Seen In</h3>*/}
-        {/*    </Col>*/}
-        {/*    <Col className="as-seen-in-slider">*/}
-        {/*        <Swiper*/}
-        {/*            className="as-seen-in-swiper"*/}
-        {/*            slidesPerView={3}*/}
-        {/*            spaceBetween={20}*/}
-        {/*            loop={true}*/}
-        {/*            autoplay={{ delay: 0, disableOnInteraction: false }}*/}
-        {/*            modules={[Autoplay]}*/}
-        {/*            breakpoints={{*/}
-        {/*                0: { slidesPerView: 2 },*/}
-        {/*                640: { slidesPerView: 2 },*/}
-        {/*                1024: { slidesPerView:2},*/}
-        {/*            }}*/}
-        {/*            freeMode={true}*/}
-        {/*            speed={8000}*/}
-        {/*        >*/}
-        {/*            {asSeenInContent.map((item, index) => (*/}
-        {/*                <SwiperSlide key={index} className="d-flex justify-content-center as-seen-in-slide">*/}
-        {/*                    <div className="p-2 border rounded bg-light d-flex align-items-center justify-content-center backed-by-vc-image-container">*/}
-        {/*                        <img src={item.imageSrc} alt={item.imageAlt} width={160} height={80} />*/}
-        {/*                    </div>*/}
-        {/*                </SwiperSlide>*/}
-        {/*            ))}*/}
-        {/*        </Swiper>*/}
-        {/*    </Col>*/}
-        {/*</Row>*/}
         <Row className="angels-container">
           <Col className="text-center">
             <h3 className="sec-head dark">
@@ -276,6 +262,7 @@ export default function BackedByBanner() {
                 </div>
               </SwiperSlide>
             ))}
+
           </Swiper>
           <div className="tech-nav">
             <button className="tech-prev" onClick={handlePrev}>
@@ -285,6 +272,76 @@ export default function BackedByBanner() {
               <Image src="/assets/images/next.svg" width={50} height={50} />
             </button>
           </div>
+        </Row>
+        {/*<Row className="as-seen-in-container">*/}
+        {/*  <Col className="text-center">*/}
+        {/*    <h3 className="sec-head dark">As Seen On</h3>*/}
+        {/*  </Col>*/}
+        {/*  <Col className="as-seen-in-slider">*/}
+        {/*    <Swiper*/}
+        {/*        className="as-seen-in-swiper"*/}
+        {/*        slidesPerView={3}*/}
+        {/*        spaceBetween={20}*/}
+        {/*        loop={true}*/}
+        {/*        autoplay={{ delay: 0, disableOnInteraction: false }}*/}
+        {/*        modules={[Autoplay]}*/}
+        {/*        breakpoints={{*/}
+        {/*          0: { slidesPerView: 2 },*/}
+        {/*          640: { slidesPerView: 2 },*/}
+        {/*          1024: { slidesPerView:2},*/}
+        {/*        }}*/}
+        {/*        freeMode={true}*/}
+        {/*        speed={8000}*/}
+        {/*    >*/}
+        {/*      {asSeenInContent.map((item, index) => (*/}
+        {/*          <SwiperSlide key={index} className="d-flex justify-content-center as-seen-in-slide">*/}
+        {/*            <div className="p-2 border rounded bg-light d-flex align-items-center justify-content-center backed-by-vc-image-container">*/}
+        {/*              <img src={item.imageSrc} alt={item.imageAlt} width={160} height={80} />*/}
+        {/*            </div>*/}
+        {/*          </SwiperSlide>*/}
+        {/*      ))}*/}
+        {/*    </Swiper>*/}
+        {/*  </Col>*/}
+        {/*</Row>*/}
+        <Row>
+          <Col className="text-center"  style={{margin:"2rem 0"}}>
+            <h3 className="sec-head dark">As Seen On</h3>
+          </Col>
+        </Row>
+        <Row className="backed-by-container">
+          <Swiper
+              className="backed-by-swiper"
+              slidesPerView={3}
+              spaceBetween={20}
+              loop={true}
+              autoplay={{ delay: 0, disableOnInteraction: false }}
+              modules={[Autoplay]}
+              breakpoints={{
+                0: { slidesPerView: 2 },
+                640: { slidesPerView: 3 },
+                1024: { slidesPerView: 4 },
+              }}
+              freeMode={true}
+              speed={8000}
+          >
+            {asSeenInContent.map((item, index) => (
+                <SwiperSlide
+                    key={index}
+                    className="d-flex justify-content-center as-seen-in-slide"
+                    onClick={()=>handleSlideClick(item.link)}
+                >
+                  <div className="p-2 border bg-light d-flex align-items-center justify-content-center backed-by-image-container">
+                    <Image
+                        src={item.imageSrc}
+                        alt={item.imageAlt}
+                        width={140}
+                        height={0}
+                        style={{ height: "auto", objectFit: "contain" }}
+                    />
+                  </div>
+                </SwiperSlide>
+            ))}
+          </Swiper>
         </Row>
       </Container>
     </section>
