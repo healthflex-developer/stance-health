@@ -203,7 +203,7 @@ export default function BackedByBanner() {
                     alt={item.imageAlt}
                     width={140}
                     height={0}
-                    style={{ width:"100%", height:"100%", objectFit: "contain", aspectRatio:"16/9" }}
+                    style={{ height: "auto", objectFit: "contain" }}
                   />
                 </div>
               </SwiperSlide>
