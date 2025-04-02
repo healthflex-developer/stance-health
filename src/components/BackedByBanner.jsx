@@ -268,11 +268,7 @@ export default function BackedByBanner() {
                             padding: "0 1px",
                           }}
                         >
-<<<<<<< HEAD
                           <img src={item.company_logo} style={{height: '25px'}} />
-=======
-                          <img src={item.company_logo} />
->>>>>>> 8ca294d3fd538d154b07e82f8d4060c4e4982f9d
                         </div>
                       </div>
                     </div>
