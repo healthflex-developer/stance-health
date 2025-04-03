@@ -189,6 +189,21 @@ const asSeenInContent = [
     imageSrc: "/assets/images/vccircle-logo.png",
     imageAlt: "vccircle-image",
     link:"https://www.vccircle.com/avataarleads-chef-robotics-series-a-round-stance-health-better-nutrition-others-snag-funding"
+  },
+  {
+    imageSrc: "/assets/images/bw-healthcare logo.png",
+    imageAlt: "bw-healthcare-image",
+    link: "https://www.bwhealthcareworld.com/article/stance-health-raises-1-million-pre-seed-funding-to-advance-msk-care-in-india-552453"
+  },
+  {
+    imageSrc: "/assets/images/entrackr-logo.png",
+    imageAlt: "entrackr-image",
+    link: "https://entrackr.com/snippets/stance-health-raises-1-mn-in-pre-seed-round-8915822s"
+  },
+  {
+    imageSrc: "/assets/images/indian-startup-news-logo.png",
+    imageAlt: "indian-startup-news-image",
+    link:"https://indianstartupnews.com/funding/stance-health-raises-1-million-in-a-pre-seed-round-to-transform-musculoskeletal-care-in-india-8916499"
   }
 ];
 
@@ -365,7 +380,7 @@ export default function BackedByBanner() {
                     className="d-flex justify-content-center as-seen-in-slide"
                     onClick={()=>handleSlideClick(item.link)}
                 >
-                  <div className="p-2 border bg-light d-flex align-items-center justify-content-center backed-by-image-container">
+                  <div className="p-2 border bg-light d-flex align-items-center justify-content-center backed-by-image-container" style={{cursor:'pointer'}}>
                     <Image
                         src={item.imageSrc}
                         alt={item.imageAlt}
