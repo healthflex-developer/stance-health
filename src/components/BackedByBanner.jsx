@@ -204,7 +204,23 @@ const asSeenInContent = [
     imageSrc: "/assets/images/indian-startup-news-logo.png",
     imageAlt: "indian-startup-news-image",
     link:"https://indianstartupnews.com/funding/stance-health-raises-1-million-in-a-pre-seed-round-to-transform-musculoskeletal-care-in-india-8916499"
-  }
+  },
+  {
+    imageSrc: "/assets/images/msn-logo.jpg",
+    imageAlt: "msn-image",
+    link: "https://www.msn.com/en-in/health/health-news/healthtech-startup-stance-health-raises-1-million-in-pre-seed-round-led-by-general-catalyst/ar-AA1C6yBC"
+  },
+  {
+    imageSrc: "/assets/images/indiamedtoday-logo.jpeg",
+    imageAlt: "indiamedtoday-image",
+    link: "https://indiamedtoday.com/stance-health-secures-1-m-pre-seed-funding-to-transform-musculoskeletal-care/"
+  },
+  {
+    imageSrc: "/assets/images/everything-startups-logo.jpeg",
+    imageAlt: "everything-startups-image",
+    link: "https://www.everythingstartups.io/news/posts/stance-health-secures-usd1m-pre-seed"
+  },
+
 ];
 
 export default function BackedByBanner() {
