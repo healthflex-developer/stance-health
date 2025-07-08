@@ -35,7 +35,7 @@ const BookNowPage = () => {
                 <ul>
                   <li>
                     <img src="/assets/images/phone-icon.svg" alt="" />
-                    <Link href="tel:+91 6360014559">+91 6360014559</Link>
+                    <Link href="tel:+91 6361056456">+91 6361056456</Link>
                   </li>
                   <li>
                     <img src="/assets/images/mail-icon.svg" alt="" />

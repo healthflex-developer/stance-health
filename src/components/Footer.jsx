@@ -12,9 +12,9 @@ const Footer = () => {
             <div className="ft-top-bar">
                 <div className="row contact-info-row">
                     <div className="col-lg-4 col-12">
-                        <Link href="https://wa.me/916360014559" className="con-det">
+                        <Link href="https://wa.me/916361056456" className="con-det">
                             <Image src="/assets/images/f-call.svg" alt="" width={24} height={24} />
-                            <span>+91 6360014559</span>
+                            <span>+91 6361056456</span>
                         </Link>
                     </div>
                     <div className="col-lg-4 col-12">
