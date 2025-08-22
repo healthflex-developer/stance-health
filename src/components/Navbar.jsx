@@ -93,7 +93,7 @@ const Navbar = () => {
                             <Image src={'/assets/images/menu.svg'} width={50} height={50} alt="" />
                         </button>
                         <Link href="/" className='head-logo'>
-                            <Image src={'/assets/images/logo.svg'} width={50} height={50} alt="" />
+                            <Image src={'/assets/images/logo.png'} width={50} height={50} alt="" />
                         </Link>
                     </div>
                     <div className="r-part">
@@ -141,7 +141,7 @@ const Navbar = () => {
         {/* mobile menu */}
         <div className={`mob-menu ${menuOpen && 'active'}`}>
             <Link href="/" className='mob-logo'>
-                <Image src={'/assets/images/logo.svg'} width={50} height={50} alt="" />
+                <Image src={'/assets/images/logo.png'} width={50} height={50} alt="" />
             </Link>
             <button className="close-btn" onClick={()=>setMenuClose(false)}>
                 <Image src={'/assets/images/cross.svg'} width={50} height={50} alt="" />

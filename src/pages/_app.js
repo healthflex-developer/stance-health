@@ -10,6 +10,7 @@ const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
 const Layout = dynamic(() => import("../../node_modules/react-masonry-list"), { ssr: false });
 
 import "../../node_modules/bootstrap/dist/css/bootstrap.css";
+import "@/styles/globals.css";
 
 import { gtmPageView } from "../hooks/gtm";
 import ButtonEffect from "@/components/ButtonEffect";

@@ -35,7 +35,7 @@ const Footer = () => {
                 <div className="row">
                     <div className="col-lg-4 col-12">
                         <Link href="/" className="ft-logo">
-                            <Image src="/assets/images/logo.svg" alt="" width={24} height={24} />
+                            <Image src="/assets/images/logo.png" alt="" width={24} height={24} />
                         </Link>
                         <h3 className="mt-30 ft-head">Follow Us</h3>
                         <ul className="soc-list">
