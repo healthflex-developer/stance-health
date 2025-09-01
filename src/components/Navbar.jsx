@@ -3,12 +3,14 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 
 const Navbar = () => {
     const [menuOpen, setMenuClose] = useState(false);
     const [isSticky, setSticky] = useState(false);
     const [domloaded, setDomLoaded] = useState(false);
+    const [currentPath, setCurrentPath] = useState('');
 
     const [isLoading, setIsLoading] = useState(true); 
 
@@ -38,6 +40,7 @@ const Navbar = () => {
         };
         window.addEventListener('scroll', handleScroll);
         setDomLoaded(true)
+        setCurrentPath(window.location.pathname);
         return () => {
           window.removeEventListener('scroll', handleScroll);
         };
@@ -128,9 +131,15 @@ const Navbar = () => {
                         </ul>
                         <ul className="ot-nav">
                             <li>
-                                <Link href="/book-now" className='main-btn'>
-                                    Book an Appointment
-                                </Link>
+                                {currentPath.includes('/whitefield') ? (
+                                    <a href="tel:9008417804" className='main-btn flex items-center gap-2'>
+                                        Call Now
+                                    </a>
+                                ) : (
+                                    <Link href="/book-now" className='main-btn'>
+                                        Book an Appointment
+                                    </Link>
+                                )}
                             </li>
                         </ul>
                     </div>
@@ -158,6 +167,19 @@ const Navbar = () => {
                         )
                     })
                 }
+                {currentPath.includes('/whitefield') ? (
+                    <li>
+                        <a href="tel:9008417804" className='flex items-center gap-2 text-white hover:text-[#CDFE71] transition-colors py-2'>
+                            Call Now
+                        </a>
+                    </li>
+                ) : (
+                    <li>
+                        <Link href="/book-now" onClick={()=>setMenuClose(false)} className='text-white hover:text-[#CDFE71] transition-colors py-2'>
+                            Book an Appointment
+                        </Link>
+                    </li>
+                )}
             </ul>
         </div>
     </>
