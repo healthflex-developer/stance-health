@@ -4,7 +4,7 @@ import { useState } from "react"
 
 
 const prizes = [
-  { text: "First Session\n₹199", shortText: "₹199 Session", probability: 0, color: "#00D4AA", canWin: false },
+  { text: "First Session\n₹199", shortText: "₹199 Session", probability: 0, color: "#DDFE71", canWin: false },
   { text: "First Session\n₹499", shortText: "₹499 Session", probability: 0, color: "#00B894", canWin: false },
   {
     text: "Free Consultation\nCall with\nPhysiotherapist",
@@ -67,7 +67,7 @@ export function InlineSpinWheel({ onSpinComplete }) {
       <div className="relative mx-auto w-64 h-64 sm:w-80 sm:h-80 mb-8">
         {/* Wheel SVG */}
         <svg
-          className="w-full h-full transition-transform duration-4000 ease-out border-4 border-[#00D4AA] rounded-full shadow-lg"
+          className="w-full h-full transition-transform duration-4000 ease-out border-4 border-[#DDFE71] rounded-full shadow-lg"
           style={{ transform: `rotate(${rotation}deg)` }}
           viewBox="0 0 200 200"
         >
@@ -117,12 +117,12 @@ export function InlineSpinWheel({ onSpinComplete }) {
 
         {/* Pointer */}
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 z-10">
-          <div className="w-0 h-0 border-l-6 border-r-6 border-b-12 border-l-transparent border-r-transparent border-b-[#00D4AA] drop-shadow-lg"></div>
+          <div className="w-0 h-0 border-l-6 border-r-6 border-b-12 border-l-transparent border-r-transparent border-b-[#DDFE71] drop-shadow-lg"></div>
         </div>
 
         {/* Center circle */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 bg-[#00D4AA] rounded-full border-4 border-white z-10 flex items-center justify-center shadow-lg">
-          <div className="text-white font-bold text-xs sm:text-sm">SPIN</div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 bg-[#DDFE71] rounded-full border-4 border-[#DDFE71] z-10 flex items-center justify-center shadow-lg">
+          <div className="text-[#252B4A] font-bold text-xs sm:text-sm">SPIN</div>
         </div>
       </div>
 
@@ -130,7 +130,7 @@ export function InlineSpinWheel({ onSpinComplete }) {
         <button  style={{borderRadius: '10px'}}
           onClick={spinWheel}
           disabled={isSpinning}
-          className="bg-[#00D4AA] hover:bg-[#00B894] text-white font-bold px-4 py-3 rounded-full text-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+          className="bg-[#DDFE71] hover:bg-[#DDFE71] text-[#252B4A] font-bold px-4 py-3 rounded-full text-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
         >
           {isSpinning ? "Spinning..." : "SPIN NOW!"}
         </button>

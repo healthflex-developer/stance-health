@@ -132,7 +132,7 @@ const Navbar = () => {
                         <ul className="ot-nav">
                             <li>
                                 {currentPath.includes('/whitefield') ? (
-                                    <a href="tel:9008417804" className='main-btn flex items-center gap-2'>
+                                    <a href="tel:9008417804" className='main-btn flex items-center gap-2 text-[#252B4A]'>
                                         Call Now
                                     </a>
                                 ) : (
@@ -169,7 +169,7 @@ const Navbar = () => {
                 }
                 {currentPath.includes('/whitefield') ? (
                     <li>
-                        <a href="tel:9008417804" className='flex items-center gap-2 text-white hover:text-[#CDFE71] transition-colors py-2'>
+                        <a href="tel:9008417804" className='flex items-center gap-2 text-[#252B4A] hover:text-[#CDFE71] transition-colors py-2'>
                             Call Now
                         </a>
                     </li>

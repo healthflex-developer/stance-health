@@ -62,15 +62,15 @@ export function FallbackBookingForm({ onClose, onSubmit, bookingType }) {
       <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
         <div className="bg-[#2D3561] border border-[#3A4374] rounded-lg max-w-md w-full">
           <div className="p-8 text-center">
-            <div className="w-16 h-16 bg-[#00D4AA] rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-[#DDFE71] rounded-full flex items-center justify-center mx-auto mb-4">
               <Calendar className="h-8 w-8 text-white" />
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">Booking Request Received! 📅</h3>
             <p className="text-gray-300 mb-6">
               Thank you for your interest in Stance Health. Our team member will connect with you shortly to book your appointment.
             </p>
-            <div className="bg-[#00D4AA]/10 border border-[#00D4AA]/20 rounded-lg p-4 mb-6">
-              <p className="text-[#00D4AA] font-semibold">
+            <div className="bg-[#DDFE71]/10 border border-[#DDFE71]/20 rounded-lg p-4 mb-6">
+              <p className="text-[#DDFE71] font-semibold">
                 {bookingType === 'assessment' ? 'VALD Assessment' : 'Appointment'} Request - {formData.location}
               </p>
             </div>
@@ -112,7 +112,7 @@ export function FallbackBookingForm({ onClose, onSubmit, bookingType }) {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
               <label htmlFor="name" className="text-white flex items-center space-x-2">
-                <User className="h-4 w-4 text-[#00D4AA]" />
+                <User className="h-4 w-4 text-[#DDFE71]" />
                 <span>Full Name *</span>
               </label>
               <input
@@ -122,14 +122,14 @@ export function FallbackBookingForm({ onClose, onSubmit, bookingType }) {
                 required
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 bg-[#252B4A] border border-[#3A4374] text-white rounded-md focus:border-[#00D4AA] focus:outline-none"
+                className="w-full px-3 py-2 bg-[#252B4A] border border-[#3A4374] text-white rounded-md focus:border-[#DDFE71] focus:outline-none"
                 placeholder="Enter your full name"
               />
             </div>
 
             <div className="space-y-2">
               <label htmlFor="mobile" className="text-white flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-[#00D4AA]" />
+                <Phone className="h-4 w-4 text-[#DDFE71]" />
                 <span>Mobile Number *</span>
               </label>
               <input
@@ -139,7 +139,7 @@ export function FallbackBookingForm({ onClose, onSubmit, bookingType }) {
                 required
                 value={formData.mobile}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 bg-[#252B4A] border border-[#3A4374] text-white rounded-md focus:border-[#00D4AA] focus:outline-none"
+                className="w-full px-3 py-2 bg-[#252B4A] border border-[#3A4374] text-white rounded-md focus:border-[#DDFE71] focus:outline-none"
                 placeholder="Enter your mobile number"
                 pattern="[0-9]{10}"
                 title="Please enter a valid 10-digit mobile number"
@@ -148,13 +148,13 @@ export function FallbackBookingForm({ onClose, onSubmit, bookingType }) {
 
             <div className="space-y-2">
               <label htmlFor="location" className="text-white flex items-center space-x-2">
-                <MapPin className="h-4 w-4 text-[#00D4AA]" />
+                <MapPin className="h-4 w-4 text-[#DDFE71]" />
                 <span>Preferred Location *</span>
               </label>
               <select 
                 onChange={(e) => handleLocationChange(e.target.value)} 
                 required
-                className="w-full px-3 py-2 bg-[#252B4A] border border-[#3A4374] text-white rounded-md focus:border-[#00D4AA] focus:outline-none"
+                className="w-full px-3 py-2 bg-[#252B4A] border border-[#3A4374] text-white rounded-md focus:border-[#DDFE71] focus:outline-none"
               >
                 <option value="">Select your preferred location</option>
                 <option value="indiranagar">Indiranagar (New Center)</option>
@@ -163,10 +163,10 @@ export function FallbackBookingForm({ onClose, onSubmit, bookingType }) {
               </select>
             </div>
 
-            <div className="bg-[#00D4AA]/10 border border-[#00D4AA]/20 rounded-lg p-4 mt-4">
+            <div className="bg-[#DDFE71]/10 border border-[#DDFE71]/20 rounded-lg p-4 mt-4">
               <div className="flex items-center space-x-2">
-                <Calendar className="h-5 w-5 text-[#00D4AA]" />
-                <span className="text-[#00D4AA] font-semibold text-sm">
+                <Calendar className="h-5 w-5 text-[#DDFE71]" />
+                <span className="text-[#DDFE71] font-semibold text-sm">
                   {bookingType === 'assessment' 
                     ? 'VALD Technology Assessment includes comprehensive movement analysis' 
                     : 'Initial consultation includes assessment and treatment plan'
@@ -178,7 +178,7 @@ export function FallbackBookingForm({ onClose, onSubmit, bookingType }) {
             <button
               type="submit"
               disabled={isSubmitting || !formData.location}
-              className="w-full bg-[#00D4AA] hover:bg-[#00B894] text-white font-bold py-3 rounded-full text-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-[#DDFE71] hover:bg-[#00B894] text-white font-bold py-3 rounded-full text-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? "Submitting..." : `Book ${bookingType === 'assessment' ? 'Assessment' : 'Appointment'}`}
             </button>
