@@ -163,9 +163,9 @@ Technology</h3>
               </h3>
               <p className='para'>Our physiotherapy services include a detailed evaluation using cutting-edge sport science technology, catering to individuals from professional athletes to grassroots participants.</p>
               <ul>
-                <li><img src="/assets/images/tick.svg" /><span style={{ color: '#03ffb3', fontSize:'23px' }} >MSK assessment: <p style={{color:'white' ,fontSize:'18px'}}> Conduct an audit on muscles and joints to identify at-risk and potential risk conditions.</p></span> </li>
-                <li><img src="/assets/images/tick.svg" /><span style={{ color: '#03ffb3', fontSize:'23px' }} >Injury management:<p style={{color:'white' ,fontSize:'18px'}}> Addressing injuries through manual therapy techniques for effective pain management.</p></span></li>
-                <li><img src="/assets/images/tick.svg" /><span style={{ color: '#03ffb3', fontSize:'23px' }} >Injury prevention:<p style={{color:'white' ,fontSize:'18px'}}> Offering a progressive and customized set of active exercises tailored to each individual's needs</p></span></li>
+                <li><img src="/assets/images/tick.svg" /><span style={{ color: '#DDFE71', fontSize:'23px' }} >MSK assessment: <p style={{color:'white' ,fontSize:'18px'}}> Conduct an audit on muscles and joints to identify at-risk and potential risk conditions.</p></span> </li>
+                <li><img src="/assets/images/tick.svg" /><span style={{ color: '#DDFE71', fontSize:'23px' }} >Injury management:<p style={{color:'white' ,fontSize:'18px'}}> Addressing injuries through manual therapy techniques for effective pain management.</p></span></li>
+                <li><img src="/assets/images/tick.svg" /><span style={{ color: '#DDFE71', fontSize:'23px' }} >Injury prevention:<p style={{color:'white' ,fontSize:'18px'}}> Offering a progressive and customized set of active exercises tailored to each individual's needs</p></span></li>
               </ul>
                </div>
         </div>
@@ -188,8 +188,8 @@ Technology</h3>
               </h3>
               <p className='para'>Our S&C programs help individuals reach outcomes based on their goals. While goals can be across functional activities or returning to sport, strength, and conditioning is a crucial element that helps ensure better management of MSK issues.</p>
               <ul>
-                <li><img src="/assets/images/tick.svg" /><span style={{ color: '#03ffb3', fontSize:'23px' }} >Seamless Everyday Routines: <p style={{color:'white' ,fontSize:'18px'}}>Breeze through daily tasks effortlessly. Our functional strength and conditioning programs ensure you are ready to fulfill everyday activities effortlessly.</p></span> </li>
-                <li><img src="/assets/images/tick.svg" /><span style={{ color: '#03ffb3', fontSize:'23px' }} >Elevated Sporting Excellence:<p style={{color:'white' ,fontSize:'18px'}}> Unlock your full potential in sports with training designed for athletes across various sporting disciplines.  We ensure this by accurately measuring progress using advanced technologies and modifying regimens basis your progress.</p></span></li>
+                <li><img src="/assets/images/tick.svg" /><span style={{ color: '#DDFE71', fontSize:'23px' }} >Seamless Everyday Routines: <p style={{color:'white' ,fontSize:'18px'}}>Breeze through daily tasks effortlessly. Our functional strength and conditioning programs ensure you are ready to fulfill everyday activities effortlessly.</p></span> </li>
+                <li><img src="/assets/images/tick.svg" /><span style={{ color: '#DDFE71', fontSize:'23px' }} >Elevated Sporting Excellence:<p style={{color:'white' ,fontSize:'18px'}}> Unlock your full potential in sports with training designed for athletes across various sporting disciplines.  We ensure this by accurately measuring progress using advanced technologies and modifying regimens basis your progress.</p></span></li>
               </ul>
                </div>
         </div>

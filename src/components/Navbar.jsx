@@ -3,12 +3,14 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 
 const Navbar = () => {
     const [menuOpen, setMenuClose] = useState(false);
     const [isSticky, setSticky] = useState(false);
     const [domloaded, setDomLoaded] = useState(false);
+    const [currentPath, setCurrentPath] = useState('');
 
     const [isLoading, setIsLoading] = useState(true); 
 
@@ -38,6 +40,7 @@ const Navbar = () => {
         };
         window.addEventListener('scroll', handleScroll);
         setDomLoaded(true)
+        setCurrentPath(window.location.pathname);
         return () => {
           window.removeEventListener('scroll', handleScroll);
         };
@@ -93,7 +96,7 @@ const Navbar = () => {
                             <Image src={'/assets/images/menu.svg'} width={50} height={50} alt="" />
                         </button>
                         <Link href="/" className='head-logo'>
-                            <Image src={'/assets/images/logo.svg'} width={50} height={50} alt="" />
+                            <Image src={'/assets/images/logo.png'} width={50} height={50} alt="" />
                         </Link>
                     </div>
                     <div className="r-part">
@@ -128,9 +131,15 @@ const Navbar = () => {
                         </ul>
                         <ul className="ot-nav">
                             <li>
-                                <Link href="/book-now" className='main-btn'>
-                                    Book an Appointment
-                                </Link>
+                                {currentPath.includes('/whitefield') ? (
+                                    <a href="tel:9008417804" className='main-btn flex items-center gap-2 text-[#252B4A]'>
+                                        Call Now
+                                    </a>
+                                ) : (
+                                    <Link href="/book-now" className='main-btn'>
+                                        Book an Appointment
+                                    </Link>
+                                )}
                             </li>
                         </ul>
                     </div>
@@ -141,7 +150,7 @@ const Navbar = () => {
         {/* mobile menu */}
         <div className={`mob-menu ${menuOpen && 'active'}`}>
             <Link href="/" className='mob-logo'>
-                <Image src={'/assets/images/logo.svg'} width={50} height={50} alt="" />
+                <Image src={'/assets/images/logo.png'} width={50} height={50} alt="" />
             </Link>
             <button className="close-btn" onClick={()=>setMenuClose(false)}>
                 <Image src={'/assets/images/cross.svg'} width={50} height={50} alt="" />
@@ -158,6 +167,19 @@ const Navbar = () => {
                         )
                     })
                 }
+                {currentPath.includes('/whitefield') ? (
+                    <li>
+                        <a href="tel:9008417804" className='flex items-center gap-2 text-[#252B4A] hover:text-[#CDFE71] transition-colors py-2'>
+                            Call Now
+                        </a>
+                    </li>
+                ) : (
+                    <li>
+                        <Link href="/book-now" onClick={()=>setMenuClose(false)} className='text-white hover:text-[#CDFE71] transition-colors py-2'>
+                            Book an Appointment
+                        </Link>
+                    </li>
+                )}
             </ul>
         </div>
     </>

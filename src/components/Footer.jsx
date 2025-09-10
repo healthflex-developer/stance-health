@@ -2,40 +2,21 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import CentersCarousel from './CentersCarousel';
 
 
 
 const Footer = () => {
   return (
-    <footer className="main-footer">
+    <>
+      <CentersCarousel />
+      <footer className="main-footer">
         <div className="container">
-            <div className="ft-top-bar">
-                <div className="row contact-info-row">
-                    <div className="col-lg-4 col-12">
-                        <Link href="https://wa.me/916361056456" className="con-det">
-                            <Image src="/assets/images/f-call.svg" alt="" width={24} height={24} />
-                            <span>+91 6361056456</span>
-                        </Link>
-                    </div>
-                    <div className="col-lg-4 col-12">
-                        <Link href="mailto:hsr@stance.health.com" className="con-det">
-                            <Image src="/assets/images/f-mail.svg" alt="" width={24} height={24} />
-                            <span>hsr@stance.health.com</span>
-                        </Link>
-                    </div>
-                    <div className="col-lg-4 col-12">
-                        <Link target='_blank' href="https://maps.app.goo.gl/ybtjB2YiqPV9yyUw6?g_st=aw" className="con-det">
-                            <Image src="/assets/images/f-loc.svg" alt="" width={24} height={24} />
-                            <span>2nd Floor, 1555, 19th Main Rd, Agara , 1st Sector, HSR Layout, Bengaluru, Karnataka 560102</span>
-                        </Link>
-                    </div>
-                </div>
-            </div>
             <div className="ft-main-wrap pb-0">
                 <div className="row">
                     <div className="col-lg-4 col-12">
                         <Link href="/" className="ft-logo">
-                            <Image src="/assets/images/logo.svg" alt="" width={24} height={24} />
+                            <Image src="/assets/images/logo.png" alt="" width={24} height={24} />
                         </Link>
                         <h3 className="mt-30 ft-head">Follow Us</h3>
                         <ul className="soc-list">
@@ -124,7 +105,8 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-    </footer>
+      </footer>
+    </>
 
   )
 }
