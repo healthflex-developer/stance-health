@@ -12,7 +12,7 @@ const centers = [
     email: "hsr@stance.health",
     address: "2nd Floor, 1555, 19th Main Rd, Agara, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102",
     mapLink: "https://maps.app.goo.gl/ybtjB2YiqPV9yyUw6?g_st=aw",
-    image: "/assets/images/HSR.jpg"
+    image: "/assets/images/HSR.JPG"
   },
   {
     id: 2,
