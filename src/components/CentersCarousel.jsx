@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const centers = [
   {
@@ -40,7 +41,7 @@ const CentersCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % centers.length)
-    }, 2000)
+    }, 4000)
 
     return () => clearInterval(interval)
   }, [])
@@ -53,15 +54,21 @@ const CentersCarousel = () => {
     setActiveIndex((prev) => (prev - 1 + centers.length) % centers.length)
   }
 
-  const getSlideClass = (index) => {
-    if (index === activeIndex) {
-      return "scale-110 z-20 opacity-100"
-    } else if (index === (activeIndex - 1 + centers.length) % centers.length || 
-               index === (activeIndex + 1) % centers.length) {
-      return "scale-90 z-10 opacity-70"
-    } else {
-      return "scale-75 z-0 opacity-40"
-    }
+  const getSlidePosition = (index) => {
+    const diff = index - activeIndex
+    return diff * 25
+  }
+
+  const getSlideScale = (index) => {
+    if (index === activeIndex) return 1.1
+    const distance = Math.abs(index - activeIndex)
+    return Math.max(0.75, 1.1 - distance * 0.2)
+  }
+
+  const getSlideOpacity = (index) => {
+    if (index === activeIndex) return 1
+    const distance = Math.abs(index - activeIndex)
+    return Math.max(0.4, 1 - distance * 0.3)
   }
 
   return (
@@ -71,56 +78,75 @@ const CentersCarousel = () => {
         
         <div className="relative">
           {/* Carousel Container */}
-          <div className="flex items-center justify-center min-h-[500px] relative overflow-hidden">
-            {centers.map((center, index) => (
-              <div
-                key={center.id}
-                className={`absolute transition-all duration-700 ease-out transform ${getSlideClass(index)}`}
-                style={{
-                  left: `${50 + (index - activeIndex) * 25}%`,
-                  transform: `translateX(-50%) ${getSlideClass(index).includes('scale-110') ? 'scale(1.1)' : 
-                    getSlideClass(index).includes('scale-90') ? 'scale(0.9)' : 'scale(0.75)'}`
-                }}
-              >
-                <div className="rounded-2xl overflow-hidden shadow-2xl w-80 sm:w-96 md:w-[500px] lg:w-[600px]">
-                  {/* Center Image with Overlay Info */}
-                  <div className="relative h-80 sm:h-80 md:h-96 overflow-hidden rounded-2xl">
-                    <Image
-                      src={center.image}
-                      alt={center.name}
-                      fill
-                      className="object-cover rounded-2xl"
-                      onError={(e) => {
-                        e.target.src = "/assets/images/default-center.jpg"
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-2xl"></div>
-                    
-                    {/* Center Info Overlay */}
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-center px-4 pb-4 w-full">
-                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#CDFE71] mb-2 sm:mb-4" style={{ color: "#CDFE71" }}>{center.name}</h3>
+          <div className="flex items-center justify-center min-h-[500px] relative overflow-hidden mx-auto max-w-7xl">
+            <AnimatePresence mode="sync">
+              {centers.map((center, index) => (
+                <motion.div
+                  key={center.id}
+                  className="absolute"
+                  initial={{ x: `${getSlidePosition(index)}%`, scale: getSlideScale(index), opacity: getSlideOpacity(index) }}
+                  animate={{ 
+                    x: `${getSlidePosition(index)}%`, 
+                    scale: getSlideScale(index), 
+                    opacity: getSlideOpacity(index),
+                    zIndex: index === activeIndex ? 20 : 10 - Math.abs(index - activeIndex)
+                  }}
+                  transition={{ 
+                    type: "spring", 
+                    stiffness: 300, 
+                    damping: 30,
+                    mass: 0.8
+                  }}
+                  style={{
+                    // left: '50%',
+                    transform: 'translateX(-50%)',
+                    transformOrigin: 'center center'
+                  }}
+                >
+                  <div className="rounded-2xl overflow-hidden shadow-2xl w-80 sm:w-96 md:w-[500px] lg:w-[600px]">
+                    <div className="relative h-80 sm:h-80 md:h-96 overflow-hidden rounded-2xl">
+                      <Image
+                        src={center.image}
+                        alt={center.name}
+                        fill
+                        className="object-cover rounded-2xl"
+                        onError={(e) => {
+                          e.target.src = "/assets/images/default-center.jpg"
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-2xl"></div>
                       
-                      <div className="space-y-1 sm:space-y-2">
-                     <Link href={`tel:${center.phone}`} className="block text-white hover:text-[#CDFE71] transition-colors text-sm sm:text-base md:text-lg">
-                          {center.phone}
-                        </Link>
+                      <motion.div 
+                        className="absolute bottom-0 left-0 right-0 flex flex-col items-center text-center px-2 sm:px-4 pb-4"
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: index === activeIndex ? 1 : 0.8 }}
+                        transition={{ delay: 0.2, duration: 0.5 }}
+                      >
+                        <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold  text-[#CDFE71] mb-1 sm:mb-2"   style={{ color: "#CDFE71" }}>{center.name}</h3>
                         
-                        <Link href={`mailto:${center.email}`} className="block text-white hover:text-[#CDFE71] transition-colors text-sm sm:text-base md:text-lg">
-                          {center.email}
-                        </Link>
-                       <Link 
-                          href={center.mapLink} 
-                          target="_blank" 
-                          className="block text-white hover:text-[#CDFE71] transition-colors text-xs sm:text-sm leading-relaxed max-w-xs mx-auto"
-                        >
-                          {center.address}
-                        </Link>
-                      </div>
+                        <div className="space-y-1 w-full max-w-[280px] sm:max-w-xs">
+                          <Link href={`tel:${center.phone}`} className="block text-white hover:text-[#CDFE71] transition-colors text-xs sm:text-sm md:text-base">
+                            {center.phone}
+                          </Link>
+                          
+                          <Link href={`mailto:${center.email}`} className="block text-white hover:text-[#CDFE71] transition-colors text-xs sm:text-sm md:text-base">
+                            {center.email}
+                          </Link>
+                          
+                          <Link 
+                            href={center.mapLink} 
+                            target="_blank" 
+                            className="block text-white hover:text-[#CDFE71] transition-colors text-xs leading-tight"
+                          >
+                            {center.address}
+                          </Link>
+                        </div>
+                      </motion.div>
                     </div>
                   </div>
-                </div>
-              </div>
-            ))}
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </div>
 
           {/* Navigation Buttons */}
@@ -144,12 +170,16 @@ const CentersCarousel = () => {
         {/* Dots Indicator */}
         <div className="flex justify-center space-x-2 mt-8">
           {centers.map((_, index) => (
-            <button
+            <motion.button
               key={index}
               onClick={() => setActiveIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === activeIndex ? 'bg-[#CDFE71] scale-125' : 'bg-gray-600 hover:bg-gray-500'
+              className={`w-3 h-3 rounded-full ${
+                index === activeIndex ? 'bg-[#CDFE71]' : 'bg-gray-600 hover:bg-gray-500'
               }`}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              animate={{ scale: index === activeIndex ? 1.25 : 1 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
             />
           ))}
         </div>
