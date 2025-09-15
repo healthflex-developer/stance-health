@@ -18,7 +18,28 @@ export default function LeadForm({ wonPrize, onClose, onSubmit }) {
     setIsSubmitting(true)
 
     try {
-      alert('This form requires a backend service to function properly. Please implement the backend logic separately.')
+      const response = await fetch('/api/spin-wheel', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          mobile: formData.mobile,
+          email: formData.email,
+          prize: wonPrize
+        })
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        console.error('API Error:', errorData)
+        throw new Error(errorData.message || 'Failed to save data')
+      }
+
+      const result = await response.json()
+      console.log('Success:', result)
+
       setSubmitted(true)
       setTimeout(() => {
         onSubmit()
