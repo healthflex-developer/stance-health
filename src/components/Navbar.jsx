@@ -136,9 +136,10 @@ const Navbar = () => {
                                         Call Now
                                     </a>
                                 ) : (
-                                    <Link href="/book-now" className='main-btn'>
+                                    <a href="https://dashboard.stance.health/onboarding-patient" className='main-btn' target='_bla
+                                    nk' rel="noreferrer">
                                         Book an Appointment
-                                    </Link>
+                                    </a>
                                 )}
                             </li>
                         </ul>
