@@ -63,11 +63,11 @@ const Footer = () => {
                                 Partner With Us
                                 </Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <a href="https://dashboard.stance.health/onboarding-patient" target='_blank' rel="noreferrer">
                                 Book an Appointment
                                 </a>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                     <div className="col-lg-3 col-md-6 col-12">
