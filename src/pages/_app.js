@@ -47,6 +47,7 @@ function App({ Component, pageProps }) {
 
   return (
     <>
+      <GoogleTagManager gtmId="GTM-NZH8NDC8" />
       <Head>
         <title>Page Title</title>
         <meta property="og:title" content="Stance" />
@@ -58,7 +59,6 @@ function App({ Component, pageProps }) {
           property="og:image"
           content="https://www.stance.health/assets/images/og.jpg"
         />
-        <GoogleTagManager gtmId="GTM-NZH8NDC8" />
       </Head>
       <ButtonEffect />
       <Navbar />
