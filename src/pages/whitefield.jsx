@@ -298,6 +298,7 @@ export default function HomePage() {
                     <h3 className="text-lg md:text-xl font-semibold text-white mb-2">Our Locations</h3>
                     <div className="space-y-2">
                       <p className="text-gray-400 text-sm md:text-base">📍 Whitefield (New Center)</p>
+                      <p className="text-gray-300 text-sm md:text-base">149, 4th Floor, Doddanakundi, 2nd Phase, Industrial Area, Hoodi Village, KEB Colony, Whitefield, Bengaluru, Karnataka 560048</p>
                       <p className="text-gray-400 text-sm md:text-base">📍 HSR Layout</p>
                       <p className="text-gray-400 text-sm md:text-base">📍 Indiranagar</p>
                     </div>

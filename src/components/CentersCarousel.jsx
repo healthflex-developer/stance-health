@@ -20,7 +20,7 @@ const centers = [
     name: "Whitefield",
     phone: "+91 6361056456 ",
     email: "wfld@stance.health",
-    address: "4th Floor, Kailash Parbat, No. 149, Doddanakundi, 2nd Phase, Hoodi, Whitefield, Bengaluru, Karnataka 560066",
+    address: "4th Floor, Kailash Parbat, No. 149, Doddanakundi, 2nd Phase, Hoodi, Whitefield, Bengaluru, Karnataka 560048",
     mapLink: "https://maps.app.goo.gl/bPuF68ZwmAWS95MVA",
     image: "/assets/images/whitefield.webp"
   },
