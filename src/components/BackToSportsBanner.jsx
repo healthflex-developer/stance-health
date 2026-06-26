@@ -9,7 +9,7 @@ const BackToSportsBanner = () => {
     {
       title: 'Reclaim Your <span>Game</span>',
       description: "Our return-to-play program leverages the latest in sports health and physiotherapy to maximize your recovery and performance.<br /> We ensure setbacks don't hold you down",
-      buttonLink: "https://book.stance.health/?utm_source=website&utm_medium=cta&utm_campaign=website_booking",
+      buttonLink: "https://book.stance.health/",
       buttonLabel: "Book an Appointment",
       image: "/assets/images/bts-banner.svg",
       mobileImage: "/assets/images/bts-banner.svg",

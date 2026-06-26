@@ -136,7 +136,7 @@ const Navbar = () => {
                                         Call Now
                                     </a>
                                 ) : (
-                                    <a href="https://book.stance.health/?utm_source=website&utm_medium=cta&utm_campaign=website_booking" className='main-btn' target='_blank' rel="noreferrer">
+                                    <a href="https://book.stance.health/" className='main-btn' target='_blank' rel="noreferrer">
                                         Book an Appointment
                                     </a>
                                 )}
@@ -175,7 +175,7 @@ const Navbar = () => {
                     </li>
                 ) : (
                     <li>
-                        <a href="https://book.stance.health/?utm_source=website&utm_medium=cta&utm_campaign=website_booking" target='_blank' rel="noreferrer" onClick={()=>setMenuClose(false)} className='text-white hover:text-[#CDFE71] transition-colors py-2'>
+                        <a href="https://book.stance.health/" target='_blank' rel="noreferrer" onClick={()=>setMenuClose(false)} className='text-white hover:text-[#CDFE71] transition-colors py-2'>
                             Book an Appointment
                         </a>
                     </li>

@@ -81,7 +81,7 @@ const InjuryManagementPage = () => {
               </div>
             </div>
             <div className='col-md-3 offset-md-1 right'>
-            <a href="https://book.stance.health/?utm_source=website&utm_medium=cta&utm_campaign=website_booking" target="_blank" rel="noreferrer" className='main-btn big'>
+            <a href="https://book.stance.health/" target="_blank" rel="noreferrer" className='main-btn big'>
                                 <span>Book Now</span>
                             </a>
             </div>

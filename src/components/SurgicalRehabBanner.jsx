@@ -9,7 +9,7 @@ const SurgicalRehabBanner = () => {
     {
       title: 'Back on <span>your Feet</span>',
       description: "Regain Strength, Movement, and Confidence with Stance's Revolutionary Rehab Solutions.<br />Let’s ensure you turn back time",
-      buttonLink: "https://book.stance.health/?utm_source=website&utm_medium=cta&utm_campaign=website_booking",
+      buttonLink: "https://book.stance.health/",
       buttonLabel: "Book an Appointment",
       image: "/assets/images/sr-banner.svg",
       mobileImage: "/assets/images/sr-banner.svg",

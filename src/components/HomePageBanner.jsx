@@ -7,7 +7,7 @@ const HomePageBanner = () => {
     {
       title: 'Welcome To <br className="d-sm-block d-none" /><span>Stance Health</span>',
       description: "Evidence-backed Orthopaedic Rehab, where Medical Science & Technology are tailored for your performance and recovery",
-      buttonLink: "https://book.stance.health/?utm_source=website&utm_medium=cta&utm_campaign=website_booking",
+      buttonLink: "https://book.stance.health/",
       buttonLabel: "Book an Appointment",
       image: "https://res.cloudinary.com/dwy0fn4vv/video/upload/v1774244004/home_video_q1es2s.mp4",
       mobileImage: "https://res.cloudinary.com/dwy0fn4vv/video/upload/v1774244004/home_video_q1es2s.mp4",
