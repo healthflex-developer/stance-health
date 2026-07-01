@@ -9,8 +9,8 @@ const HomePageBanner = () => {
       description: "Evidence-backed Orthopaedic Rehab, where Medical Science & Technology are tailored for your performance and recovery",
       buttonLink: "https://book.stance.health/",
       buttonLabel: "Book an Appointment",
-      image: "https://res.cloudinary.com/dwy0fn4vv/video/upload/v1774244004/home_video_q1es2s.mp4",
-      mobileImage: "https://res.cloudinary.com/dwy0fn4vv/video/upload/v1774244004/home_video_q1es2s.mp4",
+      image: "https://res.cloudinary.com/hhi5ylfc/video/upload/v1782911031/home_video_mglaq1.mp4",
+      mobileImage: "https://res.cloudinary.com/hhi5ylfc/video/upload/v1782911031/home_video_mglaq1.mp4",
     },
   ]
   return (
