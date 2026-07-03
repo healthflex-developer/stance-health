@@ -1,0 +1,367 @@
+[
+  {
+    "slug": "acl-rehab-what-to-expect",
+    "title": "ACL Rehab: What to Expect at Every Stage of Recovery",
+    "summary": "A torn ACL is one of the most feared injuries in sport — but with the right protocol, a full return is not just possible, it's the norm. Here's what your recovery timeline actually looks like.",
+    "publishedAt": "2025-04-10",
+    "readMinutes": 7,
+    "tags": ["Surgical Rehab", "ACL", "Return to Sport"],
+    "author": {
+      "name": "Durga Joshi",
+      "role": "Lead Musculoskeletal and Sports Physiotherapist",
+      "avatar": "https://www.stance.health/assets/images/team-1.svg"
+    },
+    "coverImage": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "An ACL rupture brings your training to a full stop, but it doesn't have to end your sporting life. At Stance, we've guided hundreds of athletes through reconstruction and back to competitive sport — and the single biggest factor in outcome quality is the quality of the rehabilitation protocol."
+      },
+      {
+        "type": "heading",
+        "content": "Phase 1 — Weeks 0–6: Protecting the Graft"
+      },
+      {
+        "type": "paragraph",
+        "content": "Immediately after surgery, the priority is protecting the new graft while managing swelling and beginning to restore range of motion. You'll work on quad activation, straight-leg raises, and gentle knee flexion. Full weight-bearing in an extension brace is typically introduced within the first week."
+      },
+      {
+        "type": "tip",
+        "content": "Ice, elevation, and compression in the first 72 hours significantly reduce effusion and allow faster progression into active rehab."
+      },
+      {
+        "type": "heading",
+        "content": "Phase 2 — Weeks 6–12: Rebuilding Strength"
+      },
+      {
+        "type": "paragraph",
+        "content": "Once range of motion is restored and swelling is controlled, the focus shifts to regaining quad and hamstring strength. Closed-chain exercises — squats, leg press, step-ups — form the backbone of this phase. We use VALD Force Decks to objectively measure limb symmetry, targeting a Limb Symmetry Index (LSI) above 70% before progressing."
+      },
+      {
+        "type": "heading",
+        "content": "Phase 3 — Months 3–6: Neuromuscular Control"
+      },
+      {
+        "type": "paragraph",
+        "content": "Strength alone isn't enough to return safely to sport. This phase introduces progressive plyometrics, agility drills, and sport-specific movement patterns. Balance and proprioception training is critical — the graft is strong enough to tolerate load, but the nervous system needs retraining to protect the joint in dynamic situations."
+      },
+      {
+        "type": "heading",
+        "content": "Phase 4 — Months 6–9: Return-to-Sport Testing"
+      },
+      {
+        "type": "paragraph",
+        "content": "Return to sport is earned through objective testing, not time alone. Our battery includes single-leg hop tests, quad and hamstring strength assessment (LSI >90%), and psychological readiness scoring. Athletes who pass all criteria demonstrate a significantly lower re-injury rate than those cleared on time alone."
+      },
+      {
+        "type": "tip",
+        "content": "Research shows athletes who reach an LSI of 90% or above before returning to sport have a re-rupture risk roughly 4× lower than those who return at 70%."
+      }
+    ]
+  },
+  {
+    "slug": "running-gait-analysis-explained",
+    "title": "Running Gait Analysis: What It Is and Why Every Runner Needs It",
+    "summary": "You don't need to be an elite runner to benefit from gait analysis. Understanding how you move is the most direct route to faster times, fewer injuries, and more enjoyable miles.",
+    "publishedAt": "2025-03-22",
+    "readMinutes": 6,
+    "tags": ["Running", "Gait Analysis", "Injury Prevention"],
+    "author": {
+      "name": "Arjun K Raj",
+      "role": "Senior Strength and Conditioning Coach",
+      "avatar": "https://www.stance.health/assets/images/team-3.svg"
+    },
+    "coverImage": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&q=80",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "Running looks simple — one foot in front of the other. But the mechanics of how your foot strikes the ground, how your hip extends, and how your trunk stays stable all interact in ways that either protect or stress your joints. Gait analysis brings those interactions into view."
+      },
+      {
+        "type": "heading",
+        "content": "What Does a Gait Assessment Measure?"
+      },
+      {
+        "type": "paragraph",
+        "content": "At Stance, we use RunScribe — a dual sensor system that attaches to your shoes and captures over 25 metrics per step. Key parameters include ground contact time, foot strike pattern, pronation excursion and velocity, braking G-force, and step rate (cadence). These metrics paint a detailed picture of where your body is absorbing excess load."
+      },
+      {
+        "type": "heading",
+        "content": "Common Patterns We Find"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Overstriding — landing too far ahead of the centre of mass, increasing braking force and knee stress",
+          "Excessive pronation — medial collapse at the ankle that often contributes to plantar fasciitis and tibial stress reactions",
+          "Reduced cadence — slower step rates correlate with longer ground contact and higher impact loads",
+          "Hip drop — insufficient glute medius activation causing lateral knee and IT band stress",
+          "Trunk lean — excessive forward or lateral lean indicating core or hip weakness"
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "How Findings Translate to Training Changes"
+      },
+      {
+        "type": "paragraph",
+        "content": "A gait report without a corrective plan is just data. Our physios translate each finding into specific cues, drills, and strength targets. A runner with a low cadence might start with a simple metronome cue to increase step rate by 5–10%, which research shows can reduce knee loading by up to 20%."
+      },
+      {
+        "type": "tip",
+        "content": "Even a small cadence increase of 5–8% can meaningfully reduce patellofemoral stress — one of the most common running injury sites."
+      },
+      {
+        "type": "heading",
+        "content": "Who Should Get a Gait Analysis?"
+      },
+      {
+        "type": "paragraph",
+        "content": "Any runner with a recurring injury, anyone preparing for a half or full marathon, and any runner who simply wants to move more efficiently. You don't need to be symptomatic — prevention is always more efficient than treatment."
+      }
+    ]
+  },
+  {
+    "slug": "knee-pain-not-just-a-running-problem",
+    "title": "Knee Pain Is Not Just a Running Problem — Here's What's Actually Causing Yours",
+    "summary": "Most people assume knee pain means the knee is the problem. More often, it's a symptom of dysfunction elsewhere. Understanding the real source changes everything about how you treat it.",
+    "publishedAt": "2025-03-05",
+    "readMinutes": 5,
+    "tags": ["Knee Pain", "Injury Management", "Biomechanics"],
+    "author": {
+      "name": "Sumesh Ashokan",
+      "role": "Senior Musculoskeletal and Sports Physiotherapist",
+      "avatar": "https://www.stance.health/assets/images/team-2.svg"
+    },
+    "coverImage": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "Knee pain is one of the most common complaints we see at Stance — and one of the most commonly mismanaged. Rest and anti-inflammatories may quiet the pain temporarily, but if the underlying driver isn't addressed, the pain returns. Often stronger."
+      },
+      {
+        "type": "heading",
+        "content": "The Knee Is a Hinge Caught Between Two Joints"
+      },
+      {
+        "type": "paragraph",
+        "content": "The knee has relatively limited mobility — it bends and extends. What it doesn't do well is tolerate rotational or valgus (inward collapse) stress. Those forces typically come from above (stiff hip, weak glutes) or below (limited ankle dorsiflexion, overpronation). When either end is dysfunctional, the knee bears the cost."
+      },
+      {
+        "type": "heading",
+        "content": "Hip Weakness and Knee Pain"
+      },
+      {
+        "type": "paragraph",
+        "content": "Weak hip abductors — glute medius in particular — allow the femur to internally rotate and adduct during single-leg loading. This creates a valgus moment at the knee, compressing the lateral structures and overloading the patellofemoral joint. Strengthening the hip often resolves anterior knee pain without touching the knee itself."
+      },
+      {
+        "type": "tip",
+        "content": "If your knee tracks inward when you squat or descend stairs, that's a classic hip abductor weakness pattern — not a knee alignment problem."
+      },
+      {
+        "type": "heading",
+        "content": "Ankle Stiffness and Knee Pain"
+      },
+      {
+        "type": "paragraph",
+        "content": "When the ankle can't dorsiflex enough (less than 10–15° during weight-bearing), the body compensates by collapsing the foot arch and rotating the tibia inward — both of which translate stress to the knee. Assessing ankle mobility is a standard part of any knee examination at Stance."
+      },
+      {
+        "type": "heading",
+        "content": "What We Do Differently"
+      },
+      {
+        "type": "paragraph",
+        "content": "Rather than treating the knee in isolation, our assessment maps the whole kinetic chain. We screen hip strength, ankle mobility, foot mechanics, and movement quality under load. Treatment follows the findings — which means addressing the root cause, not just the loudest symptom."
+      }
+    ]
+  },
+  {
+    "slug": "strength-training-for-runners",
+    "title": "Why Strength Training Is Non-Negotiable for Runners",
+    "summary": "The evidence is unambiguous: runners who strength train get injured less and run faster. Yet most recreational runners skip it entirely. Here's the case for making it a permanent part of your training week.",
+    "publishedAt": "2025-02-18",
+    "readMinutes": 6,
+    "tags": ["Running", "Strength Training", "Performance"],
+    "author": {
+      "name": "Arjun K Raj",
+      "role": "Senior Strength and Conditioning Coach",
+      "avatar": "https://www.stance.health/assets/images/team-3.svg"
+    },
+    "coverImage": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "Mention strength training to a recreational runner and you'll often hear: 'I don't want to get bulky' or 'I'd rather just run more.' Both reactions are understandable — but both are based on misconceptions. Strength training for runners isn't bodybuilding. It's injury-proofing and performance enhancement."
+      },
+      {
+        "type": "heading",
+        "content": "The Injury-Prevention Evidence"
+      },
+      {
+        "type": "paragraph",
+        "content": "A 2018 meta-analysis in the British Journal of Sports Medicine found that strength training reduced sports injuries by roughly 50% and overuse injuries specifically by up to two-thirds. For runners — a population with annual injury rates between 40–80% — those numbers are transformative. The mechanism is straightforward: stronger tendons, bones, and muscles tolerate the repetitive loads of running without accumulating the microdamage that leads to stress fractures, shin splints, and tendinopathies."
+      },
+      {
+        "type": "heading",
+        "content": "The Performance Mechanism"
+      },
+      {
+        "type": "paragraph",
+        "content": "Running economy — how efficiently you convert energy into forward motion — is the best predictor of performance beyond VO₂max. Heavy resistance training improves running economy by increasing musculotendinous stiffness, which allows more elastic energy to be stored and returned with each stride. A stiffer Achilles complex means a more efficient toe-off."
+      },
+      {
+        "type": "tip",
+        "content": "Heavy strength training (not high-rep circuits) is what improves running economy. Think 3–5 sets of 4–6 reps at high loads, not 3×20 bodyweight squats."
+      },
+      {
+        "type": "heading",
+        "content": "What to Focus On"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Single-leg squat and its variations — develops hip stability and quad strength simultaneously",
+          "Romanian deadlift — builds posterior chain strength critical for propulsion",
+          "Calf raises (heavy, single leg) — directly loads the Achilles and soleus",
+          "Nordic hamstring curls — the highest-evidence exercise for hamstring injury prevention",
+          "Hip thrust — strengthens glutes through extension, directly translating to running power"
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "How Much Is Enough?"
+      },
+      {
+        "type": "paragraph",
+        "content": "Two sessions per week of 30–45 minutes is sufficient to see meaningful injury prevention and performance benefits. The key is consistency over months, not intensity in the short term. Integrate sessions on easy or rest days to avoid compromising quality run sessions."
+      }
+    ]
+  },
+  {
+    "slug": "back-pain-understanding-the-root-cause",
+    "title": "Chronic Back Pain: Why You Keep Getting Better and Then Worse Again",
+    "summary": "The cycle of improvement and relapse is the hallmark of poorly managed back pain. Breaking that cycle requires understanding what's actually perpetuating it — not just what's triggering it.",
+    "publishedAt": "2025-01-30",
+    "readMinutes": 7,
+    "tags": ["Back Pain", "Injury Management", "Rehab"],
+    "author": {
+      "name": "Durga Joshi",
+      "role": "Lead Musculoskeletal and Sports Physiotherapist",
+      "avatar": "https://www.stance.health/assets/images/team-1.svg"
+    },
+    "coverImage": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "If you've had back pain that resolved with rest or treatment and then came back months later — often triggered by something minor — you're not alone, and your spine isn't 'falling apart.' What you're experiencing is a very common pattern driven by incomplete rehabilitation."
+      },
+      {
+        "type": "heading",
+        "content": "Why Rest Alone Isn't a Treatment"
+      },
+      {
+        "type": "paragraph",
+        "content": "Rest reduces the mechanical load that's producing pain, which makes you feel better. But it doesn't address the underlying drivers — movement dysfunction, muscle weakness, load tolerance deficits — that made the pain develop in the first place. Once you return to normal activity, those drivers are still present, and the pain returns."
+      },
+      {
+        "type": "heading",
+        "content": "The Three Common Drivers We Find"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Anterior pelvic tilt and lumbar hyperlordosis — often driven by tight hip flexors and weak deep abdominals",
+          "Thoracic stiffness — when the upper back can't rotate, the lumbar spine compensates",
+          "Poor load transfer — the deep stabilisers (multifidus, transversus abdominis) not activating before superficial movers"
+        ]
+      },
+      {
+        "type": "tip",
+        "content": "Pain location is rarely the problem location in the spine. Where it hurts is where the load is accumulating — not necessarily where the movement restriction originates."
+      },
+      {
+        "type": "heading",
+        "content": "Why Passive Treatment Has Limits"
+      },
+      {
+        "type": "paragraph",
+        "content": "Manual therapy, massage, and spinal manipulation can provide significant short-term relief by modulating pain and improving movement. But evidence consistently shows that active rehabilitation — graded loading, motor control training, progressive strengthening — produces more durable outcomes. Passive treatment is the entry point, not the destination."
+      },
+      {
+        "type": "heading",
+        "content": "Building Durable Capacity"
+      },
+      {
+        "type": "paragraph",
+        "content": "The goal of back pain rehabilitation at Stance isn't to get you pain-free — it's to build a spine robust enough that pain doesn't keep coming back. That means progressive loading beyond the level that previously caused pain, restoring movement variability, and developing the strength to sustain the postures and activities that matter most to you."
+      }
+    ]
+  },
+  {
+    "slug": "sports-return-criteria-not-just-time",
+    "title": "Return to Sport After Injury: Why the Clock Is the Wrong Metric",
+    "summary": "\"Six weeks and you're good to go\" is one of the most dangerous phrases in sports medicine. Time is a proxy for healing, not a guarantee of readiness. Here's what objective return-to-sport criteria actually look like.",
+    "publishedAt": "2025-01-12",
+    "readMinutes": 6,
+    "tags": ["Return to Sport", "Performance", "Injury Management"],
+    "author": {
+      "name": "Sumesh Ashokan",
+      "role": "Senior Musculoskeletal and Sports Physiotherapist",
+      "avatar": "https://www.stance.health/assets/images/team-2.svg"
+    },
+    "coverImage": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "When someone asks 'how long until I can play again?', the honest answer is 'we don't know yet — it depends on how you respond to rehab and whether you can meet objective criteria.' That's not the reassuring answer athletes want, but it's the only accurate one."
+      },
+      {
+        "type": "heading",
+        "content": "The Problem With Time-Based Clearance"
+      },
+      {
+        "type": "paragraph",
+        "content": "Healing timelines are population averages. Individual variation is enormous, driven by age, fitness, nutrition, sleep, stress, and the specific injury pattern. Two athletes with the same ACL reconstruction may differ by 3–4 months in their actual readiness. Clearing both at 9 months because 'that's the protocol' will over-protect one and under-protect the other."
+      },
+      {
+        "type": "heading",
+        "content": "What Objective Criteria Look Like"
+      },
+      {
+        "type": "paragraph",
+        "content": "At Stance, return-to-sport clearance for lower limb injuries involves a structured test battery across three domains:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Strength criteria — Limb Symmetry Index ≥90% for quad and hamstring peak torque, tested with VALD Dynamo",
+          "Functional hop tests — single-leg hop, triple hop, crossover hop, and 6-metre timed hop, all ≥90% LSI",
+          "Movement quality — video-based movement screening assessing landing mechanics, trunk control, and joint alignment under fatigue",
+          "Psychological readiness — validated questionnaires assessing fear of re-injury and confidence in the joint"
+        ]
+      },
+      {
+        "type": "tip",
+        "content": "Psychological readiness is often the last criterion to be met — and the most commonly overlooked. Fear of re-injury significantly increases actual re-injury risk."
+      },
+      {
+        "type": "heading",
+        "content": "The Role of Progressive Exposure"
+      },
+      {
+        "type": "paragraph",
+        "content": "Return to sport isn't a binary event — it's a continuum. We structure it in phases: return to training (full team sessions without contact), return to competition (non-contact phases of matches), and unrestricted return (full contact, full competitive load). Each phase has its own criteria and monitoring checkpoints."
+      },
+      {
+        "type": "heading",
+        "content": "What This Means for You"
+      },
+      {
+        "type": "paragraph",
+        "content": "If you've been injured, push your team to give you objective targets, not just a date. Ask: 'What do I need to demonstrate to be cleared?' The answer should be specific numbers and movement standards — not 'you should feel ready by then.'"
+      }
+    ]
+  }
+]
