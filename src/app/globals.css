@@ -1,42 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Gilroy";
-  src: url("/assets/fonts/Gilroy-Regular.ttf");
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gilroy";
-  src: url("/assets/fonts/Gilroy-Medium.ttf");
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gilroy";
-  src: url("/assets/fonts/Gilroy-SemiBold.ttf");
-  font-weight: 600;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gilroy";
-  src: url("/assets/fonts/Gilroy-Bold.ttf");
-  font-weight: 700;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gilroy";
-  src: url("/assets/fonts/Gilroy-Heavy.ttf");
-  font-weight: 800;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gilroy";
-  src: url("/assets/fonts/Gilroy-Black.ttf");
-  font-weight: 900;
-  font-display: swap;
-}
-
 :root {
   --yellow: #cdfe71;
   --blue: #0f5e9c;
@@ -57,8 +20,17 @@ html {
 body {
   background-color: var(--navy);
   color: #ffffff;
-  font-family: "Gilroy", sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+/* ── Typography: Unbounded Bold for all headings, Montserrat for
+   everything else (set on body above) ── */
+h1, h2, h3, h4, h5, h6,
+.sec-head, .section-title, .sm-head,
+.banner-con h1, .hero-display {
+  font-family: var(--font-unbounded), sans-serif;
+  font-weight: 700;
 }
 
 .text-yellow {
@@ -103,7 +75,6 @@ body {
 
 .section-title {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 700;
   color: #ffffff;
 }
 
@@ -156,14 +127,13 @@ body {
 .sec-head {
   position: relative;
   font-size: clamp(2rem, 5vw, 55px);
-  font-weight: 700;
   color: #ffffff;
   line-height: 1.1;
 }
 .sec-head span { color: var(--yellow); }
 .sec-head.green { color: var(--yellow); }
 .sec-head.dark { color: #132644; }
-.sm-head { font-size: 2rem; font-weight: 700; }
+.sm-head { font-size: 2rem; }
 .sm-head.dark { color: #132644; }
 .para { font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.75); }
 .para.big { font-size: 20px; }

@@ -1,9 +1,24 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import { Montserrat, Unbounded } from "next/font/google";
 import "./globals.css";
 import MarketingScripts, { GtmNoScript } from "@/components/MarketingScripts";
 import TrackingInit from "@/components/TrackingInit";
 import { BASE_URL, GSC_VERIFICATION } from "@/lib/constants";
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["600"],
+  display: "swap",
+});
+
+const unbounded = Unbounded({
+  variable: "--font-unbounded",
+  subsets: ["latin"],
+  weight: ["700"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -156,7 +171,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="h-full">
+    <html
+      lang="en"
+      className={`h-full ${montserrat.variable} ${unbounded.variable}`}
+    >
       <head>
         <MarketingScripts />
         <script
