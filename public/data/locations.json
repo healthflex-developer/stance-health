@@ -1,0 +1,182 @@
+[
+  {
+    "slug": "hsr-layout",
+    "name": "HSR Layout",
+    "type": "centre",
+    "nearestCentre": "hsr-layout",
+    "address": "1st Floor, 27th Main Rd, Sector 1, HSR Layout, Bengaluru, Karnataka 560102",
+    "phone": "+91 99000 00000",
+    "mapUrl": "https://maps.google.com/?q=Stance+Health+HSR+Layout+Bengaluru",
+    "commonConditions": ["knee-pain", "back-pain", "acl-injury", "shoulder-pain", "plantar-fasciitis"],
+    "seo": {
+      "title": "Physio & Rehab in HSR Layout, Bangalore | Stance Health",
+      "description": "Stance Health HSR Layout — advanced physiotherapy and sports rehab in Sector 1. Book your assessment today."
+    },
+    "lastModified": "2026-01-01"
+  },
+  {
+    "slug": "indiranagar",
+    "name": "Indiranagar",
+    "type": "centre",
+    "nearestCentre": "indiranagar",
+    "address": "Ground Floor, 100 Feet Road, Indiranagar, Bengaluru, Karnataka 560038",
+    "phone": "+91 99000 00001",
+    "mapUrl": "https://maps.google.com/?q=Stance+Health+Indiranagar+Bengaluru",
+    "commonConditions": ["knee-pain", "back-pain", "neck-pain", "acl-injury", "ankle-sprain"],
+    "seo": {
+      "title": "Physio & Rehab in Indiranagar, Bangalore | Stance Health",
+      "description": "Stance Health Indiranagar — evidence-based physiotherapy and sports rehab on 100 Feet Road. Book your assessment today."
+    },
+    "lastModified": "2026-01-01"
+  },
+  {
+    "slug": "whitefield",
+    "name": "Whitefield",
+    "type": "centre",
+    "nearestCentre": "whitefield",
+    "address": "2nd Floor, ITPL Main Road, Whitefield, Bengaluru, Karnataka 560066",
+    "phone": "+91 99000 00002",
+    "mapUrl": "https://maps.google.com/?q=Stance+Health+Whitefield+Bengaluru",
+    "commonConditions": ["back-pain", "knee-pain", "shoulder-pain", "cervical-spondylosis", "osteoarthritis"],
+    "seo": {
+      "title": "Physio & Rehab in Whitefield, Bangalore | Stance Health",
+      "description": "Stance Health Whitefield — advanced musculoskeletal physio and sports rehab near ITPL. Book your assessment today."
+    },
+    "lastModified": "2026-01-01"
+  },
+  {
+    "slug": "bellandur",
+    "name": "Bellandur",
+    "type": "neighbourhood",
+    "nearestCentre": "whitefield",
+    "address": "",
+    "phone": "",
+    "mapUrl": "",
+    "commonConditions": ["back-pain", "knee-pain", "shoulder-pain"],
+    "seo": {
+      "title": "Physiotherapy near Bellandur, Bangalore | Stance Health",
+      "description": "Looking for a physio near Bellandur? Stance Health Whitefield is your nearest centre. Book an assessment today."
+    },
+    "lastModified": "2026-01-01"
+  },
+  {
+    "slug": "koramangala",
+    "name": "Koramangala",
+    "type": "neighbourhood",
+    "nearestCentre": "hsr-layout",
+    "address": "",
+    "phone": "",
+    "mapUrl": "",
+    "commonConditions": ["knee-pain", "back-pain", "acl-injury"],
+    "seo": {
+      "title": "Physiotherapy near Koramangala, Bangalore | Stance Health",
+      "description": "Looking for a physio near Koramangala? Stance Health HSR Layout is your nearest centre. Book an assessment today."
+    },
+    "lastModified": "2026-01-01"
+  },
+  {
+    "slug": "sarjapur-road",
+    "name": "Sarjapur Road",
+    "type": "neighbourhood",
+    "nearestCentre": "whitefield",
+    "address": "",
+    "phone": "",
+    "mapUrl": "",
+    "commonConditions": ["back-pain", "knee-pain", "shoulder-pain"],
+    "seo": {
+      "title": "Physiotherapy near Sarjapur Road, Bangalore | Stance Health",
+      "description": "Looking for a physio near Sarjapur Road? Stance Health Whitefield is your nearest centre. Book an assessment today."
+    },
+    "lastModified": "2026-01-01"
+  },
+  {
+    "slug": "marathahalli",
+    "name": "Marathahalli",
+    "type": "neighbourhood",
+    "nearestCentre": "whitefield",
+    "address": "",
+    "phone": "",
+    "mapUrl": "",
+    "commonConditions": ["back-pain", "neck-pain", "knee-pain"],
+    "seo": {
+      "title": "Physiotherapy near Marathahalli, Bangalore | Stance Health",
+      "description": "Looking for a physio near Marathahalli? Stance Health Whitefield is your nearest centre. Book an assessment today."
+    },
+    "lastModified": "2026-01-01"
+  },
+  {
+    "slug": "btm-layout",
+    "name": "BTM Layout",
+    "type": "neighbourhood",
+    "nearestCentre": "hsr-layout",
+    "address": "",
+    "phone": "",
+    "mapUrl": "",
+    "commonConditions": ["knee-pain", "back-pain", "ankle-sprain"],
+    "seo": {
+      "title": "Physiotherapy near BTM Layout, Bangalore | Stance Health",
+      "description": "Looking for a physio near BTM Layout? Stance Health HSR Layout is your nearest centre. Book an assessment today."
+    },
+    "lastModified": "2026-01-01"
+  },
+  {
+    "slug": "mahadevapura",
+    "name": "Mahadevapura",
+    "type": "neighbourhood",
+    "nearestCentre": "whitefield",
+    "address": "",
+    "phone": "",
+    "mapUrl": "",
+    "commonConditions": ["back-pain", "knee-pain", "shoulder-pain"],
+    "seo": {
+      "title": "Physiotherapy near Mahadevapura, Bangalore | Stance Health",
+      "description": "Looking for a physio near Mahadevapura? Stance Health Whitefield is your nearest centre. Book an assessment today."
+    },
+    "lastModified": "2026-01-01"
+  },
+  {
+    "slug": "hoodi",
+    "name": "Hoodi",
+    "type": "neighbourhood",
+    "nearestCentre": "whitefield",
+    "address": "",
+    "phone": "",
+    "mapUrl": "",
+    "commonConditions": ["back-pain", "knee-pain", "plantar-fasciitis"],
+    "seo": {
+      "title": "Physiotherapy near Hoodi, Bangalore | Stance Health",
+      "description": "Looking for a physio near Hoodi? Stance Health Whitefield is your nearest centre. Book an assessment today."
+    },
+    "lastModified": "2026-01-01"
+  },
+  {
+    "slug": "domlur",
+    "name": "Domlur",
+    "type": "neighbourhood",
+    "nearestCentre": "indiranagar",
+    "address": "",
+    "phone": "",
+    "mapUrl": "",
+    "commonConditions": ["knee-pain", "back-pain", "shoulder-pain"],
+    "seo": {
+      "title": "Physiotherapy near Domlur, Bangalore | Stance Health",
+      "description": "Looking for a physio near Domlur? Stance Health Indiranagar is your nearest centre. Book an assessment today."
+    },
+    "lastModified": "2026-01-01"
+  },
+  {
+    "slug": "old-airport-road",
+    "name": "Old Airport Road",
+    "type": "neighbourhood",
+    "nearestCentre": "indiranagar",
+    "address": "",
+    "phone": "",
+    "mapUrl": "",
+    "commonConditions": ["back-pain", "neck-pain", "knee-pain"],
+    "seo": {
+      "title": "Physiotherapy near Old Airport Road, Bangalore | Stance Health",
+      "description": "Looking for a physio near Old Airport Road? Stance Health Indiranagar is your nearest centre. Book an assessment today."
+    },
+    "lastModified": "2026-01-01"
+  }
+]

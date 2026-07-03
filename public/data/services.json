@@ -1,0 +1,128 @@
+[
+  {
+    "slug": "pain-injury-recovery",
+    "title": "Pain & Injury Recovery",
+    "summary": "Assessment-led recovery for musculoskeletal pain — whether it's chronic, recurring, or from a specific incident. We find the root cause and build a targeted, progressive plan.",
+    "heroHeadline": "Pain has a root cause. We find it with data, not guesswork.",
+    "whoItsFor": "You're dealing with pain that won't go away — or keeps coming back. It might be knee pain during runs, a back that locks up after sitting, a shoulder that aches every morning, or recurring ankle trouble. You've tried rest, maybe physio elsewhere, but the pattern repeats. You're ready for an approach that actually looks at why.",
+    "approach": "We start with a comprehensive technology-driven assessment. Using VALD Force Decks and Dynamo, we measure strength, symmetry, and movement quality — not just where it hurts. Your treatment plan is built from your numbers. Every progression is tracked against objective markers, so you know when you're actually getting better.",
+    "features": [
+      "Full-body musculoskeletal assessment with objective strength and mobility testing",
+      "Technology-assisted diagnosis (VALD Force Decks, Dynamo, HealthFlex)",
+      "Personalised, data-driven recovery programme",
+      "Regular reassessment to track progress and refine the plan",
+      "Clinician-guided education on load management and self-management"
+    ],
+    "relatedConditions": ["knee-pain", "back-pain", "neck-pain", "shoulder-pain", "sciatica", "plantar-fasciitis", "achilles-tendinopathy", "tennis-elbow", "osteoarthritis"],
+    "seo": {
+      "title": "Pain & Injury Recovery | Stance Health Bangalore",
+      "description": "Evidence-based pain and injury recovery at Stance Health Bangalore. Root-cause assessment, objective testing, personalised rehab."
+    },
+    "lastModified": "2026-01-01"
+  },
+  {
+    "slug": "post-surgery-rehab",
+    "title": "Post-Surgery Rehabilitation",
+    "summary": "Structured, phased rehabilitation after orthopaedic surgery. We use objective criteria — not just the calendar — to progress you through each stage of recovery.",
+    "heroHeadline": "Your surgeon got you through the operation. We get you back to life.",
+    "whoItsFor": "You've had surgery — ACL reconstruction, meniscus repair, shoulder stabilisation, joint replacement, spinal decompression, or another orthopaedic procedure. You want to recover fully, not just get by. You need a team that takes post-surgical rehab seriously, tracks your progress with data, and knows when to push and when to protect.",
+    "approach": "We work from your surgical report and surgeon's protocol, then apply our objective assessment framework to track your recovery. We use VALD technology at each phase to measure strength symmetry, power, and movement quality — gatekeeping progression on criteria, not just time. We stay in communication with your surgical team where appropriate.",
+    "features": [
+      "Pre-surgical conditioning (prehab) to optimise surgical outcomes",
+      "Stage-gated progression based on objective strength and symmetry criteria",
+      "VALD Force Decks and Dynamo for limb symmetry index testing",
+      "Surgeon-aligned protocols for ACL, meniscus, shoulder, and joint replacement",
+      "Return-to-sport or return-to-activity readiness testing"
+    ],
+    "relatedConditions": ["acl-injury", "meniscus-tear", "rotator-cuff-injury", "frozen-shoulder", "knee-pain", "shoulder-pain"],
+    "seo": {
+      "title": "Post-Surgery Rehabilitation in Bangalore | Stance Health",
+      "description": "Phased post-surgical rehab at Stance Health Bangalore. ACL, meniscus, shoulder, and joint replacement recovery with objective progression criteria."
+    },
+    "lastModified": "2026-01-01"
+  },
+  {
+    "slug": "sports-injury-return-to-sport",
+    "title": "Sports Injury & Return to Sport",
+    "summary": "Injury-to-sport rehabilitation for recreational and competitive athletes. We don't just fix the injury — we test your readiness to return and make you more resilient than before.",
+    "heroHeadline": "Getting you back on the field is step one. Getting you there stronger is the goal.",
+    "whoItsFor": "You've been injured playing sport — or you're a returning athlete trying to reclaim your level. You want more than 'wait and see'. You want objective criteria, a clear pathway, and a team that understands what being ready for sport actually means.",
+    "approach": "Our return-to-sport pathway runs from injury assessment through progressive loading, sport-specific conditioning, and readiness testing. We use VALD Force Decks to test explosive power and limb symmetry, RunScribe for gait analysis in running sports, and sport-specific functional tests before clearing you for full return.",
+    "features": [
+      "Acute injury assessment and staged rehabilitation",
+      "Progressive sport-specific loading and conditioning",
+      "Readiness testing: strength symmetry, power, reactive agility",
+      "Gait and movement analysis for running-based sports",
+      "Clear return-to-sport criteria communicated at the start"
+    ],
+    "relatedConditions": ["acl-injury", "ankle-sprain", "knee-pain", "shoulder-pain", "rotator-cuff-injury", "achilles-tendinopathy"],
+    "seo": {
+      "title": "Sports Injury Rehab & Return to Sport in Bangalore | Stance Health",
+      "description": "Evidence-based sports rehab and return-to-sport testing at Stance Health Bangalore. Objective readiness criteria, not just time-based clearance."
+    },
+    "lastModified": "2026-01-01"
+  },
+  {
+    "slug": "running-assessment",
+    "title": "Running Assessment",
+    "summary": "A comprehensive running assessment using gait analysis, strength testing, and load evaluation — for runners dealing with injury, performance plateaus, or wanting to train smarter.",
+    "heroHeadline": "There is data in every stride. We read it.",
+    "whoItsFor": "You run — recreationally, for events, or as part of training. You're dealing with recurring injury that flares with mileage, a performance plateau you can't break, or you simply want to understand your biomechanics before problems start. You want more than someone watching you jog on a treadmill.",
+    "approach": "We combine RunScribe wearable gait analysis with VALD strength testing and a clinical movement assessment to build a complete picture of your running economy, injury risk factors, and strength deficits. You leave with a specific action plan for training and technique — not generic advice.",
+    "features": [
+      "RunScribe-based gait analysis: foot strike, cadence, braking, power asymmetry",
+      "VALD Dynamo strength and range of motion assessment",
+      "Load and training history evaluation",
+      "Personalised run coaching and injury prevention plan",
+      "Appropriate referral to strength training or injury management pathways"
+    ],
+    "relatedConditions": ["knee-pain", "ankle-sprain", "achilles-tendinopathy", "plantar-fasciitis", "back-pain"],
+    "seo": {
+      "title": "Running Assessment in Bangalore | Stance Health",
+      "description": "Technology-driven running assessment at Stance Health Bangalore. Gait analysis, strength testing, and personalised run plan."
+    },
+    "lastModified": "2026-01-01"
+  },
+  {
+    "slug": "strength-performance-training",
+    "title": "Strength & Performance Training",
+    "summary": "Supervised, assessment-led strength and conditioning for active adults, post-rehab individuals, and anyone who wants intelligent, progressive training — not a generic gym programme.",
+    "heroHeadline": "Strength built on data. Training built around you.",
+    "whoItsFor": "You've finished rehab and don't want to lose what you gained. Or you've never had real strength training guidance and want a programme grounded in your baseline numbers. You're 35+ and want to train for the long game. You're serious about performance, not just fitness.",
+    "approach": "We start with an objective strength and conditioning assessment using VALD Force Decks, Dynamo, and functional movement screens. Your programme is built from your numbers, not a template. We periodise your training, reassess regularly, and adapt the programme as your capacity grows.",
+    "features": [
+      "Full strength baseline assessment using VALD technology",
+      "Personalised S&C programme with periodised progression",
+      "Regular reassessment and programme review",
+      "Clinician-supervised sessions with S&C coach oversight",
+      "Integration with any ongoing physio or health goals"
+    ],
+    "relatedConditions": ["knee-pain", "back-pain", "osteoarthritis", "shoulder-pain"],
+    "seo": {
+      "title": "Strength & Performance Training in Bangalore | Stance Health",
+      "description": "Assessment-led strength and conditioning at Stance Health Bangalore. Intelligent, data-driven training for active adults and athletes."
+    },
+    "lastModified": "2026-01-01"
+  },
+  {
+    "slug": "corporate-wellness",
+    "title": "Corporate Wellness",
+    "summary": "MSK screening, workplace talks, and structured employee care programmes for teams affected by desk-related pain, overuse injuries, and inactivity.",
+    "heroHeadline": "Your team's MSK health is a business problem. We solve it.",
+    "whoItsFor": "You're an HR leader, wellness manager, or founder whose team is dealing with back pain, neck pain, and desk-related conditions at scale. You want more than a yoga class — you want structured screening, expert clinical advice, and a pathway for employees who need care.",
+    "approach": "We offer on-site or in-centre MSK screening camps, workplace talks on common conditions and movement habits, and a clear employee referral pathway into assessment and treatment. We customise the programme to your team size, office setup, and health goals.",
+    "features": [
+      "On-site MSK screening camps using objective assessment tools",
+      "Expert-led workplace talks on back pain, posture, and desk health",
+      "Employee assessment and treatment referral pathway",
+      "Reporting on population-level MSK risk factors",
+      "Corporate wellness partnership packages"
+    ],
+    "relatedConditions": ["back-pain", "neck-pain", "shoulder-pain", "cervical-spondylosis"],
+    "seo": {
+      "title": "Corporate Wellness Programme in Bangalore | Stance Health",
+      "description": "MSK screening, workplace talks, and employee care at Stance Health Bangalore. Reduce sick leave and improve team performance."
+    },
+    "lastModified": "2026-01-01"
+  }
+]

@@ -1,0 +1,721 @@
+[
+  {
+    "slug": "knee-pain-while-squatting",
+    "title": "Knee Pain While Squatting: Why It Happens and What to Do",
+    "summary": "Pain when squatting is rarely about the knee itself. Here's how to find the actual cause and fix it without giving up squatting.",
+    "bodyRegion": "knee",
+    "condition": "knee-pain",
+    "service": "pain-injury-recovery",
+    "contentFormat": "explainer",
+    "funnelStage": "awareness",
+    "clinicalReviewStatus": "approved",
+    "primaryCTA": "book-assessment",
+    "publishedAt": "2025-06-01",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "Knee pain during squatting is one of the most common complaints we see at Stance — in gym-goers, runners, and desk workers alike. The frustrating truth is that the knee is rarely where the problem starts."
+      },
+      {
+        "type": "heading",
+        "content": "Why the knee is usually the victim, not the culprit"
+      },
+      {
+        "type": "paragraph",
+        "content": "The knee sits between the hip and the ankle. When either of those joints aren't doing their job — weak glutes failing to control hip drop, stiff ankles unable to dorsiflex — the knee compensates. Over time, that compensation becomes painful."
+      },
+      {
+        "type": "tip",
+        "content": "Try squatting with your heels elevated on a plate or wedge. If the knee pain disappears or reduces significantly, restricted ankle dorsiflexion is almost certainly a major contributor."
+      },
+      {
+        "type": "heading",
+        "content": "The three most common drivers"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Hip weakness: Insufficient glute strength causes the knee to collapse inward (valgus) under load",
+          "Ankle stiffness: Limited dorsiflexion forces the heel to rise or the trunk to lean excessively forward",
+          "Quadriceps dominance: Overloading the anterior knee structures due to poor posterior chain contribution"
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "What an assessment actually looks for"
+      },
+      {
+        "type": "paragraph",
+        "content": "At Stance, we use VALD Force Decks and Dynamo to measure limb symmetry, hip abductor strength, and single-leg load capacity. We also assess ankle dorsiflexion range. These numbers tell us exactly which deficit is driving your pain — so treatment is targeted, not generic."
+      },
+      {
+        "type": "heading",
+        "content": "Should you stop squatting?"
+      },
+      {
+        "type": "paragraph",
+        "content": "In most cases, no. We modify the squat pattern while addressing the underlying deficit. The goal is to keep you training, not remove the thing that's causing pain and hope for the best."
+      }
+    ],
+    "seo": {
+      "title": "Knee Pain While Squatting | Stance Health",
+      "description": "Why squatting causes knee pain and how to fix it — explained by the clinical team at Stance Health Bangalore."
+    }
+  },
+  {
+    "slug": "knee-pain-while-running",
+    "title": "Knee Pain While Running: The Complete Guide",
+    "summary": "Runner's knee, IT band syndrome, patellofemoral pain — whatever the label, here's what's actually driving knee pain during running and how to address it properly.",
+    "bodyRegion": "knee",
+    "condition": "knee-pain",
+    "service": "running-assessment",
+    "contentFormat": "guide",
+    "funnelStage": "awareness",
+    "clinicalReviewStatus": "approved",
+    "primaryCTA": "book-assessment",
+    "publishedAt": "2025-05-15",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "Knee pain is the most common running injury. But the label — runner's knee, IT band syndrome, patellofemoral pain — matters less than understanding the mechanism. The knee is almost always a victim of what's happening above and below it."
+      },
+      {
+        "type": "heading",
+        "content": "What the research actually says"
+      },
+      {
+        "type": "paragraph",
+        "content": "The majority of running-related knee pain is driven by biomechanical factors that are highly modifiable: hip abductor weakness, excessive hip drop, foot strike pattern, and cadence. These are measurable and addressable without stopping running."
+      },
+      {
+        "type": "heading",
+        "content": "The gait factors that matter most"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Hip drop (Trendelenburg): Weak glute medius failing to stabilise the pelvis during single-leg stance",
+          "Cadence below 170 steps per minute: Increases ground contact time and joint loading",
+          "Overstriding: Landing too far in front of the body increases braking forces through the knee",
+          "Ankle dorsiflexion restriction: Alters load distribution up the kinetic chain"
+        ]
+      },
+      {
+        "type": "tip",
+        "content": "A cadence increase of 5–10% from your natural rate consistently reduces patellofemoral joint stress. You can measure this with any running watch or RunScribe pod."
+      },
+      {
+        "type": "heading",
+        "content": "What we do at Stance"
+      },
+      {
+        "type": "paragraph",
+        "content": "We use RunScribe for real-time gait analysis — measuring foot strike angle, braking g-force, cadence, and power asymmetry. Combined with VALD strength testing, this gives us a complete picture of what's driving your pain. You leave with specific, targeted changes to your training and technique."
+      }
+    ],
+    "seo": {
+      "title": "Knee Pain While Running | Stance Health",
+      "description": "A complete guide to running-related knee pain — causes, gait factors, and how Stance Health approaches assessment and recovery."
+    }
+  },
+  {
+    "slug": "back-pain-after-sitting",
+    "title": "Back Pain After Sitting: Why It Happens and What Actually Helps",
+    "summary": "Sitting doesn't cause back pain. But sitting a lot without the capacity to tolerate it does. Here's the difference — and what to do about it.",
+    "bodyRegion": "back",
+    "condition": "back-pain",
+    "service": "pain-injury-recovery",
+    "contentFormat": "explainer",
+    "funnelStage": "awareness",
+    "clinicalReviewStatus": "approved",
+    "primaryCTA": "book-assessment",
+    "publishedAt": "2025-04-20",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "Back pain that builds during a work day and eases when you move is one of the most common presentations in urban Bangalore. The usual advice — sit less, stand more — misses the point entirely."
+      },
+      {
+        "type": "heading",
+        "content": "The real problem: insufficient load capacity"
+      },
+      {
+        "type": "paragraph",
+        "content": "The spine can tolerate prolonged sitting. The problem is when the muscles supporting it don't have the strength or endurance to maintain load through a full working day. Pain is the signal that your capacity has been exceeded — not that sitting is inherently harmful."
+      },
+      {
+        "type": "tip",
+        "content": "If your pain improves within 20–30 minutes of moving or walking after sitting, this is a strong indicator that your spine is sensitised to sustained load — and that exercise is exactly what you need, not rest."
+      },
+      {
+        "type": "heading",
+        "content": "What usually needs addressing"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Deep core endurance: The ability to maintain spinal stability over hours of sitting",
+          "Hip flexor and hip extensor balance: Prolonged hip flexion tightens hip flexors and weakens glutes",
+          "Thoracic mobility: Stiff mid-back pushes more demand onto the lumbar spine",
+          "Movement habits: Frequency of position change, not posture alone, drives pain in prolonged sitting"
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "The ergonomics trap"
+      },
+      {
+        "type": "paragraph",
+        "content": "An ergonomic chair won't fix a capacity problem. Changing desk setup can reduce load temporarily, but the only long-term solution is building the physical capacity to handle your day. That means targeted, progressive exercise — not furniture."
+      }
+    ],
+    "seo": {
+      "title": "Back Pain After Sitting | Stance Health",
+      "description": "Why sitting causes back pain — and the real solution. Clinical insight from Stance Health Bangalore."
+    }
+  },
+  {
+    "slug": "shoulder-pain-during-gym",
+    "title": "Shoulder Pain During Gym Work: What's Actually Going On",
+    "summary": "Shoulder pain with bench press, overhead press, or pull movements is a signal — not a reason to stop training. Here's how to read it correctly.",
+    "bodyRegion": "shoulder",
+    "condition": "shoulder-pain",
+    "service": "pain-injury-recovery",
+    "contentFormat": "explainer",
+    "funnelStage": "awareness",
+    "clinicalReviewStatus": "approved",
+    "primaryCTA": "book-assessment",
+    "publishedAt": "2025-04-05",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "Shoulder pain during gym training is almost always a load and mechanics problem — not structural damage. Understanding which structure is irritated and why is the first step to training through it rather than around it."
+      },
+      {
+        "type": "heading",
+        "content": "The most common culprits"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Subacromial impingement: Pain at the top of range with pressing or overhead — usually from poor scapular control",
+          "AC joint irritation: Pain localised to the top of the shoulder, often in heavy bench pressers",
+          "Biceps tendinopathy: Anterior shoulder pain, often worsening with curls and supination",
+          "Rotator cuff tendinopathy: Diffuse shoulder pain with overhead or loaded internal rotation movements"
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "Why scapular control matters more than people think"
+      },
+      {
+        "type": "paragraph",
+        "content": "The subacromial space — the gap through which the rotator cuff tendons pass — narrows when the scapula doesn't rotate properly during arm elevation. Strengthening the lower trapezius, serratus anterior, and rotator cuff muscles restores this space and removes the mechanical cause of pain."
+      },
+      {
+        "type": "tip",
+        "content": "Most shoulder impingement presentations improve significantly with 4–6 weeks of targeted scapular and rotator cuff strengthening — without stopping gym training entirely."
+      }
+    ],
+    "seo": {
+      "title": "Shoulder Pain During Gym | Stance Health",
+      "description": "Why your shoulder hurts during gym training and how to fix the mechanics — explained by Stance Health Bangalore."
+    }
+  },
+  {
+    "slug": "ankle-sprain-return-to-sport",
+    "title": "Ankle Sprain: Why 'Rest and Ice' Isn't Enough for a Full Return",
+    "summary": "The ankle sprain is the most under-rehabbed sports injury. Here's what complete recovery actually looks like — and why skipping it leads to recurrence.",
+    "bodyRegion": "ankle",
+    "condition": "ankle-sprain",
+    "service": "sports-injury-return-to-sport",
+    "contentFormat": "guide",
+    "funnelStage": "consideration",
+    "clinicalReviewStatus": "approved",
+    "primaryCTA": "book-assessment",
+    "publishedAt": "2025-03-10",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "Ankle sprains have a 70% recurrence rate in athletes who return to sport without completing structured rehabilitation. That number is not inevitable — it's the result of incomplete recovery being treated as complete recovery."
+      },
+      {
+        "type": "heading",
+        "content": "What actually needs to be restored"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ligament integrity: The lateral ligament complex needs time to heal — RICE alone doesn't restore structural integrity",
+          "Peroneal muscle strength: These muscles are the active stabilisers of the lateral ankle; they are weakened by every sprain",
+          "Proprioception: The ankle's positional sense is disrupted by ligament damage and must be actively retrained",
+          "Reactive stability: The ability to recover from unexpected perturbations — tested under sport-specific conditions"
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "The three-phase approach"
+      },
+      {
+        "type": "paragraph",
+        "content": "Phase 1 (days 1–7): Reduce swelling, restore range of motion, begin gentle weight-bearing. Phase 2 (weeks 2–4): Rebuild strength and single-leg balance. Phase 3 (weeks 4–8): Sport-specific loading, reactive agility, return-to-training criteria testing."
+      },
+      {
+        "type": "tip",
+        "content": "A single-leg balance test at 8 weeks post-sprain is a reliable indicator of readiness to return. At Stance, we use VALD Force Decks to make this objective — not just clinical impression."
+      }
+    ],
+    "seo": {
+      "title": "Ankle Sprain Return to Sport | Stance Health",
+      "description": "Complete ankle sprain rehabilitation guide — what rest and ice misses, and how Stance Health Bangalore approaches full recovery."
+    }
+  },
+  {
+    "slug": "return-to-gym-after-back-pain",
+    "title": "How to Return to the Gym After Back Pain",
+    "summary": "Going back to the gym after a back pain episode doesn't have to be tentative or scary. Here's a structured approach to doing it right.",
+    "bodyRegion": "back",
+    "condition": "back-pain",
+    "service": "strength-performance-training",
+    "contentFormat": "guide",
+    "funnelStage": "consideration",
+    "clinicalReviewStatus": "approved",
+    "primaryCTA": "book-assessment",
+    "publishedAt": "2025-02-25",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "Fear of re-injury keeps many people out of the gym long after their back has recovered. The research is clear: graded return to loading is better for long-term back health than avoidance. Here's how to do it intelligently."
+      },
+      {
+        "type": "heading",
+        "content": "The principle: progressive load, not progressive avoidance"
+      },
+      {
+        "type": "paragraph",
+        "content": "Your back got better with rest — now it needs to earn the capacity to handle load. Every time you avoid a movement because you're afraid it might hurt, you reinforce the neural pathway that says that movement is dangerous. Graded exposure is the only way to break that cycle."
+      },
+      {
+        "type": "heading",
+        "content": "The recommended return sequence"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Start with core endurance work: planks, dead bugs, bird dogs — building spinal stability without compression",
+          "Introduce hinge patterns: Romanian deadlifts with light load, focusing on hip hinge mechanics",
+          "Rebuild squat capacity: goblet squats, box squats before returning to barbell",
+          "Return to pulling: cable rows, lat pulldowns before heavy barbell rows",
+          "Reintroduce pressing: incline press before flat bench; overhead press last"
+        ]
+      },
+      {
+        "type": "tip",
+        "content": "A return-to-gym plan should be based on your current strength baseline — not what you were lifting before the episode. At Stance, we test this objectively and build your programme from your numbers."
+      }
+    ],
+    "seo": {
+      "title": "Return to Gym After Back Pain | Stance Health",
+      "description": "A structured, safe guide to returning to gym training after back pain — from the clinical team at Stance Health Bangalore."
+    }
+  },
+  {
+    "slug": "strength-training-after-40",
+    "title": "Strength Training After 40: What Changes and What Doesn't",
+    "summary": "Training in your 40s, 50s, and beyond is not just possible — it's one of the most important things you can do for long-term health. Here's what actually changes with age.",
+    "bodyRegion": "back",
+    "condition": "osteoarthritis",
+    "service": "strength-performance-training",
+    "contentFormat": "guide",
+    "funnelStage": "awareness",
+    "clinicalReviewStatus": "approved",
+    "primaryCTA": "book-assessment",
+    "publishedAt": "2025-02-10",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "The body at 40, 50, or 60 is not broken. It's different. Understanding those differences lets you train intelligently — and achieve things in your 50s that you couldn't in your 30s because you're finally doing it properly."
+      },
+      {
+        "type": "heading",
+        "content": "What actually changes with age"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Recovery speed: You need more time between hard sessions. Two days recovery instead of one is normal and appropriate.",
+          "Hormonal environment: Lower testosterone and oestrogen reduce the anabolic signal — you need to train harder and smarter to achieve the same adaptation.",
+          "Tendon stiffness: Tendons become stiffer and more susceptible to load spikes. Gradual progression is non-negotiable.",
+          "Muscle fibre composition: Type II fast-twitch fibres reduce faster with age — which means power training (not just strength) becomes important."
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "What doesn't change"
+      },
+      {
+        "type": "paragraph",
+        "content": "Muscle adapts to load regardless of age. Strength gains in your 60s are well-documented in the literature. The principle of progressive overload still applies. You can still get significantly stronger — you just need an intelligent programme."
+      },
+      {
+        "type": "tip",
+        "content": "The biggest mistake over-40 lifters make is training too conservatively. Muscles need sufficient stimulus to grow. The second biggest mistake is training too aggressively. An objective baseline assessment removes the guesswork."
+      }
+    ],
+    "seo": {
+      "title": "Strength Training After 40 | Stance Health",
+      "description": "What changes with strength training after 40 — and what doesn't. Evidence-based guidance from Stance Health Bangalore."
+    }
+  },
+  {
+    "slug": "strength-training-for-runners",
+    "title": "Why Strength Training Is Non-Negotiable for Runners",
+    "summary": "Running fitness and running strength are not the same thing. Here's why every runner needs a structured strength programme — and what it should look like.",
+    "bodyRegion": "knee",
+    "condition": "knee-pain",
+    "service": "running-assessment",
+    "contentFormat": "guide",
+    "funnelStage": "awareness",
+    "clinicalReviewStatus": "approved",
+    "primaryCTA": "book-assessment",
+    "publishedAt": "2025-02-18",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "Most running injuries have a strength component. Yet most runners don't strength train — or they do it inconsistently, without the structure that actually creates adaptation. This is one of the most correctable problems in running medicine."
+      },
+      {
+        "type": "heading",
+        "content": "The injury prevention evidence"
+      },
+      {
+        "type": "paragraph",
+        "content": "Studies consistently show that runners who follow a structured strength programme have significantly fewer injuries than those who don't. The mechanism is simple: stronger muscles absorb more load, reducing the stress transferred to tendons, cartilage, and bones."
+      },
+      {
+        "type": "heading",
+        "content": "The performance mechanism"
+      },
+      {
+        "type": "paragraph",
+        "content": "Stronger tendons store and return more elastic energy — reducing the metabolic cost of each stride. Runners with greater leg stiffness maintain pace more efficiently in the late stages of a race. This is measurable and trainable."
+      },
+      {
+        "type": "heading",
+        "content": "What to focus on"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Single-leg strength: Hip hinge and squat patterns under load (RDLs, split squats, single-leg press)",
+          "Calf and Achilles loading: Heavy slow resistance for tendon stiffness and injury prevention",
+          "Hip abductor strength: Glute medius work to control lateral knee movement",
+          "Reactive strength: Box jumps, pogo jumps — to develop the elastic properties that matter for running economy"
+        ]
+      },
+      {
+        "type": "tip",
+        "content": "Two sessions per week of targeted strength work is sufficient during a running training block. More is not always better — consistency and progressive load matter more than frequency."
+      }
+    ],
+    "seo": {
+      "title": "Strength Training for Runners | Stance Health",
+      "description": "Why runners need strength training and what it should look like — evidence-based guidance from Stance Health Bangalore."
+    }
+  },
+  {
+    "slug": "acl-rehab-phases",
+    "title": "ACL Rehab: What to Expect at Every Stage of Recovery",
+    "summary": "A torn ACL is one of the most feared injuries in sport — but with the right protocol, a full return is not just possible, it's the norm. Here's what your recovery timeline actually looks like.",
+    "bodyRegion": "knee",
+    "condition": "acl-injury",
+    "service": "post-surgery-rehab",
+    "contentFormat": "guide",
+    "funnelStage": "consideration",
+    "clinicalReviewStatus": "approved",
+    "primaryCTA": "book-assessment",
+    "publishedAt": "2025-04-10",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "An ACL rupture brings your training to a full stop, but it doesn't have to end your sporting life. At Stance, we've guided athletes through reconstruction and back to competitive sport — and the single biggest factor in outcome quality is the quality of the rehabilitation protocol."
+      },
+      {
+        "type": "heading",
+        "content": "Phase 1 — Weeks 0–6: Protecting the Graft"
+      },
+      {
+        "type": "paragraph",
+        "content": "Immediately after surgery, the priority is protecting the new graft while managing swelling and beginning to restore range of motion. You'll work on quad activation, straight-leg raises, and gentle knee flexion. Full weight-bearing in an extension brace is typically introduced within the first week."
+      },
+      {
+        "type": "tip",
+        "content": "Ice, elevation, and compression in the first 72 hours significantly reduce effusion and allow faster progression into active rehab."
+      },
+      {
+        "type": "heading",
+        "content": "Phase 2 — Weeks 6–12: Rebuilding Strength"
+      },
+      {
+        "type": "paragraph",
+        "content": "Once range of motion is restored and swelling is controlled, the focus shifts to regaining quad and hamstring strength. Closed-chain exercises — squats, leg press, step-ups — form the backbone of this phase. We use VALD Force Decks to objectively measure limb symmetry, targeting a Limb Symmetry Index (LSI) above 70% before progressing."
+      },
+      {
+        "type": "heading",
+        "content": "Phase 3 — Months 3–6: Neuromuscular Control"
+      },
+      {
+        "type": "paragraph",
+        "content": "Strength alone isn't enough to return safely to sport. This phase introduces progressive plyometrics, agility drills, and sport-specific movement patterns. Balance and proprioception training is critical — the graft is strong enough to tolerate load, but the nervous system needs retraining to protect the joint in dynamic situations."
+      },
+      {
+        "type": "heading",
+        "content": "Phase 4 — Months 6–9: Return-to-Sport Testing"
+      },
+      {
+        "type": "paragraph",
+        "content": "Return to sport is gated by objective criteria, not the calendar. We use VALD Force Decks to test limb symmetry in strength and explosive power, targeting LSI above 90% before full return. This reduces re-injury risk significantly compared to time-based clearance."
+      }
+    ],
+    "seo": {
+      "title": "ACL Rehab Phases | Stance Health",
+      "description": "A complete guide to ACL rehabilitation — from graft protection to return-to-sport testing. Clinical guidance from Stance Health Bangalore."
+    }
+  },
+  {
+    "slug": "how-to-improve-running-speed",
+    "title": "How to Improve Running Speed: A Data-Driven Approach",
+    "summary": "Running faster isn't just about running more. Here's what the evidence says about speed development, and why strength and mechanics matter as much as mileage.",
+    "bodyRegion": "knee",
+    "condition": "knee-pain",
+    "service": "running-assessment",
+    "contentFormat": "performance article",
+    "funnelStage": "awareness",
+    "clinicalReviewStatus": "approved",
+    "primaryCTA": "book-assessment",
+    "publishedAt": "2025-01-15",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "Most recreational runners plateau not because they lack aerobic fitness, but because they haven't addressed the mechanical and strength factors that determine speed. Here's what actually works."
+      },
+      {
+        "type": "heading",
+        "content": "The three pillars of running speed"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Stride length and cadence: Speed = stride length × cadence. Most runners can improve both with targeted work.",
+          "Leg stiffness: The ability of the leg to act like a spring — storing and returning elastic energy with each stride. This is trainable through strength and reactive work.",
+          "Running economy: The oxygen cost of running at a given pace. Strength training, particularly heavy lower body work, consistently improves running economy."
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "What gait analysis tells us"
+      },
+      {
+        "type": "paragraph",
+        "content": "RunScribe pods measure braking g-force, cadence, foot strike angle, and contact time in real time. Reducing braking force — caused by overstriding — alone can improve your pace without any change in fitness. These are mechanical inefficiencies that don't show up in training data but do show up in race results."
+      },
+      {
+        "type": "tip",
+        "content": "Increasing cadence by 5% from your natural rate reduces ground contact time, improves leg stiffness, and reduces knee joint stress — three speed and injury benefits from one change."
+      }
+    ],
+    "seo": {
+      "title": "How to Improve Running Speed | Stance Health",
+      "description": "Evidence-based strategies to run faster — strength, mechanics, and gait explained by Stance Health Bangalore."
+    }
+  },
+  {
+    "slug": "ltad-for-young-athletes",
+    "title": "Long-Term Athlete Development: What Parents and Coaches Need to Know",
+    "summary": "How you train a young athlete shapes not just their performance but their injury risk for life. Here's what LTAD means and why it matters.",
+    "bodyRegion": "knee",
+    "condition": "acl-injury",
+    "service": "sports-injury-return-to-sport",
+    "contentFormat": "guide",
+    "funnelStage": "awareness",
+    "clinicalReviewStatus": "approved",
+    "primaryCTA": "book-assessment",
+    "publishedAt": "2025-01-05",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "Early specialisation, overtraining, and premature intensification are the three biggest drivers of youth athlete burnout and injury. Long-Term Athlete Development (LTAD) is the framework that prevents all three."
+      },
+      {
+        "type": "heading",
+        "content": "What LTAD actually means"
+      },
+      {
+        "type": "paragraph",
+        "content": "LTAD is a systematic approach to training young athletes that matches physical demands to biological development — not chronological age. A 14-year-old who is biologically 12 needs very different loading than one who is biologically 16, even if they're in the same school year."
+      },
+      {
+        "type": "heading",
+        "content": "The dangers of early specialisation"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Overuse injury: Young athletes who specialise in one sport before 14 have significantly higher injury rates",
+          "Burnout: Early specialisation is one of the strongest predictors of dropout by age 18",
+          "Reduced movement vocabulary: Multi-sport athletes develop richer motor patterns that translate to better long-term athletic performance"
+        ]
+      },
+      {
+        "type": "tip",
+        "content": "The research consistently shows that late specialisers (post-16) reach elite levels at the same rate as early specialisers — with lower injury rates and longer careers."
+      }
+    ],
+    "seo": {
+      "title": "Long-Term Athlete Development for Young Athletes | Stance Health",
+      "description": "What parents and coaches need to know about LTAD — explained by Stance Health Bangalore."
+    }
+  },
+  {
+    "slug": "neck-stiffness-after-work",
+    "title": "Neck Stiffness After Work: What's Causing It and How to Fix It",
+    "summary": "That end-of-day neck stiffness is not inevitable and not something you have to live with. Here's the cause and the solution.",
+    "bodyRegion": "neck",
+    "condition": "neck-pain",
+    "service": "pain-injury-recovery",
+    "contentFormat": "explainer",
+    "funnelStage": "awareness",
+    "clinicalReviewStatus": "approved",
+    "primaryCTA": "book-assessment",
+    "publishedAt": "2025-01-20",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "Neck stiffness that builds through a work day and eases after you move is a capacity problem — not a posture problem. Your neck can handle sustained positions. The issue is whether it has the strength and endurance to do it for 8 hours."
+      },
+      {
+        "type": "heading",
+        "content": "The deep cervical flexors: the muscle group no one trains"
+      },
+      {
+        "type": "paragraph",
+        "content": "The deep cervical flexors are the core muscles of the neck. When they fatigue, the superficial muscles — the ones that create tension — take over. This is the mechanism behind end-of-day neck stiffness and tension headaches."
+      },
+      {
+        "type": "heading",
+        "content": "What helps (and what doesn't)"
+      },
+      {
+        "type": "list",
+        "items": [
+          "What helps: Deep cervical flexor strengthening, thoracic mobility work, regular position changes through the day",
+          "What doesn't help: Ergonomic chair adjustments without addressing the underlying strength deficit",
+          "What helps short-term but not long-term: Massage and heat — they reduce muscle tension temporarily but don't build capacity"
+        ]
+      },
+      {
+        "type": "tip",
+        "content": "Chin tucks — gently drawing the chin back to create a double chin — are one of the most effective exercises for deep cervical flexor activation. 3 sets of 10 reps, twice a day, consistently for 6 weeks."
+      }
+    ],
+    "seo": {
+      "title": "Neck Stiffness After Work | Stance Health",
+      "description": "Why your neck stiffens during the work day and what to do about it — explained by Stance Health Bangalore."
+    }
+  },
+  {
+    "slug": "heel-pain-in-the-morning",
+    "title": "Heel Pain in the Morning: Understanding and Treating Plantar Fasciitis",
+    "summary": "That sharp pain when you take your first steps in the morning is almost always plantar fasciitis — and it responds very well to the right loading approach.",
+    "bodyRegion": "ankle",
+    "condition": "plantar-fasciitis",
+    "service": "pain-injury-recovery",
+    "contentFormat": "explainer",
+    "funnelStage": "awareness",
+    "clinicalReviewStatus": "approved",
+    "primaryCTA": "book-assessment",
+    "publishedAt": "2025-03-15",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "Plantar fasciitis is the most common cause of heel pain. The classic presentation — sharp pain with the first steps in the morning that eases after a few minutes, then worsens again after long periods of standing — is almost diagnostic on its own."
+      },
+      {
+        "type": "heading",
+        "content": "Why it's a loading problem, not an inflammation problem"
+      },
+      {
+        "type": "paragraph",
+        "content": "Plantar fasciitis was historically classified as an inflammatory condition. Current evidence shows it is a tendinopathy — a failure of the tissue to adapt to load. This changes the treatment completely: anti-inflammatories and rest are not the primary answer."
+      },
+      {
+        "type": "heading",
+        "content": "What the evidence supports"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Heavy slow resistance loading: Progressive calf raises (with particular emphasis on the soleus) with load sufficient to cause discomfort during, resolving within 24 hours after",
+          "Stretching: Plantar fascia stretching in the morning before first steps reduces morning pain acutely",
+          "Load management: Reducing overall volume temporarily while increasing tissue capacity with specific loading"
+        ]
+      },
+      {
+        "type": "tip",
+        "content": "Frozen water bottle rolling is a popular treatment — but the evidence for it is weak. Heavy slow calf loading has consistent evidence. Do the loading."
+      }
+    ],
+    "seo": {
+      "title": "Heel Pain in the Morning | Stance Health",
+      "description": "Morning heel pain explained — why it happens and what actually treats plantar fasciitis. From Stance Health Bangalore."
+    }
+  },
+  {
+    "slug": "ankle-pain-while-running",
+    "title": "Ankle Pain While Running: Causes, Assessment, and Recovery",
+    "summary": "Ankle pain during or after running has several distinct causes — and the approach differs significantly between them. Here's how to identify yours.",
+    "bodyRegion": "ankle",
+    "condition": "achilles-tendinopathy",
+    "service": "running-assessment",
+    "contentFormat": "explainer",
+    "funnelStage": "awareness",
+    "clinicalReviewStatus": "approved",
+    "primaryCTA": "book-assessment",
+    "publishedAt": "2025-02-05",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "Ankle pain during running is not a single diagnosis. The location, character, and behaviour of the pain tells you a great deal about the structure involved — and the approach to fixing it differs significantly."
+      },
+      {
+        "type": "heading",
+        "content": "The main causes by location"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Back of heel (Achilles): Tendinopathy — responds to progressive loading, not rest",
+          "Outer ankle: Lateral ligament complex — often residual instability from an under-rehabbed sprain",
+          "Inner ankle: Posterior tibial tendinopathy — associated with flat foot mechanics",
+          "Front of ankle: Anterior impingement — often from a forefoot strike pattern or previous injury"
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "When gait analysis is essential"
+      },
+      {
+        "type": "paragraph",
+        "content": "Many ankle issues during running are driven by what's happening higher up the chain — hip drop, overstriding, or asymmetric loading. RunScribe analysis lets us see exactly where force is being distributed and identify the upstream cause of ankle stress."
+      },
+      {
+        "type": "tip",
+        "content": "If your ankle pain appears after a specific mileage threshold on your long run, this is a load tolerance problem. We can identify your current threshold and build a progressive programme that expands it."
+      }
+    ],
+    "seo": {
+      "title": "Ankle Pain While Running | Stance Health",
+      "description": "Common causes of running-related ankle pain and how Stance Health Bangalore approaches assessment and recovery."
+    }
+  }
+]
