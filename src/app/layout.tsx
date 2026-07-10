@@ -4,6 +4,8 @@ import { Montserrat, Unbounded } from "next/font/google";
 import "./globals.css";
 import MarketingScripts, { GtmNoScript } from "@/components/MarketingScripts";
 import TrackingInit from "@/components/TrackingInit";
+import LinkTracker from "@/components/LinkTracker";
+import AnalyticsProvider from "@/components/AnalyticsProvider";
 import { BASE_URL, GSC_VERIFICATION } from "@/lib/constants";
 
 const montserrat = Montserrat({
@@ -187,7 +189,10 @@ export default function RootLayout({
         {/* Capture & persist UTM / click-ID params on every navigation */}
         <Suspense fallback={null}>
           <TrackingInit />
+          <AnalyticsProvider />
         </Suspense>
+        {/* Forward captured params onto every internal/external link on click */}
+        <LinkTracker />
         {children}
       </body>
     </html>
