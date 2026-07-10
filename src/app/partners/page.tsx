@@ -5,6 +5,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ASSETS } from "@/lib/constants";
+import { track } from "@/lib/analytics";
 
 export default function PartnersPage() {
   const [form, setForm] = useState({
@@ -24,6 +25,19 @@ export default function PartnersPage() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+
+    // Non-PII analytics only — never send name/email/message to analytics.
+    const formMeta = {
+      form_name: "partner_contact",
+      role: form.role,
+      has_organisation: Boolean(form.organisation.trim()),
+      has_message: Boolean(form.message.trim()),
+    };
+    track("web_form_submit", formMeta);
+    // Client-side lead capture (form has no backend yet); the dashboard team
+    // wires the authoritative server-side web_lead_created later.
+    track("web_lead_created", { ...formMeta, lead_type: "partner" });
+
     setSubmitted(true);
   }
 

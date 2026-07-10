@@ -1,22 +1,28 @@
 "use client";
 
-import { useCallback } from "react";
+import { useState, useEffect } from "react";
 import { buildTrackedUrl } from "@/lib/tracking";
 import { BOOKING_URL, APP_STORE_URL, PLAY_STORE_URL } from "@/lib/constants";
 
 /**
  * Returns tracked versions of the main CTA URLs.
- * Call this in any Client Component that renders a CTA link.
  *
- * Falls back to the static constant URLs during SSR (no-op — sessionStorage
- * is unavailable server-side, so buildTrackedUrl returns the base URL).
+ * The initial render (both SSR and the first client paint) returns the static
+ * base URLs so the SSR-rendered HTML and the first client render are identical
+ * — no hydration mismatch. After mount, the URLs are upgraded with any stored
+ * UTM / click-ID params from localStorage.
  */
 export function useCta() {
-  const tracked = useCallback((base: string) => buildTrackedUrl(base), []);
+  const [bookingUrl,   setBookingUrl]   = useState(BOOKING_URL);
+  const [appStoreUrl,  setAppStoreUrl]  = useState(APP_STORE_URL);
+  const [playStoreUrl, setPlayStoreUrl] = useState(PLAY_STORE_URL);
 
-  return {
-    bookingUrl:  tracked(BOOKING_URL),
-    appStoreUrl: tracked(APP_STORE_URL),
-    playStoreUrl: tracked(PLAY_STORE_URL),
-  };
+  useEffect(() => {
+    // Runs only after hydration — localStorage is safe to read here.
+    setBookingUrl(buildTrackedUrl(BOOKING_URL));
+    setAppStoreUrl(buildTrackedUrl(APP_STORE_URL));
+    setPlayStoreUrl(buildTrackedUrl(PLAY_STORE_URL));
+  }, []);
+
+  return { bookingUrl, appStoreUrl, playStoreUrl };
 }

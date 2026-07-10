@@ -10,6 +10,17 @@ export const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID ?? ""; // e.g. "1
 // Google Search Console site verification token (meta tag approach)
 export const GSC_VERIFICATION = process.env.NEXT_PUBLIC_GSC_VERIFICATION ?? "";
 
+// ── Firebase config (used by analytics.ts for Firebase Analytics) ─────────
+export const FIREBASE_CONFIG = {
+  apiKey:            process.env.NEXT_PUBLIC_FIREBASE_API_KEY ?? "",
+  authDomain:        process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN ?? "",
+  projectId:         process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID ?? "",
+  storageBucket:     process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET ?? "",
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID ?? "",
+  appId:             process.env.NEXT_PUBLIC_FIREBASE_APP_ID ?? "",
+  measurementId:     process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID ?? "", // e.g. "G-XXXXXXXXXX"
+} as const;
+
 // ── CTA destinations ──────────────────────────────────────────────────────
 const DASHBOARD_BASE = "https://book.stance.health";
 const APP_STORE_BASE  = "https://apps.apple.com/us/app/stance-health/id6757695513";
