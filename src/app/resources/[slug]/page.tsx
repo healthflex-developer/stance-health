@@ -179,7 +179,7 @@ export default async function ResourcePage({ params }: Props) {
               Our clinical team is ready to build a personalised plan around your goals.
             </p>
             <a
-              href={`https://dashboard.stance.health/onboarding-patient?utm_source=website&utm_medium=cta&utm_campaign=resource_${slug}`}
+              href={`https://book.stance.health/stance-health?utm_source=website&utm_medium=cta&utm_campaign=resource_${slug}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"

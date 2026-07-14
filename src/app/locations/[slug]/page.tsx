@@ -197,7 +197,7 @@ export default async function LocationPage({ params }: Props) {
               Start with a comprehensive assessment and get a personalised recovery or performance plan.
             </p>
             <a
-              href={`https://dashboard.stance.health/onboarding-patient?utm_source=website&utm_medium=cta&utm_campaign=location_page&utm_content=${slug}`}
+              href={`https://book.stance.health/stance-health?utm_source=website&utm_medium=cta&utm_campaign=location_page&utm_content=${slug}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"

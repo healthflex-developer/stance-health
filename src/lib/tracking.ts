@@ -199,7 +199,7 @@ export function captureTrackingParams(): TrackingData {
  * Append the forwardable tracking params to a destination URL.
  *
  * Works for both relative internal paths (`/about`, `/conditions/x?foo=1`) and
- * absolute external URLs (`https://dashboard.stance.health/...`). Params already
+ * absolute external URLs (`https://book.stance.health/...`). Params already
  * present in the destination are never overwritten. Non-http schemes
  * (`tel:`, `mailto:`, `#…`, `javascript:`) are returned untouched.
  *

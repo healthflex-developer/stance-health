@@ -204,7 +204,7 @@ export default async function ConditionPage({ params }: Props) {
               Our clinical team uses objective testing to build a personalised plan around your specific needs.
             </p>
             <a
-              href={`https://dashboard.stance.health/onboarding-patient?utm_source=website&utm_medium=cta&utm_campaign=condition_${condition.slug}`}
+              href={`https://book.stance.health/stance-health?utm_source=website&utm_medium=cta&utm_campaign=condition_${condition.slug}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"

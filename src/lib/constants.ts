@@ -22,7 +22,7 @@ export const FIREBASE_CONFIG = {
 } as const;
 
 // ── CTA destinations ──────────────────────────────────────────────────────
-const DASHBOARD_BASE = "https://book.stance.health";
+const DASHBOARD_BASE = "https://book.stance.health/stance-health";
 const APP_STORE_BASE  = "https://apps.apple.com/us/app/stance-health/id6757695513";
 const PLAY_STORE_BASE = "https://play.google.com/store/apps/details?id=com.stance.health";
 

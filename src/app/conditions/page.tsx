@@ -103,7 +103,7 @@ export default async function ConditionsHubPage() {
               Book an assessment and we&apos;ll identify the root cause with objective testing.
             </p>
             <a
-              href="https://dashboard.stance.health/onboarding-patient?utm_source=website&utm_medium=cta&utm_campaign=conditions_hub"
+              href="https://book.stance.health/stance-health?utm_source=website&utm_medium=cta&utm_campaign=conditions_hub"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
