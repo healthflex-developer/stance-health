@@ -72,7 +72,7 @@ export default function AboutPage() {
               About Us
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
-              We are Stance
+              We are <span className="text-[#cdfe71]">Stance</span> 
             </h1>
             <p className="text-white/70 text-lg max-w-2xl">
               Evidence-backed Orthopaedic Rehab, where Medical Science &amp; Technology are

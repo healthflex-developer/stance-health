@@ -11,22 +11,28 @@ const CENTERS = [
     name: "HSR Layout",
     phone: "+91 6360014559",
     email: "hsr@stance.health",
-    address: "2nd Floor, 1555, 19th Main Rd, Agara, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102",
+    address:
+      "2nd Floor, 1555, 19th Main Rd, Agara, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102",
     image: `${ASSETS}/HSR.JPG`,
+    maps: "https://maps.app.goo.gl/TfixHcJfTjjPMyKq8",
   },
   {
     name: "Whitefield",
     phone: "+91 6361056456",
     email: "wfld@stance.health",
-    address: "4th Floor, Kailash Parbat, No. 149, Doddanakundi, 2nd Phase, Hoodi, Whitefield, Bengaluru, Karnataka 560048",
+    address:
+      "4th Floor, Kailash Parbat, No. 149, Doddanakundi, 2nd Phase, Hoodi, Whitefield, Bengaluru, Karnataka 560048",
     image: `${ASSETS}/whitefield.webp`,
+    maps: "https://maps.google.com/?q=4th+Floor,+Kailash+Parbat,+No.+149,+Doddanakundi,+2nd+Phase,+Hoodi,+Whitefield,+Bengaluru,+Karnataka+560048",
   },
   {
     name: "Indiranagar",
     phone: "+91 9008417804",
     email: "indiranagar@stance.health",
-    address: "3rd Floor, Srinivasan Towers, ESI Hospital Road, Defence Colony, Indiranagar, Bengaluru, Karnataka 560038",
+    address:
+      "3rd Floor, Srinivasan Towers, ESI Hospital Road, Defence Colony, Indiranagar, Bengaluru, Karnataka 560038",
     image: `${ASSETS}/indra.webp`,
+    maps: "https://maps.app.goo.gl/su4xnN965KRdK47s9",
   },
 ];
 
@@ -78,14 +84,19 @@ export default function Centers() {
               return (
                 <div
                   key={center.name}
-                  onClick={() => !isActive && goTo(i)}
-                  className={`absolute inset-0 rounded-2xl overflow-hidden border border-white/10 transition-all duration-500 ease-out ${
-                    isActive
-                      ? "z-10 scale-100 opacity-100 cursor-default"
-                      : isVisible
+                  onClick={() => {
+                    if (isActive) {
+                      window.open(center.maps, "_blank", "noopener,noreferrer");
+                    } else {
+                      goTo(i);
+                    }
+                  }}
+                  className={`absolute inset-0 rounded-2xl overflow-hidden border border-white/10 transition-all duration-500 ease-out ${isActive
+                    ? "z-10 scale-100 opacity-100 cursor-pointer"
+                    : isVisible
                       ? "z-0 opacity-60 cursor-pointer"
                       : "z-0 opacity-0 pointer-events-none"
-                  }`}
+                    }`}
                   style={{
                     transform: isActive
                       ? "translateX(0) scale(1)"
@@ -137,9 +148,8 @@ export default function Centers() {
               key={center.name}
               onClick={() => goTo(i)}
               aria-label={`Go to ${center.name}`}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                i === active ? "w-6 bg-[#cdfe71]" : "w-2 bg-white/20"
-              }`}
+              className={`h-2 rounded-full transition-all duration-300 ${i === active ? "w-6 bg-[#cdfe71]" : "w-2 bg-white/20"
+                }`}
             />
           ))}
         </div>

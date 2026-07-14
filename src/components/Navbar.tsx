@@ -4,14 +4,13 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ASSETS, NAV_LINKS } from "@/lib/constants";
-import { useCta } from "@/hooks/useCta";
+import BookingCta from "@/components/BookingCta";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [programsOpen, setProgramsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const { bookingUrl } = useCta();
   const programs = NAV_LINKS.find((l) => l.label === "Programs");
 
   useEffect(() => {
@@ -23,11 +22,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${scrolled
           ? "bg-[#132644]/95 backdrop-blur-sm border-b border-white/5"
           : "bg-transparent border-b border-transparent"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -44,7 +42,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+          <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
             {NAV_LINKS.map((link) =>
               link.children ? (
                 <div key={link.label} className="relative group">
@@ -91,15 +89,13 @@ export default function Navbar() {
           </nav>
 
           {/* CTA */}
-          <div className="hidden md:block">
-            <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary text-sm">
-              Book an Appointment
-            </a>
+          <div className="hidden lg:block">
+            <BookingCta className="btn-primary text-sm" label="Book an Appointment" />
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile/Tablet menu button */}
           <button
-            className="md:hidden text-white p-2"
+            className="lg:hidden text-white p-2"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -116,9 +112,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile/Tablet Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-[#132644] border-t border-white/10 px-4 py-4 space-y-1">
+        <div className="lg:hidden bg-[#132644] border-t border-white/10 px-4 py-4 space-y-1">
           {NAV_LINKS.map((link) =>
             link.children ? (
               <div key={link.label}>
@@ -157,17 +153,29 @@ export default function Navbar() {
               </Link>
             )
           )}
+
+          <BookingCta
+            className="
+    relative
+    inline-flex
+    items-center
+    justify-center
+    rounded-full
+    bg-white
+    px-6
+    py-3
+    text-[#132644]
+    font-bold
+    transition-all
+    duration-200
+    hover:bg-[#cdfe71]
+  "
+            label="Book an Appointment"
+          />
+          {/* 
           <div className="pt-3">
-            <a
-              href={bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary text-sm w-full text-center block"
-              onClick={() => setMobileOpen(false)}
-            >
-              Book an Appointment
-            </a>
-          </div>
+            <BookingCta className="btn-primary text-sm w-full text-center block" label="Book an Appointment" />
+          </div> */}
         </div>
       )}
     </header>
