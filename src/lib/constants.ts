@@ -215,35 +215,6 @@ export const TEAM = [
     image: `${ASSETS}/team-4.svg`,
     bio: "With a commitment to precise diagnosis and evidence-based treatment, Surbhi helps you manage and overcome musculoskeletal conditions. Her focus is on pain management and performance enhancement, ensuring you achieve your objectives while minimizing injury risks. Through tailored programs and education, she empowers you to reach your full athletic potential.",
   },
- //extra
- {
-    name: "Sneha Yadav",
-    role: "Lead Musculoskeletal and Sports Physiotherapist",
-    experience: "1+ years experience",
-    image: `${ASSETS}/team-1.svg`,
-    bio: "Sneha brings over 12 years of experience in musculoskeletal and sports physiotherapy, specializing in manual therapy techniques such as Maitland, McKenzie, Clinical Pilates, and Butler's Neurodynamic treatments. Her professional journey includes collaborations with esteemed institutions like Sakra World Hospital and YOS Sports Health Specialists, as well as working closely with industry's best physiotherapists and sports medicine doctors.",
-  },
-  {
-    name: "Neha",
-    role: "Senior Musculoskeletal and Sports Physiotherapist",
-    experience: "4+ years experience",
-    image: `${ASSETS}/team-2.svg`,
-    bio: "As an athlete turned physiotherapist, Sumesh's mission at Stance is to guide you from injury recovery to performance enhancement. With his experience in various sports and a deep understanding of human anatomy, he provides personalized care tailored to your needs. His holistic approach ensures accurate diagnosis and prevention of future injuries, helping you achieve a better tomorrow.",
-  },
-  {
-    name: "Visahl K Raj",
-    role: "Senior Strength and Conditioning Coach",
-    experience: "5+ years experience",
-    image: `${ASSETS}/team-3.svg`,
-    bio: "At Stance, Arjun's goal is to help you achieve your fitness aspirations through personalized, meticulously crafted training programs. By understanding your unique needs, he tailors each plan to guide you towards peak performance and a healthier lifestyle. Together, you will unlock your full potential and ensure every step is taken towards your success.",
-  },
-  {
-    name: "Priyam",
-    role: "Senior Musculoskeletal and Sports Physiotherapist",
-    experience: "4+ years experience",
-    image: `${ASSETS}/team-4.svg`,
-    bio: "With a commitment to precise diagnosis and evidence-based treatment, Surbhi helps you manage and overcome musculoskeletal conditions. Her focus is on pain management and performance enhancement, ensuring you achieve your objectives while minimizing injury risks. Through tailored programs and education, she empowers you to reach your full athletic potential.",
-  },
 ];
 
 export const PROGRAMS = [
