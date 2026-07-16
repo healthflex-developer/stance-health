@@ -95,7 +95,7 @@ export default async function LocationsHubPage() {
               Choose your centre and get started with a comprehensive assessment.
             </p>
             <a
-              href="https://dashboard.stance.health/onboarding-patient?utm_source=website&utm_medium=cta&utm_campaign=locations_hub"
+              href="https://book.stance.health/stance-health?utm_source=website&utm_medium=cta&utm_campaign=locations_hub"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"

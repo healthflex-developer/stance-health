@@ -202,7 +202,7 @@ export default async function ConditionLocationPage({ params }: Props) {
               Our clinical team is ready to assess your {condition.title.toLowerCase()} and build a personalised recovery plan.
             </p>
             <a
-              href={`https://dashboard.stance.health/onboarding-patient?utm_source=website&utm_medium=cta&utm_campaign=condition_location&utm_content=${condition.slug}_${location}`}
+              href={`https://book.stance.health/stance-health?utm_source=website&utm_medium=cta&utm_campaign=condition_location&utm_content=${condition.slug}_${location}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"

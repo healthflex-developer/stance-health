@@ -132,7 +132,7 @@ export default async function ServicePage({ params }: Props) {
               Book an assessment and our clinical team will build a personalised plan for your goals.
             </p>
             <a
-              href={`https://dashboard.stance.health/onboarding-patient?utm_source=website&utm_medium=cta&utm_campaign=service_${slug}`}
+              href={`https://book.stance.health/stance-health?utm_source=website&utm_medium=cta&utm_campaign=service_${slug}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"

@@ -188,7 +188,7 @@ export default async function BlogPostPage({ params }: Props) {
               Our clinical team is ready to build a personalised plan around your goals.
             </p>
             <a
-              href="https://dashboard.stance.health/onboarding-patient?utm_source=blog&utm_medium=cta&utm_campaign=blog_article"
+              href="https://book.stance.health/stance-health?utm_source=blog&utm_medium=cta&utm_campaign=blog_article"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"

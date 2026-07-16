@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { buildTrackedUrl } from "@/lib/tracking";
 import { track } from "@/lib/analytics";
 
-const BOOKING_HOST = "dashboard.stance.health";
+const BOOKING_HOST = "book.stance.health";
 
 /** Classify a clicked anchor into an analytics event name + params. */
 function describeClick(anchor: HTMLAnchorElement, dest: URL, internal: boolean) {

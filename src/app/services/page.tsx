@@ -65,7 +65,7 @@ export default async function ServicesHubPage() {
               Book an assessment and our clinical team will identify the right pathway for your goals — whether that&apos;s recovering from pain, returning to sport, or building performance.
             </p>
             <a
-              href="https://dashboard.stance.health/onboarding-patient?utm_source=website&utm_medium=cta&utm_campaign=services_hub"
+              href="https://book.stance.health/stance-health?utm_source=website&utm_medium=cta&utm_campaign=services_hub"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"

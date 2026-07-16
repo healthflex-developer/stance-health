@@ -58,7 +58,7 @@ const homeSchema = {
           name: "How do I book an appointment at Stance Health?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "You can book an appointment online through our patient dashboard at dashboard.stance.health, or contact us directly through the website.",
+            text: "You can book an appointment online through our booking portal at book.stance.health, or contact us directly through the website.",
           },
         },
         {

@@ -22,7 +22,7 @@ export const FIREBASE_CONFIG = {
 } as const;
 
 // ── CTA destinations ──────────────────────────────────────────────────────
-const DASHBOARD_BASE = "https://book.stance.health";
+const DASHBOARD_BASE = "https://book.stance.health/stance-health";
 const APP_STORE_BASE  = "https://apps.apple.com/us/app/stance-health/id6757695513";
 const PLAY_STORE_BASE = "https://play.google.com/store/apps/details?id=com.stance.health";
 
@@ -197,21 +197,21 @@ export const TEAM = [
   {
     name: "Sumesh Ashokan",
     role: "Senior Musculoskeletal and Sports Physiotherapist",
-    experience: "",
+    experience: "8+ years experience",
     image: `${ASSETS}/team-2.svg`,
     bio: "As an athlete turned physiotherapist, Sumesh's mission at Stance is to guide you from injury recovery to performance enhancement. With his experience in various sports and a deep understanding of human anatomy, he provides personalized care tailored to your needs. His holistic approach ensures accurate diagnosis and prevention of future injuries, helping you achieve a better tomorrow.",
   },
   {
     name: "Arjun K Raj",
     role: "Senior Strength and Conditioning Coach",
-    experience: "",
+    experience: "6+ years experience",
     image: `${ASSETS}/team-3.svg`,
     bio: "At Stance, Arjun's goal is to help you achieve your fitness aspirations through personalized, meticulously crafted training programs. By understanding your unique needs, he tailors each plan to guide you towards peak performance and a healthier lifestyle. Together, you will unlock your full potential and ensure every step is taken towards your success.",
   },
   {
     name: "Surbhi Paranjpe",
     role: "Senior Musculoskeletal and Sports Physiotherapist",
-    experience: "",
+    experience: "5+ years experience",
     image: `${ASSETS}/team-4.svg`,
     bio: "With a commitment to precise diagnosis and evidence-based treatment, Surbhi helps you manage and overcome musculoskeletal conditions. Her focus is on pain management and performance enhancement, ensuring you achieve your objectives while minimizing injury risks. Through tailored programs and education, she empowers you to reach your full athletic potential.",
   },
