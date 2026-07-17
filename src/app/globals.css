@@ -261,6 +261,38 @@ h1, h2, h3, h4, h5, h6,
 }
 .banner-con .main-btn { margin-top: 0.5rem; }
 
+/* ── Program Banner (mirrors homepage hero) ─── */
+.program-banner {
+  position: relative;
+  display: block;
+}
+.program-banner-slide {
+  position: relative;
+  overflow: hidden;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+}
+.program-banner-slide > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+}
+@media (max-width: 768px) {
+  .program-banner-slide {
+    min-height: 75vh;
+  }
+}
+@media (max-width: 480px) {
+  .program-banner-slide {
+    min-height: 75vh;
+  }
+}
+
 /* ── Framework / BannerBottom ─── */
 .banner-btm-head { margin: 50px 0 0 0; }
 .banner-bottom-sec { position: relative; overflow: hidden; }

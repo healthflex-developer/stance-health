@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ASSETS } from "@/lib/constants";
 import BookingCta from "@/components/BookingCta";
+import PhilosophyPillars from "@/components/PhilosophyPillars";
 
 import type { Metadata } from "next";
 
@@ -25,73 +26,6 @@ export const metadata: Metadata = {
     images: ["/assets/images/og-default.png"],
   },
 };
-
-const PILLARS = [
-  {
-    id: "tech",
-    label: "Technology Assessment",
-    tabIcon: `${ASSETS}/tab-1.svg`,
-    tabIconHov: `${ASSETS}/tab-1-hov.png`,
-    image1: `${ASSETS}/tf-1.png`,
-    image2: `${ASSETS}/tf-2.png`,
-    heading: "State-of-the-Art Technology Assessments",
-    body: "We use the latest tools across running analysis, muscle strength, range of motion, and endurance tracking to measure and contextualise your progress. Our technology-driven assessments provide objective data that guides clinical decision-making and personalised treatment.",
-    points: [
-      "Running gait and biomechanical analysis with RunScribe",
-      "Isometric strength testing with VALD Force Frame",
-      "Explosive power and balance assessment with VALD Force Decks",
-      "Portable dynamometry with VALD Dynamo",
-    ],
-  },
-  {
-    id: "physio",
-    label: "Physiotherapy",
-    tabIcon: `${ASSETS}/tab-2.svg`,
-    tabIconHov: `${ASSETS}/tab-2-hov.png`,
-    image1: `${ASSETS}/ph-1.png`,
-    image2: `${ASSETS}/ph-2.png`,
-    heading: "Expert Physiotherapy Care",
-    body: "Our physiotherapists conduct comprehensive MSK evaluations and deliver targeted injury management through evidence-based manual therapy. We create customised preventive exercise regimens tailored to your unique condition and goals.",
-    points: [
-      "Comprehensive musculoskeletal health evaluation",
-      "Injury management via manual therapy techniques",
-      "Customised preventive exercise programmes",
-      "Maitland, McKenzie and neurodynamic treatment approaches",
-    ],
-  },
-  {
-    id: "sc",
-    label: "Strength & Conditioning",
-    tabIcon: `${ASSETS}/tab-3.svg`,
-    tabIconHov: `${ASSETS}/tab-3-hov.png`,
-    image1: `${ASSETS}/sc-1.png`,
-    image2: `${ASSETS}/sc-2.png`,
-    heading: "Performance-Focused Strength & Conditioning",
-    body: "Our strength and conditioning programmes are designed to build the functional capacity needed for daily activities and sporting performance. We use advanced progress measurement technology to ensure every session delivers measurable improvement.",
-    points: [
-      "Functional strength for everyday activities and sport",
-      "Data-driven progress tracking and programme adjustment",
-      "Sport-specific conditioning protocols",
-      "Injury-resilience training and load management",
-    ],
-  },
-  {
-    id: "athome",
-    label: "At-Home Technology",
-    tabIcon: `${ASSETS}/tab-4.svg`,
-    tabIconHov: `${ASSETS}/tab-4-hov.png`,
-    image1: `${ASSETS}/at-1.png`,
-    image2: `${ASSETS}/at-2.png`,
-    heading: "AI-Powered At-Home Recovery",
-    body: "Through our HealthFlex platform with AI-driven motion sensors, we deliver remote sessions with real-time feedback and movement tracking. This ensures continuity of care and consistent progress monitoring regardless of where you are.",
-    points: [
-      "Remote sessions via HealthFlex AI platform",
-      "Real-time movement feedback and correction",
-      "Progress tracking between clinic visits",
-      "Self-paced recovery pathways with clinical oversight",
-    ],
-  },
-];
 
 const DIFFERENTIATORS = [
   {
@@ -142,80 +76,14 @@ export default function PhilosophyPage() {
               Philosophy
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
-              Our Approach
+              Our <span className="text-[#cdfe71]">Approach</span>
             </h1>
             <p className="text-white/60 text-xl">Clinical and Data-Backed</p>
           </div>
         </section>
 
-        {/* Intro */}
-        <section className="py-16 bg-[#0c1b30]">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="section-title mb-6">How we do it?</h2>
-            <p className="text-white/60 text-lg leading-relaxed">
-              At Stance, our clinical philosophy centres on four integrated pillars that work together
-              to deliver outcomes that are measurable, sustainable, and personalised to you.
-            </p>
-          </div>
-        </section>
-
-        {/* Four Pillars */}
-        {PILLARS.map((pillar, idx) => (
-          <section
-            key={pillar.id}
-            className={`py-20 ${idx % 2 === 0 ? "bg-[#132644]" : "bg-[#0c1b30]"}`}
-          >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                  idx % 2 !== 0 ? "lg:grid-flow-dense" : ""
-                }`}
-              >
-                {/* Text */}
-                <div className={idx % 2 !== 0 ? "lg:col-start-2" : ""}>
-                  <div className="inline-flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-[#cdfe71]/10 flex items-center justify-center">
-                      <Image src={pillar.tabIcon} alt={pillar.label} width={28} height={28} />
-                    </div>
-                    <p className="text-[#cdfe71] text-sm font-semibold uppercase tracking-widest">
-                      {pillar.label}
-                    </p>
-                  </div>
-                  <h2 className="section-title mb-4">{pillar.heading}</h2>
-                  <p className="text-white/60 leading-relaxed mb-6">{pillar.body}</p>
-                  <ul className="space-y-3">
-                    {pillar.points.map((pt) => (
-                      <li key={pt} className="flex gap-3 items-start">
-                        <Image
-                          src={`${ASSETS}/tick.svg`}
-                          alt=""
-                          width={18}
-                          height={18}
-                          className="mt-0.5 shrink-0"
-                        />
-                        <span className="text-white/70 text-sm">{pt}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Images */}
-                <div
-                  className={`grid grid-cols-2 gap-4 ${
-                    idx % 2 !== 0 ? "lg:col-start-1 lg:row-start-1" : ""
-                  }`}
-                >
-                  <div className="rounded-2xl overflow-hidden aspect-[4/5] relative bg-[#1a3358]">
-                    <Image src={pillar.image1} alt={pillar.label} fill className="object-cover" />
-                  </div>
-                  <div className="rounded-2xl overflow-hidden aspect-[4/5] relative mt-8 bg-[#1a3358]">
-                    <Image src={pillar.image2} alt={pillar.label} fill className="object-cover" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        ))}
+        {/* How We Do It — Interactive Pillars */}
+        <PhilosophyPillars />
 
         {/* Differentiators */}
         <section className="py-20 bg-[#cdfe71]">
@@ -227,16 +95,40 @@ export default function PhilosophyPage() {
               Four pillars that make our approach uniquely effective.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {DIFFERENTIATORS.map((d) => (
+              {DIFFERENTIATORS.map((d, i) => (
                 <div
                   key={d.title}
-                  className="bg-black/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-black/20 transition-colors"
+                  className="group relative bg-white rounded-2xl overflow-hidden border border-[#132644]/8 hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(19,38,68,0.15)] transition-all duration-300"
                 >
-                  <div className="w-14 h-14 rounded-xl bg-black/15 flex items-center justify-center mb-4">
-                    <Image src={d.icon} alt={d.title} width={36} height={36} />
+                  {/* Top half — large icon area */}
+                  <div className="relative h-44 bg-[#132644] flex items-center justify-center overflow-hidden">
+                    {/* Background pattern */}
+                    <div className="absolute inset-0 opacity-10">
+                      <div className="absolute top-4 right-4 w-20 h-20 rounded-full border border-white/30" />
+                      <div className="absolute bottom-4 left-4 w-12 h-12 rounded-full border border-white/20" />
+                    </div>
+                    {/* Icon — large and visible */}
+                    <Image
+                      src={d.icon}
+                      alt={d.title}
+                      width={80}
+                      height={80}
+                      className="relative z-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                    />
+                    {/* Step number in corner */}
+                    <span className="absolute bottom-3 right-4 text-white/10 text-4xl font-extrabold leading-none select-none group-hover:text-white/20 transition-colors duration-300">
+                      0{i + 1}
+                    </span>
                   </div>
-                  <h3 className="text-black font-bold text-lg mb-2">{d.title}</h3>
-                  <p className="text-black/70 text-sm leading-relaxed">{d.description}</p>
+
+                  {/* Bottom half — text content */}
+                  <div className="p-5">
+                    <h3 className="text-[#132644] font-bold text-lg mb-2">{d.title}</h3>
+                    <p className="text-[#132644]/60 text-sm leading-relaxed">{d.description}</p>
+                  </div>
+
+                  {/* Bottom accent line that grows on hover */}
+                  <div className="absolute bottom-0 left-0 h-1 bg-[#cdfe71] w-0 group-hover:w-full transition-all duration-500 ease-out" />
                 </div>
               ))}
             </div>

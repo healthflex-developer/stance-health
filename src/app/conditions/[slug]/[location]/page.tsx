@@ -173,10 +173,13 @@ export default async function ConditionLocationPage({ params }: Props) {
           {/* Symptoms summary */}
           <section className="mb-10">
             <h2 className="text-xl font-bold text-white mb-4">Common symptoms</h2>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {condition.symptoms.slice(0, 4).map((s, i) => (
-                <li key={i} className="flex gap-3 text-white/70">
-                  <span className="text-[#cdfe71] mt-1 flex-shrink-0">—</span>
+                <li key={i} className="flex gap-3 items-start text-white/70">
+                  <svg viewBox="0 0 20 20" fill="none" className="mt-0.5 shrink-0 w-5 h-5 text-[#cdfe71]">
+                    <circle cx="10" cy="10" r="10" fill="currentColor" fillOpacity="0.15" />
+                    <path d="M6 10.5l2.5 2.5L14 7.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                   <span>{s}</span>
                 </li>
               ))}
