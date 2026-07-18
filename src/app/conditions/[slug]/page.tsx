@@ -213,7 +213,7 @@ export default async function ConditionPage({ params }: Props) {
               href={`https://book.stance.health/stance-health?utm_source=website&utm_medium=cta&utm_campaign=condition_${condition.slug}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-white text-[#132644] font-bold px-8 py-3 rounded-full hover:bg-[#cdfe71] hover:shadow-[0_8px_25px_rgba(205,254,113,0.3)] hover:scale-105 active:scale-95 transition-all duration-200"
+              className="booking-cta inline-block bg-white text-[#132644] font-bold px-8 py-3 rounded-full hover:bg-[#cdfe71] hover:shadow-[0_8px_25px_rgba(205,254,113,0.3)] hover:scale-105 active:scale-95 transition-all duration-200"
             >
               Book an Assessment
             </a>

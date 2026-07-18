@@ -122,7 +122,7 @@ export default async function ConditionsHubPage() {
               Book an assessment and we&apos;ll identify the root cause with objective testing.
             </p>
             <BookingCta
-              className="inline-block bg-[#132644] text-white font-semibold px-8 py-3 rounded-full hover:bg-[#0c1b30] transition-colors"
+              className="inline-block bg-[#132644] text-white font-semibold px-8 py-3 rounded-full hover:bg-[#0c1b30] hover:shadow-[0_8px_25px_rgba(19,38,68,0.4)] transition-all duration-200"
               label="Book an Assessment"
             />
           </div>

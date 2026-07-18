@@ -6,6 +6,7 @@ import MarketingScripts, { GtmNoScript } from "@/components/MarketingScripts";
 import TrackingInit from "@/components/TrackingInit";
 import LinkTracker from "@/components/LinkTracker";
 import AnalyticsProvider from "@/components/AnalyticsProvider";
+import ScrollToTop from "@/components/ScrollToTop";
 import { BASE_URL, GSC_VERIFICATION } from "@/lib/constants";
 
 const montserrat = Montserrat({
@@ -190,6 +191,7 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <TrackingInit />
           <AnalyticsProvider />
+          <ScrollToTop />
         </Suspense>
         {/* Forward captured params onto every internal/external link on click */}
         <LinkTracker />

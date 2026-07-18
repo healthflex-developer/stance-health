@@ -85,17 +85,17 @@ export default async function LocationsHubPage() {
         </section>
 
         {/* Neighbourhood coverage */}
-        <section className="py-16 bg-[#132644]">
+        <section className="py-12 sm:py-16 bg-[#132644]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-sm font-semibold uppercase tracking-widest text-[#cdfe71]/60 mb-6 border-b border-white/5 pb-3">
               Serving these areas
             </h2>
-            <div className="flex flex-wrap gap-3">
+            <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-3">
               {neighbourhoods.map((n) => (
                 <Link
                   key={n.slug}
                   href={`/locations/${n.slug}`}
-                  className="text-sm px-5 py-2.5 rounded-full bg-[#1a3358] border border-white/5 text-white/60 hover:border-[#cdfe71]/40 hover:text-[#cdfe71] hover:bg-[#1a3358]/80 hover:shadow-[0_4px_15px_rgba(205,254,113,0.06)] transition-all duration-300"
+                  className="text-sm px-4 sm:px-5 py-2.5 rounded-full bg-[#1a3358] border border-white/5 text-white/60 text-center hover:border-[#cdfe71]/40 hover:text-[#cdfe71] hover:bg-[#1a3358]/80 hover:shadow-[0_4px_15px_rgba(205,254,113,0.06)] active:border-[#cdfe71] active:text-[#cdfe71] transition-all duration-300"
                 >
                   {n.name}
                 </Link>

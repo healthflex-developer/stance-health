@@ -57,6 +57,18 @@ h1, h2, h3, h4, h5, h6,
   color: var(--navy);
 }
 
+/* Reset hover state on touch devices so button doesn't stay green after tap */
+@media (hover: none) {
+  .btn-primary:hover {
+    background-color: #ffffff;
+    color: var(--navy);
+  }
+  .btn-primary:active {
+    background-color: var(--yellow);
+    color: var(--navy);
+  }
+}
+
 .btn-outline {
   border: 1px solid var(--yellow);
   color: var(--yellow);

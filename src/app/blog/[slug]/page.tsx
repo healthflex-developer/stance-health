@@ -53,7 +53,7 @@ function Section({ section }: { section: BlogSection }) {
   switch (section.type) {
     case "heading":
       return (
-        <h2 className="text-xl font-bold text-white mt-10 mb-3">{section.content}</h2>
+        <h2 className="text-xl font-bold text-[#cdfe71] mt-10 mb-3">{section.content}</h2>
       );
     case "paragraph":
       return (
@@ -61,17 +61,20 @@ function Section({ section }: { section: BlogSection }) {
       );
     case "tip":
       return (
-        <div className="my-6 flex gap-3 bg-[#cdfe71]/5 border border-[#cdfe71]/20 rounded-xl p-4">
+        <div className="my-6 flex gap-3 bg-[#cdfe71]/5 border border-[#cdfe71]/20 rounded-xl p-4 hover:border-[#cdfe71]/40 transition-colors duration-300">
           <span className="text-[#cdfe71] text-lg mt-0.5 flex-shrink-0">💡</span>
           <p className="text-white/80 text-sm leading-relaxed">{section.content}</p>
         </div>
       );
     case "list":
       return (
-        <ul className="space-y-2 my-4">
+        <ul className="space-y-3 my-4">
           {section.items.map((item, i) => (
-            <li key={i} className="flex gap-2 text-white/70 text-base">
-              <span className="text-[#cdfe71] mt-1 flex-shrink-0">—</span>
+            <li key={i} className="flex gap-3 items-start text-white/70 text-base hover:text-white/90 transition-colors duration-200">
+              <svg viewBox="0 0 20 20" fill="none" className="mt-0.5 shrink-0 w-5 h-5 text-[#cdfe71]">
+                <circle cx="10" cy="10" r="10" fill="currentColor" fillOpacity="0.15" />
+                <path d="M6 10.5l2.5 2.5L14 7.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
               <span>{item}</span>
             </li>
           ))}
@@ -182,8 +185,8 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
 
           {/* CTA */}
-          <div className="mt-16 bg-[#1a3358] rounded-2xl p-8 border border-white/5 text-center">
-            <h3 className="text-xl font-bold text-white mb-2">Ready to take the next step?</h3>
+          <div className="mt-16 bg-[#1a3358] rounded-2xl p-8 border border-white/5 hover:border-[#cdfe71]/20 hover:shadow-[0_8px_30px_rgba(205,254,113,0.06)] transition-all duration-300 text-center">
+            <h3 className="text-xl font-bold text-white mb-2">Ready to take the <span className="text-[#cdfe71]">next step</span>?</h3>
             <p className="text-white/60 text-sm mb-6">
               Our clinical team is ready to build a personalised plan around your goals.
             </p>
@@ -191,7 +194,7 @@ export default async function BlogPostPage({ params }: Props) {
               href="https://book.stance.health/stance-health?utm_source=blog&utm_medium=cta&utm_campaign=blog_article"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
+              className="booking-cta inline-block bg-white text-[#132644] font-bold px-8 py-3 rounded-full hover:bg-[#cdfe71] hover:shadow-[0_8px_25px_rgba(205,254,113,0.3)] hover:scale-105 active:scale-95 transition-all duration-200"
             >
               Book an Assessment
             </a>
