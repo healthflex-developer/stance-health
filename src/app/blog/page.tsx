@@ -35,7 +35,6 @@ function formatDate(iso: string) {
 
 export default async function BlogPage() {
   const blogs = await getAllBlogs();
-  const [featured, ...rest] = blogs;
 
   return (
     <>
@@ -52,62 +51,13 @@ export default async function BlogPage() {
             </p>
           </div>
 
-          {/* Featured post */}
-          <Link
-            href={`/blog/${featured.slug}`}
-            className="group block bg-[#1a3358] rounded-2xl overflow-hidden border border-white/5 hover:border-[#cdfe71]/30 transition-colors mb-12"
-          >
-            <div className="grid md:grid-cols-2">
-              <div className="relative aspect-[16/9] md:aspect-auto md:min-h-64">
-                <Image
-                  src={featured.coverImage}
-                  alt={featured.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-              <div className="p-8 flex flex-col justify-center gap-4">
-                <div className="flex flex-wrap gap-2">
-                  {featured.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs font-medium px-2.5 py-1 rounded-full bg-[#cdfe71]/10 text-[#cdfe71]"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <h2 className="text-2xl font-bold text-white group-hover:text-[#cdfe71] transition-colors leading-snug">
-                  {featured.title}
-                </h2>
-                <p className="text-white/60 text-sm leading-relaxed">{featured.summary}</p>
-                <div className="flex items-center gap-3 mt-2">
-                  <Image
-                    src={featured.author.avatar}
-                    alt={featured.author.name}
-                    width={36}
-                    height={36}
-                    className="rounded-full bg-[#132644]"
-                  />
-                  <div>
-                    <p className="text-sm font-medium text-white">{featured.author.name}</p>
-                    <p className="text-xs text-white/40">
-                      {formatDate(featured.publishedAt)} · {featured.readMinutes} min read
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Link>
-
           {/* Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {rest.map((post) => (
+            {blogs.map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group flex flex-col bg-[#1a3358] rounded-2xl overflow-hidden border border-white/5 hover:border-[#cdfe71]/30 transition-colors"
+                className="group flex flex-col bg-[#1a3358] rounded-2xl overflow-hidden border border-white/5 hover:border-[#cdfe71]/40 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(205,254,113,0.08)] transition-all duration-300"
               >
                 <div className="relative aspect-[16/9]">
                   <Image

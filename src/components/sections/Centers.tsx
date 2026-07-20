@@ -10,7 +10,6 @@ const CENTERS = [
   {
     name: "HSR Layout",
     phone: "+91 6360014559",
-    email: "hsr@stance.health",
     address:
       "2nd Floor, 1555, 19th Main Rd, Agara, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102",
     image: `${ASSETS}/HSR.JPG`,
@@ -19,7 +18,6 @@ const CENTERS = [
   {
     name: "Whitefield",
     phone: "+91 6361056456",
-    email: "wfld@stance.health",
     address:
       "4th Floor, Kailash Parbat, No. 149, Doddanakundi, 2nd Phase, Hoodi, Whitefield, Bengaluru, Karnataka 560048",
     image: `${ASSETS}/whitefield.webp`,
@@ -28,12 +26,29 @@ const CENTERS = [
   {
     name: "Indiranagar",
     phone: "+91 9008417804",
-    email: "indiranagar@stance.health",
     address:
       "3rd Floor, Srinivasan Towers, ESI Hospital Road, Defence Colony, Indiranagar, Bengaluru, Karnataka 560038",
     image: `${ASSETS}/indra.webp`,
     maps: "https://maps.app.goo.gl/su4xnN965KRdK47s9",
   },
+  {
+    name: "JP NAGAR",
+    phone: "+91 6366940175",
+    address:
+      "Ward No.57, 3rd Floor, V.B.R Ruddhi, 558, 9th Cross Rd, 3rd Phase, J. P. Nagar, Bengaluru, Karnataka 560078",
+    image: `${ASSETS}/JP_Nagar.jpg`,
+    maps: "https://maps.app.goo.gl/bAdshZ7kyvqnLNdq9",
+  },
+  {
+    name: "KORAMANGALA",
+    phone: "+91 6366941095",
+    address:
+      "Unit No. 22, Ground floor, 80 Feet Rd, S.T. Bed, 4th Block, Koramangala, Bengaluru, Karnataka 560034",
+    image: `${ASSETS}/JP_Nagar.jpg`,  //to be updated
+    maps: "https://maps.app.goo.gl/hTP95zAu7pv4c79Y6",
+  },
+
+
 ];
 
 export default function Centers() {
@@ -118,7 +133,6 @@ export default function Centers() {
                         {center.name}
                       </h3>
                       <p className="text-white text-sm sm:text-base mb-1">{center.phone}</p>
-                      <p className="text-white text-sm sm:text-base mb-3">{center.email}</p>
                       <p className="text-white/70 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
                         {center.address}
                       </p>

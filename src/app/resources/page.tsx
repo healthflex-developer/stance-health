@@ -60,14 +60,11 @@ export default async function ResourcesHubPage() {
               <Link
                 key={resource.slug}
                 href={`/resources/${resource.slug}`}
-                className="group flex flex-col p-5 rounded-2xl bg-[#1a3358] border border-white/5 hover:border-[#cdfe71]/30 transition-all"
+                className="group flex flex-col p-5 rounded-2xl bg-[#1a3358] border border-white/5 hover:border-[#cdfe71]/40 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(205,254,113,0.08)] transition-all duration-300"
               >
-                <div className="flex items-center gap-2 mb-3">
+                <div className="mb-3">
                   <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-[#cdfe71]/10 text-[#cdfe71]">
                     {FORMAT_LABELS[resource.contentFormat] ?? resource.contentFormat}
-                  </span>
-                  <span className="text-xs text-white/30">
-                    {formatDate(resource.publishedAt)}
                   </span>
                 </div>
                 <h2 className="text-base font-semibold text-white group-hover:text-[#cdfe71] transition-colors mb-2 flex-1">
@@ -76,11 +73,16 @@ export default async function ResourcesHubPage() {
                 <p className="text-sm text-white/50 leading-relaxed line-clamp-2 mb-4">
                   {resource.summary}
                 </p>
-                <div className="flex items-center gap-1 text-xs text-[#cdfe71]/70 group-hover:text-[#cdfe71] transition-colors">
-                  <span>Read</span>
-                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                <div className="flex items-center justify-between mt-auto pt-3 border-t border-white/5">
+                  <span className="text-xs text-white/40">
+                    {formatDate(resource.publishedAt)}
+                  </span>
+                  <div className="flex items-center gap-1 text-xs text-[#cdfe71]/70 group-hover:text-[#cdfe71] transition-colors">
+                    <span>Read</span>
+                    <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                 </div>
               </Link>
             ))}

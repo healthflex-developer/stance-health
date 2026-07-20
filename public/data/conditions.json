@@ -27,7 +27,7 @@
       { "q": "Do I need an MRI before seeing you?", "a": "No. We can assess you and build a plan without imaging. If we identify something that warrants a scan, we'll advise you on next steps." },
       { "q": "Can I continue exercising with knee pain?", "a": "Often yes — but the type and load of exercise matters. We'll guide you on what to continue, modify, or pause." }
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield"],
+    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
     "seo": {
       "title": "Knee Pain Treatment in Bangalore | Stance Health",
       "description": "Evidence-based knee pain assessment and recovery at Stance Health, Bangalore. Objective strength testing, root-cause diagnosis, personalised rehab.",
@@ -63,7 +63,7 @@
       { "q": "Should I rest or keep moving?", "a": "For most back pain, graded movement is better than rest. We'll guide you on the right type and intensity of movement for your presentation." },
       { "q": "How many sessions will I need?", "a": "Most patients see meaningful improvement within 4–8 sessions. Long-term resolution typically requires 8–16 weeks of structured rehab." }
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield"],
+    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
     "seo": {
       "title": "Back Pain Treatment in Bangalore | Stance Health",
       "description": "Root-cause back pain assessment and rehab at Stance Health Bangalore. Strength-based, data-driven recovery for chronic and acute back pain.",
@@ -98,7 +98,7 @@
       { "q": "Can physiotherapy help with cervicogenic headaches?", "a": "Yes. Headaches driven by the neck respond well to manual therapy and cervical strengthening. We'll assess whether your headaches are cervicogenic in origin." },
       { "q": "Do I need to stop using screens?", "a": "Rarely. We'll help you optimise your setup and build the capacity to tolerate screen-based work without pain." }
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield"],
+    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
     "seo": {
       "title": "Neck Pain Treatment in Bangalore | Stance Health",
       "description": "Expert neck pain assessment and rehab at Stance Health Bangalore. Manual therapy plus strength work for lasting relief.",
@@ -133,7 +133,7 @@
       { "q": "Will I need surgery for my shoulder pain?", "a": "Most shoulder conditions resolve with structured physiotherapy. Surgery is typically a last resort after 3–6 months of quality conservative management." },
       { "q": "How long does rotator cuff rehab take?", "a": "Mild tendinopathy: 6–8 weeks. Partial tears: 12–16 weeks. Full tears managed conservatively: 16–24 weeks or more." }
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield"],
+    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
     "seo": {
       "title": "Shoulder Pain Treatment in Bangalore | Stance Health",
       "description": "Objective shoulder pain assessment and rehab at Stance Health Bangalore. Strength testing and personalised recovery for rotator cuff, impingement, and more.",
@@ -166,7 +166,7 @@
       { "q": "Will frozen shoulder resolve on its own?", "a": "Often yes, but it can take 1–3 years without treatment. Targeted physiotherapy significantly accelerates recovery." },
       { "q": "Is manipulation under anaesthesia necessary?", "a": "Rarely. Most patients respond to structured physiotherapy without the need for MUA." }
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield"],
+    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
     "seo": {
       "title": "Frozen Shoulder Treatment in Bangalore | Stance Health",
       "description": "Frozen shoulder assessment and stage-specific rehab at Stance Health Bangalore. Restore movement faster with targeted physiotherapy.",
@@ -200,7 +200,7 @@
       { "q": "Is cervical spondylosis the same as arthritis?", "a": "It is a form of degenerative joint change in the cervical spine, similar in nature to osteoarthritis. It is very common after age 40 and does not always cause symptoms." },
       { "q": "Can I exercise with cervical spondylosis?", "a": "Yes. Appropriate exercise is one of the most effective treatments. We will guide you on which movements to prioritise and which to approach carefully." }
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield"],
+    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
     "seo": {
       "title": "Cervical Spondylosis Treatment in Bangalore | Stance Health",
       "description": "Structured physiotherapy for cervical spondylosis at Stance Health Bangalore. Strength-based management for lasting neck health.",
@@ -234,7 +234,7 @@
       { "q": "How long does ACL rehab take?", "a": "9–12 months is the typical return-to-sport timeline for surgically reconstructed ACL. The duration is driven by biology and objective readiness, not the calendar." },
       { "q": "When can I start rehab?", "a": "Immediately — both before surgery (prehab) and after. Pre-surgical strength predicts post-surgical outcomes." }
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield"],
+    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
     "seo": {
       "title": "ACL Injury Rehab in Bangalore | Stance Health",
       "description": "Data-driven ACL rehabilitation at Stance Health Bangalore. Objective strength testing and phased return-to-sport protocol.",
@@ -269,7 +269,7 @@
       { "q": "Is sciatica the same as a slipped disc?", "a": "Sciatica is a symptom — pain along the sciatic nerve pathway. A slipped disc (disc herniation) is one common cause, but not the only one." },
       { "q": "How long does sciatica last?", "a": "Most acute sciatica episodes improve significantly within 6–12 weeks. Chronic cases take longer but still respond well to structured physiotherapy." }
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield"],
+    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
     "seo": {
       "title": "Sciatica Treatment in Bangalore | Stance Health",
       "description": "Expert sciatica assessment and nerve-targeted rehab at Stance Health Bangalore. Most cases resolve without surgery.",
@@ -302,7 +302,7 @@
       { "q": "Will the disc heal?", "a": "Yes. Disc herniations frequently resorb over time — the body absorbs the herniated material. This process is supported by appropriate loading and movement." },
       { "q": "Do I need surgery?", "a": "Less than 10% of disc herniations require surgery. We will refer you if red flag symptoms are present, but structured physiotherapy is the first-line treatment." }
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield"],
+    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
     "seo": {
       "title": "Slipped Disc Treatment in Bangalore | Stance Health",
       "description": "Evidence-based disc herniation assessment and rehab at Stance Health Bangalore. Conservative management that works.",
@@ -336,7 +336,7 @@
       { "q": "How long does plantar fasciitis take to resolve?", "a": "With structured loading, most patients see significant improvement in 6–12 weeks. Complete resolution can take 3–6 months." },
       { "q": "Should I stop running?", "a": "Not necessarily. We will help you manage load so you can continue training at a modified level while the tissue heals." }
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield"],
+    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
     "seo": {
       "title": "Plantar Fasciitis Treatment in Bangalore | Stance Health",
       "description": "Loading-based plantar fasciitis rehab at Stance Health Bangalore. Get back to running faster with evidence-based treatment.",
@@ -369,7 +369,7 @@
       { "q": "Should I get an X-ray after a sprain?", "a": "We use the Ottawa Ankle Rules to assess whether imaging is required. Most ankle sprains do not need an X-ray." },
       { "q": "Can I return to sport after a sprain?", "a": "Yes — with objective readiness criteria met. We test balance, strength, and reactive control before clearing you for full return." }
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield"],
+    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
     "seo": {
       "title": "Ankle Sprain Rehab in Bangalore | Stance Health",
       "description": "Complete ankle sprain rehabilitation at Stance Health Bangalore. Strength and balance testing for a safe return to sport.",
@@ -403,7 +403,7 @@
       { "q": "Do I need to stop running completely?", "a": "Rarely. A structured loading programme alongside managed running volume is more effective than complete rest." },
       { "q": "Will my Achilles tendon rupture if I keep running?", "a": "A tendinopathic tendon is different from a rupture risk. We assess the severity and guide you on appropriate load — complete ruptures in tendinopathy patients who are loading appropriately are rare." }
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield"],
+    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
     "seo": {
       "title": "Achilles Tendinopathy Treatment in Bangalore | Stance Health",
       "description": "Evidence-based Achilles tendinopathy loading programme at Stance Health Bangalore. Keep running while you recover.",
@@ -436,7 +436,7 @@
       { "q": "Should I get a cortisone injection?", "a": "Evidence shows that physiotherapy produces better long-term outcomes than corticosteroid injection. We recommend trying a structured loading programme first." },
       { "q": "How long does tennis elbow take to resolve?", "a": "Most cases improve significantly in 6–12 weeks of structured loading. Full resolution can take 3–6 months." }
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield"],
+    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
     "seo": {
       "title": "Tennis Elbow Treatment in Bangalore | Stance Health",
       "description": "Tennis elbow loading-based rehab at Stance Health Bangalore. Avoid injections with structured physiotherapy.",
@@ -469,7 +469,7 @@
       { "q": "Will I need surgery for a rotator cuff tear?", "a": "Not necessarily. Partial tears and even small full-thickness tears frequently respond to structured physiotherapy. Surgery is considered after 3–6 months of quality conservative management." },
       { "q": "Can I lift weights with a rotator cuff injury?", "a": "Yes — with modification. We'll guide you on which movements to continue, adapt, or pause." }
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield"],
+    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
     "seo": {
       "title": "Rotator Cuff Injury Rehab in Bangalore | Stance Health",
       "description": "Rotator cuff strength testing and rehab at Stance Health Bangalore. Data-driven recovery for tears and tendinopathy.",
@@ -502,7 +502,7 @@
       { "q": "Is surgery always needed for a meniscus tear?", "a": "No. Evidence shows that for degenerative meniscus tears, physiotherapy produces equivalent outcomes to arthroscopic surgery. We help you understand your options." },
       { "q": "How long after a meniscus tear can I return to sport?", "a": "Typically 6–12 weeks for conservative management, and 12–16 weeks post-surgery, depending on the type of repair." }
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield"],
+    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
     "seo": {
       "title": "Meniscus Tear Rehab in Bangalore | Stance Health",
       "description": "Evidence-based meniscus tear assessment and rehab at Stance Health Bangalore. Understand your options before choosing surgery.",
@@ -537,7 +537,7 @@
       { "q": "Will exercise make my OA worse?", "a": "No. This is the most common myth. Graded exercise reduces pain and improves joint health. It does not accelerate cartilage wear." },
       { "q": "When should I consider joint replacement?", "a": "Joint replacement is considered when pain and function significantly impact quality of life and conservative management has been exhausted — typically after 6–12 months of structured physiotherapy." }
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield"],
+    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
     "seo": {
       "title": "Osteoarthritis Treatment in Bangalore | Stance Health",
       "description": "Strength-based osteoarthritis management at Stance Health Bangalore. Move better, live better with OA.",

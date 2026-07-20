@@ -67,11 +67,11 @@ export default function Footer() {
 
           {/* About links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">About Us</h4>
+            <h4 className="text-[#cdfe71]/70 font-semibold mb-4">About Us</h4>
             <ul className="space-y-2.5">
               {FOOTER_LINKS.about.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/50 hover:text-white text-sm transition-colors">
+                  <Link href={link.href} className="text-white/50 hover:text-[#cdfe71] text-sm transition-colors duration-200">
                     {link.label}
                   </Link>
                 </li>
@@ -81,11 +81,11 @@ export default function Footer() {
 
           {/* Programs links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Programs</h4>
+            <h4 className="text-[#cdfe71]/70 font-semibold mb-4">Programs</h4>
             <ul className="space-y-2.5">
               {FOOTER_LINKS.programs.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/50 hover:text-white text-sm transition-colors">
+                  <Link href={link.href} className="text-white/50 hover:text-[#cdfe71] text-sm transition-colors duration-200">
                     {link.label}
                   </Link>
                 </li>
@@ -95,11 +95,11 @@ export default function Footer() {
 
           {/* Other links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Other Links</h4>
+            <h4 className="text-[#cdfe71]/70 font-semibold mb-4">Other Links</h4>
             <ul className="space-y-2.5">
               {FOOTER_LINKS.other.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/50 hover:text-white text-sm transition-colors">
+                  <Link href={link.href} className="text-white/50 hover:text-[#cdfe71] text-sm transition-colors duration-200">
                     {link.label}
                   </Link>
                 </li>
@@ -109,19 +109,16 @@ export default function Footer() {
 
           {/* Policies links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Policies</h4>
+            <h4 className="text-[#cdfe71]/70 font-semibold mb-4">Policies</h4>
             <ul className="space-y-2.5">
               {FOOTER_LINKS.policies.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/50 hover:text-white text-sm transition-colors">
+                  <Link href={link.href} className="text-white/50 hover:text-[#cdfe71] text-sm transition-colors duration-200">
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
-            {/* <div className="mt-6">
-              <BookingCta className="btn-primary text-sm" label="Book Appointment" />
-            </div> */}
           </div>
         </div>
 

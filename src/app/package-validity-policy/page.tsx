@@ -31,7 +31,7 @@ export default function PackageValidityPolicyPage() {
               Legal
             </p>
             <h1 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight mb-3">
-              Package Validity Policy
+              Package Validity <span className="text-[#cdfe71]">Policy</span>
             </h1>
             <p className="text-white/60 text-lg">
               How treatment packages work, when they expire, and how to request an extension.
@@ -146,7 +146,7 @@ export default function PackageValidityPolicyPage() {
                     In exceptional circumstances — such as medical emergencies, hospitalisation, or other
                     valid reasons — you may request an extension of your package validity.
                   </p>
-                  <ul className="space-y-0 mb-2">
+                  <ul className="space-y-2 mb-2">
                     {[
                       <>
                         Requests must be submitted <strong className="text-white">before</strong> the
@@ -158,27 +158,30 @@ export default function PackageValidityPolicyPage() {
                     ].map((item, i) => (
                       <li
                         key={i}
-                        className="flex gap-3 items-start text-white/75 text-sm leading-relaxed py-2 border-b border-white/4 last:border-0"
+                        className="flex gap-3 items-start text-white/75 text-sm leading-relaxed py-1.5 hover:text-white/90 transition-colors duration-200"
                       >
-                        <span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-[#cdfe71] flex-shrink-0" />
-                        {item}
+                        <svg viewBox="0 0 20 20" fill="none" className="mt-0.5 shrink-0 w-4 h-4 text-[#cdfe71]">
+                          <circle cx="10" cy="10" r="10" fill="currentColor" fillOpacity="0.15" />
+                          <path d="M6 10.5l2.5 2.5L14 7.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                        <span>{item}</span>
                       </li>
                     ))}
                   </ul>
                   <div className="bg-black/25 border border-[#cdfe71]/10 rounded-xl overflow-hidden mt-5">
-                    <div className="flex items-center px-5 py-3.5 border-b border-white/5">
-                      <span className="text-white/40 text-xs font-bold uppercase tracking-widest w-28 flex-shrink-0">
+                    <div className="flex flex-col sm:flex-row sm:items-center px-5 py-3.5 gap-1 sm:gap-0 border-b border-white/5">
+                      <span className="text-white/40 text-xs font-bold uppercase tracking-widest sm:w-28 flex-shrink-0">
                         Requests
                       </span>
-                      <a href="mailto:hello@stance.health" className="text-[#cdfe71] text-sm hover:underline">
+                      <a href="mailto:hello@stance.health" className="text-[#cdfe71] text-sm hover:underline break-all">
                         hello@stance.health
                       </a>
                     </div>
-                    <div className="flex items-center px-5 py-3.5">
-                      <span className="text-white/40 text-xs font-bold uppercase tracking-widest w-28 flex-shrink-0">
+                    <div className="flex flex-col sm:flex-row sm:items-center px-5 py-3.5 gap-1 sm:gap-0">
+                      <span className="text-white/40 text-xs font-bold uppercase tracking-widest sm:w-28 flex-shrink-0">
                         WhatsApp
                       </span>
-                      <a href="https://wa.me/919019410049" className="text-[#cdfe71] text-sm hover:underline">
+                      <a href="https://wa.me/919019410049" className="text-[#cdfe71] text-sm hover:underline break-all">
                         +91 90194 10049
                       </a>
                     </div>

@@ -163,8 +163,8 @@ export default async function ConditionLocationPage({ params }: Props) {
           </div>
 
           {/* Approach */}
-          <section className="mb-10">
-            <h2 className="text-xl font-bold text-white mb-3">
+          <section className="mb-10 p-6 rounded-2xl bg-[#1a3358] border border-white/5 hover:border-[#cdfe71]/20 hover:shadow-[0_8px_25px_rgba(205,254,113,0.06)] transition-all duration-300">
+            <h2 className="text-xl font-bold text-[#cdfe71] mb-3">
               How we treat {condition.title.toLowerCase()}
             </h2>
             <p className="text-white/70 leading-relaxed">{condition.stanceApproach}</p>
@@ -172,11 +172,14 @@ export default async function ConditionLocationPage({ params }: Props) {
 
           {/* Symptoms summary */}
           <section className="mb-10">
-            <h2 className="text-xl font-bold text-white mb-4">Common symptoms</h2>
-            <ul className="space-y-2">
+            <h2 className="text-xl font-bold text-[#cdfe71] mb-4">Common symptoms</h2>
+            <ul className="space-y-3">
               {condition.symptoms.slice(0, 4).map((s, i) => (
-                <li key={i} className="flex gap-3 text-white/70">
-                  <span className="text-[#cdfe71] mt-1 flex-shrink-0">—</span>
+                <li key={i} className="flex gap-3 items-start text-white/70 hover:text-white/90 transition-colors duration-200">
+                  <svg viewBox="0 0 20 20" fill="none" className="mt-0.5 shrink-0 w-5 h-5 text-[#cdfe71]">
+                    <circle cx="10" cy="10" r="10" fill="currentColor" fillOpacity="0.15" />
+                    <path d="M6 10.5l2.5 2.5L14 7.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                   <span>{s}</span>
                 </li>
               ))}
@@ -193,10 +196,10 @@ export default async function ConditionLocationPage({ params }: Props) {
           </section>
 
           {/* CTA */}
-          <div className="mt-10 bg-[#1a3358] rounded-2xl p-8 border border-white/5 text-center">
+          <div className="mt-10 bg-[#1a3358] rounded-2xl p-8 border border-white/5 hover:border-[#cdfe71]/20 hover:shadow-[0_8px_30px_rgba(205,254,113,0.06)] transition-all duration-300 text-center">
             <h3 className="text-xl font-bold text-white mb-2">
               Book at our{" "}
-              {isCentre ? locationData.name : toTitleCase(locationData.nearestCentre)} centre
+              <span className="text-[#cdfe71]">{isCentre ? locationData.name : toTitleCase(locationData.nearestCentre)}</span> centre
             </h3>
             <p className="text-white/60 text-sm mb-6">
               Our clinical team is ready to assess your {condition.title.toLowerCase()} and build a personalised recovery plan.
@@ -205,7 +208,7 @@ export default async function ConditionLocationPage({ params }: Props) {
               href={`https://book.stance.health/stance-health?utm_source=website&utm_medium=cta&utm_campaign=condition_location&utm_content=${condition.slug}_${location}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
+              className="booking-cta inline-block bg-white text-[#132644] font-bold px-8 py-3 rounded-full hover:bg-[#cdfe71] hover:shadow-[0_8px_25px_rgba(205,254,113,0.3)] hover:scale-105 active:scale-95 transition-all duration-200"
             >
               Book an Assessment
             </a>
