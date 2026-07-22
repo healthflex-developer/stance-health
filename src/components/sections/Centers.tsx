@@ -44,7 +44,7 @@ const CENTERS = [
     phone: "+91 6366941095",
     address:
       "Unit No. 22, Ground floor, 80 Feet Rd, S.T. Bed, 4th Block, Koramangala, Bengaluru, Karnataka 560034",
-    image: `${ASSETS}/JP_Nagar.jpg`,  //to be updated
+    image: `${ASSETS}/koramangala.jpeg`,
     maps: "https://maps.app.goo.gl/hTP95zAu7pv4c79Y6",
   },
 
