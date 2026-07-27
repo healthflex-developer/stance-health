@@ -49,7 +49,7 @@ export default function Team() {
   }, []);
 
   return (
-    <section className="sec test-sec">
+    <section className="sec test-sec team-sec-wrap">
       <div className="container">
         <div className="row">
           <div className="col-12 text-center">
