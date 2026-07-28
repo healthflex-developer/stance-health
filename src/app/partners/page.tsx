@@ -117,7 +117,7 @@ export default function PartnersPage() {
               Whether you&apos;re a clinician, sports organisation, or corporate entity — we have a
               tailored collaboration model for you.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
               {PARTNER_TYPES.map((pt) => (
                 <div
                   key={pt.title}

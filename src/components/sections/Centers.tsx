@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { ASSETS } from "@/lib/constants";
 
@@ -44,7 +44,7 @@ const CENTERS = [
     phone: "+91 6366941095",
     address:
       "Unit No. 22, Ground floor, 80 Feet Rd, S.T. Bed, 4th Block, Koramangala, Bengaluru, Karnataka 560034",
-    image: `${ASSETS}/JP_Nagar.jpg`,  //to be updated
+    image: `${ASSETS}/koramangala.jpeg`,
     maps: "https://maps.app.goo.gl/hTP95zAu7pv4c79Y6",
   },
 
@@ -55,10 +55,30 @@ export default function Centers() {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
   const count = CENTERS.length;
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   const goTo = (i: number) => setActive(((i % count) + count) % count);
   const prev = () => goTo(active - 1);
   const next = () => goTo(active + 1);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    setPaused(true);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    const diff = touchStartX.current - touchEndX.current;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) next();
+      else prev();
+    }
+    setPaused(false);
+  };
 
   useEffect(() => {
     if (paused) return;
@@ -90,7 +110,12 @@ export default function Centers() {
           </button>
 
           {/* Slides */}
-          <div className="relative w-full max-w-3xl h-[420px] sm:h-[480px] flex items-center justify-center">
+          <div
+            className="relative w-full max-w-3xl h-[420px] sm:h-[480px] flex items-center justify-center"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
             {CENTERS.map((center, i) => {
               const offset = i - active;
               const isActive = offset === 0;

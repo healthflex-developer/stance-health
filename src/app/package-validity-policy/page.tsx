@@ -54,9 +54,9 @@ export default function PackageValidityPolicyPage() {
                       <li key={s.id}>
                         <button
                           onClick={() => scrollTo(s.id)}
-                          className={`flex items-start gap-2 w-full text-left px-2 py-1.5 rounded-md text-xs leading-relaxed transition-colors ${
+                          className={`flex items-start gap-2 w-full text-left px-2 py-1.5 rounded-md text-xs leading-relaxed transition-all duration-200 ${
                             activeSection === s.id
-                              ? "bg-[#cdfe71]/8 text-[#cdfe71]"
+                              ? "bg-[#cdfe71]/10 text-[#cdfe71]"
                               : "text-white/50 hover:bg-[#cdfe71]/5 hover:text-[#cdfe71]"
                           }`}
                         >
@@ -67,13 +67,32 @@ export default function PackageValidityPolicyPage() {
                           >
                             {s.number}
                           </span>
-                          {s.title}
+                          <span>{s.title}</span>
                         </button>
                       </li>
                     ))}
                   </ul>
                 </div>
               </aside>
+
+              {/* Mobile TOC */}
+              <div className="lg:hidden bg-white/[0.03] border border-[#cdfe71]/12 rounded-xl p-4">
+                <p className="text-[#cdfe71] text-[11px] font-bold tracking-[2px] uppercase mb-3">
+                  Contents
+                </p>
+                <div className="grid grid-cols-2 gap-1">
+                  {SECTIONS.map((s) => (
+                    <button
+                      key={s.id}
+                      onClick={() => scrollTo(s.id)}
+                      className="flex items-center gap-1.5 text-left px-2 py-1.5 rounded-md text-xs text-white/50 hover:bg-[#cdfe71]/5 hover:text-[#cdfe71] active:text-[#cdfe71] transition-colors"
+                    >
+                      <span className="text-[10px] font-bold text-[#cdfe71]/40">{s.number}</span>
+                      <span className="truncate">{s.title}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
 
               {/* Main content */}
               <div className="space-y-6">

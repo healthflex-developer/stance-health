@@ -20,12 +20,12 @@ export default function Programs() {
         </div>
 
         {/* Tab buttons */}
-        <div className="flex gap-2 flex-wrap justify-center mb-10">
+        <div className="flex gap-2 sm:gap-3 flex-wrap justify-center mb-10 max-w-3xl mx-auto">
           {PROGRAMS.map((p, i) => (
             <button
               key={p.id}
               onClick={() => setActive(i)}
-              className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
+              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all whitespace-nowrap ${
                 i === active
                   ? "bg-[#cdfe71] text-black"
                   : "border border-white/20 text-white/60 hover:border-white/40 hover:text-white"
