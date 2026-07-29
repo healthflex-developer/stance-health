@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ASSETS, TEAM } from "@/lib/constants";
+import { ASSETS } from "@/lib/constants";
 import BookingCta from "@/components/BookingCta";
+import AboutTeam from "@/components/sections/AboutTeam";
 
 import type { Metadata } from "next";
 
@@ -103,7 +104,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="rounded-2xl overflow-hidden aspect-[4/5] relative">
                   <Image
-                    src={`${ASSETS}/about-1-img.png`}
+                    src={`${ASSETS}/about-1-img.PNG`}
                     alt="Stance clinic"
                     fill
                     className="object-cover"
@@ -111,7 +112,7 @@ export default function AboutPage() {
                 </div>
                 <div className="rounded-2xl overflow-hidden aspect-[4/5] relative mt-8">
                   <Image
-                    src={`${ASSETS}/about-2-img.png`}
+                    src={`${ASSETS}/about-2-img.jpeg`}
                     alt="Stance team in action"
                     fill
                     className="object-cover"
@@ -146,96 +147,7 @@ export default function AboutPage() {
         </section>
 
         {/* Team */}
-        <section className="py-20 bg-[#0c1b30]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="section-title text-center mb-4">
-              Meet Our <span className="text-[#cdfe71]">Team</span>
-            </h2>
-            <p className="text-white/50 text-center text-lg mb-12 max-w-2xl mx-auto">
-              Our clinical team brings decades of combined experience in sports physiotherapy,
-              rehabilitation, and performance.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {TEAM.map((member) => (
-                <div key={member.name} className="card-navy text-center">
-                  <div className="w-24 h-24 rounded-full bg-[#132644] border border-white/10 flex items-center justify-center mx-auto mb-4 overflow-hidden">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      width={96}
-                      height={96}
-                      className="object-cover"
-                    />
-                  </div>
-                  <h3 className="text-white font-bold mb-1">{member.name}</h3>
-                  <p className="text-[#cdfe71] text-sm font-medium mb-1">{member.role}</p>
-                  {member.experience && (
-                    <p className="text-white/40 text-xs">{member.experience}</p>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Team extended bios */}
-        <section className="py-20 bg-[#132644]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-            {/* Durga */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="rounded-2xl overflow-hidden aspect-video relative bg-[#1a3358]">
-                <Image
-                  src={`${ASSETS}/team-1.svg`}
-                  alt="Durga Joshi"
-                  fill
-                  className="object-contain p-6"
-                />
-              </div>
-              <div>
-                <p className="text-[#cdfe71] text-sm font-semibold uppercase tracking-widest mb-2">
-                  Lead Physiotherapist
-                </p>
-                <h3 className="text-3xl font-extrabold text-white mb-4">Durga Joshi</h3>
-                <p className="text-white/70 leading-relaxed mb-4">
-                  With 12+ years of experience, Durga specialises in manual therapy including
-                  Maitland, McKenzie, Clinical Pilates, and neurodynamic treatments. She has
-                  previously collaborated with Sakra World Hospital and YOS Sports Health Specialists.
-                </p>
-                <p className="text-white/70 leading-relaxed">
-                  Her expertise spans comprehensive MSK health evaluation, injury prevention, and
-                  personalised recovery planning for athletes and active individuals.
-                </p>
-              </div>
-            </div>
-
-            {/* Sumesh */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="lg:order-2 rounded-2xl overflow-hidden aspect-video relative bg-[#1a3358]">
-                <Image
-                  src={`${ASSETS}/team-2.svg`}
-                  alt="Sumesh Ashokan"
-                  fill
-                  className="object-contain p-6"
-                />
-              </div>
-              <div className="lg:order-1">
-                <p className="text-[#cdfe71] text-sm font-semibold uppercase tracking-widest mb-2">
-                  Senior Physiotherapist
-                </p>
-                <h3 className="text-3xl font-extrabold text-white mb-4">Sumesh Ashokan</h3>
-                <p className="text-white/70 leading-relaxed mb-4">
-                  A former athlete himself, Sumesh brings a unique perspective to rehabilitation.
-                  His deep understanding of anatomy and sports-specific demands allows him to
-                  create targeted recovery pathways.
-                </p>
-                <p className="text-white/70 leading-relaxed">
-                  He emphasises holistic injury prevention and accurate diagnosis, ensuring athletes
-                  return to sport stronger and more resilient than before.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <AboutTeam />
 
         {/* CTA */}
         <section className="py-20 bg-[#cdfe71]">
