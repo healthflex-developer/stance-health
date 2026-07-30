@@ -2,7 +2,7 @@
 
 import { useRef, useCallback, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Scrollbar } from "swiper/modules";
+import { Scrollbar, Autoplay, FreeMode } from "swiper/modules";
 import type { SwiperRef } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
@@ -60,7 +60,7 @@ export default function Team() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5 }}
             >
-              Flawless Team
+              Flawless <span className="green">Team</span>
             </motion.h3>
             <motion.p
               className="para sub-txt"
@@ -73,28 +73,36 @@ export default function Team() {
             </motion.p>
           </div>
           <div className="col-12">
-            <div className="team-slider">
+            <div
+              className="team-slider"
+              onMouseEnter={() => sliderRef.current?.swiper.autoplay.stop()}
+              onMouseLeave={() => sliderRef.current?.swiper.autoplay.start()}
+            >
               <Swiper
                 ref={sliderRef}
                 scrollbar={{ hide: false, draggable: true }}
                 className="team-swiper"
-                modules={[Scrollbar]}
+                modules={[Scrollbar, Autoplay, FreeMode]}
                 slidesPerView={4}
                 spaceBetween={0}
                 grabCursor={true}
+                loop={true}
+                speed={4000}
+                autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: true }}
+                freeMode={true}
                 touchEventsTarget="container"
                 threshold={5}
                 onSlideChange={onSlideChange}
                 onSwiper={onSwiperInit}
                 breakpoints={{
-                  0: { slidesPerView: 1.15, spaceBetween: 12 },
-                  400: { slidesPerView: 1.3, spaceBetween: 16 },
-                  540: { slidesPerView: 1.8, spaceBetween: 18 },
-                  640: { slidesPerView: 2, spaceBetween: 20 },
-                  768: { slidesPerView: 2.5, spaceBetween: 24 },
-                  900: { slidesPerView: 3, spaceBetween: 28 },
-                  1024: { slidesPerView: 3.5, spaceBetween: 32 },
-                  1200: { slidesPerView: 4, spaceBetween: 40 },
+                  0: { slidesPerView: 1.15, spaceBetween: 8 },
+                  400: { slidesPerView: 1.3, spaceBetween: 10 },
+                  540: { slidesPerView: 1.8, spaceBetween: 12 },
+                  640: { slidesPerView: 2, spaceBetween: 14 },
+                  768: { slidesPerView: 2.5, spaceBetween: 16 },
+                  900: { slidesPerView: 3, spaceBetween: 18 },
+                  1024: { slidesPerView: 3.5, spaceBetween: 20 },
+                  1200: { slidesPerView: 4, spaceBetween: 24 },
                 }}
               >
                 {TEAM.map((member, index) => (
@@ -143,12 +151,11 @@ export default function Team() {
               </Swiper>
               <div className="tech-nav">
                 <motion.button
-                  className={`tech-prev ${isBeginning ? "nav-disabled" : ""}`}
+                  className="tech-prev"
                   onClick={handlePrev}
                   aria-label="Previous"
-                  disabled={isBeginning}
-                  whileHover={!isBeginning ? { scale: 1.15 } : {}}
-                  whileTap={!isBeginning ? { scale: 0.9 } : {}}
+                  whileHover={{ scale: 1.15 }}
+                  whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                   <Image
@@ -159,12 +166,11 @@ export default function Team() {
                   />
                 </motion.button>
                 <motion.button
-                  className={`tech-next ${isEnd ? "nav-disabled" : ""}`}
+                  className="tech-next"
                   onClick={handleNext}
                   aria-label="Next"
-                  disabled={isEnd}
-                  whileHover={!isEnd ? { scale: 1.15 } : {}}
-                  whileTap={!isEnd ? { scale: 0.9 } : {}}
+                  whileHover={{ scale: 1.15 }}
+                  whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                   <Image
@@ -176,7 +182,7 @@ export default function Team() {
                 </motion.button>
               </div>
             </div>
-            <Link href="/about" className="main-btn center">
+            <Link href="/about" className="main-btn center hover-glow">
               <span>Explore Now</span>
             </Link>
           </div>
