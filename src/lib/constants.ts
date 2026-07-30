@@ -36,7 +36,7 @@ export const APP_STORE_URL  = `${APP_STORE_BASE}?utm_source=website&utm_medium=c
 export const PLAY_STORE_URL = `${PLAY_STORE_BASE}&utm_source=website&utm_medium=cta&utm_campaign=app_install`;
 
 export const NAV_LINKS = [
-  { label: "We are Stance", href: "/about" },
+  { label: "About Us", href: "/about" },
   { label: "Philosophy", href: "/philosophy" },
   {
     label: "Programs",
@@ -195,12 +195,19 @@ export const TEAM = [
     // image: `${ASSETS}/11.png`,
     bio: "Durga brings over 12 years of experience in musculoskeletal and sports physiotherapy, specializing in manual therapy techniques such as Maitland, McKenzie, Clinical Pilates, and Butler's Neurodynamic treatments. Her professional journey includes collaborations with esteemed institutions like Sakra World Hospital and YOS Sports Health Specialists, as well as working closely with industry's best physiotherapists and sports medicine doctors.",
   },
+  // {
+  //   name: "Sumesh Ashokan",
+  //   role: "Senior Musculoskeletal and Sports Physiotherapist",
+  //   experience: "8+ years experience",
+  //   image: `${ASSETS}/team-2.svg`,
+  //   bio: "As an athlete turned physiotherapist, Sumesh's mission at Stance is to guide you from injury recovery to performance enhancement. With his experience in various sports and a deep understanding of human anatomy, he provides personalized care tailored to your needs. His holistic approach ensures accurate diagnosis and prevention of future injuries, helping you achieve a better tomorrow.",
+  // },
   {
-    name: "Sumesh Ashokan",
-    role: "Senior Musculoskeletal and Sports Physiotherapist",
-    experience: "8+ years experience",
-    image: `${ASSETS}/team-2.svg`,
-    bio: "As an athlete turned physiotherapist, Sumesh's mission at Stance is to guide you from injury recovery to performance enhancement. With his experience in various sports and a deep understanding of human anatomy, he provides personalized care tailored to your needs. His holistic approach ensures accurate diagnosis and prevention of future injuries, helping you achieve a better tomorrow.",
+    name: "Anand Date",
+    role: "S&C",
+    experience: "15+ years experience",
+    image: `${ASSETS}/Anand.svg`,
+    bio: "Anand is a strength and conditioning coach and sports science professional with over 15 years of experience working with high-performance athletes. His work focuses on performance development, injury recovery, and return-to-sport preparation through structured strength and conditioning programs. He applies high-performance training and recovery strategies to help athletes and active individuals move and perform better.",
   },
   {
     name: "Arjun K Raj",
@@ -263,7 +270,7 @@ export const TEAM = [
   name: "Arun Raj",
   role: "Sports Physiotherapist",
   experience: "6+ years experience",
-  image: `${ASSETS}/team-11.png`,
+  image: `${ASSETS}/Arun.jpg`,
   bio: "Arun holds degrees in Physiotherapy and Musculoskeletal & Sports Physiotherapy and focuses on orthopedic and sports injury rehabilitation. His work emphasizes individualized rehabilitation protocols, injury prevention strategies, and functional recovery.",
 },
 {
@@ -277,21 +284,21 @@ export const TEAM = [
   name: "Erica D'Costa",
   role: "Musculoskeletal Physiotherapist",
   experience: "4+ years experience",
-  image: `${ASSETS}/team-13.png`,
+  image: `${ASSETS}/Erica.png`,
   bio: "Erica holds a degree in Physiotherapy and is pursuing specialization in Musculoskeletal Physiotherapy. Her work focuses on assessment and rehabilitation of musculoskeletal injuries through exercise therapy and manual therapy approaches.",
 },
 {
   name: "Pandieswari Pandian",
   role: "Sports Physiotherapist",
   experience: "5+ years experience",
-  image: `${ASSETS}/team-14.png`,
+  image: `${ASSETS}/Eswari.jpg`,
   bio: "Pandieswari holds a degree in Physiotherapy with experience in musculoskeletal and sports injury rehabilitation. She utilizes techniques such as dry needling, myofascial release, joint mobilization, and kinesiology taping to support patient recovery.",
 },
 {
   name: "Kiandra Fernandes",
   role: "Musculoskeletal Physiotherapist",
   experience: "5+ years experience",
-  image: `${ASSETS}/team-15.png`,
+  image: `${ASSETS}/Kiandra.png`,
   bio: "Kiandra is a musculoskeletal physiotherapist pursuing specialization in Musculoskeletal Sciences, with a background in exercise-based rehabilitation and manual therapy. She focuses on structured rehabilitation for musculoskeletal and sports-related injuries.",
 },
 {
@@ -300,13 +307,6 @@ export const TEAM = [
   experience: "5+ years experience",
   image: `${ASSETS}/team-16.png`,
   bio: "Harini is a musculoskeletal physiotherapist specializing in post-operative rehabilitation, biomechanics, and exercise-based recovery. She integrates manual therapy, movement assessment, and strength-focused rehabilitation to support patient outcomes.",
-},
-{
-  name: "Anand Date",
-  role: "Strength and Conditioning Coach",
-  experience: "15+ years experience",
-  image: `${ASSETS}/team-17.png`,
-  bio: "Anand is a strength and conditioning coach and sports science professional with over 15 years of experience working with high-performance athletes. He focuses on performance development, injury recovery, and return-to-sport preparation.",
 },
 {
   name: "Pradyumna Bopaiah",
@@ -368,14 +368,14 @@ export const TEAM = [
   name: "Soham Veer",
   role: "Strength and Conditioning Coach",
   experience: "5+ years experience",
-  image: `${ASSETS}/team-26.png`,
+  image: `${ASSETS}/soham.jpg`,
   bio: "Soham holds a degree in Sports and Exercise Science with specialization in sports biomechanics and strength and conditioning. He develops sport-specific strength and conditioning programs to improve movement efficiency and athletic performance.",
 },
 {
   name: "Pooja Khandelwal",
   role: "Strength and Conditioning Coach",
   experience: "7+ years experience",
-  image: `${ASSETS}/team-27.png`,
+  image: `${ASSETS}/pooja.png`,
   bio: "Pooja is a Certified Strength and Conditioning Specialist (CSCS) with additional certifications in personal training and fitness nutrition. She focuses on strength development, conditioning, and injury prevention through individualized training programs.",
 },
 {
@@ -396,7 +396,7 @@ export const TEAM = [
   name: "Anmol Khanna",
   role: "Strength and Conditioning Coach",
   experience: "4+ years experience",
-  image: `${ASSETS}/team-30.png`,
+  image: `${ASSETS}/Anmol.jpg`,
   bio: "Anmol is pursuing a degree in Strength and Conditioning and focuses on structured performance training and workload monitoring. His work includes strength development, rehabilitation support, and return-to-play programming.",
 },
 ];
@@ -447,7 +447,7 @@ export const PROGRAMS = [
 export const FOOTER_LINKS = {
   about: [
     { label: "Home", href: "/" },
-    { label: "We are Stance", href: "/about" },
+    { label: "About Us", href: "/about" },
     { label: "Philosophy", href: "/philosophy" },
     { label: "Partner With Us", href: "/partners" },
   ],

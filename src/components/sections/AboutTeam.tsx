@@ -6,7 +6,8 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { TEAM, ASSETS } from "@/lib/constants";
 
-// Show first 9 members on this page
+// Show 9 on desktop (3x3), 8 on tablets/mobile (2x4)
+// We render 9 and hide the last one on smaller screens via CSS
 const DISPLAYED_TEAM = TEAM.slice(0, 9);
 
 export default function AboutTeam() {
@@ -37,7 +38,7 @@ export default function AboutTeam() {
         </motion.div>
 
         {/* Large Team Photo */}
-        <motion.div
+        {/* <motion.div
           className="relative w-full rounded-2xl overflow-hidden mb-16 aspect-[21/9]"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -52,14 +53,14 @@ export default function AboutTeam() {
             sizes="(max-width: 1280px) 100vw, 1280px"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0c1b30] via-transparent to-transparent opacity-60" />
-        </motion.div>
+        </motion.div> */}
 
-        {/* Team Cards Grid — 3x3 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+        {/* Team Cards Grid — 2 per row on mobile, 3 on desktop */}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-5 sm:gap-x-8 gap-y-10 sm:gap-y-12">
           {DISPLAYED_TEAM.map((member, index) => (
             <motion.div
               key={member.name}
-              className="group cursor-pointer"
+              className={`group cursor-pointer ${index === 8 ? "hidden lg:block" : ""}`}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-30px" }}
