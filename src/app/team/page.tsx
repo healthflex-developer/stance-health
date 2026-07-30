@@ -61,7 +61,7 @@ export default function TeamPage() {
         {/* All Team Members */}
         <section className="py-16 sm:py-20 bg-[#0c1b30]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-5 sm:gap-x-8 gap-y-10 sm:gap-y-12">
               {TEAM.map((member, index) => (
                 <motion.div
                   key={member.name}
