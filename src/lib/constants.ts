@@ -12,18 +12,18 @@ export const GSC_VERIFICATION = process.env.NEXT_PUBLIC_GSC_VERIFICATION ?? "";
 
 // ── Firebase config (used by analytics.ts for Firebase Analytics) ─────────
 export const FIREBASE_CONFIG = {
-  apiKey:            process.env.NEXT_PUBLIC_FIREBASE_API_KEY ?? "",
-  authDomain:        process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN ?? "",
-  projectId:         process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID ?? "",
-  storageBucket:     process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET ?? "",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY ?? "",
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN ?? "",
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID ?? "",
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET ?? "",
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID ?? "",
-  appId:             process.env.NEXT_PUBLIC_FIREBASE_APP_ID ?? "",
-  measurementId:     process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID ?? "", // e.g. "G-XXXXXXXXXX"
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID ?? "",
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID ?? "", // e.g. "G-XXXXXXXXXX"
 } as const;
 
 // ── CTA destinations ──────────────────────────────────────────────────────
 const DASHBOARD_BASE = "https://book.stance.health/stance-health";
-const APP_STORE_BASE  = "https://apps.apple.com/us/app/stance-health/id6757695513";
+const APP_STORE_BASE = "https://apps.apple.com/us/app/stance-health/id6757695513";
 const PLAY_STORE_BASE = "https://play.google.com/store/apps/details?id=com.stance.health";
 
 /**
@@ -32,25 +32,26 @@ const PLAY_STORE_BASE = "https://play.google.com/store/apps/details?id=com.stanc
  * params client-side via the useCta() hook (see src/hooks/useCta.ts).
  */
 export const BOOKING_URL = DASHBOARD_BASE;
-export const APP_STORE_URL  = `${APP_STORE_BASE}?utm_source=website&utm_medium=cta&utm_campaign=app_install`;
+export const APP_STORE_URL = `${APP_STORE_BASE}?utm_source=website&utm_medium=cta&utm_campaign=app_install`;
 export const PLAY_STORE_URL = `${PLAY_STORE_BASE}&utm_source=website&utm_medium=cta&utm_campaign=app_install`;
 
 export const NAV_LINKS = [
   { label: "About Us", href: "/about" },
   { label: "Philosophy", href: "/philosophy" },
-  {
-    label: "Programs",
-    children: [
-      { label: "In Your Stride", href: "/running" },
-      { label: "Reclaim Your Game", href: "/back-to-sports" },
-      { label: "Back on your feet", href: "/surgical-rehab" },
-      { label: "Prevention & Recovery", href: "/injury-management" },
-      { label: "Breaking Barriers", href: "/performance-training" },
-    ],
-  },
+  // {
+  //   label: "Programs",
+  //   children: [
+  //     { label: "In Your Stride", href: "/running" },
+  //     { label: "Reclaim Your Game", href: "/back-to-sports" },
+  //     { label: "Back on your feet", href: "/surgical-rehab" },
+  //     { label: "Prevention & Recovery", href: "/injury-management" },
+  //     { label: "Breaking Barriers", href: "/performance-training" },
+  //   ],
+  // },
   { label: "Conditions", href: "/conditions" },
   { label: "Locations", href: "/locations" },
   { label: "Partners", href: "/partners" },
+  { label: "Careers", href: "/careers" },
 ];
 
 export const FRAMEWORK_STEPS = [
@@ -101,22 +102,22 @@ export const TECHNOLOGIES = [
   {
     id: "vald-force-frame",
     name: "VALD | Force Frame",
-    icon: `${ASSETS}/force.svg`,
+    icon: `${ASSETS}/forceframe.png`,
     description: "Accurate testing of isometric strength across various muscle groups",
   },
   {
     id: "vald-force-decks",
     name: "VALD | Force Decks",
-    icon: `${ASSETS}/deck.svg`,
+    icon: `${ASSETS}/forcedeck.png`,
     description:
       "Dual force plates for accurately testing explosive power, balance and neuromuscular control",
   },
-  {
-    id: "healthflex",
-    name: "HealthFlex",
-    icon: `${ASSETS}/tech1.jpg`,
-    description: "AI-based motion sensors that guide you in your rehabilitation journey at home.",
-  },
+  // {
+  //   id: "healthflex",
+  //   name: "HealthFlex",
+  //   icon: `${ASSETS}/tech1.jpg`,
+  //   description: "AI-based motion sensors that guide you in your rehabilitation journey at home.",
+  // },
 ];
 
 export const TESTIMONIALS = [
@@ -191,8 +192,7 @@ export const TEAM = [
     name: "Durga Joshi",
     role: "Lead Musculoskeletal and Sports Physiotherapist",
     experience: "12+ years experience",
-    image: `${ASSETS}/team-1.svg`,
-    // image: `${ASSETS}/11.png`,
+    image: `${ASSETS}/durga.jpg`,
     bio: "Durga brings over 12 years of experience in musculoskeletal and sports physiotherapy, specializing in manual therapy techniques such as Maitland, McKenzie, Clinical Pilates, and Butler's Neurodynamic treatments. Her professional journey includes collaborations with esteemed institutions like Sakra World Hospital and YOS Sports Health Specialists, as well as working closely with industry's best physiotherapists and sports medicine doctors.",
   },
   // {
@@ -206,199 +206,199 @@ export const TEAM = [
     name: "Anand Date",
     role: "S&C",
     experience: "15+ years experience",
-    image: `${ASSETS}/Anand.svg`,
+    image: `${ASSETS}/Anand.jpg`,
     bio: "Anand is a strength and conditioning coach and sports science professional with over 15 years of experience working with high-performance athletes. His work focuses on performance development, injury recovery, and return-to-sport preparation through structured strength and conditioning programs. He applies high-performance training and recovery strategies to help athletes and active individuals move and perform better.",
   },
   {
     name: "Arjun K Raj",
     role: "Senior Strength and Conditioning Coach",
     experience: "6+ years experience",
-    image: `${ASSETS}/team-3.svg`,
+    image: `${ASSETS}/Arjun.jpg`,
     bio: "At Stance, Arjun's goal is to help you achieve your fitness aspirations through personalized, meticulously crafted training programs. By understanding your unique needs, he tailors each plan to guide you towards peak performance and a healthier lifestyle. Together, you will unlock your full potential and ensure every step is taken towards your success.",
   },
   {
     name: "Surbhi Paranjpe",
     role: "Senior Musculoskeletal and Sports Physiotherapist",
     experience: "5+ years experience",
-    image: `${ASSETS}/team-4.svg`,
+    image: `${ASSETS}/Surbhi.jpg`,
     bio: "With a commitment to precise diagnosis and evidence-based treatment, Surbhi helps you manage and overcome musculoskeletal conditions. Her focus is on pain management and performance enhancement, ensuring you achieve your objectives while minimizing injury risks. Through tailored programs and education, she empowers you to reach your full athletic potential.",
   },
   //new members
-//   {
-//   name: "Maitri Gala",
-//   role: "Physiotherapist",
-//   experience: "5+ years experience",
-//   image: `${ASSETS}/team-5.svg`,
-//   bio: "Maitri is a physiotherapist with experience working with national-level athletes across sports such as hockey, volleyball, and football. Her work focuses on injury prevention, rehabilitation, and optimizing physical performance through individualized treatment strategies. She applies evidence-based physiotherapy to support recovery from musculoskeletal injuries and improve functional movement.",
-// },
-{
-  name: "Vignesh Seetharaman",
-  role: "Sports Physiotherapist",
-  experience: "6+ years experience",
-  image: `${ASSETS}/team-6.png`,
-  bio: "Vignesh is a sports physiotherapist with a degree in physiotherapy and advanced training in sports physiotherapy, specializing in injury rehabilitation and return-to-play protocols. His work includes musculoskeletal assessments, manual therapy techniques, and sports-specific rehabilitation strategies. He has supported athletes across football, squash, hockey, kabaddi, volleyball, and weightlifting.",
-},
-{
-  name: "Sneha Jain",
-  role: "Sports Physiotherapist",
-  experience: "4+ years experience",
-  image: `${ASSETS}/team-7.png`,
-  bio: "Sneha holds a degree in Physiotherapy and is pursuing specialization in Sports Physiotherapy. Her work focuses on post-operative sports injury rehabilitation, including ACL reconstruction and shoulder instability cases, alongside movement screening and performance recovery.",
-},
-// {
-//   name: "Vaishnavi Balani",
-//   role: "Musculoskeletal Physiotherapist",
-//   experience: "4+ years experience",
-//   image: `${ASSETS}/team-8.png`,
-//   bio: "Vaishnavi holds a degree in Physiotherapy and is pursuing a specialization in Musculoskeletal Physiotherapy. Her work focuses on orthopedic rehabilitation, post-operative recovery, and patient-specific exercise therapy.",
-// },
-{
-  name: "Shreya Poojary",
-  role: "Physiotherapist",
-  experience: "4+ years experience",
-  image: `${ASSETS}/team-9.png`,
-  bio: "Shreya holds a degree in Physiotherapy with experience in musculoskeletal rehabilitation and sports physiotherapy. Her work includes treating orthopedic and spinal conditions, designing rehabilitation programs, and providing on-field physiotherapy support.",
-},
-{
-  name: "Vanshika Tandon",
-  role: "Musculoskeletal Physiotherapist",
-  experience: "4+ years experience",
-  image: `${ASSETS}/team-10.png`,
-  bio: "Vanshika holds a degree in Physiotherapy and is pursuing specialization in Musculoskeletal and Manual Therapy. Her work focuses on rehabilitation planning, functional mobility restoration, and manual therapy techniques.",
-},
-{
-  name: "Arun Raj",
-  role: "Sports Physiotherapist",
-  experience: "6+ years experience",
-  image: `${ASSETS}/Arun.jpg`,
-  bio: "Arun holds degrees in Physiotherapy and Musculoskeletal & Sports Physiotherapy and focuses on orthopedic and sports injury rehabilitation. His work emphasizes individualized rehabilitation protocols, injury prevention strategies, and functional recovery.",
-},
-{
-  name: "Keerthana S",
-  role: "Sports Physiotherapist",
-  experience: "4+ years experience",
-  image: `${ASSETS}/team-12.png`,
-  bio: "Keerthana holds a degree in Physiotherapy and is pursuing specialization in Sports Physiotherapy. Her work focuses on athlete assessment, injury prevention, kinesiology taping, and return-to-sport rehabilitation.",
-},
-{
-  name: "Erica D'Costa",
-  role: "Musculoskeletal Physiotherapist",
-  experience: "4+ years experience",
-  image: `${ASSETS}/Erica.png`,
-  bio: "Erica holds a degree in Physiotherapy and is pursuing specialization in Musculoskeletal Physiotherapy. Her work focuses on assessment and rehabilitation of musculoskeletal injuries through exercise therapy and manual therapy approaches.",
-},
-{
-  name: "Pandieswari Pandian",
-  role: "Sports Physiotherapist",
-  experience: "5+ years experience",
-  image: `${ASSETS}/Eswari.jpg`,
-  bio: "Pandieswari holds a degree in Physiotherapy with experience in musculoskeletal and sports injury rehabilitation. She utilizes techniques such as dry needling, myofascial release, joint mobilization, and kinesiology taping to support patient recovery.",
-},
-{
-  name: "Kiandra Fernandes",
-  role: "Musculoskeletal Physiotherapist",
-  experience: "5+ years experience",
-  image: `${ASSETS}/Kiandra.png`,
-  bio: "Kiandra is a musculoskeletal physiotherapist pursuing specialization in Musculoskeletal Sciences, with a background in exercise-based rehabilitation and manual therapy. She focuses on structured rehabilitation for musculoskeletal and sports-related injuries.",
-},
-{
-  name: "Harini Bidari",
-  role: "Musculoskeletal Physiotherapist",
-  experience: "5+ years experience",
-  image: `${ASSETS}/team-16.png`,
-  bio: "Harini is a musculoskeletal physiotherapist specializing in post-operative rehabilitation, biomechanics, and exercise-based recovery. She integrates manual therapy, movement assessment, and strength-focused rehabilitation to support patient outcomes.",
-},
-{
-  name: "Pradyumna Bopaiah",
-  role: "Strength and Conditioning Coach",
-  experience: "10+ years experience",
-  image: `${ASSETS}/team-18.png`,
-  bio: "Pradyumna is a high-performance strength and conditioning coach with a background in sprinting. He has worked with international cricketers, elite track and field athletes, and national-level football players.",
-},
-{
-  name: "Srinivas M",
-  role: "Strength and Conditioning Coach",
-  experience: "8+ years experience",
-  image: `${ASSETS}/team-19.png`,
-  bio: "Srinivas is a physiotherapist and sports scientist working in strength and conditioning. He integrates clinical expertise with evidence-based training to build strength, resilience, and long-term athletic capacity.",
-},
-{
-  name: "Sharvari Godase",
-  role: "Strength and Conditioning Coach",
-  experience: "5+ years experience",
-  image: `${ASSETS}/team-20.png`,
-  bio: "Sharvari holds a degree in Sports and Exercise Science and focuses on structured strength testing, sport-specific program design, and functional strength development. She brings competitive sporting experience into her coaching approach.",
-},
-{
-  name: "Shubh Gupta",
-  role: "Strength and Conditioning Coach",
-  experience: "5+ years experience",
-  image: `${ASSETS}/team-21.png`,
-  bio: "Shubh holds a degree in Exercise and Sports Science with training in biomechanics, exercise physiology, and athlete performance testing. His work focuses on strength programming, biomechanical analysis, and return-to-play support.",
-},
-{
-  name: "Kaushik Jadhav",
-  role: "Strength and Conditioning Coach",
-  experience: "6+ years experience",
-  image: `${ASSETS}/team-22.png`,
-  bio: "Kaushik holds a BPED qualification and ASCA Level 1 certification in Strength and Conditioning. His coaching focuses on structured performance testing, strength development, and safe return-to-sport progression.",
-},
-{
-  name: "Sanket Sharma",
-  role: "Strength and Conditioning Coach",
-  experience: "8+ years experience",
-  image: `${ASSETS}/team-23.png`,
-  bio: "Sanket is a Certified Strength and Conditioning Specialist (CSCS) with additional training in sports nutrition and sports psychology. His work focuses on speed, power development, and sport-specific conditioning.",
-},
-{
-  name: "Vamshi P",
-  role: "Strength and Conditioning Coach",
-  experience: "5+ years experience",
-  image: `${ASSETS}/team-24.png`,
-  bio: "Vamshi holds a degree in Sports and Exercise Science with training in biomechanics, exercise physiology, and athlete performance testing. His work involves strength and conditioning program design alongside physiological and biomechanical assessments.",
-},
-{
-  name: "Rajath M",
-  role: "Strength and Conditioning Coach",
-  experience: "5+ years experience",
-  image: `${ASSETS}/team-25.png`,
-  bio: "Rajath holds a degree in Sports Science with training in biomechanics, exercise physiology, and sports nutrition. His work focuses on performance assessment, strength and conditioning program design, and recovery strategies.",
-},
-{
-  name: "Soham Veer",
-  role: "Strength and Conditioning Coach",
-  experience: "5+ years experience",
-  image: `${ASSETS}/soham.jpg`,
-  bio: "Soham holds a degree in Sports and Exercise Science with specialization in sports biomechanics and strength and conditioning. He develops sport-specific strength and conditioning programs to improve movement efficiency and athletic performance.",
-},
-{
-  name: "Pooja Khandelwal",
-  role: "Strength and Conditioning Coach",
-  experience: "7+ years experience",
-  image: `${ASSETS}/pooja.png`,
-  bio: "Pooja is a Certified Strength and Conditioning Specialist (CSCS) with additional certifications in personal training and fitness nutrition. She focuses on strength development, conditioning, and injury prevention through individualized training programs.",
-},
-{
-  name: "Prajwal Acharya",
-  role: "Strength and Conditioning Coach",
-  experience: "6+ years experience",
-  image: `${ASSETS}/team-28.png`,
-  bio: "Prajwal holds degrees in Exercise and Sports Science with specialization in strength and conditioning, biomechanics, and exercise physiology. His work focuses on athlete performance testing and data-driven training program design.",
-},
-// {
-//   name: "Hemanth Das",
-//   role: "Strength and Conditioning Coach",
-//   experience: "6+ years experience",
-//   image: `${ASSETS}/team-29.png`,
-//   bio: "Hemanth is a Strength and Conditioning Coach with experience working with elite and team sport athletes. He designs individualized training programs and periodized plans to help athletes build strength, improve resilience, and return to sport safely.",
-// },
-{
-  name: "Anmol Khanna",
-  role: "Strength and Conditioning Coach",
-  experience: "4+ years experience",
-  image: `${ASSETS}/Anmol.jpg`,
-  bio: "Anmol is pursuing a degree in Strength and Conditioning and focuses on structured performance training and workload monitoring. His work includes strength development, rehabilitation support, and return-to-play programming.",
-},
+  //   {
+  //   name: "Maitri Gala",
+  //   role: "Physiotherapist",
+  //   experience: "5+ years experience",
+  //   image: `${ASSETS}/team-5.svg`,
+  //   bio: "Maitri is a physiotherapist with experience working with national-level athletes across sports such as hockey, volleyball, and football. Her work focuses on injury prevention, rehabilitation, and optimizing physical performance through individualized treatment strategies. She applies evidence-based physiotherapy to support recovery from musculoskeletal injuries and improve functional movement.",
+  // },
+  {
+    name: "Vignesh Seetharaman",
+    role: "Sports Physiotherapist",
+    experience: "6+ years experience",
+    image: `${ASSETS}/team-6.png`,
+    bio: "Vignesh is a sports physiotherapist with a degree in physiotherapy and advanced training in sports physiotherapy, specializing in injury rehabilitation and return-to-play protocols. His work includes musculoskeletal assessments, manual therapy techniques, and sports-specific rehabilitation strategies. He has supported athletes across football, squash, hockey, kabaddi, volleyball, and weightlifting.",
+  },
+  {
+    name: "Sneha Jain",
+    role: "Sports Physiotherapist",
+    experience: "4+ years experience",
+    image: `${ASSETS}/team-7.png`,
+    bio: "Sneha holds a degree in Physiotherapy and is pursuing specialization in Sports Physiotherapy. Her work focuses on post-operative sports injury rehabilitation, including ACL reconstruction and shoulder instability cases, alongside movement screening and performance recovery.",
+  },
+  // {
+  //   name: "Vaishnavi Balani",
+  //   role: "Musculoskeletal Physiotherapist",
+  //   experience: "4+ years experience",
+  //   image: `${ASSETS}/team-8.png`,
+  //   bio: "Vaishnavi holds a degree in Physiotherapy and is pursuing a specialization in Musculoskeletal Physiotherapy. Her work focuses on orthopedic rehabilitation, post-operative recovery, and patient-specific exercise therapy.",
+  // },
+  {
+    name: "Shreya Poojary",
+    role: "Physiotherapist",
+    experience: "4+ years experience",
+    image: `${ASSETS}/team-9.png`,
+    bio: "Shreya holds a degree in Physiotherapy with experience in musculoskeletal rehabilitation and sports physiotherapy. Her work includes treating orthopedic and spinal conditions, designing rehabilitation programs, and providing on-field physiotherapy support.",
+  },
+  {
+    name: "Vanshika Tandon",
+    role: "Musculoskeletal Physiotherapist",
+    experience: "4+ years experience",
+    image: `${ASSETS}/team-10.png`,
+    bio: "Vanshika holds a degree in Physiotherapy and is pursuing specialization in Musculoskeletal and Manual Therapy. Her work focuses on rehabilitation planning, functional mobility restoration, and manual therapy techniques.",
+  },
+  {
+    name: "Arun Raj",
+    role: "Sports Physiotherapist",
+    experience: "6+ years experience",
+    image: `${ASSETS}/Arun.jpg`,
+    bio: "Arun holds degrees in Physiotherapy and Musculoskeletal & Sports Physiotherapy and focuses on orthopedic and sports injury rehabilitation. His work emphasizes individualized rehabilitation protocols, injury prevention strategies, and functional recovery.",
+  },
+  {
+    name: "Keerthana S",
+    role: "Sports Physiotherapist",
+    experience: "4+ years experience",
+    image: `${ASSETS}/team-12.png`,
+    bio: "Keerthana holds a degree in Physiotherapy and is pursuing specialization in Sports Physiotherapy. Her work focuses on athlete assessment, injury prevention, kinesiology taping, and return-to-sport rehabilitation.",
+  },
+  {
+    name: "Erica D'Costa",
+    role: "Musculoskeletal Physiotherapist",
+    experience: "4+ years experience",
+    image: `${ASSETS}/Erica.png`,
+    bio: "Erica holds a degree in Physiotherapy and is pursuing specialization in Musculoskeletal Physiotherapy. Her work focuses on assessment and rehabilitation of musculoskeletal injuries through exercise therapy and manual therapy approaches.",
+  },
+  {
+    name: "Pandieswari Pandian",
+    role: "Sports Physiotherapist",
+    experience: "5+ years experience",
+    image: `${ASSETS}/Eswari.jpg`,
+    bio: "Pandieswari holds a degree in Physiotherapy with experience in musculoskeletal and sports injury rehabilitation. She utilizes techniques such as dry needling, myofascial release, joint mobilization, and kinesiology taping to support patient recovery.",
+  },
+  {
+    name: "Kiandra Fernandes",
+    role: "Musculoskeletal Physiotherapist",
+    experience: "5+ years experience",
+    image: `${ASSETS}/Kiandra.png`,
+    bio: "Kiandra is a musculoskeletal physiotherapist pursuing specialization in Musculoskeletal Sciences, with a background in exercise-based rehabilitation and manual therapy. She focuses on structured rehabilitation for musculoskeletal and sports-related injuries.",
+  },
+  {
+    name: "Harini Bidari",
+    role: "Musculoskeletal Physiotherapist",
+    experience: "5+ years experience",
+    image: `${ASSETS}/team-16.png`,
+    bio: "Harini is a musculoskeletal physiotherapist specializing in post-operative rehabilitation, biomechanics, and exercise-based recovery. She integrates manual therapy, movement assessment, and strength-focused rehabilitation to support patient outcomes.",
+  },
+  {
+    name: "Pradyumna Bopaiah",
+    role: "Strength and Conditioning Coach",
+    experience: "10+ years experience",
+    image: `${ASSETS}/team-18.png`,
+    bio: "Pradyumna is a high-performance strength and conditioning coach with a background in sprinting. He has worked with international cricketers, elite track and field athletes, and national-level football players.",
+  },
+  {
+    name: "Srinivas M",
+    role: "Strength and Conditioning Coach",
+    experience: "8+ years experience",
+    image: `${ASSETS}/team-19.png`,
+    bio: "Srinivas is a physiotherapist and sports scientist working in strength and conditioning. He integrates clinical expertise with evidence-based training to build strength, resilience, and long-term athletic capacity.",
+  },
+  {
+    name: "Sharvari Godase",
+    role: "Strength and Conditioning Coach",
+    experience: "5+ years experience",
+    image: `${ASSETS}/team-20.png`,
+    bio: "Sharvari holds a degree in Sports and Exercise Science and focuses on structured strength testing, sport-specific program design, and functional strength development. She brings competitive sporting experience into her coaching approach.",
+  },
+  {
+    name: "Shubh Gupta",
+    role: "Strength and Conditioning Coach",
+    experience: "5+ years experience",
+    image: `${ASSETS}/team-21.png`,
+    bio: "Shubh holds a degree in Exercise and Sports Science with training in biomechanics, exercise physiology, and athlete performance testing. His work focuses on strength programming, biomechanical analysis, and return-to-play support.",
+  },
+  {
+    name: "Kaushik Jadhav",
+    role: "Strength and Conditioning Coach",
+    experience: "6+ years experience",
+    image: `${ASSETS}/team-22.png`,
+    bio: "Kaushik holds a BPED qualification and ASCA Level 1 certification in Strength and Conditioning. His coaching focuses on structured performance testing, strength development, and safe return-to-sport progression.",
+  },
+  {
+    name: "Sanket Sharma",
+    role: "Strength and Conditioning Coach",
+    experience: "8+ years experience",
+    image: `${ASSETS}/team-23.png`,
+    bio: "Sanket is a Certified Strength and Conditioning Specialist (CSCS) with additional training in sports nutrition and sports psychology. His work focuses on speed, power development, and sport-specific conditioning.",
+  },
+  {
+    name: "Vamshi P",
+    role: "Strength and Conditioning Coach",
+    experience: "5+ years experience",
+    image: `${ASSETS}/team-24.png`,
+    bio: "Vamshi holds a degree in Sports and Exercise Science with training in biomechanics, exercise physiology, and athlete performance testing. His work involves strength and conditioning program design alongside physiological and biomechanical assessments.",
+  },
+  {
+    name: "Rajath M",
+    role: "Strength and Conditioning Coach",
+    experience: "5+ years experience",
+    image: `${ASSETS}/team-25.png`,
+    bio: "Rajath holds a degree in Sports Science with training in biomechanics, exercise physiology, and sports nutrition. His work focuses on performance assessment, strength and conditioning program design, and recovery strategies.",
+  },
+  {
+    name: "Soham Veer",
+    role: "Strength and Conditioning Coach",
+    experience: "5+ years experience",
+    image: `${ASSETS}/soham.jpg`,
+    bio: "Soham holds a degree in Sports and Exercise Science with specialization in sports biomechanics and strength and conditioning. He develops sport-specific strength and conditioning programs to improve movement efficiency and athletic performance.",
+  },
+  {
+    name: "Pooja Khandelwal",
+    role: "Strength and Conditioning Coach",
+    experience: "7+ years experience",
+    image: `${ASSETS}/pooja.png`,
+    bio: "Pooja is a Certified Strength and Conditioning Specialist (CSCS) with additional certifications in personal training and fitness nutrition. She focuses on strength development, conditioning, and injury prevention through individualized training programs.",
+  },
+  {
+    name: "Prajwal Acharya",
+    role: "Strength and Conditioning Coach",
+    experience: "6+ years experience",
+    image: `${ASSETS}/team-28.png`,
+    bio: "Prajwal holds degrees in Exercise and Sports Science with specialization in strength and conditioning, biomechanics, and exercise physiology. His work focuses on athlete performance testing and data-driven training program design.",
+  },
+  // {
+  //   name: "Hemanth Das",
+  //   role: "Strength and Conditioning Coach",
+  //   experience: "6+ years experience",
+  //   image: `${ASSETS}/team-29.png`,
+  //   bio: "Hemanth is a Strength and Conditioning Coach with experience working with elite and team sport athletes. He designs individualized training programs and periodized plans to help athletes build strength, improve resilience, and return to sport safely.",
+  // },
+  {
+    name: "Anmol Khanna",
+    role: "Strength and Conditioning Coach",
+    experience: "4+ years experience",
+    image: `${ASSETS}/Anmol.jpg`,
+    bio: "Anmol is pursuing a degree in Strength and Conditioning and focuses on structured performance training and workload monitoring. His work includes strength development, rehabilitation support, and return-to-play programming.",
+  },
 ];
 
 export const PROGRAMS = [
@@ -441,6 +441,187 @@ export const PROGRAMS = [
     image: `${ASSETS}/pt-5.svg`,
     description:
       "High-performance training programme for individuals looking to elevate their athletic performance and overcome physical barriers through evidence-based strength and conditioning.",
+  },
+];
+
+export const TEAM_TESTIMONIALS = [
+  {
+    quote: "I'm learning something new every day, which is helping me grow both personally and professionally. I believe this experience is helping me become a better physiotherapist and will contribute significantly to my development as a clinician in the future. The work environment is supportive, well-organized, and professionally managed, making it a great place to learn and grow.",
+    name: "Anjali",
+    role: "Physio Intern",
+    initials: "A",
+  },
+  {
+    quote: "It's been a great learning experience with a supportive team and a professional environment. It has improved my practical skills, confidence, and understanding of strength and conditioning in real-world settings. Stance offers a more structured approach, better mentorship, and greater exposure to athlete assessment and evidence-based training.",
+    name: "Akshat",
+    role: "S&C Intern",
+    initials: "A",
+  },
+  {
+    quote: "Working at Stance has been incredibly rewarding. As an early-career physiotherapist, mentorship from experienced clinicians and exposure to evidence-based practice have strengthened my clinical reasoning, confidence, and hands-on skills. What stands out most is Stance's collaborative culture and individualised approach to care, looking beyond symptoms to understand the root cause. Its focus on quality, teamwork, and continuous learning makes it a place where both patients and therapists can thrive.",
+    name: "Richwin",
+    role: "Physiotherapist",
+    initials: "R",
+  },
+  {
+    quote: "Working at Stance has been a great learning experience so far. As an intern, I've had the opportunity to enhance my clinical reasoning, assessment skills, and confidence through an evidence-based approach and excellent mentorship. What sets Stance apart is its focus on objective assessments, individualized rehabilitation, and continuous learning. The collaborative environment has made it a valuable place for both my professional and personal growth. I'm grateful to be part of the team.",
+    name: "Muskan Agrawal",
+    role: "Physiotherapy Intern",
+    initials: "M",
+  },
+  {
+    quote: "I joined Stance to build my expertise in return-to-sport, performance, and clinical care, and the exposure to a wide range of injuries and conditions has made the experience incredibly valuable.",
+    name: "Paramjeet",
+    role: "S&C Intern",
+    initials: "P",
+  },
+  {
+    quote: "Working at Stance has been a truly rewarding experience. The professional and supportive environment encourages continuous learning, and everyone on the team is approachable and always willing to help. Through exposure to evidence-based assessments, rehabilitation methods, and advanced technology, I have strengthened my clinical knowledge, practical skills, and clinical reasoning. This experience has played an important role in my professional growth.",
+    name: "Bhuvanshree",
+    role: "Physiotherapy Intern",
+    initials: "B",
+  },
+];
+
+export const CAREER_VALUES = [
+  { icon: "wrench", title: "Bring a problem, leave with a fix", body: "That's less a value statement and more just how work happens here." },
+  { icon: "brain", title: "Reasoning over résumé", body: "We hire for how you think, not how your CV reads. Nowhere to hide once they do." },
+  { icon: "chat", title: "Ideas don't wait in line", body: "No ladder to climb before someone hears you out. Nowhere to hide once they do." },
+  { icon: "chart", title: "We don't guess", body: "Every decision has a number attached. That's just how the place runs." },
+  { icon: "bolt", title: "We move fast", body: "50,000+ sessions delivered, 4 centers live, a 5th on the way. You'll feel the pace in week one." },
+  { icon: "gamepad", title: "Compete a little, unwind a lot", body: "Thursdays, we trade laptops for a ball. Football, cricket, pickleball — by vote." },
+];
+
+export const CAREER_FAQ = [
+  { question: "Which locations do you operate in?", answer: "We currently have five centers across Bengaluru: HSR Layout, Whitefield, Indiranagar, JP Nagar and Koramangala." },
+
+  {
+    question: "How do I book an appointment?",
+    answer: "You can book directly through our website at book.stance.health, or call your nearest center to schedule an assessment "
+  }
+
+
+
+];
+
+export const OPEN_ROLES_DETAILED = [
+  {
+    slug: "senior-sc",
+    title: "Senior Strength & Conditioning Coach",
+    location: "Bengaluru (HSR · Whitefield · Indiranagar)",
+    category: "Clinical & Performance",
+    type: "Full-time",
+    experience: "3+ years full-time (excluding internship)",
+    qualification: "BSc Sports/Exercise Science with 3+ yrs, or MSc Sports Science / Exercise Physiology / S&C with 2+ yrs — in an academy, pro team, high-performance centre or elite facility.",
+    description: "Lead performance training for athletes and active individuals. Beyond coaching, this role owns mentorship, project ownership, operational excellence and cross-team collaboration.",
+    sections: [
+      { title: "Strength & Conditioning delivery", points: ["Design and deliver evidence-based programmes.", "Run athlete assessments and performance profiling.", "Build sport-specific performance plans.", "Lead individual and small-group sessions.", "Maintain flawless documentation."] },
+      { title: "Sports science & technology", points: ["Use VALD, RunScribe, Output, ForceDecks and other assessment tools.", "Contribute to testing protocols and performance standards."] },
+      { title: "Return-to-performance", points: ["Bridge rehab and performance with physiotherapists.", "Own injury prevention and load management.", "Educate athletes on recovery and performance."] },
+      { title: "Leadership & team development", points: ["Mentor junior coaches and interns.", "Support onboarding and skill development.", "Lead internal workshops and knowledge shares."] },
+      { title: "Preferred certifications", points: ["ASCA Level 1/2, EXOS, NSCA-CSCS, FMS, UKSCA, ACSM Performance."] },
+    ],
+    whyJoin: ["India's first fully technology-integrated sports physio + rehab ecosystem.", "Work alongside experienced physios, sports scientists and coaches.", "Cutting-edge sports science and performance tech.", "High-growth environment with leadership pathways."],
+  },
+  {
+    slug: "junior-sc",
+    title: "Junior Strength & Conditioning Coach",
+    location: "Bengaluru (HSR · Whitefield · Indiranagar)",
+    category: "Clinical & Performance",
+    type: "Full-time",
+    experience: "1-3 years",
+    qualification: "BSc Sports/Exercise Science or equivalent. Exposure to team or individual sport settings preferred.",
+    description: "Support senior coaches in delivering performance programmes. Own a caseload, run assessments, and grow under structured mentorship.",
+    sections: [
+      { title: "Core responsibilities", points: ["Deliver S&C sessions under senior supervision.", "Run assessments using VALD and ForceDecks.", "Document athlete progress and session notes.", "Support programme design for assigned athletes."] },
+      { title: "Growth & learning", points: ["Weekly case discussions with senior coaches.", "Attend internal workshops and CPD sessions.", "Shadow return-to-performance cases."] },
+    ],
+    whyJoin: ["Structured mentorship from day one.", "Real athlete caseload within the first month.", "Access to elite-level technology and data systems.", "Clear promotion pathway to Senior within 18-24 months."],
+  },
+  {
+    slug: "sc-intern",
+    title: "Strength & Conditioning Intern",
+    location: "Bengaluru (HSR · Whitefield · Indiranagar)",
+    category: "Clinical & Performance",
+    type: "Internship (3 months)",
+    experience: "Final year or recent graduate",
+    qualification: "BSc Sports Science / Exercise Science (final year or completed).",
+    description: "A structured 3-month internship with floor exposure, supervised coaching, and progressive responsibility.",
+    sections: [
+      { title: "What you'll do", points: ["Shadow and assist senior coaches on the floor.", "Learn assessment protocols and documentation.", "Gradually take on supervised sessions.", "Present a case study at the end of the programme."] },
+    ],
+    whyJoin: ["Stipend provided.", "Real coaching experience from week one.", "Potential conversion to full-time role.", "Mentorship from India's leading S&C professionals."],
+  },
+  {
+    slug: "senior-physio",
+    title: "Senior / In-charge Physiotherapist — MSK & Sports",
+    location: "Bengaluru",
+    category: "Clinical & Performance",
+    type: "Full-time",
+    experience: "5+ years",
+    qualification: "MPT in Orthopaedics / Sports / Musculoskeletal. Additional certifications in manual therapy or sports rehab preferred.",
+    description: "Lead clinical decision-making, manage complex cases, and mentor junior physiotherapists. This is a clinical leadership role.",
+    sections: [
+      { title: "Clinical delivery", points: ["Manage complex MSK and sports injury caseloads.", "Design and execute rehabilitation programmes.", "Use VALD, ForceDecks and motion analysis in clinical reasoning.", "Collaborate with S&C coaches on return-to-performance."] },
+      { title: "Leadership", points: ["Mentor junior physios and interns.", "Lead clinical audits and case presentations.", "Contribute to SOPs and protocol development."] },
+    ],
+    whyJoin: ["India's first fully technology-integrated sports physio + rehab ecosystem.", "Multi-disciplinary team environment.", "Clinical leadership pathway.", "Work with elite and recreational athletes."],
+  },
+  {
+    slug: "junior-physio",
+    title: "Junior Sports Physiotherapist",
+    location: "Bengaluru (HSR · Whitefield)",
+    category: "Clinical & Performance",
+    type: "Full-time",
+    experience: "2-5 years",
+    qualification: "BPT / MPT. Interest in sports and MSK physiotherapy.",
+    description: "Deliver hands-on physiotherapy, manage a caseload, and grow your clinical reasoning under experienced clinicians.",
+    sections: [
+      { title: "Core responsibilities", points: ["Assess and treat MSK conditions.", "Use technology-assisted diagnostics.", "Document patient progress meticulously.", "Collaborate with S&C on rehab-to-performance transition."] },
+    ],
+    whyJoin: ["Structured mentorship and case discussions.", "Access to cutting-edge assessment technology.", "Diverse caseload — athletes to weekend warriors.", "Clear growth pathway to senior clinician."],
+  },
+  {
+    slug: "physio-intern",
+    title: "Physiotherapy Intern",
+    location: "Bengaluru (All centres)",
+    category: "Clinical & Performance",
+    type: "Internship (2 months)",
+    experience: "Final year BPT or recent graduate",
+    qualification: "BPT (final year or completed).",
+    description: "A structured clinical rotation with supervised caseload, case discussions, and hands-on learning.",
+    sections: [
+      { title: "What you'll do", points: ["Observe and assist senior physiotherapists.", "Learn assessment and documentation protocols.", "Take supervised patient sessions.", "Present a clinical case study."] },
+    ],
+    whyJoin: ["Stipend provided.", "Hands-on clinical exposure from day one.", "Potential conversion to full-time.", "Work in a multi-disciplinary sports health setting."],
+  },
+  {
+    slug: "patient-care",
+    title: "Patient Care Coordinator",
+    location: "Bengaluru (Indiranagar)",
+    category: "Patient Care & Operations",
+    type: "Full-time",
+    experience: "1+ years in healthcare/hospitality",
+    qualification: "Graduate in any discipline. Strong communication skills.",
+    description: "Own the patient experience from booking to discharge. Coordinate schedules, manage communications, and ensure seamless operations.",
+    sections: [
+      { title: "Core responsibilities", points: ["Manage patient bookings and schedules.", "Coordinate between clinicians and patients.", "Handle patient queries via phone and WhatsApp.", "Maintain documentation and billing support."] },
+    ],
+    whyJoin: ["Work in a fast-paced healthcare startup.", "Direct impact on patient experience.", "Growth into operations leadership.", "Collaborative and supportive team."],
+  },
+  {
+    slug: "operations",
+    title: "Operations Associate",
+    location: "Bengaluru",
+    category: "Corporate & Leadership",
+    type: "Full-time",
+    experience: "2+ years in operations/startups",
+    qualification: "Graduate/MBA. Startup or healthcare operations experience preferred.",
+    description: "Support centre operations, vendor management, and process optimization across multiple locations.",
+    sections: [
+      { title: "Core responsibilities", points: ["Manage day-to-day centre operations.", "Coordinate with vendors and suppliers.", "Track operational KPIs and reporting.", "Support new centre launches."] },
+    ],
+    whyJoin: ["Multi-location operations experience.", "High ownership from day one.", "Fast-growing healthcare company.", "Work directly with founding team."],
   },
 ];
 
