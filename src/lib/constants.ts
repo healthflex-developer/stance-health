@@ -58,6 +58,157 @@ export const NAV_LINKS: Array<{ label: string; href: string; children?: { label:
   { label: "Contact", href: "/contact" },
 ];
 
+export const FAQ_GENERAL = [
+  {
+    question: "Which locations do you operate in?",
+    answer: "We currently have five centers across Bengaluru: HSR Layout, Whitefield, Indiranagar, JP Nagar, and Koramangala."
+  },
+  {
+    question: "How do I book an appointment?",
+    answer: "You can book directly through our website at book.stance.health, or call your nearest center to schedule an assessment."
+  },
+  {
+    question: "What conditions does Stance Health treat?",
+    answer: "We treat common musculoskeletal issues including knee pain, ACL injuries, back pain, sciatica, shoulder pain, frozen shoulder, neck pain, plantar fasciitis, ankle sprains, tennis elbow, and many other conditions. If you're not sure what's causing your pain, book an assessment and we'll help identify the cause."
+  },
+  {
+    question: "What kind of plans does Stance Health offer?",
+    answer: "We offer session-based treatment plans tailored to your condition, along with multi-session packages that provide better value for ongoing care. Your physiotherapist will recommend the most suitable plan based on your assessment."
+  },
+  {
+    question: "Can Stance Health help me train for Hyrox?",
+    answer: "Yes. Our sports performance team can support your Hyrox training using tools like VALD assessments to identify and improve weak points. We also incorporate injury prevention strategies if you have a history of injuries."
+  },
+  {
+    question: "Do I need a doctor's referral to visit?",
+    answer: "No. A doctor's referral is not required. You can book a consultation directly with one of our physiotherapists."
+  },
+  {
+    question: "Do you combine Strength & Conditioning (S&C) with physiotherapy?",
+    answer: "Yes, but only after your pain has been resolved. We first focus on physiotherapy to reduce pain and restore function. Once you're pain-free, we transition into Strength & Conditioning (S&C) to build strength, improve resilience, and reduce the likelihood of recurring injuries."
+  },
+  {
+    question: "What happens during my first visit?",
+    answer: "Your first visit includes a comprehensive assessment of your condition, a review of your medical history, movement and strength testing using VALD technology, and a detailed musculoskeletal screening by a physiotherapist. These assessments help identify persistent pain, movement asymmetries, force production deficits, and other irregularities before creating a personalized treatment plan."
+  },
+  {
+    question: "Do you offer pre- and post-surgery rehabilitation programs?",
+    answer: "Yes. We provide both prehabilitation programs to prepare you for surgery and structured post-surgical rehabilitation plans to support recovery. We also offer specialized care for prepartum and postpartum mothers, with treatment plans tailored to each individual's needs."
+  },
+  {
+    question: "Does Stance Health offer services like IFT, cupping, or needling?",
+    answer: "Our approach focuses on active, exercise-based rehabilitation rather than passive treatments such as cupping or needling. We use evidence-based physiotherapy, structured exercise programs, manual therapy where appropriate, and sports massage to relieve muscle tightness and address the root cause of your condition."
+  },
+  {
+    question: "How do I give feedback about my experience at Stance Health?",
+    answer: "You can share your feedback through our app, website contact form, or directly with our clinic staff. We value your feedback and use it to continuously improve our care."
+  },
+  {
+    question: "What happens if I miss a scheduled session?",
+    answer: "Missed sessions can usually be rescheduled. Please refer to our cancellation policy or contact your clinic for specific terms and assistance."
+  },
+  {
+    question: "Can family members accompany me during my session?",
+    answer: "Yes. In most cases, a family member or guardian is welcome to accompany you, especially for pediatric or elderly patients."
+  },
+  {
+    question: "Can I switch clinic locations for my ongoing treatment?",
+    answer: "Yes. You can continue your treatment plan at any Stance Health location that's more convenient for you."
+  },
+  {
+    question: "How do I refer a friend or family member to Stance Health?",
+    answer: "You can refer them through our app or website, or simply ask them to contact any of our clinics to book an assessment."
+  }
+];
+
+export const ASSESSMENT_TOOLS = [
+  { id: "forceframe", num: "01", label: "VALD ForceFrame" },
+  { id: "forcedecks", num: "02", label: "VALD ForceDecks" },
+  { id: "dynamo", num: "03", label: "VALD DynaMo" },
+  { id: "output", num: "04", label: "Output Sports Sensors" },
+  { id: "smartspeed", num: "05", label: "VALD SmartSpeed" },
+];
+
+export const ASSESSMENT_SECTIONS = [
+  {
+    id: "forceframe",
+    num: "01",
+    badge: "VALD FORCEFRAME",
+    title: "Measure Strength and Identify Imbalances",
+    description:
+      "ForceFrame gives our team objective measurements of strength across major joints and muscle groups. This allows us to identify weaknesses and side-to-side imbalances, personalise your treatment and show you how your strength is improving over time.",
+    points: [
+      "Joint-specific strength measurement",
+      "Immediate left-to-right comparison",
+      "Repeatable positions for future reassessment",
+    ],
+    image: `${ASSETS}/forceframe.png`,
+  },
+  {
+    id: "forcedecks",
+    num: "02",
+    badge: "VALD FORCEDECKS",
+    title: "Understand Power, Balance and Movement",
+    description:
+      "By analysing how you jump, land, balance and absorb force, ForceDecks helps our team identify movement strategies that may limit your recovery or performance. You receive a clearer understanding of your capabilities and a progression plan based on measurable results.",
+    points: [
+      "Jump height, force and power",
+      "Landing symmetry and balance",
+      "Load absorption and weight distribution",
+    ],
+    image: `${ASSETS}/forcedeck.png`,
+  },
+  {
+    id: "dynamo",
+    num: "03",
+    badge: "VALD DYNAMO",
+    title: "Pinpoint Muscle Weaknesses",
+    description:
+      "Portable strength testing with Dynamo enables our team to assess specific muscles and joints wherever targeted testing is required. The results help us focus your treatment on the areas that need the most attention and demonstrate whether those areas are becoming stronger.",
+    points: [
+      "Push and pull strength tests",
+      "Grip strength measurement",
+      "Portable, targeted testing",
+    ],
+    image: `${ASSETS}/assessment/dynamo.png`,
+  },
+  {
+    id: "output",
+    num: "04",
+    badge: "OUTPUT SPORTS SENSORS",
+    title: "Personalise Training Intensity",
+    description:
+      "Output Sports sensors provide real-time information about movement velocity, power and exercise performance. This helps our team select appropriate loads, adjust your training intensity and progress exercises at the right time, giving you a programme that responds to your individual capabilities.",
+    points: [
+      "Movement and repetition velocity",
+      "Power measurement",
+      "Set-to-set and reassessment comparison",
+    ],
+    image: `${ASSETS}/forcedeck.png`,
+  },
+  {
+    id: "smartspeed",
+    num: "05",
+    badge: "VALD SMARTSPEED",
+    title: "Track Speed and Agility",
+    description:
+      "SmartSpeed timing gates accurately measure acceleration, sprint speed and change-of-direction performance. Our team uses this information to tailor speed and agility training, while helping you track progress and prepare for the real demands of your sport.",
+    points: [
+      "Sprint speed and total time",
+      "Acceleration and split times",
+      "Selected agility and reactivity tests",
+    ],
+    image: `${ASSETS}/forcedeck.png`,
+  },
+];
+
+export const ASSESSMENT_PERFORMANCE_DATA = [
+  { title: "Knee Flexion – Prone", left: "117.3 N", right: "117.8 N", asym: "0.4% Left" },
+  { title: "Knee Extension", left: "325.1 N", right: "440.2 N", asym: "26.1% Left" },
+  { title: "Ankle Plantarflexion", left: "607.3 N", right: "692.4 N", asym: "12.3% Left" },
+  { title: "Hip AD/AB – 45", left: "234.5 N", right: "251.8 N", asym: "6.9% Right" },
+];
+
 export const FRAMEWORK_STEPS = [
   {
     id: "assess",
