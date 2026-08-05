@@ -35,8 +35,8 @@ export const BOOKING_URL = DASHBOARD_BASE;
 export const APP_STORE_URL = `${APP_STORE_BASE}?utm_source=website&utm_medium=cta&utm_campaign=app_install`;
 export const PLAY_STORE_URL = `${PLAY_STORE_BASE}&utm_source=website&utm_medium=cta&utm_campaign=app_install`;
 
-export const NAV_LINKS = [
-  { label: "About Us", href: "/about" },
+export const NAV_LINKS: Array<{ label: string; href: string; children?: { label: string; href: string }[] }> = [
+  { label: "About", href: "/about" },
   { label: "Philosophy", href: "/philosophy" },
   // {
   //   label: "Programs",
@@ -48,10 +48,14 @@ export const NAV_LINKS = [
   //     { label: "Breaking Barriers", href: "/performance-training" },
   //   ],
   // },
+  { label: "Assessment", href: "/assessment" },
+  { label: "Services", href: "/services" },
   { label: "Conditions", href: "/conditions" },
   { label: "Locations", href: "/locations" },
   { label: "Partners", href: "/partners" },
   { label: "Careers", href: "/careers" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const FRAMEWORK_STEPS = [

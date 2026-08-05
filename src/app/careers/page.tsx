@@ -202,7 +202,7 @@ export default function CareersPage() {
             </p>
             <div className="flex gap-20 animate-marquee">
               {[...IMPACT_ICONS, ...IMPACT_ICONS].map((icon, i) => (
-                <div key={i} className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 relative opacity-70 hover:opacity-100 transition-opacity duration-300">
+                <div key={i} className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 relative opacity-70 hover:opacity-100 transition-opacity duration-300">
                   <Image src={icon} alt="partner" fill className="object-contain" />
                 </div>
               ))}

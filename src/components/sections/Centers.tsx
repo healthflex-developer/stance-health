@@ -33,7 +33,7 @@ const CENTERS = [
   },
   {
     name: "JP NAGAR",
-    phone: "+91 6366940175",
+    phone: "+91 6366941095",
     address:
       "Ward No.57, 3rd Floor, V.B.R Ruddhi, 558, 9th Cross Rd, 3rd Phase, J. P. Nagar, Bengaluru, Karnataka 560078",
     image: `${ASSETS}/JP_Nagar.jpg`,
@@ -41,7 +41,7 @@ const CENTERS = [
   },
   {
     name: "KORAMANGALA",
-    phone: "+91 6366941095",
+    phone: "+91 6366940175",
     address:
       "Unit No. 22, Ground floor, 80 Feet Rd, S.T. Bed, 4th Block, Koramangala, Bengaluru, Karnataka 560034",
     image: `${ASSETS}/koramangala.jpeg`,
