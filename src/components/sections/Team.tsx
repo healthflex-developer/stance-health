@@ -134,7 +134,7 @@ export default function Team() {
                       </motion.div>
                       <div className="con">
                         <div className="tp">
-                          <h3>{member.name}</h3>
+                          <h3 className="pb-4">{member.name}</h3>
                           <h4>{member.role}</h4>
                         </div>
                         <p className="para">{member.bio}</p>

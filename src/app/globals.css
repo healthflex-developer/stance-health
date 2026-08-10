@@ -1030,3 +1030,15 @@ h1, h2, h3, h4, h5, h6,
   border-radius: 100px;
   cursor: grab;
 }
+
+/* ── Marquee animation for floating icons ─── */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
