@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "*",
         allow: "/",
         // Block internal/utility paths from indexing
-        disallow: ["/api/", "/_next/", "/admin/"],
+        disallow: ["/api/", "/_next/", "/admin/", "/a/"],
       },
     ],
     sitemap: `${BASE_URL}/sitemap.xml`,
