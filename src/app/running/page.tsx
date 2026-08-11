@@ -1,5 +1,5 @@
 import ProgramPageLayout from "@/components/ProgramPageLayout";
-import { ASSETS } from "@/lib/constants";
+import { ASSETS, OG_ASSETS } from "@/lib/constants";
 
 import type { Metadata } from "next";
 
@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     description:
       "Technology-backed running analysis and rehab for grassroots to elite runners in Bangalore.",
     url: "/running",
-    images: [{ url: "/assets/images/og-default.png", width: 1200, height: 630 }],
+    images: [{ url: `${OG_ASSETS}/og-default.png`, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "In Your Stride – Running Programme | Stance Health",
     description: "RunScribe gait analysis + VALD strength testing for runners.",
-    images: ["/assets/images/og-default.png"],
+    images: [`${OG_ASSETS}/og-default.png`],
   },
 };
 

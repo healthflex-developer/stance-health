@@ -8,13 +8,13 @@ import Team from "@/components/sections/Team";
 import Programs from "@/components/sections/Programs";
 import Centers from "@/components/sections/Centers";
 import Footer from "@/components/Footer";
-import { BASE_URL } from "@/lib/constants";
+import { BASE_URL, OG_ASSETS } from "@/lib/constants";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
   openGraph: {
     url: "/",
-    images: [{ url: "/assets/images/og-default.png", width: 1200, height: 630 }],
+    images: [{ url: `${OG_ASSETS}/og-default.png`, width: 1200, height: 630 }],
   },
 };
 

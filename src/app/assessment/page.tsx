@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BookingCta from "@/components/BookingCta";
-import { ASSETS, ASSESSMENT_TOOLS, ASSESSMENT_SECTIONS, ASSESSMENT_PERFORMANCE_DATA } from "@/lib/constants";
+import { ASSETS, VIDEO_ASSETS, ASSESSMENT_TOOLS, ASSESSMENT_SECTIONS, ASSESSMENT_PERFORMANCE_DATA } from "@/lib/constants";
 
 export default function AssessmentPage() {
   const scrollTo = (id: string) => {
@@ -29,7 +29,7 @@ export default function AssessmentPage() {
             playsInline
             preload="auto"
           >
-            <source src={`${ASSETS}/hero_assessment.mp4`} type="video/mp4" />
+            <source src={`${VIDEO_ASSETS}/hero_assessment.mp4`} type="video/mp4" />
           </video>
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-[#132644]/60" />

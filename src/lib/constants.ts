@@ -1,5 +1,19 @@
 export const BASE_URL = "https://www.stance.health";
-export const ASSETS = `/assets/images`;
+
+// ── Cloudinary asset base URLs ────────────────────────────────────────────
+// After running `bun scripts/upload-to-cloudinary.ts`, all assets are served
+// from Cloudinary with automatic format/quality optimization.
+const CLOUDINARY_CLOUD = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || "fxhi8rmk";
+const CLOUDINARY_BASE = `https://res.cloudinary.com/${CLOUDINARY_CLOUD}`;
+
+// Images: auto format (webp/avif) + auto quality for best performance
+export const ASSETS = `${CLOUDINARY_BASE}/image/upload/f_auto,q_auto/stance-health/images`;
+
+// Videos: served without transformations (Cloudinary streams them efficiently)
+export const VIDEO_ASSETS = `${CLOUDINARY_BASE}/video/upload/stance-health/images`;
+
+// OG images: full absolute URL for social sharing metadata
+export const OG_ASSETS = `${CLOUDINARY_BASE}/image/upload/f_auto,q_auto/stance-health/images`;
 
 // ── Marketing / Analytics IDs ─────────────────────────────────────────────
 // Fill these in with your real IDs. An empty string disables that provider.
@@ -569,7 +583,7 @@ export const PROGRAMS = [
     id: "back-to-sports",
     label: "Reclaim Your Game",
     href: "/back-to-sports",
-    image: `${ASSETS}/pt-2.svg`,
+    image: `/assets/images/pt-2.svg`,
     description:
       "Comprehensive return-to-sport rehabilitation programme designed to safely guide athletes back to their chosen sport after injury, using evidence-based protocols and performance testing.",
   },

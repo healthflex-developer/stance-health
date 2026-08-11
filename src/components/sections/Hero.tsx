@@ -1,6 +1,6 @@
 import BookingCta from "@/components/BookingCta";
 
-const VIDEO_URL = "https://res.cloudinary.com/hhi5ylfc/video/upload/v1782911031/home_video_mglaq1.mp4";
+const VIDEO_URL = "https://res.cloudinary.com/fxhi8rmk/video/upload/v1786384701/stance-health/home_video_mglaq1.mp4";
 
 export default function Hero() {
   return (

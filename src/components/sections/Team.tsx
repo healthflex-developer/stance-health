@@ -10,7 +10,7 @@ import "swiper/css/scrollbar";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { TEAM } from "@/lib/constants";
+import { TEAM, ASSETS } from "@/lib/constants";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -159,7 +159,7 @@ export default function Team() {
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                   <Image
-                    src="/assets/images/prev.svg"
+                    src={`${ASSETS}/prev.svg`}
                     width={50}
                     height={50}
                     alt="Previous"
@@ -174,7 +174,7 @@ export default function Team() {
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                   <Image
-                    src="/assets/images/next.svg"
+                    src={`${ASSETS}/next.svg`}
                     width={50}
                     height={50}
                     alt="Next"

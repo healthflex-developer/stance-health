@@ -1,5 +1,5 @@
 import ProgramPageLayout from "@/components/ProgramPageLayout";
-import { ASSETS } from "@/lib/constants";
+import { ASSETS, OG_ASSETS } from "@/lib/constants";
 
 import type { Metadata } from "next";
 
@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     description:
       "Evidence-based return-to-sport rehab with objective performance testing in Bangalore.",
     url: "/back-to-sports",
-    images: [{ url: "/assets/images/og-default.png", width: 1200, height: 630 }],
+    images: [{ url: `${OG_ASSETS}/og-default.png`, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Reclaim Your Game – Stance Health",
     description: "Return-to-sport rehab with VALD performance testing.",
-    images: ["/assets/images/og-default.png"],
+    images: [`${OG_ASSETS}/og-default.png`],
   },
 };
 
@@ -28,7 +28,7 @@ export default function BackToSportsPage() {
     <ProgramPageLayout
       title="Reclaim Your Game"
       subtitle="Our return-to-play programme leverages the latest in sports health and physiotherapy to maximise your recovery and performance."
-      bannerImage={`${ASSETS}/pt-2.svg`}
+      bannerImage={`/assets/images/pt-2.svg`}
       intro="Our comprehensive return-to-sport rehabilitation programme is designed to safely guide athletes back to their chosen sport after injury. Using evidence-based protocols and performance testing, we create customised athlete recovery pathways that facilitate smooth transitions back to sport-specific performance levels."
       whyTitle="Our Return-to-Play Approach"
       features={[

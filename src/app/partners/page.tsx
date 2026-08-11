@@ -85,7 +85,7 @@ export default function PartnersPage() {
         <section className="relative min-h-[320px] sm:min-h-[380px] flex items-end pb-12 sm:pb-16 pt-28 sm:pt-32 bg-[#132644]">
           <div className="absolute inset-0 overflow-hidden">
             <Image
-              src={`${ASSETS}/about-banner.svg`}
+              src={`/assets/images/about-banner.svg`}
               alt="Partner with us"
               fill
               className="object-cover object-center opacity-20"
