@@ -1,5 +1,19 @@
 export const BASE_URL = "https://www.stance.health";
-export const ASSETS = `/assets/images`;
+
+// ── Cloudinary asset base URLs ────────────────────────────────────────────
+// After running `bun scripts/upload-to-cloudinary.ts`, all assets are served
+// from Cloudinary with automatic format/quality optimization.
+const CLOUDINARY_CLOUD = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || "fxhi8rmk";
+const CLOUDINARY_BASE = `https://res.cloudinary.com/${CLOUDINARY_CLOUD}`;
+
+// Images: auto format (webp/avif) + auto quality for best performance
+export const ASSETS = `${CLOUDINARY_BASE}/image/upload/f_auto,q_auto/stance-health/images`;
+
+// Videos: served without transformations (Cloudinary streams them efficiently)
+export const VIDEO_ASSETS = `${CLOUDINARY_BASE}/video/upload/stance-health/images`;
+
+// OG images: full absolute URL for social sharing metadata
+export const OG_ASSETS = `${CLOUDINARY_BASE}/image/upload/f_auto,q_auto/stance-health/images`;
 
 // ── Marketing / Analytics IDs ─────────────────────────────────────────────
 // Fill these in with your real IDs. An empty string disables that provider.
@@ -569,7 +583,7 @@ export const PROGRAMS = [
     id: "back-to-sports",
     label: "Reclaim Your Game",
     href: "/back-to-sports",
-    image: `${ASSETS}/pt-2.svg`,
+    image: `/assets/images/pt-2.svg`,
     description:
       "Comprehensive return-to-sport rehabilitation programme designed to safely guide athletes back to their chosen sport after injury, using evidence-based protocols and performance testing.",
   },
@@ -777,6 +791,49 @@ export const OPEN_ROLES_DETAILED = [
       { title: "Core responsibilities", points: ["Manage day-to-day centre operations.", "Coordinate with vendors and suppliers.", "Track operational KPIs and reporting.", "Support new centre launches."] },
     ],
     whyJoin: ["Multi-location operations experience.", "High ownership from day one.", "Fast-growing healthcare company.", "Work directly with founding team."],
+  },
+];
+
+export const CENTERS = [
+  {
+    name: "HSR Layout",
+    phone: "+91 6360014559",
+    address:
+      "2nd Floor, 1555, 19th Main Rd, Agara, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102",
+    image: `${ASSETS}/HSR.JPG`,
+    maps: "https://maps.app.goo.gl/TfixHcJfTjjPMyKq8",
+  },
+  {
+    name: "Whitefield",
+    phone: "+91 6361056456",
+    address:
+      "4th Floor, Kailash Parbat, No. 149, Doddanakundi, 2nd Phase, Hoodi, Whitefield, Bengaluru, Karnataka 560048",
+    image: `${ASSETS}/whitefield.webp`,
+    maps: "https://www.google.com/maps/place/Stance+Health/@12.9858932,77.7082149,17z/data=!3m2!4b1!5s0x3bae119ae2509811:0x8383d133539a7b!4m6!3m5!1s0x3bae11ed0a8b499b:0x5f1478679abe452a!8m2!3d12.9858932!4d77.7082149!16s%2Fg%2F11xdsrwj0m",
+  },
+  {
+    name: "Indiranagar",
+    phone: "+91 9008417804",
+    address:
+      "3rd Floor, Srinivasan Towers, ESI Hospital Road, Defence Colony, Indiranagar, Bengaluru, Karnataka 560038",
+    image: `${ASSETS}/indra.webp`,
+    maps: "https://maps.app.goo.gl/su4xnN965KRdK47s9",
+  },
+  {
+    name: "JP NAGAR",
+    phone: "+91 6366941095",
+    address:
+      "Ward No.57, 3rd Floor, V.B.R Ruddhi, 558, 9th Cross Rd, 3rd Phase, J. P. Nagar, Bengaluru, Karnataka 560078",
+    image: `${ASSETS}/JP_Nagar.jpg`,
+    maps: "https://maps.app.goo.gl/bAdshZ7kyvqnLNdq9",
+  },
+  {
+    name: "KORAMANGALA",
+    phone: "+91 6366940175",
+    address:
+      "Unit No. 22, Ground floor, 80 Feet Rd, S.T. Bed, 4th Block, Koramangala, Bengaluru, Karnataka 560034",
+    image: `${ASSETS}/koramangala.jpeg`,
+    maps: "https://maps.app.goo.gl/hTP95zAu7pv4c79Y6",
   },
 ];
 

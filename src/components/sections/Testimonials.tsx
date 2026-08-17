@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperRef } from "swiper/react";
 import "swiper/css";
 import Image from "next/image";
-import { TESTIMONIALS } from "@/lib/constants";
+import { TESTIMONIALS, ASSETS } from "@/lib/constants";
 
 export default function Testimonials() {
   const sliderRef = useRef<SwiperRef>(null);
@@ -42,7 +42,7 @@ export default function Testimonials() {
                 <SwiperSlide key={t.name}>
                   <div className="test-card">
                     <div className="test-pf">
-                      <Image src="/assets/images/quote.svg" className="quote" alt="" width={100} height={100} />
+                      <Image src={`${ASSETS}/quote.svg`} className="quote" alt="" width={100} height={100} />
                       <Image src={t.image} className="prof" alt={t.name} width={100} height={100} />
                     </div>
                     <div className="test-det">
@@ -62,10 +62,10 @@ export default function Testimonials() {
             </Swiper>
             <div className="tech-nav">
               <button className="tech-prev" onClick={handlePrev} aria-label="Previous">
-                <Image src="/assets/images/prev.svg" width={50} height={50} alt="Previous" />
+                <Image src={`${ASSETS}/prev.svg`} width={50} height={50} alt="Previous" />
               </button>
               <button className="tech-next" onClick={handleNext} aria-label="Next">
-                <Image src="/assets/images/next.svg" width={50} height={50} alt="Next" />
+                <Image src={`${ASSETS}/next.svg`} width={50} height={50} alt="Next" />
               </button>
             </div>
           </div>

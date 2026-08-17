@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ASSETS } from "@/lib/constants";
+import { ASSETS, OG_ASSETS } from "@/lib/constants";
 import BookingCta from "@/components/BookingCta";
 import AboutTeam from "@/components/sections/AboutTeam";
 
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     description:
       "Meet the expert team behind Stance Health — leading physiotherapists and strength coaches.",
     url: "/about",
-    images: [{ url: "/assets/images/og-about.png", width: 1200, height: 630 }],
+    images: [{ url: `${OG_ASSETS}/og-about.png`, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "We are Stance – Stance Health",
     description: "Meet the expert team behind Stance Health.",
-    images: ["/assets/images/og-about.png"],
+    images: [`${OG_ASSETS}/og-about.png`],
   },
 };
 
@@ -59,7 +59,7 @@ export default function AboutPage() {
         <section className="relative min-h-[420px] flex items-end pb-16 pt-32 bg-[#132644]">
           <div className="absolute inset-0 overflow-hidden">
             <Image
-              src={`${ASSETS}/about-banner.svg`}
+              src={`/assets/images/about-banner.svg`}
               alt="About Stance Health"
               fill
               className="object-cover object-center opacity-30"

@@ -8,7 +8,7 @@ import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { TECHNOLOGIES } from "@/lib/constants";
+import { TECHNOLOGIES, ASSETS } from "@/lib/constants";
 import gsap from "gsap";
 
 const cardVariants = {
@@ -169,7 +169,7 @@ export default function Technology() {
                     whileTap={!isBeginning ? { scale: 0.9 } : {}}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   >
-                    <Image src="/assets/images/prev.svg" width={50} height={50} alt="Previous" />
+                    <Image src={`${ASSETS}/prev.svg`} width={50} height={50} alt="Previous" />
                   </motion.button>
                   <motion.button
                     className={`tech-next ${isEnd ? "nav-disabled" : ""}`}
@@ -180,7 +180,7 @@ export default function Technology() {
                     whileTap={!isEnd ? { scale: 0.9 } : {}}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   >
-                    <Image src="/assets/images/next.svg" width={50} height={50} alt="Next" />
+                    <Image src={`${ASSETS}/next.svg`} width={50} height={50} alt="Next" />
                   </motion.button>
                 </div>
               </div>
@@ -213,7 +213,7 @@ export default function Technology() {
                       <div className="col-lg-6 col-12">
                         <div className="s-img">
                           <button onClick={() => setTab(null)} aria-label="Close">
-                            <Image src="/assets/images/close.svg" alt="Close" width={50} height={50} />
+                            <Image src={`${ASSETS}/close.svg`} alt="Close" width={50} height={50} />
                           </button>
                           <Image src={item.icon} alt={item.name} width={1920} height={1920} />
                         </div>

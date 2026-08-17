@@ -1,5 +1,5 @@
 import ProgramPageLayout from "@/components/ProgramPageLayout";
-import { ASSETS } from "@/lib/constants";
+import { ASSETS, OG_ASSETS } from "@/lib/constants";
 
 import type { Metadata } from "next";
 
@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     description:
       "Pre and post-op rehab to optimise surgical outcomes and restore full function.",
     url: "/surgical-rehab",
-    images: [{ url: "/assets/images/og-default.png", width: 1200, height: 630 }],
+    images: [{ url: `${OG_ASSETS}/og-default.png`, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Back on Your Feet – Stance Health",
     description: "Surgical rehab to restore full function faster.",
-    images: ["/assets/images/og-default.png"],
+    images: [`${OG_ASSETS}/og-default.png`],
   },
 };
 

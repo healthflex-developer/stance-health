@@ -7,7 +7,7 @@ import TrackingInit from "@/components/TrackingInit";
 import LinkTracker from "@/components/LinkTracker";
 import AnalyticsProvider from "@/components/AnalyticsProvider";
 import ScrollToTop from "@/components/ScrollToTop";
-import { BASE_URL, GSC_VERIFICATION } from "@/lib/constants";
+import { BASE_URL, GSC_VERIFICATION, OG_ASSETS } from "@/lib/constants";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
       "Evidence-backed Orthopaedic Rehab in Bangalore. Medical science & technology tailored for your performance and recovery.",
     images: [
       {
-        url: "/assets/images/og-default.png",
+        url: `${OG_ASSETS}/og-default.png`,
         width: 1200,
         height: 630,
         alt: "Stance Health – Orthopaedic Rehab",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     title: "Stance Health – Evidence-backed Orthopaedic Rehab",
     description:
       "Evidence-backed Orthopaedic Rehab in Bangalore. Medical science & technology tailored for your performance and recovery.",
-    images: ["/assets/images/og-default.png"],
+    images: [`${OG_ASSETS}/og-default.png`],
   },
 
   // Search-engine verification tokens
@@ -114,7 +114,7 @@ const orgSchema = {
       url: BASE_URL,
       logo: {
         "@type": "ImageObject",
-        url: `${BASE_URL}/assets/images/logo.png`,
+        url: `${OG_ASSETS}/logo.png`,
         width: 120,
         height: 36,
       },
@@ -135,7 +135,7 @@ const orgSchema = {
       url: BASE_URL,
       description:
         "Evidence-backed Orthopaedic Rehab clinic in Bangalore, combining medical science and technology for performance and recovery.",
-      image: `${BASE_URL}/assets/images/og-default.png`,
+      image: `${OG_ASSETS}/og-default.png`,
       priceRange: "₹₹",
       telephone: "+91-000-000-0000", // replace with real number
       address: {

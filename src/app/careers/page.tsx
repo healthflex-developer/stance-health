@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Centers from "@/components/sections/Centers";
-import { ASSETS, TEAM_TESTIMONIALS, CAREER_VALUES, CAREER_FAQ } from "@/lib/constants";
+import { ASSETS, VIDEO_ASSETS, TEAM_TESTIMONIALS, CAREER_VALUES, CAREER_FAQ } from "@/lib/constants";
 
 /* ─── DATA ─────────────────────────────────────────────────────────────── */
 
@@ -51,11 +51,11 @@ const CAREER_TRACKS = [
       { title: "INTERN", sub: "structured 3-month pathway", level: "L1" },
     ],
     videos: [
-      { src: `${ASSETS}/careers/S&CVideos/video1.mov`, title: "Coach, don't supervise", body: "Run the entire athlete lifecycle — from assessment to programming to in-session coaching." },
-      { src: `${ASSETS}/careers/S&CVideos/Evidence_meets_experience2.mov`, title: "Evidence meets experience", body: "Debate research with practitioners who publish, teach and still coach every week." },
-      { src: `${ASSETS}/careers/S&CVideos/Accelerated_responsibility.mov`, title: "Accelerated responsibility", body: "You'll own athlete profiles, present data and contribute sooner than you'd expect." },
-      { src: `${ASSETS}/careers/S&CVideos/Build.mov`, title: "Build a reputation", body: "Not just experience — a name athletes and coaches recognize." },
-      { src: `${ASSETS}/careers/S&CVideos/video3.mov`, title: "Learn from India's leading S&C minds", body: "Work under coaches who've built performance systems from scratch." },
+      { src: `${VIDEO_ASSETS}/careers/SandCVideos/video1.mov`, title: "Coach, don't supervise", body: "Run the entire athlete lifecycle — from assessment to programming to in-session coaching." },
+      { src: `${VIDEO_ASSETS}/careers/SandCVideos/Evidence_meets_experience2.mov`, title: "Evidence meets experience", body: "Debate research with practitioners who publish, teach and still coach every week." },
+      { src: `${VIDEO_ASSETS}/careers/SandCVideos/Accelerated_responsibility.mov`, title: "Accelerated responsibility", body: "You'll own athlete profiles, present data and contribute sooner than you'd expect." },
+      { src: `${VIDEO_ASSETS}/careers/SandCVideos/Build.mov`, title: "Build a reputation", body: "Not just experience — a name athletes and coaches recognize." },
+      { src: `${VIDEO_ASSETS}/careers/SandCVideos/video3.mov`, title: "Learn from India's leading S&C minds", body: "Work under coaches who've built performance systems from scratch." },
     ],
   },
   {
@@ -71,11 +71,11 @@ const CAREER_TRACKS = [
       { title: "INTERN", sub: "structured clinical rotation", level: "L1" },
     ],
     videos: [
-      { src: `${ASSETS}/careers/PhysioVideos/Think_like_a_movement_specialist.mov`, title: "Think like a movement specialist", body: "Go beyond protocols — understand why bodies move the way they do." },
-      { src: `${ASSETS}/careers/PhysioVideos/Bridge_rehab_and performance.mov`, title: "Bridge rehab and performance", body: "Work at the intersection of clinical care and athletic output." },
-      { src: `${ASSETS}/careers/PhysioVideos/Receive_real_mentorship.mov`, title: "Receive real mentorship", body: "Case discussions, clinical reasoning labs, and 1:1 growth every week." },
-      { src: `${ASSETS}/careers/PhysioVideos/Master_Return_to_Performance_2.mov`, title: "Master return-to-performance", body: "Use data to guide every decision from day 1 post-op to full clearance." },
-      { src: `${ASSETS}/careers/PhysioVideos/Become the clinician every clinician_calls.mov`, title: "Become the clinician others call", body: "Build a reputation for clinical reasoning that sets you apart." },
+      { src: `${VIDEO_ASSETS}/careers/PhysioVideos/Think_like_a_movement_specialist.mov`, title: "Think like a movement specialist", body: "Go beyond protocols — understand why bodies move the way they do." },
+      { src: `${VIDEO_ASSETS}/careers/PhysioVideos/Bridge_rehab_and performance.mov`, title: "Bridge rehab and performance", body: "Work at the intersection of clinical care and athletic output." },
+      { src: `${VIDEO_ASSETS}/careers/PhysioVideos/Receive_real_mentorship.mov`, title: "Receive real mentorship", body: "Case discussions, clinical reasoning labs, and 1:1 growth every week." },
+      { src: `${VIDEO_ASSETS}/careers/PhysioVideos/Master_Return_to_Performance_2.mov`, title: "Master return-to-performance", body: "Use data to guide every decision from day 1 post-op to full clearance." },
+      { src: `${VIDEO_ASSETS}/careers/PhysioVideos/Become the clinician every clinician_calls.mov`, title: "Become the clinician others call", body: "Build a reputation for clinical reasoning that sets you apart." },
     ],
   },
 ];
@@ -136,7 +136,7 @@ export default function CareersPage() {
               playsInline
               className="w-full h-full object-cover"
             >
-              <source src={`${ASSETS}/careers/hero.mp4`} type="video/mp4" />
+              <source src={`${VIDEO_ASSETS}/careers/hero.mp4`} type="video/mp4" />
             </video>
             {/* Gradient overlay: clear at top, dark navy at bottom */}
             <div className="absolute inset-0 bg-gradient-to-b from-[#0d1f3c]/30 via-[#0d1f3c]/60 to-[#0d1f3c]" />

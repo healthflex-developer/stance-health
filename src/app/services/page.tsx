@@ -25,7 +25,7 @@ export default async function ServicesHubPage() {
         <section className="relative min-h-[380px] flex items-end pb-16 pt-32 bg-[#132644]">
           <div className="absolute inset-0 overflow-hidden">
             <Image
-              src={`${ASSETS}/about-banner.svg`}
+              src={`/assets/images/about-banner.svg`}
               alt="Our services"
               fill
               className="object-cover object-center opacity-20"

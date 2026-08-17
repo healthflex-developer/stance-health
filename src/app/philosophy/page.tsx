@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ASSETS } from "@/lib/constants";
+import { ASSETS, OG_ASSETS } from "@/lib/constants";
 import BookingCta from "@/components/BookingCta";
 import PhilosophyPillars from "@/components/PhilosophyPillars";
 
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     description:
       "Clinical and data-backed rehab: technology assessment, physiotherapy, S&C, and at-home recovery.",
     url: "/philosophy",
-    images: [{ url: "/assets/images/og-default.png", width: 1200, height: 630 }],
+    images: [{ url: `${OG_ASSETS}/og-default.png`, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Our Philosophy – Stance Health",
     description: "Clinical and data-backed approach to orthopaedic rehab.",
-    images: ["/assets/images/og-default.png"],
+    images: [`${OG_ASSETS}/og-default.png`],
   },
 };
 
@@ -63,7 +63,7 @@ export default function PhilosophyPage() {
         <section className="relative min-h-[380px] flex items-end pb-16 pt-32 bg-[#132644]">
           <div className="absolute inset-0 overflow-hidden">
             <Image
-              src={`${ASSETS}/philosophy-banner.svg`}
+              src={`/assets/images/philosophy-banner.svg`}
               alt="Philosophy"
               fill
               className="object-cover object-center opacity-25"

@@ -5,6 +5,11 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "res.cloudinary.com",
+        pathname: "/fxhi8rmk/**",
+      },
+      {
+        protocol: "https",
         hostname: "www.stance.health",
         pathname: "/assets/**",
       },
@@ -13,6 +18,8 @@ const nextConfig: NextConfig = {
         hostname: "images.unsplash.com",
       },
     ],
+    // Cloudinary handles format negotiation — request webp/avif via URL params
+    formats: ["image/avif", "image/webp"],
   },
 };
 
