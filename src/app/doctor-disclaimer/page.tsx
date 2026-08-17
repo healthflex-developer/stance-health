@@ -127,10 +127,13 @@ export default function DoctorDisclaimerPage() {
 
                 <div id="scope" className="scroll-mt-28 bg-white/[0.02] border border-[#cdfe71]/8 rounded-2xl p-7 hover:border-[#cdfe71]/20 hover:shadow-[0_6px_25px_rgba(205,254,113,0.04)] transition-all duration-300">
                   <SectionHeader number="02" title="Scope of Stance Health's Services" />
-                  <p className="text-white/75 text-sm leading-relaxed">
+                  <p className="text-white/75 text-sm leading-relaxed mb-4">
                     Stance Health&apos;s core services are physiotherapy, exercise rehabilitation, and strength
                     &amp; conditioning. Medical diagnoses, prescriptions, and clinical certificates are outside
                     the scope of Stance Health&apos;s direct services.
+                  </p>
+                  <p className="text-white/75 text-sm leading-relaxed">
+                    Stance Health is not liable for any acts, omissions, or advice of such visiting doctors, who act independently and are responsible for their own professional services.
                   </p>
                 </div>
 
