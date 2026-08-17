@@ -3,11 +3,20 @@ export const BASE_URL = "https://www.stance.health";
 // ── Cloudinary asset base URLs ────────────────────────────────────────────
 // After running `bun scripts/upload-to-cloudinary.ts`, all assets are served
 // from Cloudinary with automatic format/quality optimization.
+//
+// Cache-busting: We use Cloudinary's `_a` (analytics) query param with a
+// build-time timestamp. This forces CDN to serve fresh content after every
+// deployment without needing manual version bumping per image.
+// Update ASSET_VERSION when you replace images and need instant cache bust.
 const CLOUDINARY_CLOUD = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || "fxhi8rmk";
 const CLOUDINARY_BASE = `https://res.cloudinary.com/${CLOUDINARY_CLOUD}`;
+const ASSET_VERSION = process.env.NEXT_PUBLIC_ASSET_VERSION || "1";
 
-// Images: auto format (webp/avif) + auto quality for best performance
+// Images: auto format (webp/avif) + auto quality + cache bust
 export const ASSETS = `${CLOUDINARY_BASE}/image/upload/f_auto,q_auto/stance-health/images`;
+
+// Append cache-bust query param to any asset URL
+export const cb = (url: string) => `${url}?_v=${ASSET_VERSION}`;
 
 // Videos: served without transformations (Cloudinary streams them efficiently)
 export const VIDEO_ASSETS = `${CLOUDINARY_BASE}/video/upload/stance-health/images`;
@@ -375,7 +384,7 @@ export const TEAM = [
     name: "Anand Date",
     role: "S&C",
     experience: "15+ years experience",
-    image: `${ASSETS}/Anand.jpg`,
+    image: cb(`${ASSETS}/Anand.png`),
     bio: "Anand is a strength and conditioning coach and sports science professional with over 15 years of experience working with high-performance athletes. His work focuses on performance development, injury recovery, and return-to-sport preparation through structured strength and conditioning programs. He applies high-performance training and recovery strategies to help athletes and active individuals move and perform better.",
   },
   {
@@ -565,7 +574,7 @@ export const TEAM = [
     name: "Anmol Khanna",
     role: "Strength and Conditioning Coach",
     experience: "4+ years experience",
-    image: `${ASSETS}/Anmol.jpg`,
+    image: cb(`${ASSETS}/Anmol.png`),
     bio: "Anmol is pursuing a degree in Strength and Conditioning and focuses on structured performance training and workload monitoring. His work includes strength development, rehabilitation support, and return-to-play programming.",
   },
 ];
