@@ -134,14 +134,15 @@ export default function PrivacyPolicyPage() {
                   <p className="text-white/75 text-sm leading-relaxed mb-4">We may collect the following categories of information:</p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {[
-                      { title: "Personal Information", body: "Name, age, gender, phone number, email address, and basic identification details." },
-                      { title: "Health & Clinical Information", body: "Information relating to injuries, symptoms, movement patterns, strength levels, assessments, treatment notes, and progress tracking." },
-                      { title: "Usage & Device Information", body: "Device type, IP address, app or website usage patterns, and interaction data." },
-                      { title: "Communication & Engagement Data", body: "Interactions through calls, WhatsApp, forms, or other communication channels, including responses to campaigns or outreach." },
+                      { title: "Personal Information", body: "Name, age, gender, phone number, email address, and basic identification details.", purpose: "For communication, and data attribution." },
+                      { title: "Health & Clinical Information", body: "Information relating to injuries, symptoms, movement patterns, strength levels, assessments, treatment notes, and progress tracking.", purpose: "In order to improve clinical diagnosis, tracking and improvement of protocols." },
+                      { title: "Usage & Device Information", body: "Device type, IP address, app or website usage patterns, and interaction data.", purpose: "To understand usage patterns, and improve program adherence." },
+                      { title: "Communication & Engagement Data", body: "Interactions through calls, WhatsApp, forms, or other communication channels, including responses to campaigns or outreach.", purpose: "To understand usage patterns, and improve program adherence." },
                     ].map((c) => (
                       <div key={c.title} className="bg-[#cdfe71]/4 border border-[#cdfe71]/10 rounded-xl p-4">
                         <h3 className="text-[#cdfe71] text-xs font-bold uppercase tracking-wide mb-2">{c.title}</h3>
-                        <p className="text-white/65 text-xs leading-relaxed">{c.body}</p>
+                        <p className="text-white/65 text-xs leading-relaxed mb-2">{c.body}</p>
+                        <p className="text-white/45 text-xs leading-relaxed italic border-t border-[#cdfe71]/10 pt-2">{c.purpose}</p>
                       </div>
                     ))}
                   </div>
@@ -204,6 +205,7 @@ export default function PrivacyPolicyPage() {
                 {/* Section 8 */}
                 <div id="retention" className="scroll-mt-28 bg-white/[0.02] border border-[#cdfe71]/8 rounded-2xl p-7">
                   <SectionHeader number="08" title="Data Retention" />
+                  <p className="text-white/75 text-sm leading-relaxed mb-4">Unless a longer retention period is required by applicable law or is necessary for ongoing clinical care or legal obligations, personal and clinical information will generally be retained for a period of up to seven (7) years from the date of the user&apos;s last interaction with the Company.</p>
                   <p className="text-white/75 text-sm leading-relaxed mb-4">Personal and clinical data is retained only for as long as necessary for:</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {["Service delivery", "Clinical continuity", "Legal & regulatory compliance"].map((tag) => (
@@ -226,6 +228,7 @@ export default function PrivacyPolicyPage() {
                     "Internal clinical and operational teams",
                     "Technology service providers supporting our systems",
                     "Regulatory authorities, if required by law",
+                    "These third parties will also be required to comply with applicable laws and contractual obligations relating to data privacy.",
                   ]} />
                   <p className="text-white/75 text-sm leading-relaxed mt-3">Any such sharing is limited to what is necessary for the intended purpose.</p>
                 </div>
