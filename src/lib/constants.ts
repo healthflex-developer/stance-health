@@ -810,7 +810,7 @@ export const CENTERS = [
     address:
       "2nd Floor, 1555, 19th Main Rd, Agara, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102",
     image: `${ASSETS}/HSR.JPG`,
-    maps: "https://maps.app.goo.gl/2kHL4tjme2Maa9VE7",
+    maps: "https://maps.app.goo.gl/RHWQ7VEB45CYPAE66",
   },
   {
     name: "Whitefield",
@@ -818,7 +818,7 @@ export const CENTERS = [
     address:
       "4th Floor, Kailash Parbat, No. 149, Doddanakundi, 2nd Phase, Hoodi, Whitefield, Bengaluru, Karnataka 560048",
     image: `${ASSETS}/whitefield.webp`,
-    maps: "https://www.google.com/maps/place/Stance+Health/@12.9858932,77.7082149,17z/data=!3m2!4b1!5s0x3bae119ae2509811:0x8383d133539a7b!4m6!3m5!1s0x3bae11ed0a8b499b:0x5f1478679abe452a!8m2!3d12.9858932!4d77.7082149!16s%2Fg%2F11xdsrwj0m",
+    maps: "https://maps.app.goo.gl/FCk4gaXCgviPFJMG8",
   },
   {
     name: "Indiranagar",
@@ -826,7 +826,7 @@ export const CENTERS = [
     address:
       "3rd Floor, Srinivasan Towers, ESI Hospital Road, Defence Colony, Indiranagar, Bengaluru, Karnataka 560038",
     image: `${ASSETS}/indra.webp`,
-    maps: "https://maps.app.goo.gl/su4xnN965KRdK47s9",
+    maps: "https://maps.app.goo.gl/xLpXLPXRtuY8S21w8",
   },
   {
     name: "JP NAGAR",
@@ -834,7 +834,7 @@ export const CENTERS = [
     address:
       "Ward No.57, 3rd Floor, V.B.R Ruddhi, 558, 9th Cross Rd, 3rd Phase, J. P. Nagar, Bengaluru, Karnataka 560078",
     image: `${ASSETS}/JP_Nagar.jpg`,
-    maps: "https://share.google/H0gWjsjm6H6LNeZj2",
+    maps: "https://maps.app.goo.gl/NHvNAa1mRZbmjsKv9",
   },
   {
     name: "KORAMANGALA",
@@ -842,7 +842,7 @@ export const CENTERS = [
     address:
       "Unit No. 22, Ground floor, 80 Feet Rd, S.T. Bed, 4th Block, Koramangala, Bengaluru, Karnataka 560034",
     image: `${ASSETS}/koramangala.jpeg`,
-    maps: "https://maps.app.goo.gl/hTP95zAu7pv4c79Y6",
+    maps: "https://maps.app.goo.gl/Pe6diykLUL22aLfa9",
   },
 ];
 
