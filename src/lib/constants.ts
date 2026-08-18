@@ -810,7 +810,7 @@ export const CENTERS = [
     address:
       "2nd Floor, 1555, 19th Main Rd, Agara, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102",
     image: `${ASSETS}/HSR.JPG`,
-    maps: "https://maps.app.goo.gl/TfixHcJfTjjPMyKq8",
+    maps: "https://maps.app.goo.gl/2kHL4tjme2Maa9VE7",
   },
   {
     name: "Whitefield",
@@ -834,7 +834,7 @@ export const CENTERS = [
     address:
       "Ward No.57, 3rd Floor, V.B.R Ruddhi, 558, 9th Cross Rd, 3rd Phase, J. P. Nagar, Bengaluru, Karnataka 560078",
     image: `${ASSETS}/JP_Nagar.jpg`,
-    maps: "https://maps.app.goo.gl/bAdshZ7kyvqnLNdq9",
+    maps: "https://share.google/H0gWjsjm6H6LNeZj2",
   },
   {
     name: "KORAMANGALA",
