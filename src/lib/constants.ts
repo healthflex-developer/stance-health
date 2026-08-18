@@ -830,7 +830,7 @@ export const CENTERS = [
   },
   {
     name: "JP NAGAR",
-    phone: "+91 6366941095",
+    phone: "+91 6366940195",
     address:
       "Ward No.57, 3rd Floor, V.B.R Ruddhi, 558, 9th Cross Rd, 3rd Phase, J. P. Nagar, Bengaluru, Karnataka 560078",
     image: `${ASSETS}/JP_Nagar.jpg`,
