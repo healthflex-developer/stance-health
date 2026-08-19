@@ -801,7 +801,7 @@ h1, h2, h3, h4, h5, h6,
   transform: translateY(0);
 }
 .team-card .con h3 {
-  font-size: 20px;
+  font-size: 15px;
   color: white;
   font-weight: 600;
   letter-spacing: -0.02em;

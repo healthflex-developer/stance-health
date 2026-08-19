@@ -88,7 +88,7 @@ export default function Home() {
         <Technology />
         <Testimonials />
         <Team />
-        <Programs />
+        {/* <Programs /> */}
         <Centers />
       </main>
       <Footer />
