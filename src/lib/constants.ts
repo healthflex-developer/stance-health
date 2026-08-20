@@ -207,7 +207,7 @@ export const ASSESSMENT_SECTIONS = [
       "Power measurement",
       "Set-to-set and reassessment comparison",
     ],
-    image: `${ASSETS}/forcedeck.png`,
+    image: `${ASSETS}/assessment/Output_sensor.png`,
   },
   {
     id: "smartspeed",
@@ -221,7 +221,7 @@ export const ASSESSMENT_SECTIONS = [
       "Acceleration and split times",
       "Selected agility and reactivity tests",
     ],
-    image: `${ASSETS}/forcedeck.png`,
+    image: `${ASSETS}/assessment/smartspeed.png`,
   },
 ];
 
@@ -575,7 +575,7 @@ export const TEAM = [
     role: "Strength and Conditioning Coach",
     experience: "4+ years experience",
     image: cb(`${ASSETS}/Anmol.png`),
-    bio: "Anmol is pursuing a degree in Strength and Conditioning and focuses on structured performance training and workload monitoring. His work includes strength development, rehabilitation support, and return-to-play programming.",
+    bio: "I'm Anmol Khanna, a Strength & Conditioning Coach specialising in athletic performance, rehabilitation, and return to performance. I've worked with IPL and domestic cricket players, athletes across multiple sports, and individuals across age groups and performance levels from recreational to professional. With over a decade of experience as a competitive cricketer, I bring a practical understanding of the demands of sport into my coaching. My approach is individualised, purposeful, and performance-driven building stronger, more resilient athletes and humans who are prepared to perform at their best.",
   },
 ];
 

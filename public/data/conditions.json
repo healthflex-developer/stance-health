@@ -3,7 +3,7 @@
     "slug": "knee-pain",
     "title": "Knee Pain",
     "bodyRegion": "knee",
-    "summary": "Knee pain is one of the most common complaints we see at Stance — affecting runners, gym-goers, office workers, and post-surgical patients alike. The knee rarely fails in isolation; the cause is almost always found above or below it.",
+    "summary": "Knee pain can affect everyday movement, exercise and sporting performance. We assess strength, mobility, movement patterns and load tolerance to understand what is contributing to your symptoms and build a targeted recovery plan.",
     "heroHeadline": "Knee pain that keeps coming back has a root cause. We find it.",
     "symptoms": [
       "Pain during or after activity (running, squatting, climbing stairs)",
@@ -20,14 +20,36 @@
       "Post-surgical deconditioning (ACL, meniscus, joint replacement)"
     ],
     "stanceApproach": "We begin with an objective, technology-driven assessment using VALD Force Decks and Dynamo to measure limb symmetry, strength deficits, and movement quality. Treatment is not guesswork — every progression is based on your numbers. We address the kinetic chain, not just the knee.",
-    "relatedServices": ["pain-injury-recovery", "post-surgery-rehab", "sports-injury-return-to-sport"],
-    "relatedResources": ["knee-pain-while-squatting", "knee-pain-while-running"],
-    "faqs": [
-      { "q": "How long does it take for knee pain to resolve?", "a": "Most non-surgical knee pain responds within 6–12 weeks of structured rehab. The timeline depends on the root cause, severity, and how consistently you follow the programme." },
-      { "q": "Do I need an MRI before seeing you?", "a": "No. We can assess you and build a plan without imaging. If we identify something that warrants a scan, we'll advise you on next steps." },
-      { "q": "Can I continue exercising with knee pain?", "a": "Often yes — but the type and load of exercise matters. We'll guide you on what to continue, modify, or pause." }
+    "relatedServices": [
+      "pain-injury-recovery",
+      "post-surgery-rehab",
+      "sports-injury-return-to-sport"
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
+    "relatedResources": [
+      "knee-pain-while-squatting",
+      "knee-pain-while-running"
+    ],
+    "faqs": [
+      {
+        "q": "How long does it take for knee pain to resolve?",
+        "a": "Most non-surgical knee pain responds within 6–12 weeks of structured rehab. The timeline depends on the root cause, severity, and how consistently you follow the programme."
+      },
+      {
+        "q": "Do I need an MRI before seeing you?",
+        "a": "No. We can assess you and build a plan without imaging. If we identify something that warrants a scan, we'll advise you on next steps."
+      },
+      {
+        "q": "Can I continue exercising with knee pain?",
+        "a": "Often yes — but the type and load of exercise matters. We'll guide you on what to continue, modify, or pause."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
     "seo": {
       "title": "Knee Pain Treatment in Bangalore | Stance Health",
       "description": "Evidence-based knee pain assessment and recovery at Stance Health, Bangalore. Objective strength testing, root-cause diagnosis, personalised rehab.",
@@ -39,7 +61,7 @@
     "slug": "back-pain",
     "title": "Back Pain",
     "bodyRegion": "back",
-    "summary": "Chronic and recurring back pain is rarely just a structural problem. At Stance, we look at load capacity, movement habits, and muscle function — not just what an MRI shows.",
+    "summary": "Back pain can be influenced by strength, movement habits, workload and physical capacity. We assess the factors contributing to your symptoms and develop a progressive plan that helps you move with greater confidence.",
     "heroHeadline": "Back pain that keeps returning has a pattern. We break it.",
     "symptoms": [
       "Dull ache or sharp pain in the lower, mid, or upper back",
@@ -56,14 +78,35 @@
       "Psychosocial factors including stress and fear-avoidance"
     ],
     "stanceApproach": "We don't treat back pain with passive therapies alone. Our assessment identifies your specific load tolerance, movement deficits, and strength gaps. We build a graded, progressive programme that trains your spine to handle real-life demands — and we track your progress with objective measures so you can see the change.",
-    "relatedServices": ["pain-injury-recovery", "strength-performance-training"],
-    "relatedResources": ["back-pain-after-sitting", "return-to-gym-after-back-pain"],
-    "faqs": [
-      { "q": "Is back pain always caused by a disc problem?", "a": "No. The majority of back pain is not disc-specific and responds well to exercise-based rehabilitation. Even when disc changes are present, they are often not the primary driver of pain." },
-      { "q": "Should I rest or keep moving?", "a": "For most back pain, graded movement is better than rest. We'll guide you on the right type and intensity of movement for your presentation." },
-      { "q": "How many sessions will I need?", "a": "Most patients see meaningful improvement within 4–8 sessions. Long-term resolution typically requires 8–16 weeks of structured rehab." }
+    "relatedServices": [
+      "pain-injury-recovery",
+      "strength-performance-training"
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
+    "relatedResources": [
+      "back-pain-after-sitting",
+      "return-to-gym-after-back-pain"
+    ],
+    "faqs": [
+      {
+        "q": "Is back pain always caused by a disc problem?",
+        "a": "No. The majority of back pain is not disc-specific and responds well to exercise-based rehabilitation. Even when disc changes are present, they are often not the primary driver of pain."
+      },
+      {
+        "q": "Should I rest or keep moving?",
+        "a": "For most back pain, graded movement is better than rest. We'll guide you on the right type and intensity of movement for your presentation."
+      },
+      {
+        "q": "How many sessions will I need?",
+        "a": "Most patients see meaningful improvement within 4–8 sessions. Long-term resolution typically requires 8–16 weeks of structured rehab."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
     "seo": {
       "title": "Back Pain Treatment in Bangalore | Stance Health",
       "description": "Root-cause back pain assessment and rehab at Stance Health Bangalore. Strength-based, data-driven recovery for chronic and acute back pain.",
@@ -75,7 +118,7 @@
     "slug": "neck-pain",
     "title": "Neck Pain",
     "bodyRegion": "neck",
-    "summary": "Neck pain — whether from desk work, poor posture, or a specific injury — responds well to a targeted combination of manual therapy, strength work, and movement re-education.",
+    "summary": "Neck pain may be related to desk work, physical load, movement habits or a specific injury. We assess mobility and strength to build a targeted plan that supports comfortable movement.",
     "heroHeadline": "Neck pain that limits your day deserves more than a massage.",
     "symptoms": [
       "Stiffness or restricted rotation on one or both sides",
@@ -92,13 +135,29 @@
       "Stress and muscle guarding patterns"
     ],
     "stanceApproach": "We assess cervical range of motion, deep neck flexor endurance, and upper limb neural tension. Treatment combines hands-on manual therapy with a personalised strengthening and postural programme — so you get short-term relief and long-term resilience.",
-    "relatedServices": ["pain-injury-recovery"],
-    "relatedResources": ["neck-stiffness-after-work"],
-    "faqs": [
-      { "q": "Can physiotherapy help with cervicogenic headaches?", "a": "Yes. Headaches driven by the neck respond well to manual therapy and cervical strengthening. We'll assess whether your headaches are cervicogenic in origin." },
-      { "q": "Do I need to stop using screens?", "a": "Rarely. We'll help you optimise your setup and build the capacity to tolerate screen-based work without pain." }
+    "relatedServices": [
+      "pain-injury-recovery"
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
+    "relatedResources": [
+      "neck-stiffness-after-work"
+    ],
+    "faqs": [
+      {
+        "q": "Can physiotherapy help with cervicogenic headaches?",
+        "a": "Yes. Headaches driven by the neck respond well to manual therapy and cervical strengthening. We'll assess whether your headaches are cervicogenic in origin."
+      },
+      {
+        "q": "Do I need to stop using screens?",
+        "a": "Rarely. We'll help you optimise your setup and build the capacity to tolerate screen-based work without pain."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
     "seo": {
       "title": "Neck Pain Treatment in Bangalore | Stance Health",
       "description": "Expert neck pain assessment and rehab at Stance Health Bangalore. Manual therapy plus strength work for lasting relief.",
@@ -110,7 +169,7 @@
     "slug": "shoulder-pain",
     "title": "Shoulder Pain",
     "bodyRegion": "shoulder",
-    "summary": "Shoulder pain during overhead activity, at night, or during gym work is a common presentation at Stance. We distinguish between structural and movement-based causes before designing your programme.",
+    "summary": "Shoulder pain can affect reaching, lifting, sleeping and gym activity. We assess mobility, strength and movement control to understand the source of your symptoms and guide a progressive recovery programme.",
     "heroHeadline": "Shoulder pain limits everything overhead. We help you lift again.",
     "symptoms": [
       "Pain with overhead reaching or lifting",
@@ -127,13 +186,31 @@
       "Frozen shoulder (adhesive capsulitis)"
     ],
     "stanceApproach": "Using VALD Dynamo, we objectively measure rotator cuff and scapular muscle strength to find the specific deficits driving your symptoms. Our programme rebuilds shoulder mechanics from the ground up — not just the symptomatic structure.",
-    "relatedServices": ["pain-injury-recovery", "post-surgery-rehab", "sports-injury-return-to-sport"],
-    "relatedResources": ["shoulder-pain-during-gym"],
-    "faqs": [
-      { "q": "Will I need surgery for my shoulder pain?", "a": "Most shoulder conditions resolve with structured physiotherapy. Surgery is typically a last resort after 3–6 months of quality conservative management." },
-      { "q": "How long does rotator cuff rehab take?", "a": "Mild tendinopathy: 6–8 weeks. Partial tears: 12–16 weeks. Full tears managed conservatively: 16–24 weeks or more." }
+    "relatedServices": [
+      "pain-injury-recovery",
+      "post-surgery-rehab",
+      "sports-injury-return-to-sport"
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
+    "relatedResources": [
+      "shoulder-pain-during-gym"
+    ],
+    "faqs": [
+      {
+        "q": "Will I need surgery for my shoulder pain?",
+        "a": "Most shoulder conditions resolve with structured physiotherapy. Surgery is typically a last resort after 3–6 months of quality conservative management."
+      },
+      {
+        "q": "How long does rotator cuff rehab take?",
+        "a": "Mild tendinopathy: 6–8 weeks. Partial tears: 12–16 weeks. Full tears managed conservatively: 16–24 weeks or more."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
     "seo": {
       "title": "Shoulder Pain Treatment in Bangalore | Stance Health",
       "description": "Objective shoulder pain assessment and rehab at Stance Health Bangalore. Strength testing and personalised recovery for rotator cuff, impingement, and more.",
@@ -145,7 +222,7 @@
     "slug": "frozen-shoulder",
     "title": "Frozen Shoulder",
     "bodyRegion": "shoulder",
-    "summary": "Frozen shoulder (adhesive capsulitis) is one of the most painful and limiting shoulder conditions — but with the right approach at the right stage, recovery is achievable.",
+    "summary": "Frozen shoulder causes significant pain and stiffness that can restrict everyday activities. Treatment is adapted to the stage of the condition, with a focus on managing symptoms and gradually restoring movement.",
     "heroHeadline": "Frozen shoulder is slow. The right treatment isn't.",
     "symptoms": [
       "Progressive loss of shoulder range of motion in all directions",
@@ -160,13 +237,28 @@
       "Post-trauma or following a rotator cuff injury"
     ],
     "stanceApproach": "Frozen shoulder has three stages and treatment differs by stage. We identify where you are in the cycle and apply appropriate manual therapy, guided stretching, and strengthening to restore movement without aggravating the inflammatory phase.",
-    "relatedServices": ["pain-injury-recovery", "post-surgery-rehab"],
+    "relatedServices": [
+      "pain-injury-recovery",
+      "post-surgery-rehab"
+    ],
     "relatedResources": [],
     "faqs": [
-      { "q": "Will frozen shoulder resolve on its own?", "a": "Often yes, but it can take 1–3 years without treatment. Targeted physiotherapy significantly accelerates recovery." },
-      { "q": "Is manipulation under anaesthesia necessary?", "a": "Rarely. Most patients respond to structured physiotherapy without the need for MUA." }
+      {
+        "q": "Will frozen shoulder resolve on its own?",
+        "a": "Often yes, but it can take 1–3 years without treatment. Targeted physiotherapy significantly accelerates recovery."
+      },
+      {
+        "q": "Is manipulation under anaesthesia necessary?",
+        "a": "Rarely. Most patients respond to structured physiotherapy without the need for MUA."
+      }
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
     "seo": {
       "title": "Frozen Shoulder Treatment in Bangalore | Stance Health",
       "description": "Frozen shoulder assessment and stage-specific rehab at Stance Health Bangalore. Restore movement faster with targeted physiotherapy.",
@@ -178,7 +270,7 @@
     "slug": "cervical-spondylosis",
     "title": "Cervical Spondylosis",
     "bodyRegion": "neck",
-    "summary": "Cervical spondylosis is age-related wear in the neck, but wear on imaging doesn't equal pain or disability. We help you build the capacity to live and move well alongside it.",
+    "summary": "Cervical spondylosis refers to age-related changes in the neck. We help improve mobility, strength and physical capacity so you can manage symptoms and continue everyday activities with confidence.",
     "heroHeadline": "Your scan shows change. We show you what your body can still do.",
     "symptoms": [
       "Chronic neck stiffness and aching",
@@ -194,13 +286,29 @@
       "Genetic predisposition"
     ],
     "stanceApproach": "Cervical spondylosis is manageable. We focus on what is changeable — strength, flexibility, posture, and load tolerance — and build a realistic, sustainable programme for long-term neck health.",
-    "relatedServices": ["pain-injury-recovery"],
-    "relatedResources": ["neck-stiffness-after-work"],
-    "faqs": [
-      { "q": "Is cervical spondylosis the same as arthritis?", "a": "It is a form of degenerative joint change in the cervical spine, similar in nature to osteoarthritis. It is very common after age 40 and does not always cause symptoms." },
-      { "q": "Can I exercise with cervical spondylosis?", "a": "Yes. Appropriate exercise is one of the most effective treatments. We will guide you on which movements to prioritise and which to approach carefully." }
+    "relatedServices": [
+      "pain-injury-recovery"
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
+    "relatedResources": [
+      "neck-stiffness-after-work"
+    ],
+    "faqs": [
+      {
+        "q": "Is cervical spondylosis the same as arthritis?",
+        "a": "It is a form of degenerative joint change in the cervical spine, similar in nature to osteoarthritis. It is very common after age 40 and does not always cause symptoms."
+      },
+      {
+        "q": "Can I exercise with cervical spondylosis?",
+        "a": "Yes. Appropriate exercise is one of the most effective treatments. We will guide you on which movements to prioritise and which to approach carefully."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
     "seo": {
       "title": "Cervical Spondylosis Treatment in Bangalore | Stance Health",
       "description": "Structured physiotherapy for cervical spondylosis at Stance Health Bangalore. Strength-based management for lasting neck health.",
@@ -212,7 +320,7 @@
     "slug": "acl-injury",
     "title": "ACL Injury",
     "bodyRegion": "knee",
-    "summary": "An ACL injury — whether partial tear or complete rupture — is a serious setback. But with the right phased rehabilitation, most athletes return to full sport. We guide you through every stage.",
+    "summary": "ACL injuries require structured rehabilitation that progresses from restoring movement and strength to running, jumping and changing direction. Objective testing helps us determine when you are ready for each stage.",
     "heroHeadline": "ACL recovery is a process. We make it a precise one.",
     "symptoms": [
       "A 'pop' sound or sensation at the time of injury",
@@ -227,14 +335,35 @@
       "Predisposing factors: hip and glute weakness, ankle stiffness, biomechanical patterns"
     ],
     "stanceApproach": "We use VALD Force Decks to measure limb symmetry indices at each phase of rehab — progressing you based on data, not time. Our ACL protocol follows international best practice for phased return to sport, with explicit criteria at each gate.",
-    "relatedServices": ["post-surgery-rehab", "sports-injury-return-to-sport"],
-    "relatedResources": ["acl-rehab-phases", "ankle-sprain-return-to-sport"],
-    "faqs": [
-      { "q": "Do I need surgery for an ACL tear?", "a": "Not always. Partial tears and some complete tears in less active individuals can be managed non-surgically. We'll help you understand your options." },
-      { "q": "How long does ACL rehab take?", "a": "9–12 months is the typical return-to-sport timeline for surgically reconstructed ACL. The duration is driven by biology and objective readiness, not the calendar." },
-      { "q": "When can I start rehab?", "a": "Immediately — both before surgery (prehab) and after. Pre-surgical strength predicts post-surgical outcomes." }
+    "relatedServices": [
+      "post-surgery-rehab",
+      "sports-injury-return-to-sport"
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
+    "relatedResources": [
+      "acl-rehab-phases",
+      "ankle-sprain-return-to-sport"
+    ],
+    "faqs": [
+      {
+        "q": "Do I need surgery for an ACL tear?",
+        "a": "Not always. Partial tears and some complete tears in less active individuals can be managed non-surgically. We'll help you understand your options."
+      },
+      {
+        "q": "How long does ACL rehab take?",
+        "a": "9–12 months is the typical return-to-sport timeline for surgically reconstructed ACL. The duration is driven by biology and objective readiness, not the calendar."
+      },
+      {
+        "q": "When can I start rehab?",
+        "a": "Immediately — both before surgery (prehab) and after. Pre-surgical strength predicts post-surgical outcomes."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
     "seo": {
       "title": "ACL Injury Rehab in Bangalore | Stance Health",
       "description": "Data-driven ACL rehabilitation at Stance Health Bangalore. Objective strength testing and phased return-to-sport protocol.",
@@ -246,7 +375,7 @@
     "slug": "sciatica",
     "title": "Sciatica",
     "bodyRegion": "back",
-    "summary": "Sciatica describes pain travelling along the sciatic nerve pathway — from the lower back through the buttock and down the leg. The source is almost always in the spine or piriformis, and most cases resolve with the right approach.",
+    "summary": "Sciatica can cause pain, tingling or numbness that travels from the lower back into the leg. We identify the movements and positions affecting your symptoms and build a plan to restore comfortable function.",
     "heroHeadline": "Pain down your leg has a source. We find and fix it.",
     "symptoms": [
       "Sharp, burning, or shooting pain from the lower back into the buttock and leg",
@@ -263,13 +392,29 @@
       "Pregnancy-related pelvic changes"
     ],
     "stanceApproach": "We identify the directional preference and nerve tension pattern driving your sciatica, then build a directional exercise programme alongside neural mobilisation and progressive loading. Most sciatica cases resolve without injections or surgery.",
-    "relatedServices": ["pain-injury-recovery"],
-    "relatedResources": ["back-pain-after-sitting"],
-    "faqs": [
-      { "q": "Is sciatica the same as a slipped disc?", "a": "Sciatica is a symptom — pain along the sciatic nerve pathway. A slipped disc (disc herniation) is one common cause, but not the only one." },
-      { "q": "How long does sciatica last?", "a": "Most acute sciatica episodes improve significantly within 6–12 weeks. Chronic cases take longer but still respond well to structured physiotherapy." }
+    "relatedServices": [
+      "pain-injury-recovery"
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
+    "relatedResources": [
+      "back-pain-after-sitting"
+    ],
+    "faqs": [
+      {
+        "q": "Is sciatica the same as a slipped disc?",
+        "a": "Sciatica is a symptom — pain along the sciatic nerve pathway. A slipped disc (disc herniation) is one common cause, but not the only one."
+      },
+      {
+        "q": "How long does sciatica last?",
+        "a": "Most acute sciatica episodes improve significantly within 6–12 weeks. Chronic cases take longer but still respond well to structured physiotherapy."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
     "seo": {
       "title": "Sciatica Treatment in Bangalore | Stance Health",
       "description": "Expert sciatica assessment and nerve-targeted rehab at Stance Health Bangalore. Most cases resolve without surgery.",
@@ -281,7 +426,7 @@
     "slug": "slipped-disc",
     "title": "Slipped Disc (Disc Herniation)",
     "bodyRegion": "back",
-    "summary": "A slipped disc — more accurately, a disc herniation — sounds alarming, but the vast majority of cases resolve with good physiotherapy and graded exercise. Surgery is rarely the first option.",
+    "summary": "A disc herniation can cause back pain, stiffness or symptoms extending into the leg. Most cases can be managed through physiotherapy, graded movement and progressive strengthening tailored to individual symptoms.",
     "heroHeadline": "A disc herniation is not a life sentence. We prove it.",
     "symptoms": [
       "Back pain that is worse with forward bending or sitting",
@@ -296,13 +441,29 @@
       "Age-related disc dehydration reducing structural resilience"
     ],
     "stanceApproach": "We use directional preference assessment (McKenzie method) combined with progressive loading to find the movement approach that rapidly reduces your symptoms and restores disc health. We rarely advise rest — movement is medicine.",
-    "relatedServices": ["pain-injury-recovery"],
-    "relatedResources": ["back-pain-after-sitting"],
-    "faqs": [
-      { "q": "Will the disc heal?", "a": "Yes. Disc herniations frequently resorb over time — the body absorbs the herniated material. This process is supported by appropriate loading and movement." },
-      { "q": "Do I need surgery?", "a": "Less than 10% of disc herniations require surgery. We will refer you if red flag symptoms are present, but structured physiotherapy is the first-line treatment." }
+    "relatedServices": [
+      "pain-injury-recovery"
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
+    "relatedResources": [
+      "back-pain-after-sitting"
+    ],
+    "faqs": [
+      {
+        "q": "Will the disc heal?",
+        "a": "Yes. Disc herniations frequently resorb over time — the body absorbs the herniated material. This process is supported by appropriate loading and movement."
+      },
+      {
+        "q": "Do I need surgery?",
+        "a": "Less than 10% of disc herniations require surgery. We will refer you if red flag symptoms are present, but structured physiotherapy is the first-line treatment."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
     "seo": {
       "title": "Slipped Disc Treatment in Bangalore | Stance Health",
       "description": "Evidence-based disc herniation assessment and rehab at Stance Health Bangalore. Conservative management that works.",
@@ -314,7 +475,7 @@
     "slug": "plantar-fasciitis",
     "title": "Plantar Fasciitis",
     "bodyRegion": "ankle",
-    "summary": "Plantar fasciitis — heel pain that is worst in the morning — is extremely common in runners and active adults. It responds very well to a structured loading programme.",
+    "summary": "Plantar fasciitis commonly causes heel pain that is worse during the first few steps after rest. Progressive loading, mobility work and activity management help restore foot capacity and reduce symptoms.",
     "heroHeadline": "Heel pain every morning is not something you have to live with.",
     "symptoms": [
       "Sharp heel pain with the first steps in the morning",
@@ -330,13 +491,30 @@
       "Biomechanical factors: flat feet or high arches"
     ],
     "stanceApproach": "Heavy slow resistance loading for the plantar fascia — a protocol with strong evidence for pain reduction and tissue remodelling. We combine this with calf flexibility work, gait analysis if running-related, and load management to prevent recurrence.",
-    "relatedServices": ["pain-injury-recovery", "running-assessment"],
-    "relatedResources": ["heel-pain-in-the-morning"],
-    "faqs": [
-      { "q": "How long does plantar fasciitis take to resolve?", "a": "With structured loading, most patients see significant improvement in 6–12 weeks. Complete resolution can take 3–6 months." },
-      { "q": "Should I stop running?", "a": "Not necessarily. We will help you manage load so you can continue training at a modified level while the tissue heals." }
+    "relatedServices": [
+      "pain-injury-recovery",
+      "running-assessment"
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
+    "relatedResources": [
+      "heel-pain-in-the-morning"
+    ],
+    "faqs": [
+      {
+        "q": "How long does plantar fasciitis take to resolve?",
+        "a": "With structured loading, most patients see significant improvement in 6–12 weeks. Complete resolution can take 3–6 months."
+      },
+      {
+        "q": "Should I stop running?",
+        "a": "Not necessarily. We will help you manage load so you can continue training at a modified level while the tissue heals."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
     "seo": {
       "title": "Plantar Fasciitis Treatment in Bangalore | Stance Health",
       "description": "Loading-based plantar fasciitis rehab at Stance Health Bangalore. Get back to running faster with evidence-based treatment.",
@@ -348,7 +526,7 @@
     "slug": "ankle-sprain",
     "title": "Ankle Sprain",
     "bodyRegion": "ankle",
-    "summary": "Ankle sprains are the most commonly under-rehabilitated sports injury — and the most commonly re-injured as a result. Complete rehab including strength and proprioception work is essential for a confident return to sport.",
+    "summary": "Ankle sprains can affect strength, balance and confidence long after the initial pain settles. Complete rehabilitation helps restore stability and reduce the risk of repeated injury.",
     "heroHeadline": "An ankle sprain isn't just rest and ice. Real recovery is more.",
     "symptoms": [
       "Pain and swelling on the outer ankle immediately after a roll or twist",
@@ -363,13 +541,31 @@
       "Inadequate rehab from a previous sprain"
     ],
     "stanceApproach": "We treat ankle sprains in three stages: acute management, strength restoration, and sport-specific neuromuscular retraining. We use VALD Force Decks to measure balance and single-leg control, and objective criteria to clear you for return to sport — not just a time window.",
-    "relatedServices": ["sports-injury-return-to-sport", "pain-injury-recovery"],
-    "relatedResources": ["ankle-sprain-return-to-sport", "ankle-pain-while-running"],
-    "faqs": [
-      { "q": "Should I get an X-ray after a sprain?", "a": "We use the Ottawa Ankle Rules to assess whether imaging is required. Most ankle sprains do not need an X-ray." },
-      { "q": "Can I return to sport after a sprain?", "a": "Yes — with objective readiness criteria met. We test balance, strength, and reactive control before clearing you for full return." }
+    "relatedServices": [
+      "sports-injury-return-to-sport",
+      "pain-injury-recovery"
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
+    "relatedResources": [
+      "ankle-sprain-return-to-sport",
+      "ankle-pain-while-running"
+    ],
+    "faqs": [
+      {
+        "q": "Should I get an X-ray after a sprain?",
+        "a": "We use the Ottawa Ankle Rules to assess whether imaging is required. Most ankle sprains do not need an X-ray."
+      },
+      {
+        "q": "Can I return to sport after a sprain?",
+        "a": "Yes — with objective readiness criteria met. We test balance, strength, and reactive control before clearing you for full return."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
     "seo": {
       "title": "Ankle Sprain Rehab in Bangalore | Stance Health",
       "description": "Complete ankle sprain rehabilitation at Stance Health Bangalore. Strength and balance testing for a safe return to sport.",
@@ -381,7 +577,7 @@
     "slug": "achilles-tendinopathy",
     "title": "Achilles Tendinopathy",
     "bodyRegion": "ankle",
-    "summary": "Achilles tendinopathy — pain at the back of the heel or mid-tendon — is the classic overuse injury for runners. Heavy slow resistance loading is the gold-standard treatment, and we deliver it precisely.",
+    "summary": "Achilles tendinopathy causes pain or stiffness around the tendon at the back of the ankle. A progressive loading programme helps rebuild tendon strength and prepare it for walking, running and sport.",
     "heroHeadline": "Achilles pain that flares with every run needs a loading plan, not rest.",
     "symptoms": [
       "Morning stiffness at the back of the heel that warms up with movement",
@@ -397,13 +593,31 @@
       "Return to activity after a period of rest"
     ],
     "stanceApproach": "We prescribe a precisely dosed heavy slow resistance programme based on your current strength level and training volume. We pair this with load management for your running programme and address any contributing biomechanical factors identified via gait analysis.",
-    "relatedServices": ["pain-injury-recovery", "running-assessment"],
-    "relatedResources": ["ankle-pain-while-running", "strength-training-for-runners"],
-    "faqs": [
-      { "q": "Do I need to stop running completely?", "a": "Rarely. A structured loading programme alongside managed running volume is more effective than complete rest." },
-      { "q": "Will my Achilles tendon rupture if I keep running?", "a": "A tendinopathic tendon is different from a rupture risk. We assess the severity and guide you on appropriate load — complete ruptures in tendinopathy patients who are loading appropriately are rare." }
+    "relatedServices": [
+      "pain-injury-recovery",
+      "running-assessment"
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
+    "relatedResources": [
+      "ankle-pain-while-running",
+      "strength-training-for-runners"
+    ],
+    "faqs": [
+      {
+        "q": "Do I need to stop running completely?",
+        "a": "Rarely. A structured loading programme alongside managed running volume is more effective than complete rest."
+      },
+      {
+        "q": "Will my Achilles tendon rupture if I keep running?",
+        "a": "A tendinopathic tendon is different from a rupture risk. We assess the severity and guide you on appropriate load — complete ruptures in tendinopathy patients who are loading appropriately are rare."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
     "seo": {
       "title": "Achilles Tendinopathy Treatment in Bangalore | Stance Health",
       "description": "Evidence-based Achilles tendinopathy loading programme at Stance Health Bangalore. Keep running while you recover.",
@@ -415,7 +629,7 @@
     "slug": "tennis-elbow",
     "title": "Tennis Elbow (Lateral Epicondylalgia)",
     "bodyRegion": "elbow",
-    "summary": "Tennis elbow is a common overuse injury of the forearm extensor tendons — most often in non-tennis players. It responds well to a structured loading and grip-strengthening programme.",
+    "summary": "Tennis elbow causes pain on the outside of the elbow during gripping, lifting or repetitive wrist activity. Progressive forearm and grip strengthening helps rebuild tendon capacity and improve function.",
     "heroHeadline": "Elbow pain that limits your grip has a solution that's more than rest.",
     "symptoms": [
       "Pain on the outer elbow, especially gripping or lifting",
@@ -430,13 +644,28 @@
       "Weakness of shoulder and rotator cuff muscles creating downstream load"
     ],
     "stanceApproach": "We use a graded isometric-to-isotonic loading progression for the wrist extensors, addressing both local tendon health and the shoulder and scapular strength that reduces forearm demand. Most patients recover fully without injections.",
-    "relatedServices": ["pain-injury-recovery", "sports-injury-return-to-sport"],
+    "relatedServices": [
+      "pain-injury-recovery",
+      "sports-injury-return-to-sport"
+    ],
     "relatedResources": [],
     "faqs": [
-      { "q": "Should I get a cortisone injection?", "a": "Evidence shows that physiotherapy produces better long-term outcomes than corticosteroid injection. We recommend trying a structured loading programme first." },
-      { "q": "How long does tennis elbow take to resolve?", "a": "Most cases improve significantly in 6–12 weeks of structured loading. Full resolution can take 3–6 months." }
+      {
+        "q": "Should I get a cortisone injection?",
+        "a": "Evidence shows that physiotherapy produces better long-term outcomes than corticosteroid injection. We recommend trying a structured loading programme first."
+      },
+      {
+        "q": "How long does tennis elbow take to resolve?",
+        "a": "Most cases improve significantly in 6–12 weeks of structured loading. Full resolution can take 3–6 months."
+      }
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
     "seo": {
       "title": "Tennis Elbow Treatment in Bangalore | Stance Health",
       "description": "Tennis elbow loading-based rehab at Stance Health Bangalore. Avoid injections with structured physiotherapy.",
@@ -448,7 +677,7 @@
     "slug": "rotator-cuff-injury",
     "title": "Rotator Cuff Injury",
     "bodyRegion": "shoulder",
-    "summary": "Rotator cuff injuries range from tendinopathy to partial and full tears. Most respond to structured strengthening — even partial tears often avoid surgery with the right rehab.",
+    "summary": "Rotator cuff injuries can cause pain, weakness and difficulty with overhead movement. We assess shoulder capacity and progressively rebuild strength and control based on your symptoms and functional goals.",
     "heroHeadline": "Shoulder weakness doesn't have to mean the operating table.",
     "symptoms": [
       "Weakness with arm elevation or rotation",
@@ -463,13 +692,30 @@
       "Poor scapular control creating subacromial impingement"
     ],
     "stanceApproach": "We measure rotator cuff strength objectively using VALD Dynamo and design a personalised loading programme. We also address scapular stability and thoracic mobility — the upstream factors that reduce impingement and create the space the rotator cuff needs to function.",
-    "relatedServices": ["pain-injury-recovery", "post-surgery-rehab"],
-    "relatedResources": ["shoulder-pain-during-gym"],
-    "faqs": [
-      { "q": "Will I need surgery for a rotator cuff tear?", "a": "Not necessarily. Partial tears and even small full-thickness tears frequently respond to structured physiotherapy. Surgery is considered after 3–6 months of quality conservative management." },
-      { "q": "Can I lift weights with a rotator cuff injury?", "a": "Yes — with modification. We'll guide you on which movements to continue, adapt, or pause." }
+    "relatedServices": [
+      "pain-injury-recovery",
+      "post-surgery-rehab"
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
+    "relatedResources": [
+      "shoulder-pain-during-gym"
+    ],
+    "faqs": [
+      {
+        "q": "Will I need surgery for a rotator cuff tear?",
+        "a": "Not necessarily. Partial tears and even small full-thickness tears frequently respond to structured physiotherapy. Surgery is considered after 3–6 months of quality conservative management."
+      },
+      {
+        "q": "Can I lift weights with a rotator cuff injury?",
+        "a": "Yes — with modification. We'll guide you on which movements to continue, adapt, or pause."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
     "seo": {
       "title": "Rotator Cuff Injury Rehab in Bangalore | Stance Health",
       "description": "Rotator cuff strength testing and rehab at Stance Health Bangalore. Data-driven recovery for tears and tendinopathy.",
@@ -481,7 +727,7 @@
     "slug": "meniscus-tear",
     "title": "Meniscus Tear",
     "bodyRegion": "knee",
-    "summary": "Meniscus tears are common in both acute sport injuries and in the general population through degeneration. The majority of degenerative tears do not require surgery and respond well to physiotherapy.",
+    "summary": "Meniscus tears can cause pain, swelling, stiffness or difficulty twisting and squatting. We assess your knee function and create a progressive rehabilitation plan based on your symptoms, activity levels and recovery goals.",
     "heroHeadline": "A meniscus tear on your MRI is not always the cause of your pain.",
     "symptoms": [
       "Pain on the inner or outer joint line of the knee",
@@ -496,13 +742,28 @@
       "Cumulative loading without adequate recovery"
     ],
     "stanceApproach": "We assess knee mechanics, quadriceps and hamstring strength, and functional capacity. For degenerative tears, exercise-based management is as effective as surgery in most cases. For acute, mechanical tears we guide you through post-surgical rehab if surgery is indicated.",
-    "relatedServices": ["pain-injury-recovery", "post-surgery-rehab"],
+    "relatedServices": [
+      "pain-injury-recovery",
+      "post-surgery-rehab"
+    ],
     "relatedResources": [],
     "faqs": [
-      { "q": "Is surgery always needed for a meniscus tear?", "a": "No. Evidence shows that for degenerative meniscus tears, physiotherapy produces equivalent outcomes to arthroscopic surgery. We help you understand your options." },
-      { "q": "How long after a meniscus tear can I return to sport?", "a": "Typically 6–12 weeks for conservative management, and 12–16 weeks post-surgery, depending on the type of repair." }
+      {
+        "q": "Is surgery always needed for a meniscus tear?",
+        "a": "No. Evidence shows that for degenerative meniscus tears, physiotherapy produces equivalent outcomes to arthroscopic surgery. We help you understand your options."
+      },
+      {
+        "q": "How long after a meniscus tear can I return to sport?",
+        "a": "Typically 6–12 weeks for conservative management, and 12–16 weeks post-surgery, depending on the type of repair."
+      }
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
     "seo": {
       "title": "Meniscus Tear Rehab in Bangalore | Stance Health",
       "description": "Evidence-based meniscus tear assessment and rehab at Stance Health Bangalore. Understand your options before choosing surgery.",
@@ -514,7 +775,7 @@
     "slug": "osteoarthritis",
     "title": "Osteoarthritis",
     "bodyRegion": "knee",
-    "summary": "Osteoarthritis is the most common joint condition in India. Exercise — not rest — is the most effective treatment. We help you build the strength and capacity to live actively with OA.",
+    "summary": "Knee osteoarthritis can lead to pain, stiffness and reduced confidence in movement. Progressive strength, mobility and conditioning can help improve function and make everyday activities more manageable.",
     "heroHeadline": "OA is not the end of activity. It is the beginning of training smarter.",
     "symptoms": [
       "Aching joint pain during and after activity",
@@ -531,18 +792,2129 @@
       "Genetic predisposition"
     ],
     "stanceApproach": "Exercise is the most evidence-based treatment for osteoarthritis. We design graded strength programmes that reduce pain, improve function, and delay or prevent the need for joint replacement — measured objectively with VALD technology.",
-    "relatedServices": ["pain-injury-recovery", "strength-performance-training"],
-    "relatedResources": ["strength-training-after-40"],
-    "faqs": [
-      { "q": "Will exercise make my OA worse?", "a": "No. This is the most common myth. Graded exercise reduces pain and improves joint health. It does not accelerate cartilage wear." },
-      { "q": "When should I consider joint replacement?", "a": "Joint replacement is considered when pain and function significantly impact quality of life and conservative management has been exhausted — typically after 6–12 months of structured physiotherapy." }
+    "relatedServices": [
+      "pain-injury-recovery",
+      "strength-performance-training"
     ],
-    "locations": ["hsr-layout", "indiranagar", "whitefield", "jp-nagar", "koramangala"],
+    "relatedResources": [
+      "strength-training-after-40"
+    ],
+    "faqs": [
+      {
+        "q": "Will exercise make my OA worse?",
+        "a": "No. This is the most common myth. Graded exercise reduces pain and improves joint health. It does not accelerate cartilage wear."
+      },
+      {
+        "q": "When should I consider joint replacement?",
+        "a": "Joint replacement is considered when pain and function significantly impact quality of life and conservative management has been exhausted — typically after 6–12 months of structured physiotherapy."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
     "seo": {
       "title": "Osteoarthritis Treatment in Bangalore | Stance Health",
       "description": "Strength-based osteoarthritis management at Stance Health Bangalore. Move better, live better with OA.",
       "canonical": "/conditions/osteoarthritis"
     },
     "lastModified": "2026-01-01"
+  },
+  {
+    "slug": "hip-pain",
+    "title": "Hip Pain",
+    "bodyRegion": "hip",
+    "summary": "Hip pain can affect walking, sitting, exercise and sporting movement. We assess hip mobility, strength and movement patterns to understand the contributing factors and build a targeted recovery plan.",
+    "heroHeadline": "Hip pain that limits your movement has a cause we can find.",
+    "symptoms": [
+      "Pain in the front, side or back of the hip during movement",
+      "Stiffness after prolonged sitting or rest",
+      "Pain with walking, stairs or exercise",
+      "Reduced range of motion in the hip joint",
+      "Discomfort during sporting movements such as kicking or running"
+    ],
+    "causes": [
+      "Hip muscle weakness or imbalance",
+      "Reduced hip joint mobility",
+      "Overuse or training load changes",
+      "Referred pain from the lower back",
+      "Joint degeneration or structural changes"
+    ],
+    "stanceApproach": "We assess hip mobility, strength and movement patterns using objective testing to understand the contributing factors. Treatment is tailored to address your specific deficits and build the capacity you need for your activities.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "sports-injury-return-to-sport"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Can hip pain be referred from the back?",
+        "a": "Yes. The lower back and hip are closely related. We assess both to identify the primary source of your symptoms."
+      },
+      {
+        "q": "How long does hip pain take to resolve?",
+        "a": "Most hip pain responds well to structured rehabilitation within 6-12 weeks, depending on the cause and severity."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Hip Pain Treatment in Bangalore | Stance Health",
+      "description": "Assessment-led hip pain recovery at Stance Health Bangalore. Objective testing and personalised rehabilitation."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "hip-osteoarthritis",
+    "title": "Hip Osteoarthritis",
+    "bodyRegion": "hip",
+    "summary": "Hip osteoarthritis may cause pain, stiffness and reduced mobility. Progressive strength, mobility and conditioning can help improve function, support joint health and maintain an active lifestyle.",
+    "heroHeadline": "Hip OA does not mean stopping. It means training smarter.",
+    "symptoms": [
+      "Aching pain in the groin, thigh or buttock",
+      "Morning stiffness lasting less than 30 minutes",
+      "Reduced range of motion, especially rotation",
+      "Pain after prolonged activity or walking",
+      "Difficulty with tasks like putting on shoes or socks"
+    ],
+    "causes": [
+      "Age-related cartilage changes in the hip joint",
+      "Previous hip injury or structural abnormality",
+      "Reduced muscle strength around the hip",
+      "Obesity increasing joint load",
+      "Genetic predisposition"
+    ],
+    "stanceApproach": "Exercise is the most effective treatment for hip osteoarthritis. We design progressive strength and mobility programmes that reduce pain, improve function and help you maintain an active lifestyle for as long as possible.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "balance-mobility-healthy-ageing"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Will exercise make my hip arthritis worse?",
+        "a": "No. Graded exercise reduces pain and improves joint function. It does not accelerate cartilage wear."
+      },
+      {
+        "q": "When should I consider hip replacement?",
+        "a": "Hip replacement is considered when pain and function significantly impact quality of life after structured conservative management has been tried."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Hip Osteoarthritis Treatment in Bangalore | Stance Health",
+      "description": "Strength-based hip osteoarthritis management at Stance Health Bangalore. Maintain mobility and an active lifestyle."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "groin-strain",
+    "title": "Groin Strain",
+    "bodyRegion": "hip",
+    "summary": "A groin strain commonly affects running, kicking and changing direction. Rehabilitation focuses on restoring adductor strength, movement control and the capacity required for a safe return to activity.",
+    "heroHeadline": "Groin pain that limits your sport needs structured rehabilitation.",
+    "symptoms": [
+      "Pain in the inner thigh or groin during activity",
+      "Sharp pain with kicking, sprinting or changing direction",
+      "Tenderness along the adductor muscles",
+      "Stiffness or tightness after activity or rest",
+      "Reduced ability to push off or accelerate"
+    ],
+    "causes": [
+      "Sudden acceleration, deceleration or change of direction",
+      "Overuse without adequate recovery",
+      "Adductor muscle weakness relative to demands",
+      "Insufficient warm-up before high-intensity activity",
+      "Previous groin injury with incomplete rehabilitation"
+    ],
+    "stanceApproach": "We assess adductor strength, hip mobility and movement control to identify the factors limiting your recovery. Rehabilitation progresses from isolated strengthening through to sport-specific loading and return to activity.",
+    "relatedServices": [
+      "sports-injury-return-to-sport",
+      "pain-injury-recovery"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "How long does a groin strain take to heal?",
+        "a": "Mild strains may recover in 2-4 weeks. More significant injuries or chronic presentations may take 8-12 weeks of structured rehabilitation."
+      },
+      {
+        "q": "Can I continue training with a groin strain?",
+        "a": "Often yes, with modifications. We guide you on what to continue and what to temporarily avoid while the tissue recovers."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Groin Strain Rehabilitation in Bangalore | Stance Health",
+      "description": "Structured groin strain recovery at Stance Health Bangalore. Adductor strengthening and safe return to sport."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "hip-impingement",
+    "title": "Hip Impingement",
+    "bodyRegion": "hip",
+    "summary": "Hip impingement can cause pain or pinching during deep bending, sitting or sporting movement. We assess hip mobility, strength and movement strategies to improve function and manage symptoms.",
+    "heroHeadline": "Hip pinching and catching does not have to limit you.",
+    "symptoms": [
+      "Pinching or catching sensation in the front of the hip",
+      "Pain with deep squatting, lunging or sitting for long periods",
+      "Stiffness or restricted movement in the hip",
+      "Groin pain during or after sporting activity",
+      "Discomfort getting in and out of a car"
+    ],
+    "causes": [
+      "Bony morphology of the hip joint (cam or pincer type)",
+      "Movement strategies that increase impingement load",
+      "Hip muscle weakness or imbalance",
+      "High training volume in flexion-dominant activities",
+      "Reduced hip joint mobility"
+    ],
+    "stanceApproach": "We assess hip mobility, strength and movement patterns to identify what is contributing to your symptoms. Treatment focuses on improving hip muscle function, optimising movement strategies and building the capacity to perform your desired activities.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "sports-injury-return-to-sport"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Does hip impingement always need surgery?",
+        "a": "No. Many people with hip impingement respond well to physiotherapy that addresses strength, mobility and movement patterns."
+      },
+      {
+        "q": "Can I squat with hip impingement?",
+        "a": "Often yes, with modifications to depth, stance or technique. We help you find a movement strategy that works for your hip."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Hip Impingement Treatment in Bangalore | Stance Health",
+      "description": "Hip impingement assessment and rehabilitation at Stance Health Bangalore. Improve mobility and reduce symptoms."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "hip-labral-injury",
+    "title": "Hip Labral Injury",
+    "bodyRegion": "hip",
+    "summary": "A hip labral injury may cause pain, clicking or restricted movement. We assess hip strength, mobility and load tolerance before developing a programme suited to your symptoms and activity goals.",
+    "heroHeadline": "A labral tear does not define your hip. Your strength does.",
+    "symptoms": [
+      "Deep groin or front-of-hip pain",
+      "Clicking, catching or locking in the hip joint",
+      "Pain with prolonged sitting or crossing legs",
+      "Stiffness or restricted hip movement",
+      "Pain during or after sporting activity"
+    ],
+    "causes": [
+      "Repetitive hip flexion and rotation in sport",
+      "Structural factors such as hip impingement",
+      "Trauma or sudden twisting injury",
+      "Hypermobility or joint laxity",
+      "Cumulative loading without adequate hip strength"
+    ],
+    "stanceApproach": "We assess hip strength, mobility and load tolerance to understand what is driving your symptoms. Many labral injuries are managed successfully with physiotherapy that builds hip stability, strength and movement control.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "post-surgery-rehab"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Does a hip labral tear always need surgery?",
+        "a": "No. Many labral tears are managed successfully with structured physiotherapy. Surgery is considered when conservative management does not achieve your goals."
+      },
+      {
+        "q": "Can I return to sport with a labral tear?",
+        "a": "Often yes. Building hip strength and optimising movement patterns can allow a return to high-level activity."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Hip Labral Injury Treatment in Bangalore | Stance Health",
+      "description": "Hip labral injury assessment and rehabilitation at Stance Health Bangalore. Conservative management and return to activity."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "gluteal-tendinopathy",
+    "title": "Gluteal Tendinopathy",
+    "bodyRegion": "hip",
+    "summary": "Gluteal tendinopathy commonly causes pain on the outside of the hip, particularly during walking, climbing stairs or lying on one side. Progressive loading helps improve tendon capacity and function.",
+    "heroHeadline": "Outer hip pain that disrupts your sleep and walking is treatable.",
+    "symptoms": [
+      "Pain on the outside of the hip or upper thigh",
+      "Pain lying on the affected side at night",
+      "Discomfort climbing stairs or walking uphill",
+      "Stiffness after prolonged sitting or rest",
+      "Pain with single-leg activities such as standing on one leg"
+    ],
+    "causes": [
+      "Compressive loading on the gluteal tendons",
+      "Hip abductor muscle weakness",
+      "Sudden increase in walking or activity volume",
+      "Habitual postures that compress the tendons (crossing legs, standing on one hip)",
+      "Hormonal changes (common in peri- and post-menopausal women)"
+    ],
+    "stanceApproach": "We assess hip abductor strength and identify compressive loading habits. Treatment focuses on progressive tendon loading, strength building and education on posture and activity modifications that reduce compression.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "womens-health-physiotherapy"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Should I stretch my hip if I have gluteal tendinopathy?",
+        "a": "Stretching can sometimes increase compression on the tendon. We guide you on which movements help and which to avoid."
+      },
+      {
+        "q": "How long does gluteal tendinopathy take to improve?",
+        "a": "Most patients see meaningful improvement in 8-12 weeks with a structured loading programme. Full resolution may take 3-6 months."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Gluteal Tendinopathy Treatment in Bangalore | Stance Health",
+      "description": "Progressive loading programme for gluteal tendinopathy at Stance Health Bangalore. Reduce hip pain and restore function."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "hip-replacement-rehabilitation",
+    "title": "Hip Replacement Rehabilitation",
+    "bodyRegion": "hip",
+    "summary": "Rehabilitation after hip replacement helps restore mobility, strength, balance and independence. We progressively prepare you for walking, daily activities, exercise and the physical goals that matter to you.",
+    "heroHeadline": "After hip replacement, we help you move better than before.",
+    "symptoms": [
+      "Post-surgical stiffness and reduced range of motion",
+      "Weakness in the operated leg",
+      "Difficulty with walking, stairs or getting up from a chair",
+      "Reduced balance and confidence on the operated side",
+      "Desire to return to exercise or recreational activities"
+    ],
+    "causes": [
+      "End-stage hip osteoarthritis requiring joint replacement",
+      "Hip fracture requiring surgical intervention",
+      "Failed conservative management of hip joint disease"
+    ],
+    "stanceApproach": "We follow a phased rehabilitation protocol that progressively restores mobility, strength, balance and function. Each stage is guided by objective testing to ensure safe progression towards your personal goals.",
+    "relatedServices": [
+      "post-surgery-rehab",
+      "balance-mobility-healthy-ageing"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "When should I start physiotherapy after hip replacement?",
+        "a": "Rehabilitation begins immediately after surgery. Early mobilisation improves outcomes. We can see you as soon as you are discharged."
+      },
+      {
+        "q": "How long does hip replacement rehabilitation take?",
+        "a": "Most patients achieve good functional recovery in 12-16 weeks. Return to sport or high-level activity may take 6-12 months."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Hip Replacement Rehabilitation in Bangalore | Stance Health",
+      "description": "Structured hip replacement rehabilitation at Stance Health Bangalore. Restore mobility, strength and independence."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "golfers-elbow",
+    "title": "Golfer's Elbow",
+    "bodyRegion": "elbow",
+    "summary": "Golfer's elbow causes pain on the inside of the elbow during gripping, lifting or throwing. We assess the activities contributing to your symptoms and build a progressive loading programme.",
+    "heroHeadline": "Inner elbow pain during gripping responds to structured loading.",
+    "symptoms": [
+      "Pain on the inside of the elbow during gripping or lifting",
+      "Tenderness on the medial epicondyle",
+      "Weakness with wrist flexion or forearm rotation",
+      "Pain during throwing or pulling movements",
+      "Stiffness in the elbow after rest"
+    ],
+    "causes": [
+      "Overuse of forearm flexor and pronator muscles",
+      "Sudden increase in grip-intensive or throwing activity",
+      "Inadequate forearm strength relative to demands",
+      "Poor technique during sport or gym exercises",
+      "Repetitive work tasks involving gripping or twisting"
+    ],
+    "stanceApproach": "We assess forearm strength, grip capacity and contributing movement patterns. Treatment uses a graded loading progression for the wrist flexors alongside addressing shoulder and scapular factors that may increase forearm demand.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "sports-injury-return-to-sport"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "How is golfer's elbow different from tennis elbow?",
+        "a": "Tennis elbow affects the outside of the elbow (extensor tendons), while golfer's elbow affects the inside (flexor tendons). Treatment principles are similar but target different muscle groups."
+      },
+      {
+        "q": "How long does golfer's elbow take to resolve?",
+        "a": "Most cases improve significantly in 6-12 weeks of structured loading. Full resolution may take 3-6 months."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Golfer's Elbow Treatment in Bangalore | Stance Health",
+      "description": "Progressive loading programme for golfer's elbow at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "carpal-tunnel-syndrome",
+    "title": "Carpal Tunnel Syndrome",
+    "bodyRegion": "elbow",
+    "summary": "Carpal tunnel syndrome may cause numbness, tingling or weakness in the hand. We assess your symptoms, wrist function and workload to determine an appropriate management and rehabilitation plan.",
+    "heroHeadline": "Hand numbness and tingling can improve with the right approach.",
+    "symptoms": [
+      "Numbness or tingling in the thumb, index and middle fingers",
+      "Weakness with gripping or fine motor tasks",
+      "Symptoms worse at night or after prolonged wrist use",
+      "Dropping objects due to reduced grip strength",
+      "Pain or aching in the wrist or forearm"
+    ],
+    "causes": [
+      "Repetitive wrist movements or sustained wrist positions",
+      "Pregnancy or hormonal changes causing fluid retention",
+      "Wrist fracture or trauma",
+      "Conditions such as diabetes or thyroid disorders",
+      "Workplace ergonomics and sustained keyboard use"
+    ],
+    "stanceApproach": "We assess symptom severity, nerve function and contributing factors. Management may include nerve gliding exercises, wrist positioning education, workload modification and progressive strengthening.",
+    "relatedServices": [
+      "pain-injury-recovery"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Does carpal tunnel always need surgery?",
+        "a": "No. Many cases respond to conservative management including nerve gliding, splinting and activity modification. Surgery is considered for severe or persistent cases."
+      },
+      {
+        "q": "Can physiotherapy help carpal tunnel?",
+        "a": "Yes. Evidence supports nerve gliding exercises, manual therapy and ergonomic education for mild to moderate carpal tunnel syndrome."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Carpal Tunnel Syndrome Treatment in Bangalore | Stance Health",
+      "description": "Carpal tunnel syndrome assessment and management at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "de-quervains-tenosynovitis",
+    "title": "De Quervain's Tenosynovitis",
+    "bodyRegion": "elbow",
+    "summary": "De Quervain's tenosynovitis causes pain along the thumb side of the wrist, often during gripping or repetitive hand movements. Treatment focuses on managing irritation and gradually restoring load tolerance.",
+    "heroHeadline": "Thumb-side wrist pain responds to structured load management.",
+    "symptoms": [
+      "Pain along the thumb side of the wrist",
+      "Pain with gripping, pinching or twisting movements",
+      "Swelling or tenderness over the thumb tendons",
+      "Pain when making a fist or turning the wrist",
+      "Difficulty with tasks like opening jars or turning keys"
+    ],
+    "causes": [
+      "Repetitive thumb and wrist movements",
+      "New or increased hand-intensive activity",
+      "Pregnancy or postpartum hormonal changes",
+      "Direct trauma to the thumb or wrist",
+      "Sustained gripping or pinching activities"
+    ],
+    "stanceApproach": "We identify the activities contributing to tendon irritation and build a graded return to loading. Treatment combines load management, isometric and isotonic strengthening, and activity modification.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "womens-health-physiotherapy"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Is De Quervain's common after pregnancy?",
+        "a": "Yes. Hormonal changes and repetitive lifting of a newborn are common triggers. It typically responds well to conservative management."
+      },
+      {
+        "q": "Do I need a cortisone injection?",
+        "a": "Not necessarily. Structured physiotherapy is effective for many patients. Injection may be considered if symptoms persist despite conservative management."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "De Quervain's Tenosynovitis Treatment in Bangalore | Stance Health",
+      "description": "Thumb-side wrist pain treatment at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "wrist-sprain",
+    "title": "Wrist Sprain",
+    "bodyRegion": "elbow",
+    "summary": "A wrist sprain can cause pain, swelling and reduced confidence during gripping or weight-bearing. Rehabilitation restores mobility, strength and stability based on the demands of your work, training or sport.",
+    "heroHeadline": "A wrist sprain needs more than rest to fully recover.",
+    "symptoms": [
+      "Pain and swelling in the wrist after a fall or impact",
+      "Difficulty bearing weight through the hand",
+      "Reduced grip strength",
+      "Stiffness or restricted wrist movement",
+      "Bruising around the wrist joint"
+    ],
+    "causes": [
+      "Fall onto an outstretched hand",
+      "Impact during sport or training",
+      "Twisting or bending force applied to the wrist",
+      "Repetitive loading without adequate recovery"
+    ],
+    "stanceApproach": "We assess wrist mobility, stability and grip strength to guide rehabilitation. Treatment progresses from restoring movement through to strengthening and returning to weight-bearing and sport-specific demands.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "sports-injury-return-to-sport"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "How long does a wrist sprain take to heal?",
+        "a": "Mild sprains may recover in 2-4 weeks. More significant ligament injuries may take 6-12 weeks of structured rehabilitation."
+      },
+      {
+        "q": "Should I get an X-ray after a wrist injury?",
+        "a": "If there is significant pain, swelling or inability to bear weight, imaging may be appropriate to rule out a fracture. We can advise on this during your assessment."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Wrist Sprain Rehabilitation in Bangalore | Stance Health",
+      "description": "Wrist sprain recovery at Stance Health Bangalore. Restore grip strength and confidence."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "tfcc-injury",
+    "title": "TFCC Injury",
+    "bodyRegion": "elbow",
+    "summary": "A triangular fibrocartilage complex injury can cause pain on the little-finger side of the wrist, particularly during gripping or rotation. We progressively restore wrist strength, control and load tolerance.",
+    "heroHeadline": "Ulnar-side wrist pain during rotation is treatable.",
+    "symptoms": [
+      "Pain on the little-finger side of the wrist",
+      "Pain with gripping, twisting or rotation",
+      "Clicking or catching during wrist movement",
+      "Weakness with forearm rotation",
+      "Pain during weight-bearing through the hand"
+    ],
+    "causes": [
+      "Fall onto an outstretched hand",
+      "Repetitive rotation or loading of the wrist",
+      "Degenerative changes over time",
+      "Direct trauma to the ulnar side of the wrist",
+      "Overhead racquet or bat sports"
+    ],
+    "stanceApproach": "We assess wrist stability, rotation strength and load tolerance. Rehabilitation focuses on progressive strengthening, movement control and building the capacity for your required activities.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "sports-injury-return-to-sport"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Does a TFCC tear always need surgery?",
+        "a": "No. Many TFCC injuries respond well to structured physiotherapy. Surgery is considered for unstable tears or when conservative management does not achieve your goals."
+      },
+      {
+        "q": "Can I return to sport with a TFCC injury?",
+        "a": "Often yes, with appropriate rehabilitation. Building wrist strength and stability is key to a confident return."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "TFCC Injury Treatment in Bangalore | Stance Health",
+      "description": "TFCC injury assessment and rehabilitation at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "elbow-wrist-fracture-rehabilitation",
+    "title": "Elbow & Wrist Fracture Rehabilitation",
+    "bodyRegion": "elbow",
+    "summary": "Rehabilitation after an elbow or wrist fracture helps restore movement, grip strength and functional use of the arm. Your programme progresses according to healing status and individual recovery goals.",
+    "heroHeadline": "After a fracture, structured rehab restores full function.",
+    "symptoms": [
+      "Stiffness and reduced range of motion after cast removal",
+      "Weakness in grip and forearm muscles",
+      "Swelling or sensitivity around the fracture site",
+      "Difficulty with daily tasks requiring hand use",
+      "Reduced confidence loading the arm"
+    ],
+    "causes": [
+      "Fall onto an outstretched hand",
+      "Direct impact or trauma to the elbow or wrist",
+      "Sporting injury",
+      "Osteoporosis-related fragility fracture"
+    ],
+    "stanceApproach": "We follow a phased rehabilitation protocol guided by fracture healing status. Treatment progressively restores mobility, grip strength and functional capacity for your daily activities, work and sport.",
+    "relatedServices": [
+      "post-surgery-rehab",
+      "pain-injury-recovery"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "When should I start physiotherapy after a fracture?",
+        "a": "Rehabilitation can begin as soon as your treating doctor clears you for movement, often immediately after cast removal or as guided by your surgeon."
+      },
+      {
+        "q": "How long does fracture rehabilitation take?",
+        "a": "Most patients regain good functional use in 8-16 weeks. Full strength and confidence may take 3-6 months depending on the fracture type."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Elbow & Wrist Fracture Rehabilitation in Bangalore | Stance Health",
+      "description": "Structured fracture rehabilitation at Stance Health Bangalore. Restore movement and grip strength."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "chronic-ankle-instability",
+    "title": "Chronic Ankle Instability",
+    "bodyRegion": "ankle",
+    "summary": "Repeated ankle sprains can lead to ongoing instability or a feeling that the ankle may give way. We rebuild strength, balance, coordination and movement control to improve long-term stability.",
+    "heroHeadline": "An ankle that keeps giving way needs more than rest.",
+    "symptoms": [
+      "Repeated ankle sprains or rolling",
+      "A feeling that the ankle may give way during activity",
+      "Reduced confidence on uneven ground",
+      "Weakness or fatigue in the ankle during sport",
+      "Swelling or discomfort after activity"
+    ],
+    "causes": [
+      "Incomplete rehabilitation after previous ankle sprains",
+      "Ligament laxity from repeated injury",
+      "Reduced proprioception and neuromuscular control",
+      "Peroneal muscle weakness",
+      "Fear-avoidance leading to deconditioning"
+    ],
+    "stanceApproach": "We assess ankle strength, balance and neuromuscular control using objective testing. Rehabilitation progressively rebuilds stability through strength work, proprioceptive training and sport-specific movement challenges.",
+    "relatedServices": [
+      "sports-injury-return-to-sport",
+      "pain-injury-recovery"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Can chronic ankle instability be fixed without surgery?",
+        "a": "Yes. Most cases respond well to structured rehabilitation focusing on strength, balance and movement control. Surgery is rarely needed."
+      },
+      {
+        "q": "How long does rehabilitation take?",
+        "a": "Most patients see meaningful improvement in 8-12 weeks. Full confidence for sport may take 3-6 months depending on severity."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Chronic Ankle Instability Treatment in Bangalore | Stance Health",
+      "description": "Ankle stability rehabilitation at Stance Health Bangalore. Rebuild strength, balance and confidence."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "achilles-rupture",
+    "title": "Achilles Rupture",
+    "bodyRegion": "ankle",
+    "summary": "Rehabilitation after an Achilles rupture requires carefully planned progression. We restore mobility, calf strength and tendon capacity before introducing running, jumping and sport-specific movement where appropriate.",
+    "heroHeadline": "After an Achilles rupture, structured rehab gets you moving again.",
+    "symptoms": [
+      "Sudden sharp pain at the back of the ankle at time of injury",
+      "Inability to push off or stand on tiptoe",
+      "Swelling and bruising around the Achilles",
+      "A gap felt in the tendon",
+      "Significant weakness in the calf"
+    ],
+    "causes": [
+      "Sudden explosive movement such as sprinting or jumping",
+      "Degenerated tendon failing under load",
+      "Return to sport after a period of inactivity",
+      "Direct impact to the tendon"
+    ],
+    "stanceApproach": "We follow a phased rehabilitation protocol guided by healing timelines and objective strength testing. Progression moves from early mobility through to calf strengthening, running and return to sport where appropriate.",
+    "relatedServices": [
+      "post-surgery-rehab",
+      "sports-injury-return-to-sport"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "How long does Achilles rupture rehabilitation take?",
+        "a": "Return to walking is typically 3-4 months. Return to running takes 6-9 months. Full return to sport may take 9-12 months."
+      },
+      {
+        "q": "Can I avoid surgery for an Achilles rupture?",
+        "a": "Some ruptures are managed non-surgically with structured rehabilitation. Your treating doctor will advise on the best approach for your injury."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Achilles Rupture Rehabilitation in Bangalore | Stance Health",
+      "description": "Structured Achilles rupture recovery at Stance Health Bangalore. Phased rehabilitation to restore function."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "heel-pain",
+    "title": "Heel Pain",
+    "bodyRegion": "ankle",
+    "summary": "Heel pain can arise from several structures and may affect walking, standing or exercise. We assess foot mechanics, strength and activity load to identify contributing factors and guide treatment.",
+    "heroHeadline": "Heel pain that limits your first steps deserves a clear diagnosis.",
+    "symptoms": [
+      "Pain under or around the heel during walking or standing",
+      "Pain worse with first steps after rest",
+      "Discomfort during or after exercise",
+      "Tenderness to pressure on the heel",
+      "Stiffness in the foot after prolonged inactivity"
+    ],
+    "causes": [
+      "Plantar fascia overload",
+      "Fat pad irritation or atrophy",
+      "Calcaneal stress reaction",
+      "Achilles tendon insertion issues",
+      "Sudden increase in activity or time on feet"
+    ],
+    "stanceApproach": "We assess foot mechanics, calf and intrinsic foot muscle strength, and activity load to identify what is driving your heel pain. Treatment is tailored to the specific structure and contributing factors.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "running-assessment"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Is all heel pain plantar fasciitis?",
+        "a": "No. Several structures can cause heel pain. Accurate assessment identifies the specific source so treatment can be targeted appropriately."
+      },
+      {
+        "q": "How long does heel pain take to resolve?",
+        "a": "Most heel pain improves significantly in 6-12 weeks with structured management. Some cases take longer depending on the cause."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Heel Pain Treatment in Bangalore | Stance Health",
+      "description": "Heel pain assessment and treatment at Stance Health Bangalore. Identify the cause and restore comfortable walking."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "flat-feet",
+    "title": "Flat Feet",
+    "bodyRegion": "ankle",
+    "summary": "Flat feet do not always cause symptoms, but they may contribute to discomfort or reduced load tolerance in some individuals. We assess foot function and build strength based on your activity needs.",
+    "heroHeadline": "Flat feet are not always a problem. We assess whether yours are.",
+    "symptoms": [
+      "Arch pain or fatigue during prolonged standing or walking",
+      "Pain in the feet, ankles or lower legs during activity",
+      "Visible flattening of the arch when standing",
+      "Difficulty with single-leg balance or calf raises",
+      "Shoe wear patterns suggesting overpronation"
+    ],
+    "causes": [
+      "Natural foot structure and genetics",
+      "Reduced intrinsic foot muscle strength",
+      "Tibialis posterior tendon weakness",
+      "Hypermobility or ligament laxity",
+      "Weight gain or increased loading"
+    ],
+    "stanceApproach": "We assess whether your flat feet are contributing to symptoms or limiting your activity. If intervention is needed, we build intrinsic foot and lower-leg strength rather than relying solely on orthotics.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "running-assessment"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Do flat feet always need treatment?",
+        "a": "No. Many people with flat feet have no symptoms and require no intervention. We assess whether your foot type is contributing to any issues you are experiencing."
+      },
+      {
+        "q": "Do I need orthotics for flat feet?",
+        "a": "Not necessarily. Strengthening the foot and lower-leg muscles is often more effective long-term than relying on external support."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Flat Feet Assessment in Bangalore | Stance Health",
+      "description": "Flat feet assessment and foot strengthening at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "shin-splints",
+    "title": "Shin Splints",
+    "bodyRegion": "ankle",
+    "summary": "Shin splints commonly affect runners and people who rapidly increase training. We assess running load, lower-leg strength and movement mechanics to help you return to activity safely.",
+    "heroHeadline": "Shin pain during running has identifiable causes we can address.",
+    "symptoms": [
+      "Pain along the inner shin during or after running",
+      "Tenderness along the shinbone",
+      "Pain that eases with rest but returns with activity",
+      "Swelling or aching in the lower leg",
+      "Pain worse at the start of a run"
+    ],
+    "causes": [
+      "Rapid increase in running volume or intensity",
+      "Hard running surfaces",
+      "Reduced calf and tibialis strength",
+      "Inadequate footwear or sudden shoe changes",
+      "Biomechanical factors affecting load distribution"
+    ],
+    "stanceApproach": "We assess running load, lower-leg strength and movement mechanics to identify contributing factors. Treatment combines load management, progressive strengthening and guided return to running.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "running-assessment"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Should I stop running with shin splints?",
+        "a": "Not always. Load modification is often sufficient. We guide you on how much to reduce and when to progress back."
+      },
+      {
+        "q": "How long do shin splints take to resolve?",
+        "a": "Most cases improve in 4-8 weeks with appropriate load management and strengthening. Persistent cases may take longer."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Shin Splints Treatment in Bangalore | Stance Health",
+      "description": "Shin splints assessment and management at Stance Health Bangalore. Return to running safely."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "ankle-fracture-rehabilitation",
+    "title": "Ankle Fracture Rehabilitation",
+    "bodyRegion": "ankle",
+    "summary": "Rehabilitation after an ankle fracture helps restore movement, strength, balance and walking confidence. Progression is guided by healing status, symptoms and the functional demands you need to return to.",
+    "heroHeadline": "After an ankle fracture, structured rehab restores your confidence.",
+    "symptoms": [
+      "Stiffness and reduced ankle range of motion after immobilisation",
+      "Weakness in the calf and foot muscles",
+      "Swelling that persists after cast or boot removal",
+      "Difficulty walking normally or bearing full weight",
+      "Reduced balance and confidence on the affected leg"
+    ],
+    "causes": [
+      "Fall or twisting injury",
+      "Direct impact to the ankle",
+      "Sporting injury",
+      "Osteoporosis-related fragility fracture"
+    ],
+    "stanceApproach": "We follow a phased rehabilitation protocol guided by fracture healing status and your surgeon's guidance. Treatment progressively restores mobility, strength, balance and walking confidence.",
+    "relatedServices": [
+      "post-surgery-rehab",
+      "pain-injury-recovery"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "When can I start physiotherapy after an ankle fracture?",
+        "a": "Rehabilitation can begin as soon as your treating doctor clears you for movement and weight-bearing, often 4-8 weeks after injury depending on the fracture type."
+      },
+      {
+        "q": "How long does ankle fracture rehabilitation take?",
+        "a": "Most patients achieve good walking ability in 8-12 weeks. Full return to sport may take 4-6 months."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Ankle Fracture Rehabilitation in Bangalore | Stance Health",
+      "description": "Structured ankle fracture recovery at Stance Health Bangalore. Restore mobility, strength and confidence."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "foot-ankle-surgery-rehabilitation",
+    "title": "Foot & Ankle Surgery Rehabilitation",
+    "bodyRegion": "ankle",
+    "summary": "Post-surgical rehabilitation helps restore foot and ankle mobility, strength and load tolerance. We work alongside your surgeon's guidance and progressively prepare you for everyday movement, exercise or sport.",
+    "heroHeadline": "After foot or ankle surgery, we guide your return to full function.",
+    "symptoms": [
+      "Post-surgical stiffness and reduced range of motion",
+      "Weakness in the foot, ankle or calf muscles",
+      "Difficulty with weight-bearing or walking",
+      "Swelling and sensitivity around the surgical site",
+      "Reduced confidence during activity"
+    ],
+    "causes": [
+      "Ankle ligament reconstruction",
+      "Achilles tendon repair",
+      "Bunion surgery (hallux valgus correction)",
+      "Arthroscopic procedures",
+      "Fracture fixation surgery"
+    ],
+    "stanceApproach": "We work alongside your surgeon's post-operative protocol and progressively restore mobility, strength and functional capacity. Each stage is guided by healing timelines, symptoms and your personal recovery goals.",
+    "relatedServices": [
+      "post-surgery-rehab",
+      "sports-injury-return-to-sport"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "When should I start physiotherapy after foot or ankle surgery?",
+        "a": "Timing depends on the procedure. Many protocols allow early mobility work within days to weeks. We follow your surgeon's specific guidance."
+      },
+      {
+        "q": "How long does post-surgical rehabilitation take?",
+        "a": "This varies by procedure. Simple procedures may take 6-12 weeks. Complex reconstructions may take 4-9 months for full return to activity."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Foot & Ankle Surgery Rehabilitation in Bangalore | Stance Health",
+      "description": "Post-surgical foot and ankle rehabilitation at Stance Health Bangalore. Restore function and return to activity."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "cervical-disc-herniation",
+    "title": "Cervical Disc Herniation",
+    "bodyRegion": "neck",
+    "summary": "A cervical disc herniation can cause neck pain or symptoms that travel into the shoulder, arm or hand. Treatment focuses on symptom management, movement restoration and progressive strengthening.",
+    "heroHeadline": "Disc-related neck and arm pain responds to structured rehabilitation.",
+    "symptoms": [
+      "Neck pain radiating into the shoulder, arm or hand",
+      "Numbness or tingling in the arm or fingers",
+      "Weakness in the arm or grip",
+      "Pain worse with certain neck positions or movements",
+      "Stiffness or restricted neck range of motion"
+    ],
+    "causes": [
+      "Age-related disc degeneration",
+      "Sudden load or awkward neck movement",
+      "Cumulative postural strain over time",
+      "Previous neck injury or trauma",
+      "Reduced neck muscle strength and endurance"
+    ],
+    "stanceApproach": "We assess symptom behaviour, movement patterns and neck muscle function to guide treatment. Management combines symptom relief strategies, directional exercises and progressive strengthening to restore function and reduce recurrence.",
+    "relatedServices": [
+      "pain-injury-recovery"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Do cervical disc herniations need surgery?",
+        "a": "Most cervical disc herniations improve with structured physiotherapy. Surgery is considered only when conservative management has not achieved adequate relief after an appropriate trial."
+      },
+      {
+        "q": "How long does recovery take?",
+        "a": "Most patients see significant improvement in 6-12 weeks. Full resolution of nerve-related symptoms may take longer in some cases."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Cervical Disc Herniation Treatment in Bangalore | Stance Health",
+      "description": "Cervical disc herniation assessment and rehabilitation at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "cervical-radiculopathy",
+    "title": "Cervical Radiculopathy",
+    "bodyRegion": "neck",
+    "summary": "Cervical radiculopathy may cause pain, tingling, numbness or weakness extending into the arm. We assess nerve-related symptoms and develop a programme to improve movement, strength and functional tolerance.",
+    "heroHeadline": "Nerve-related arm symptoms from the neck are treatable.",
+    "symptoms": [
+      "Pain travelling from the neck into the shoulder and arm",
+      "Tingling or numbness in specific fingers",
+      "Weakness in the arm, hand or grip",
+      "Symptoms provoked by certain neck positions",
+      "Reduced ability to perform overhead or sustained arm tasks"
+    ],
+    "causes": [
+      "Cervical disc herniation compressing a nerve root",
+      "Foraminal narrowing from degenerative changes",
+      "Cervical spondylosis with nerve involvement",
+      "Sudden neck injury or awkward movement",
+      "Sustained postures reducing nerve space"
+    ],
+    "stanceApproach": "We assess the behaviour of your nerve-related symptoms and identify positions and movements that help. Treatment combines nerve mobilisation, cervical strengthening and progressive loading to restore arm function and reduce irritability.",
+    "relatedServices": [
+      "pain-injury-recovery"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Will the nerve symptoms go away?",
+        "a": "Most cervical radiculopathy episodes resolve with appropriate management. Structured physiotherapy helps accelerate recovery and restore function."
+      },
+      {
+        "q": "Do I need imaging?",
+        "a": "Not always. We can assess and treat based on clinical findings. If symptoms are severe, worsening or not responding, we may recommend imaging."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Cervical Radiculopathy Treatment in Bangalore | Stance Health",
+      "description": "Cervical radiculopathy assessment and nerve-targeted rehabilitation at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "whiplash-injury",
+    "title": "Whiplash Injury",
+    "bodyRegion": "neck",
+    "summary": "Whiplash can cause neck pain, stiffness, headaches and sensitivity following a sudden movement or impact. Rehabilitation gradually restores mobility, strength and confidence while respecting symptom irritability.",
+    "heroHeadline": "Whiplash recovery needs patience and structured progression.",
+    "symptoms": [
+      "Neck pain and stiffness after a sudden movement or impact",
+      "Headaches originating from the neck",
+      "Reduced neck range of motion",
+      "Dizziness or sensitivity to movement",
+      "Pain or tension in the shoulders and upper back"
+    ],
+    "causes": [
+      "Road traffic accident causing sudden neck acceleration-deceleration",
+      "Sporting impact or collision",
+      "Fall causing sudden head and neck movement",
+      "Any sudden unexpected force to the head or neck"
+    ],
+    "stanceApproach": "We assess symptom irritability, neck mobility and muscle function to guide a graded rehabilitation approach. Treatment respects your current tolerance while progressively restoring movement, strength and confidence.",
+    "relatedServices": [
+      "pain-injury-recovery"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "How long does whiplash take to recover?",
+        "a": "Most whiplash injuries improve significantly within 6-12 weeks. Some cases with higher initial irritability may take longer with appropriate management."
+      },
+      {
+        "q": "Should I wear a neck collar?",
+        "a": "Prolonged collar use is generally not recommended. Early guided movement within comfort is more beneficial for recovery."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Whiplash Injury Treatment in Bangalore | Stance Health",
+      "description": "Whiplash assessment and graded rehabilitation at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "posture-related-neck-pain",
+    "title": "Posture-Related Neck Pain",
+    "bodyRegion": "neck",
+    "summary": "Sustained desk work and repetitive positions can contribute to neck discomfort. We combine mobility, strength and practical workload strategies to improve your tolerance for work and everyday activity.",
+    "heroHeadline": "Desk-related neck pain is manageable with the right approach.",
+    "symptoms": [
+      "Neck aching or stiffness during or after desk work",
+      "Tension in the upper shoulders and base of the skull",
+      "Fatigue in the neck with prolonged screen use",
+      "Headaches related to sustained postures",
+      "Reduced comfort with sustained concentration tasks"
+    ],
+    "causes": [
+      "Prolonged forward head posture during screen use",
+      "Insufficient breaks or postural variation during work",
+      "Reduced deep neck flexor and upper back muscle endurance",
+      "Workstation setup that encourages sustained flexion",
+      "Stress and muscle guarding patterns"
+    ],
+    "stanceApproach": "We assess your neck muscle endurance, mobility and workload tolerance. Treatment combines targeted strengthening, mobility work and practical strategies for managing your work environment and habits.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "corporate-wellness"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Do I need to change my desk setup?",
+        "a": "Sometimes small adjustments help, but building neck and upper back capacity is usually more effective than relying on ergonomic changes alone."
+      },
+      {
+        "q": "Can I continue working at a desk?",
+        "a": "Yes. We help you build tolerance for desk work while addressing contributing factors. Most people do not need to stop working."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Posture-Related Neck Pain Treatment in Bangalore | Stance Health",
+      "description": "Desk-related neck pain management at Stance Health Bangalore. Build tolerance and reduce discomfort."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "cervicogenic-headache",
+    "title": "Cervicogenic Headache",
+    "bodyRegion": "neck",
+    "summary": "Cervicogenic headaches originate from structures in the neck and may be linked to stiffness or movement limitations. We assess neck function and address contributing mobility, strength and workload factors.",
+    "heroHeadline": "Headaches from the neck respond to targeted treatment.",
+    "symptoms": [
+      "One-sided headache that starts from the neck or base of the skull",
+      "Headache provoked or worsened by neck movement or sustained postures",
+      "Reduced neck range of motion on the affected side",
+      "Pain that does not respond well to typical headache medication",
+      "Associated neck stiffness or discomfort"
+    ],
+    "causes": [
+      "Upper cervical joint stiffness or dysfunction",
+      "Reduced deep neck flexor muscle endurance",
+      "Sustained forward head posture",
+      "Previous neck injury or trauma",
+      "Cervical spondylosis affecting upper segments"
+    ],
+    "stanceApproach": "We assess upper cervical mobility, deep neck flexor endurance and contributing postural factors. Treatment combines manual therapy for the cervical joints with targeted strengthening to reduce headache frequency and intensity.",
+    "relatedServices": [
+      "pain-injury-recovery"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "How do I know if my headache is from my neck?",
+        "a": "Cervicogenic headaches typically start from the neck, are one-sided, and are provoked by neck movement or sustained postures. We assess this during your appointment."
+      },
+      {
+        "q": "Can physiotherapy help headaches?",
+        "a": "Yes. Cervicogenic headaches respond well to manual therapy and cervical strengthening. We can determine whether your headaches have a cervical component."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Cervicogenic Headache Treatment in Bangalore | Stance Health",
+      "description": "Cervicogenic headache assessment and treatment at Stance Health Bangalore. Neck-focused approach to headache relief."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "shoulder-impingement",
+    "title": "Shoulder Impingement",
+    "bodyRegion": "shoulder",
+    "summary": "Shoulder impingement can cause pain during lifting or overhead movement. We assess shoulder mobility, muscle function and movement patterns to reduce irritation and improve your ability to load the shoulder.",
+    "heroHeadline": "Overhead pain has a cause. We find and address it.",
+    "symptoms": [
+      "Pain during overhead reaching or lifting",
+      "Pain with pressing movements in the gym",
+      "Discomfort lying on the affected shoulder",
+      "A catching or pinching sensation during arm elevation",
+      "Weakness or fatigue with sustained arm use"
+    ],
+    "causes": [
+      "Reduced rotator cuff strength or coordination",
+      "Poor scapular control during arm movement",
+      "Reduced thoracic spine mobility",
+      "Sudden increase in overhead training volume",
+      "Sustained overhead work or repetitive arm use"
+    ],
+    "stanceApproach": "We assess rotator cuff and scapular muscle function, thoracic mobility and movement patterns to identify what is creating the impingement. Treatment builds shoulder capacity from the ground up rather than just treating the symptomatic area.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "sports-injury-return-to-sport"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Is shoulder impingement the same as a rotator cuff tear?",
+        "a": "No. Impingement refers to irritation of structures in the subacromial space. It may involve the rotator cuff tendons but does not necessarily mean there is a tear."
+      },
+      {
+        "q": "Can I continue training with impingement?",
+        "a": "Often yes, with modifications. We guide you on which movements to adapt and how to progressively reload the shoulder."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Shoulder Impingement Treatment in Bangalore | Stance Health",
+      "description": "Shoulder impingement assessment and rehabilitation at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "shoulder-instability",
+    "title": "Shoulder Instability",
+    "bodyRegion": "shoulder",
+    "summary": "Shoulder instability can create a feeling of looseness, weakness or apprehension during movement. Rehabilitation focuses on rebuilding strength, joint control and confidence across the positions required for daily activity or sport.",
+    "heroHeadline": "A shoulder that feels unstable needs strength, not just rest.",
+    "symptoms": [
+      "A feeling that the shoulder may slip or give way",
+      "Apprehension during overhead or end-range movements",
+      "Repeated episodes of subluxation or dislocation",
+      "Weakness or fatigue with sustained arm activity",
+      "Clicking or clunking during shoulder movement"
+    ],
+    "causes": [
+      "Previous shoulder dislocation or subluxation",
+      "Ligament laxity or hypermobility",
+      "Reduced rotator cuff and scapular muscle strength",
+      "Repetitive overhead sport without adequate conditioning",
+      "Traumatic injury to the labrum or capsule"
+    ],
+    "stanceApproach": "We assess shoulder strength, control and confidence across the range of motion. Rehabilitation progressively builds rotator cuff and scapular stability through positions that challenge the shoulder in a controlled way.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "sports-injury-return-to-sport",
+      "post-surgery-rehab"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Does shoulder instability always need surgery?",
+        "a": "No. Many patients respond well to structured strengthening. Surgery is considered for recurrent dislocations or when conservative management does not provide adequate stability."
+      },
+      {
+        "q": "Can I return to overhead sport with an unstable shoulder?",
+        "a": "Often yes, with appropriate rehabilitation. Building strength and control in the positions your sport demands is key."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Shoulder Instability Treatment in Bangalore | Stance Health",
+      "description": "Shoulder instability rehabilitation at Stance Health Bangalore. Rebuild strength and confidence."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "shoulder-dislocation",
+    "title": "Shoulder Dislocation",
+    "bodyRegion": "shoulder",
+    "summary": "Rehabilitation after a shoulder dislocation helps restore movement, strength and stability. We progressively prepare the shoulder for lifting, overhead activity, contact and sport-specific demands where appropriate.",
+    "heroHeadline": "After a dislocation, structured rehab rebuilds shoulder confidence.",
+    "symptoms": [
+      "Significant pain and inability to move the arm at the time of injury",
+      "Swelling and bruising around the shoulder",
+      "Apprehension or fear of certain arm positions after reduction",
+      "Reduced range of motion and strength",
+      "A feeling of looseness or instability in the joint"
+    ],
+    "causes": [
+      "Traumatic force during sport, fall or impact",
+      "Overhead collision or forced arm position",
+      "Previous dislocation increasing risk of recurrence",
+      "Ligament laxity or hypermobility"
+    ],
+    "stanceApproach": "We follow a phased rehabilitation protocol that progressively restores range of motion, rotator cuff strength and dynamic stability. Progression is guided by objective strength testing and your functional goals.",
+    "relatedServices": [
+      "post-surgery-rehab",
+      "sports-injury-return-to-sport"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Will my shoulder dislocate again?",
+        "a": "Risk of recurrence depends on age, activity level and rehabilitation quality. Structured strengthening significantly reduces the risk."
+      },
+      {
+        "q": "When can I return to contact sport?",
+        "a": "Typically 3-6 months depending on strength recovery and sport demands. Objective testing guides clearance."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Shoulder Dislocation Rehabilitation in Bangalore | Stance Health",
+      "description": "Shoulder dislocation recovery at Stance Health Bangalore. Phased rehabilitation for stability and return to activity."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "labral-injury",
+    "title": "Labral Injury",
+    "bodyRegion": "shoulder",
+    "summary": "A shoulder labral injury can cause pain, clicking or instability during movement. We assess the shoulder's strength and control before creating a programme that supports recovery and improved joint stability.",
+    "heroHeadline": "A labral tear does not always mean surgery.",
+    "symptoms": [
+      "Deep shoulder pain, often hard to pinpoint",
+      "Clicking, catching or locking during movement",
+      "Pain with overhead or end-range positions",
+      "A feeling of instability or weakness",
+      "Reduced confidence during sport or lifting"
+    ],
+    "causes": [
+      "Shoulder dislocation or subluxation",
+      "Repetitive overhead activity in sport",
+      "Fall onto an outstretched hand",
+      "Degenerative changes over time",
+      "Combined instability and impingement loading"
+    ],
+    "stanceApproach": "We assess shoulder strength, stability and movement control to determine how the labral injury is affecting your function. Many labral injuries are managed successfully with rehabilitation that builds rotator cuff and scapular strength.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "post-surgery-rehab",
+      "sports-injury-return-to-sport"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Does a labral tear always need surgery?",
+        "a": "No. Many labral tears are managed successfully with structured physiotherapy, particularly when instability is not the primary issue."
+      },
+      {
+        "q": "Can I lift weights with a labral tear?",
+        "a": "Often yes, with modifications. We guide you on which positions and loads are appropriate during your recovery."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Shoulder Labral Injury Treatment in Bangalore | Stance Health",
+      "description": "Shoulder labral injury assessment and rehabilitation at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "biceps-tendinopathy",
+    "title": "Biceps Tendinopathy",
+    "bodyRegion": "shoulder",
+    "summary": "Biceps tendinopathy commonly causes pain at the front of the shoulder during lifting or overhead activity. Progressive loading helps improve tendon capacity and restore comfortable shoulder function.",
+    "heroHeadline": "Front-of-shoulder pain during lifting is treatable.",
+    "symptoms": [
+      "Pain at the front of the shoulder during lifting",
+      "Tenderness in the bicipital groove",
+      "Pain with overhead reaching or pulling movements",
+      "Discomfort during bicep curls or chin-ups",
+      "Aching after sustained arm use"
+    ],
+    "causes": [
+      "Overuse of the biceps tendon during repetitive lifting",
+      "Shoulder impingement contributing to tendon irritation",
+      "Sudden increase in training volume or intensity",
+      "Poor overhead mechanics increasing biceps load",
+      "Associated rotator cuff weakness"
+    ],
+    "stanceApproach": "We assess the contributing factors including rotator cuff function, scapular control and training load. Treatment uses progressive tendon loading alongside addressing upstream shoulder mechanics.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "sports-injury-return-to-sport"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Is biceps tendinopathy the same as a biceps tear?",
+        "a": "No. Tendinopathy refers to tendon irritation and reduced capacity. It is different from a tear and responds well to progressive loading."
+      },
+      {
+        "q": "How long does biceps tendinopathy take to improve?",
+        "a": "Most cases improve in 6-12 weeks with structured loading and addressing contributing factors."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Biceps Tendinopathy Treatment in Bangalore | Stance Health",
+      "description": "Biceps tendinopathy loading programme at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "ac-joint-injury",
+    "title": "AC Joint Injury",
+    "bodyRegion": "shoulder",
+    "summary": "An acromioclavicular joint injury can cause pain at the top of the shoulder, particularly during pressing or reaching across the body. Rehabilitation focuses on restoring movement, strength and load tolerance.",
+    "heroHeadline": "AC joint pain during pressing and lifting is manageable.",
+    "symptoms": [
+      "Pain at the top of the shoulder over the AC joint",
+      "Pain with pressing movements or push-ups",
+      "Discomfort reaching across the body",
+      "Tenderness to touch at the joint",
+      "Pain during heavy lifting or carrying"
+    ],
+    "causes": [
+      "Fall onto the point of the shoulder",
+      "Direct impact during contact sport",
+      "Fall onto an outstretched hand",
+      "Repetitive overhead or pressing activity",
+      "Degenerative changes in the joint over time"
+    ],
+    "stanceApproach": "We assess the grade of injury and current functional limitations. Treatment focuses on pain management, progressive loading and building the strength required for your activities while respecting the healing joint.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "sports-injury-return-to-sport"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Does an AC joint injury need surgery?",
+        "a": "Most AC joint injuries (grades 1-3) are managed successfully with physiotherapy. Higher-grade injuries may require surgical opinion."
+      },
+      {
+        "q": "When can I return to pressing exercises?",
+        "a": "Timing depends on the grade of injury. Most patients can progressively return to pressing within 4-12 weeks with appropriate guidance."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "AC Joint Injury Treatment in Bangalore | Stance Health",
+      "description": "AC joint injury rehabilitation at Stance Health Bangalore. Restore pressing and overhead function."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "lumbar-spondylosis",
+    "title": "Lumbar Spondylosis",
+    "bodyRegion": "back",
+    "summary": "Lumbar spondylosis refers to age-related changes in the lower spine. We focus on improving strength, mobility and physical capacity so you can remain active and manage symptoms more effectively.",
+    "heroHeadline": "Age-related spinal changes do not have to limit your activity.",
+    "symptoms": [
+      "Lower back stiffness, particularly in the morning",
+      "Aching pain after prolonged sitting or standing",
+      "Reduced flexibility in the lower spine",
+      "Occasional pain radiating into the buttock or thigh",
+      "Discomfort with certain movements such as bending or twisting"
+    ],
+    "causes": [
+      "Age-related disc and facet joint degeneration",
+      "Reduced core and hip strength over time",
+      "Sedentary lifestyle with insufficient physical activity",
+      "Previous back injuries",
+      "Genetic predisposition"
+    ],
+    "stanceApproach": "We focus on what is changeable — strength, mobility, movement habits and physical capacity. Treatment builds a realistic, sustainable programme for long-term back health rather than chasing structural changes on imaging.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "balance-mobility-healthy-ageing"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Is lumbar spondylosis the same as arthritis?",
+        "a": "It is a form of degenerative change in the lumbar spine, similar in nature to osteoarthritis. It is very common and does not always cause symptoms."
+      },
+      {
+        "q": "Can exercise help lumbar spondylosis?",
+        "a": "Yes. Appropriate exercise is one of the most effective approaches. We guide you on which movements to prioritise and how to progress safely."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Lumbar Spondylosis Treatment in Bangalore | Stance Health",
+      "description": "Strength-based lumbar spondylosis management at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "spinal-stenosis",
+    "title": "Spinal Stenosis",
+    "bodyRegion": "back",
+    "summary": "Spinal stenosis can cause back or leg discomfort during standing and walking. Rehabilitation focuses on improving mobility, strength and activity tolerance while helping you manage movements that aggravate your symptoms.",
+    "heroHeadline": "Walking further and standing longer is possible with the right approach.",
+    "symptoms": [
+      "Back or leg pain during prolonged standing or walking",
+      "Symptoms that ease when sitting or bending forward",
+      "Heaviness, tingling or numbness in the legs",
+      "Reduced walking distance over time",
+      "Stiffness in the lower back"
+    ],
+    "causes": [
+      "Narrowing of the spinal canal due to age-related changes",
+      "Disc bulging reducing available space for nerves",
+      "Thickening of spinal ligaments",
+      "Spondylolisthesis contributing to canal narrowing",
+      "Combination of degenerative factors"
+    ],
+    "stanceApproach": "We assess your current walking tolerance, strength and movement preferences. Treatment focuses on flexion-based exercises, progressive conditioning and strategies that help you walk further and stand longer with less discomfort.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "balance-mobility-healthy-ageing"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Does spinal stenosis always get worse?",
+        "a": "Not necessarily. Many patients stabilise or improve with appropriate exercise and management. Structured physiotherapy can significantly improve walking tolerance."
+      },
+      {
+        "q": "Do I need surgery for spinal stenosis?",
+        "a": "Surgery is considered when conservative management has not provided adequate relief after a reasonable trial. Many patients manage well without surgery."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Spinal Stenosis Treatment in Bangalore | Stance Health",
+      "description": "Spinal stenosis rehabilitation at Stance Health Bangalore. Improve walking tolerance and manage symptoms."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "spondylolisthesis",
+    "title": "Spondylolisthesis",
+    "bodyRegion": "back",
+    "summary": "Spondylolisthesis occurs when one spinal bone shifts relative to another. We assess how it affects your movement and build a structured programme to improve trunk strength, control and functional capacity.",
+    "heroHeadline": "A shifted vertebra does not have to limit what you can do.",
+    "symptoms": [
+      "Lower back pain that may worsen with extension or prolonged standing",
+      "Stiffness in the lower back",
+      "Pain radiating into the buttock or leg in some cases",
+      "A feeling of instability in the lower back",
+      "Hamstring tightness"
+    ],
+    "causes": [
+      "Stress fracture in the vertebra (spondylolysis) progressing to slippage",
+      "Degenerative changes allowing gradual vertebral shift",
+      "Congenital structural variation",
+      "Repetitive extension loading in sport (gymnastics, cricket, dance)"
+    ],
+    "stanceApproach": "We assess how the spondylolisthesis affects your movement and function. Treatment builds trunk strength, control and load tolerance through a progressive programme tailored to your symptoms and activity goals.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "sports-injury-return-to-sport"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Is spondylolisthesis serious?",
+        "a": "Most cases are low-grade and manageable with physiotherapy. Higher-grade slips may require closer monitoring but often still respond well to conservative management."
+      },
+      {
+        "q": "Can I exercise with spondylolisthesis?",
+        "a": "Yes. Appropriate exercise that builds trunk strength and control is beneficial. We guide you on which activities to prioritise and how to progress."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Spondylolisthesis Treatment in Bangalore | Stance Health",
+      "description": "Spondylolisthesis assessment and rehabilitation at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "sacroiliac-joint-pain",
+    "title": "Sacroiliac Joint Pain",
+    "bodyRegion": "back",
+    "summary": "Sacroiliac joint pain is commonly felt around the lower back, pelvis or buttock. We assess hip, pelvic and trunk function to identify contributing factors and guide a progressive recovery plan.",
+    "heroHeadline": "Pelvic and lower back pain has identifiable contributing factors.",
+    "symptoms": [
+      "Pain around the lower back, pelvis or buttock on one side",
+      "Pain aggravated by prolonged standing or sitting",
+      "Discomfort with single-leg activities such as stairs or walking",
+      "Pain that may radiate into the groin or thigh",
+      "Stiffness in the pelvis or lower back"
+    ],
+    "causes": [
+      "Muscle imbalance around the pelvis and hips",
+      "Pregnancy or postpartum changes",
+      "Asymmetric loading patterns",
+      "Previous injury or trauma to the pelvis",
+      "Hypermobility or reduced joint stiffness"
+    ],
+    "stanceApproach": "We assess hip, pelvic and trunk muscle function to identify the factors contributing to your symptoms. Treatment builds strength and control around the pelvis through progressive loading.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "womens-health-physiotherapy"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Is SIJ pain common during pregnancy?",
+        "a": "Yes. Hormonal and biomechanical changes during pregnancy can contribute to SIJ symptoms. Targeted strengthening and management strategies are effective."
+      },
+      {
+        "q": "How is SIJ pain different from lower back pain?",
+        "a": "SIJ pain is typically felt around the pelvis or buttock rather than centrally in the spine. Clinical testing helps differentiate between the two."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Sacroiliac Joint Pain Treatment in Bangalore | Stance Health",
+      "description": "SIJ pain assessment and rehabilitation at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "postural-back-pain",
+    "title": "Postural Back Pain",
+    "bodyRegion": "back",
+    "summary": "Long periods of sitting, repetitive work and reduced physical activity can contribute to back discomfort. We combine movement strategies, strength training and practical workload changes to improve your tolerance.",
+    "heroHeadline": "Desk-related back pain is manageable with the right approach.",
+    "symptoms": [
+      "Back aching or stiffness during or after prolonged sitting",
+      "Discomfort that eases with movement or position changes",
+      "Fatigue in the back with sustained desk work",
+      "Tension across the lower or mid-back",
+      "Reduced comfort with sustained concentration tasks"
+    ],
+    "causes": [
+      "Prolonged sitting without adequate breaks or variation",
+      "Reduced core and back muscle endurance",
+      "Insufficient physical activity outside of work",
+      "Workstation setup that encourages sustained flexion",
+      "Stress contributing to muscle tension"
+    ],
+    "stanceApproach": "We assess your back muscle endurance, mobility and workload tolerance. Treatment combines targeted strengthening, mobility work and practical strategies for managing your work environment and activity habits.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "corporate-wellness"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Do I need a standing desk?",
+        "a": "Not necessarily. Building back and core capacity is usually more effective than changing your desk alone. Variation in posture throughout the day is key."
+      },
+      {
+        "q": "Can I continue sitting at a desk?",
+        "a": "Yes. We help you build tolerance for desk work while addressing contributing factors. Most people do not need to stop working at a desk."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Postural Back Pain Treatment in Bangalore | Stance Health",
+      "description": "Desk-related back pain management at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "spine-surgery-rehabilitation",
+    "title": "Spine Surgery Rehabilitation",
+    "bodyRegion": "back",
+    "summary": "Rehabilitation after spine surgery supports the safe restoration of movement, strength and everyday function. Your programme progresses according to clinical guidance, symptoms and objective measures rather than time alone.",
+    "heroHeadline": "After spine surgery, structured rehab helps you regain function safely.",
+    "symptoms": [
+      "Post-surgical stiffness and reduced range of motion",
+      "Weakness in the trunk and lower limbs",
+      "Difficulty with walking, bending or lifting",
+      "Reduced confidence with everyday movements",
+      "Residual nerve symptoms in some cases"
+    ],
+    "causes": [
+      "Discectomy or microdiscectomy",
+      "Spinal fusion surgery",
+      "Laminectomy or decompression",
+      "Disc replacement surgery",
+      "Spinal fracture fixation"
+    ],
+    "stanceApproach": "We work alongside your surgeon's post-operative protocol and progressively restore mobility, strength and functional capacity. Each stage is guided by healing timelines, symptoms and your personal recovery goals.",
+    "relatedServices": [
+      "post-surgery-rehab",
+      "pain-injury-recovery"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "When should I start physiotherapy after spine surgery?",
+        "a": "Timing depends on the procedure. Many protocols allow early mobility within days to weeks. We follow your surgeon's specific guidance."
+      },
+      {
+        "q": "How long does spine surgery rehabilitation take?",
+        "a": "This varies by procedure. Simple decompressions may take 8-12 weeks. Fusion surgery may take 4-6 months for full return to activity."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Spine Surgery Rehabilitation in Bangalore | Stance Health",
+      "description": "Post-operative spine rehabilitation at Stance Health Bangalore. Safe, progressive return to function."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "runners-knee",
+    "title": "Runner's Knee (Patellofemoral Pain Syndrome)",
+    "bodyRegion": "knee",
+    "summary": "Runner's knee commonly causes pain around or behind the kneecap during running, squatting or climbing stairs. We assess strength, movement mechanics and training load to address the factors contributing to the pain.",
+    "heroHeadline": "Kneecap pain during running has identifiable causes we can address.",
+    "symptoms": [
+      "Pain around or behind the kneecap during activity",
+      "Pain with squatting, lunging or climbing stairs",
+      "Discomfort after prolonged sitting with bent knees",
+      "Pain during or after running that gradually worsens",
+      "A grinding or crunching sensation under the kneecap"
+    ],
+    "causes": [
+      "Quadriceps and hip muscle weakness",
+      "Increased running volume or intensity too quickly",
+      "Poor biomechanics during running or squatting",
+      "Reduced knee or ankle mobility",
+      "Inadequate footwear or surface changes"
+    ],
+    "stanceApproach": "We assess quadriceps and hip strength, knee mechanics and training load to identify the factors contributing to your pain. Treatment combines progressive strengthening with load management to restore pain-free running.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "running-assessment",
+      "sports-injury-return-to-sport"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Do I need to stop running?",
+        "a": "Not always. Load modification is often sufficient while we address the contributing factors. We guide you on how much to reduce and when to progress."
+      },
+      {
+        "q": "How long does runner's knee take to resolve?",
+        "a": "Most cases improve significantly in 6-12 weeks with appropriate strengthening and load management."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Runner's Knee Treatment in Bangalore | Stance Health",
+      "description": "Patellofemoral pain assessment and rehabilitation at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "patellar-tendinopathy",
+    "title": "Patellar Tendinopathy",
+    "bodyRegion": "knee",
+    "summary": "Patellar tendinopathy usually causes pain below the kneecap during jumping, running or loaded knee movements. A structured loading programme helps rebuild tendon capacity and support a confident return to activity.",
+    "heroHeadline": "Tendon pain below the kneecap responds to progressive loading.",
+    "symptoms": [
+      "Pain below the kneecap during jumping or landing",
+      "Pain with squatting, lunging or running",
+      "Stiffness in the tendon after rest that eases with warm-up",
+      "Localised tenderness at the base of the kneecap",
+      "Pain that worsens with increased training intensity"
+    ],
+    "causes": [
+      "Sudden increase in jumping or running volume",
+      "Insufficient quadriceps and calf strength",
+      "Reduced ankle or hip mobility",
+      "Return to sport after a period of rest",
+      "Hard training surfaces"
+    ],
+    "stanceApproach": "We prescribe a precisely dosed loading programme based on your current tendon tolerance and activity demands. Treatment progressively rebuilds tendon capacity alongside addressing contributing strength and mobility deficits.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "sports-injury-return-to-sport"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Should I rest my patellar tendon?",
+        "a": "Complete rest is rarely the best approach. A structured loading programme that respects your current tolerance is more effective for tendon recovery."
+      },
+      {
+        "q": "How long does patellar tendinopathy take to improve?",
+        "a": "Most patients see meaningful improvement in 8-12 weeks. Full return to sport may take 3-6 months depending on demands."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Patellar Tendinopathy Treatment in Bangalore | Stance Health",
+      "description": "Patellar tendon loading programme at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "pcl-injury",
+    "title": "PCL Injury",
+    "bodyRegion": "knee",
+    "summary": "A PCL injury can affect knee stability, strength and confidence during movement. Rehabilitation focuses on restoring mobility, rebuilding muscular support and gradually preparing the knee for everyday activity or sport.",
+    "heroHeadline": "PCL injuries respond well to structured rehabilitation.",
+    "symptoms": [
+      "Pain at the back of the knee after injury",
+      "Swelling in the knee joint",
+      "A feeling of instability during deceleration or stairs",
+      "Difficulty with deep squatting or kneeling",
+      "Reduced confidence during sport or physical activity"
+    ],
+    "causes": [
+      "Direct impact to the front of the shin with the knee bent",
+      "Fall onto the knee with the foot pointed down",
+      "Sporting collision or tackle",
+      "Dashboard injury in a road traffic accident"
+    ],
+    "stanceApproach": "We assess knee stability, quadriceps and hamstring strength, and functional capacity. Most PCL injuries are managed non-surgically with progressive strengthening that builds muscular support around the knee.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "sports-injury-return-to-sport",
+      "post-surgery-rehab"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Does a PCL injury always need surgery?",
+        "a": "No. Most isolated PCL injuries are managed successfully with structured physiotherapy. Surgery is typically reserved for combined ligament injuries or persistent instability."
+      },
+      {
+        "q": "How long does PCL rehabilitation take?",
+        "a": "Most patients return to full activity in 3-6 months with appropriate rehabilitation."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "PCL Injury Rehabilitation in Bangalore | Stance Health",
+      "description": "PCL injury assessment and rehabilitation at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "mcl-lcl-injuries",
+    "title": "MCL & LCL Injuries",
+    "bodyRegion": "knee",
+    "summary": "Injuries to the knee's collateral ligaments can cause pain and instability during side-to-side movement. We assess the severity of the injury and progressively rebuild strength, control and movement confidence.",
+    "heroHeadline": "Collateral ligament injuries recover well with structured rehabilitation.",
+    "symptoms": [
+      "Pain on the inner (MCL) or outer (LCL) side of the knee",
+      "Swelling along the affected ligament",
+      "Instability or giving way during side-stepping or pivoting",
+      "Pain with valgus or varus stress on the knee",
+      "Reduced confidence during sport or lateral movement"
+    ],
+    "causes": [
+      "Direct blow to the outside of the knee (MCL)",
+      "Direct blow to the inside of the knee (LCL)",
+      "Twisting injury during sport",
+      "Landing awkwardly from a jump",
+      "Combined force during a tackle or collision"
+    ],
+    "stanceApproach": "We assess the grade of ligament injury and current functional limitations. Treatment progressively restores range of motion, strength and stability through a phased protocol appropriate to the severity of injury.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "sports-injury-return-to-sport"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Do collateral ligament injuries need surgery?",
+        "a": "Most MCL injuries heal without surgery. LCL injuries are less common and may require surgical opinion for higher-grade tears or combined injuries."
+      },
+      {
+        "q": "When can I return to sport?",
+        "a": "Grade 1: 2-4 weeks. Grade 2: 4-8 weeks. Grade 3: 8-12+ weeks. Objective testing guides clearance."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "MCL & LCL Injury Treatment in Bangalore | Stance Health",
+      "description": "Collateral ligament injury rehabilitation at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "it-band-syndrome",
+    "title": "IT Band Syndrome",
+    "bodyRegion": "knee",
+    "summary": "IT band syndrome commonly causes pain on the outside of the knee during running or repetitive activity. We assess running load, hip strength and movement mechanics to identify and address contributing factors.",
+    "heroHeadline": "Outer knee pain during running has identifiable causes.",
+    "symptoms": [
+      "Pain on the outside of the knee during or after running",
+      "Pain that typically starts after a consistent distance or duration",
+      "Discomfort walking downhill or down stairs",
+      "Tightness or aching along the outer thigh",
+      "Pain that resolves with rest but returns with activity"
+    ],
+    "causes": [
+      "Rapid increase in running volume or intensity",
+      "Hip abductor and external rotator weakness",
+      "Running biomechanics increasing lateral knee load",
+      "Inadequate recovery between training sessions",
+      "Sudden change in running surface or terrain"
+    ],
+    "stanceApproach": "We assess hip and gluteal strength, running mechanics and training load to identify what is driving the lateral knee pain. Treatment combines progressive hip strengthening with load management and running modifications where needed.",
+    "relatedServices": [
+      "pain-injury-recovery",
+      "running-assessment"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "Should I foam roll my IT band?",
+        "a": "Foam rolling the IT band itself provides limited benefit. Strengthening the hip muscles that control IT band tension is more effective."
+      },
+      {
+        "q": "Do I need to stop running?",
+        "a": "Not always. Load modification and hip strengthening can often allow you to continue running at a reduced level while addressing the cause."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "IT Band Syndrome Treatment in Bangalore | Stance Health",
+      "description": "IT band syndrome assessment and rehabilitation at Stance Health Bangalore."
+    },
+    "lastModified": "2026-08-03"
+  },
+  {
+    "slug": "knee-replacement-rehabilitation",
+    "title": "Knee Replacement Rehabilitation",
+    "bodyRegion": "knee",
+    "summary": "Rehabilitation after knee replacement helps restore mobility, strength and independence. We guide you through each stage with progressive exercises and objective measures that track your recovery and functional improvement.",
+    "heroHeadline": "After knee replacement, structured rehab restores your independence.",
+    "symptoms": [
+      "Post-surgical stiffness and reduced knee range of motion",
+      "Weakness in the quadriceps and surrounding muscles",
+      "Difficulty with walking, stairs or getting up from a chair",
+      "Swelling around the knee joint",
+      "Reduced balance and confidence on the operated leg"
+    ],
+    "causes": [
+      "End-stage knee osteoarthritis requiring joint replacement",
+      "Failed conservative management of knee joint disease",
+      "Significant pain and functional limitation affecting quality of life"
+    ],
+    "stanceApproach": "We follow a phased rehabilitation protocol that progressively restores knee range of motion, quadriceps strength, balance and functional capacity. Each stage is guided by objective testing to ensure safe progression towards your personal goals.",
+    "relatedServices": [
+      "post-surgery-rehab",
+      "balance-mobility-healthy-ageing"
+    ],
+    "relatedResources": [],
+    "faqs": [
+      {
+        "q": "When should I start physiotherapy after knee replacement?",
+        "a": "Rehabilitation begins immediately after surgery. Early mobilisation and knee bending exercises improve outcomes. We can see you as soon as you are discharged."
+      },
+      {
+        "q": "How long does knee replacement rehabilitation take?",
+        "a": "Most patients achieve good functional recovery in 12-16 weeks. Continued strength improvements occur for up to 12 months."
+      }
+    ],
+    "locations": [
+      "hsr-layout",
+      "indiranagar",
+      "whitefield",
+      "jp-nagar",
+      "koramangala"
+    ],
+    "seo": {
+      "title": "Knee Replacement Rehabilitation in Bangalore | Stance Health",
+      "description": "Structured knee replacement rehabilitation at Stance Health Bangalore. Restore mobility, strength and independence."
+    },
+    "lastModified": "2026-08-03"
   }
 ]

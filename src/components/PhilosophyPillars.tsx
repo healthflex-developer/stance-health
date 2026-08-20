@@ -10,8 +10,8 @@ const PILLARS = [
     id: "tech",
     label: "Technology Assessment",
     tabIcon: `${ASSETS}/tab-1.svg`,
-    image1: `${ASSETS}/tf-1.png`,
-    image2: `${ASSETS}/tf-2.png`,
+    image1: `${ASSETS}/Philosophy_technology1.png`,
+    image2: `${ASSETS}/Philosophy_technology2.png`,
     heading: "State-of-the-Art Technology Assessments",
     body: "We use the latest tools across running analysis, muscle strength, range of motion, and endurance tracking to measure and contextualise your progress. Our technology-driven assessments provide objective data that guides clinical decision-making and personalised treatment.",
     points: [
@@ -26,7 +26,7 @@ const PILLARS = [
     label: "Physiotherapy",
     tabIcon: `${ASSETS}/tab-2.svg`,
     image1: `${ASSETS}/ph-1.png`,
-    image2: `${ASSETS}/ph-2.png`,
+    image2: `${ASSETS}/Physio2.png`,
     heading: "Expert Physiotherapy Care",
     body: "Our physiotherapists conduct comprehensive MSK evaluations and deliver targeted injury management through evidence-based manual therapy. We create customised preventive exercise regimens tailored to your unique condition and goals.",
     points: [

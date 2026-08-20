@@ -10,7 +10,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Conditions We Treat",
   description:
-    "Browse musculoskeletal conditions treated at Stance Health Bangalore — knee pain, back pain, ACL injury, shoulder pain, and more. Find your condition and book an assessment.",
+    "Every condition has a root cause. We use objective assessment, clinical expertise and measurable data to understand it, then build a programme around your specific needs and goals.",
   alternates: { canonical: "/conditions" },
 };
 
@@ -21,6 +21,7 @@ const BODY_REGION_ORDER = [
   "neck",
   "ankle",
   "elbow",
+  "hip",
 ];
 
 export default async function ConditionsHubPage() {
@@ -40,6 +41,7 @@ export default async function ConditionsHubPage() {
     neck: "Neck",
     ankle: "Ankle & Foot",
     elbow: "Elbow & Wrist",
+    hip: "Hip & Groin",
   };
 
   return (
@@ -66,7 +68,7 @@ export default async function ConditionsHubPage() {
               Conditions we <span className="text-[#cdfe71]">treat</span>
             </h1>
             <p className="text-white/60 text-lg max-w-2xl">
-              Every condition has a root cause. We find it with objective assessment — not guesswork — and build a programme around your specific numbers.
+              Every condition has a root cause. We use objective assessment, clinical expertise and measurable data to understand it, then build a programme around your specific needs and goals.
             </p>
           </div>
         </section>
