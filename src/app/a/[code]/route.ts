@@ -17,11 +17,15 @@ async function fetchRedirect(
 }
 
 /**
- * Public advance-receipt short-link resolver:
- * GET /a/:code → proxy to Stance API → 302 to the S3 PDF URL.
+ * Public short-link resolver:
+ * GET /a/:code → resolve via Stance API → proxy the PDF (not redirect).
  *
- * WhatsApp messages use https://stance.health/a/{code} (redirects to www).
- * Tries prod API first; on 404 falls back to devapi (dev MongoDB receipts).
+ * Why proxy instead of redirect:
+ *   iOS Safari follows a 302 to an S3 URL and either shows an AccessDenied
+ *   XML page (if the bucket blocks direct access) or triggers a download
+ *   instead of an inline PDF view. By fetching the PDF server-side and
+ *   streaming it back we control the Content-Type / Content-Disposition
+ *   headers, so Safari renders it inline every time.
  */
 export async function GET(
   _request: NextRequest,
@@ -36,54 +40,67 @@ export async function GET(
 
   const origins = [getApiOrigin()];
   const fallback = getApiOriginFallback();
-  if (fallback) {
-    origins.push(fallback);
-  }
+  if (fallback) origins.push(fallback);
 
+  let pdfUrl: string | null = null;
   let lastStatus = 502;
-  let lastUpstream = "";
 
+  // Step 1 — resolve the short code to the real S3 PDF URL
   for (const apiOrigin of origins) {
-    lastUpstream = `${apiOrigin}/a/${encodeURIComponent(code)}`;
     try {
       const res = await fetchRedirect(apiOrigin, code);
 
-      if (
-        res.status === 301 ||
-        res.status === 302 ||
-        res.status === 307 ||
-        res.status === 308
-      ) {
+      if ([301, 302, 307, 308].includes(res.status)) {
         const location = res.headers.get("location");
         if (location) {
-          return NextResponse.redirect(location, 302);
+          pdfUrl = location;
+          break;
         }
       }
 
-      if (res.status === 404) {
-        lastStatus = 404;
-        continue;
-      }
-
+      if (res.status === 404) { lastStatus = 404; continue; }
       if (res.status === 410) {
-        return new NextResponse("This link has expired or been deactivated.", {
-          status: 410,
-        });
+        return new NextResponse("This link has expired or been deactivated.", { status: 410 });
       }
 
       lastStatus = res.status;
-    } catch (error) {
-      console.error("[advance-short-link] upstream resolve failed", {
-        upstream: lastUpstream,
-        error,
-      });
+    } catch {
       lastStatus = 502;
     }
   }
 
-  if (lastStatus === 404) {
-    return new NextResponse("Short link not found.", { status: 404 });
+  if (!pdfUrl) {
+    if (lastStatus === 404) return new NextResponse("Short link not found.", { status: 404 });
+    return new NextResponse("Unable to resolve short link.", { status: 502 });
   }
 
-  return new NextResponse("Unable to resolve short link.", { status: 502 });
+  // Step 2 — proxy the PDF so iOS Safari renders it inline
+  try {
+    const s3Res = await fetch(pdfUrl, { cache: "no-store" });
+
+    if (!s3Res.ok) {
+      // Fallback: redirect if proxy fails (e.g. S3 public URL works fine on Android/desktop)
+      return NextResponse.redirect(pdfUrl, 302);
+    }
+
+    const body = await s3Res.arrayBuffer();
+
+    // Derive a clean filename from the URL (e.g. "Invoice_I-0042.pdf")
+    const fileName = pdfUrl.split("/").pop()?.split("?")[0] ?? "document.pdf";
+
+    return new NextResponse(body, {
+      status: 200,
+      headers: {
+        "Content-Type": "application/pdf",
+        // inline = show in browser, not download
+        "Content-Disposition": `inline; filename="${fileName}"`,
+        "Content-Length": String(body.byteLength),
+        // Allow Safari to cache for 10 min so re-opens are instant
+        "Cache-Control": "public, max-age=600",
+      },
+    });
+  } catch {
+    // If proxying fails for any reason, fall back to direct redirect
+    return NextResponse.redirect(pdfUrl, 302);
+  }
 }
