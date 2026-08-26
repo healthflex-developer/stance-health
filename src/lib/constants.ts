@@ -221,7 +221,7 @@ export const ASSESSMENT_SECTIONS = [
       "Acceleration and split times",
       "Selected agility and reactivity tests",
     ],
-    image: `${ASSETS}/assessment/smartspeed.png`,
+    image: cb(`${ASSETS}/assessment/smartspeed.png`),
   },
 ];
 
