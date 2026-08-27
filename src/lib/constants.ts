@@ -221,7 +221,7 @@ export const ASSESSMENT_SECTIONS = [
       "Acceleration and split times",
       "Selected agility and reactivity tests",
     ],
-    image: `${ASSETS}/assessment/smartspeed.png`,
+    image: cb(`${ASSETS}/assessment/smartspeed.png`),
   },
 ];
 
@@ -840,7 +840,7 @@ export const CENTERS = [
     name: "KORAMANGALA",
     phone: "+91 6366940175",
     address:
-      "Unit No. 22, Ground floor, 80 Feet Rd, S.T. Bed, 4th Block, Koramangala, Bengaluru, Karnataka 560034",
+      "Unit No. 22, 2nd floor, 80 Feet Rd, S.T. Bed, 4th Block, Koramangala, Bengaluru, Karnataka 560034",
     image: `${ASSETS}/koramangala.jpeg`,
     maps: "https://maps.app.goo.gl/Pe6diykLUL22aLfa9",
   },
