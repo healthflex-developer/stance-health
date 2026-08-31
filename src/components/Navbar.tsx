@@ -10,6 +10,7 @@ import BookingCta from "@/components/BookingCta";
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [programsOpen, setProgramsOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
@@ -30,6 +31,7 @@ export default function Navbar() {
   const closeMobileMenu = useCallback(() => {
     setMobileOpen(false);
     setProgramsOpen(false);
+    setMoreOpen(false);
   }, []);
 
   useEffect(() => {
@@ -85,7 +87,7 @@ export default function Navbar() {
 
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
-              {NAV_LINKS.map((link) =>
+              {NAV_LINKS.filter(link => ["About", "Conditions", "Services", "Assessment"].includes(link.label)).map((link) =>
                 link.children ? (
                   <div key={link.label} className="relative group">
                     <button
@@ -154,6 +156,45 @@ export default function Navbar() {
                   </Link>
                 )
               )}
+
+              {/* More Dropdown */}
+              <div className="relative group">
+                <button
+                  className={`relative py-1 flex items-center gap-1 transition-colors duration-200 text-white/80 hover:text-white`}
+                  onMouseEnter={() => setMoreOpen(true)}
+                  onMouseLeave={() => setMoreOpen(false)}
+                >
+                  More
+                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                  {/* Hover underline */}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white/60 rounded-full group-hover:w-full transition-all duration-300" />
+                </button>
+                {moreOpen && (
+                  <div
+                    className="absolute top-full right-0 pt-2 w-52"
+                    onMouseEnter={() => setMoreOpen(true)}
+                    onMouseLeave={() => setMoreOpen(false)}
+                  >
+                    <div className="bg-[#1a3358] border border-white/10 rounded-xl shadow-xl overflow-hidden">
+                      {NAV_LINKS.filter(link => !["About", "Conditions", "Services", "Assessment"].includes(link.label)).map((link) => (
+                        <Link
+                          key={link.label}
+                          href={link.href}
+                          className={`block px-4 py-2.5 text-sm transition-colors ${
+                            isActive(link.href)
+                              ? "text-[#cdfe71] bg-[#cdfe71]/5"
+                              : "text-white/70 hover:text-white hover:bg-white/5"
+                          }`}
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             </nav>
 
             {/* CTA */}
