@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0c1b30] border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/">
@@ -79,8 +79,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Programs links */}
-          <div>
+          {/* Programs links — commented out for now */}
+          {/* <div>
             <h4 className="text-[#cdfe71]/70 font-semibold mb-4">Programs</h4>
             <ul className="space-y-2.5">
               {FOOTER_LINKS.programs.map((link) => (
@@ -91,7 +91,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Other links */}
           <div>
