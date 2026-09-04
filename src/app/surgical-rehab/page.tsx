@@ -66,7 +66,7 @@ export default function SurgicalRehabPage() {
       expectTitle="What You Can Expect"
       expectItems={[
         "Technology-based assessments tracking pain, mobility, and force production",
-        "Specialised gait analysis using RunScribe for lower limb surgeries",
+        "Specialised gait and movement analysis for lower limb surgeries",
         "Milestone-based progression with objective readiness criteria",
         "Coordination with your surgical team for aligned care",
         "Complete journey management from diagnosis through long-term care",
