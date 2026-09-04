@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "In Your Stride – Running Programme",
   description:
-    "Extensive running programme backed by RunScribe gait analysis and VALD strength testing — improve efficiency, prevent injury, and perform at your best.",
+    "Running programme at Stance Health — assessment of strength movement and physical capacity tailored to your goals. Improve efficiency, prevent injury, and perform at your best.",
   alternates: { canonical: "/running" },
   openGraph: {
     title: "In Your Stride – Stance Health Running Programme",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "In Your Stride – Running Programme | Stance Health",
-    description: "RunScribe gait analysis + VALD strength testing for runners.",
+    description: "Objective running assessment and strength testing for runners at Stance Health",
     images: [`${OG_ASSETS}/og-default.png`],
   },
 };
@@ -60,12 +60,12 @@ export default function RunningPage() {
           icon: `${ASSETS}/run.svg`,
           title: "Maximise Efficiency and Performance",
           description:
-            "RunScribe and VALD data helps us fine-tune your gait to improve economy and speed.",
+            "Objective strength and movement data helps us fine-tune your gait to improve economy and speed.",
         },
       ]}
       expectTitle="What You Can Expect"
       expectItems={[
-        "2D running gait analysis using RunScribe technology",
+        "Running gait and movement assessment using objective measurement tools",
         "Kinematics — angular assessments of upper and lower body movements",
         "Shock metrics — impact Gs and braking Gs measurements",
         "Efficiency measures — step rate, flight ratio, and contact time",
