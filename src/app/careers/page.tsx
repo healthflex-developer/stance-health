@@ -34,7 +34,7 @@ const STATS = [
   { icon: "users", value: "2000+", label: "Total Users", sub: "Patients treated across all centres" },
   { icon: "athlete", value: "500+", label: "Total Athletes", sub: "Professional & amateur athletes trained" },
   { icon: "center", value: "5", label: "Active Centres", sub: "Across Bengaluru" },
-  { icon: "data", value: "6", label: "Data Systems", sub: "VALD, RunScribe, ForceDecks & more" },
+  { icon: "data", value: "6", label: "Data Systems", sub: "VALD, Output Sports, ForceDecks & more" },
 ];
 
 const CAREER_TRACKS = [
