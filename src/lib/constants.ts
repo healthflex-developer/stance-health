@@ -265,10 +265,10 @@ export const FRAMEWORK_STEPS = [
 
 export const TECHNOLOGIES = [
   {
-    id: "run-scribe",
-    name: "Run Scribe",
+    id: "gait-analysis",
+    name: "Gait Analysis",
     icon: `${ASSETS}/run.svg`,
-    description: "Portable Gait and running analysis tool built for Runners and Sports Enthusiasts",
+    description: "Wearable sensor technology for objective running analysis — measuring foot strike, cadence, braking, and symmetry across every step",
   },
   {
     id: "vald-dynamo",
@@ -694,7 +694,7 @@ export const OPEN_ROLES_DETAILED = [
     description: "Lead performance training for athletes and active individuals. Beyond coaching, this role owns mentorship, project ownership, operational excellence and cross-team collaboration.",
     sections: [
       { title: "Strength & Conditioning delivery", points: ["Design and deliver evidence-based programmes.", "Run athlete assessments and performance profiling.", "Build sport-specific performance plans.", "Lead individual and small-group sessions.", "Maintain flawless documentation."] },
-      { title: "Sports science & technology", points: ["Use VALD, RunScribe, Output, ForceDecks and other assessment tools.", "Contribute to testing protocols and performance standards."] },
+      { title: "Sports science & technology", points: ["Use VALD ForceFrame, ForceDecks, DynaMo, Output Sports Sensors and other assessment tools.", "Contribute to testing protocols and performance standards."] },
       { title: "Return-to-performance", points: ["Bridge rehab and performance with physiotherapists.", "Own injury prevention and load management.", "Educate athletes on recovery and performance."] },
       { title: "Leadership & team development", points: ["Mentor junior coaches and interns.", "Support onboarding and skill development.", "Lead internal workshops and knowledge shares."] },
       { title: "Preferred certifications", points: ["ASCA Level 1/2, EXOS, NSCA-CSCS, FMS, UKSCA, ACSM Performance."] },

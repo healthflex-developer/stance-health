@@ -92,9 +92,9 @@
     "summary": "A comprehensive running assessment using gait analysis, strength testing and load evaluation. It is designed for runners managing injuries, facing performance plateaus or wanting to train smarter.",
     "heroHeadline": "There is data in every stride. We read it.",
     "whoItsFor": "You run — recreationally, for events, or as part of training. You're dealing with recurring injury that flares with mileage, a performance plateau you can't break, or you simply want to understand your biomechanics before problems start. You want more than someone watching you jog on a treadmill.",
-    "approach": "We combine RunScribe wearable gait analysis with VALD strength testing and a clinical movement assessment to build a complete picture of your running economy, injury risk factors, and strength deficits. You leave with a specific action plan for training and technique — not generic advice.",
+    "approach": "We combine wearable gait analysis with VALD strength testing and a clinical movement assessment to build a complete picture of your running economy, injury risk factors, and strength deficits. You leave with a specific action plan for training and technique — not generic advice.",
     "features": [
-      "RunScribe-based gait analysis: foot strike, cadence, braking, power asymmetry",
+      "Wearable sensor gait analysis: foot strike, cadence, braking, power asymmetry",
       "VALD Dynamo strength and range of motion assessment",
       "Load and training history evaluation",
       "Personalised run coaching and injury prevention plan",

@@ -15,7 +15,7 @@ const PILLARS = [
     heading: "State-of-the-Art Technology Assessments",
     body: "We use the latest tools across running analysis, muscle strength, range of motion, and endurance tracking to measure and contextualise your progress. Our technology-driven assessments provide objective data that guides clinical decision-making and personalised treatment.",
     points: [
-      "Running gait and biomechanical analysis with RunScribe",
+      "Running gait and biomechanical analysis with wearable sensor technology",
       "Isometric strength testing with VALD Force Frame",
       "Explosive power and balance assessment with VALD Force Decks",
       "Portable dynamometry with VALD Dynamo",

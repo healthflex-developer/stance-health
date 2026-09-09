@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { TECHNOLOGIES } from "@/lib/constants";
 
-// Reuses the same VALD/RunScribe technology roster shown on the homepage,
+// Reuses the same VALD/Output Sports technology roster shown on the homepage,
 // trimmed to the three most visually persuasive tools for a fast scroll.
 const FEATURED = TECHNOLOGIES.filter((t) =>
   ["vald-dynamo", "vald-force-frame", "vald-force-decks"].includes(t.id)
