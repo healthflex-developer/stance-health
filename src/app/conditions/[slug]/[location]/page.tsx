@@ -30,7 +30,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const locationData = await getLocationBySlug(location);
   if (!condition || !locationData) return {};
 
-  const title = `${condition.title} Treatment in ${locationData.name}, Bangalore | Stance Health`;
+  // HTML <title> omits the brand — the root layout's title template
+  // ("%s | Stance Health") appends it. OG titles bypass that template, so
+  // they carry the brand explicitly.
+  const title = `${condition.title} Treatment in ${locationData.name}, Bangalore`;
+  const ogTitle = `${title} | Stance Health`;
   const description = `Expert ${condition.title.toLowerCase()} assessment and rehab near ${locationData.name}, Bangalore. ${condition.summary.slice(0, 100)}...`;
   const canonical = `/conditions/${slug}/in-${location}`;
 
@@ -38,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: { canonical },
-    openGraph: { title, description, url: canonical, type: "website" },
+    openGraph: { title: ogTitle, description, url: canonical, type: "website" },
   };
 }
 
