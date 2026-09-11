@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { APP_STORE_URL, PLAY_STORE_URL, BASE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Download Stance Health",
+  title: "Download the App",
   description: "Download the Stance Health app on Android or iOS.",
   alternates: { canonical: "/qr" },
   robots: { index: false, follow: false },
