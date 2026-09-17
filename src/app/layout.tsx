@@ -119,7 +119,7 @@ const orgSchema = {
         height: 36,
       },
       sameAs: [
-        "https://instagram.com/stancehealth",
+        "https://www.instagram.com/stance.health?stkn=MWQ5eWpucDN1dTdhMQ==",
         "https://linkedin.com/company/stancehealth",
       ],
       contactPoint: {
