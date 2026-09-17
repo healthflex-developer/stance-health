@@ -26,7 +26,7 @@ export default function Footer() {
             {/* Social */}
             <div className="flex gap-3">
               <a
-                href="https://instagram.com/stancehealth"
+                href="https://www.instagram.com/stance.health?stkn=MWQ5eWpucDN1dTdhMQ=="
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
