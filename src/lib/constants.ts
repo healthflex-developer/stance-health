@@ -838,7 +838,7 @@ export const CENTERS = [
   },
   {
     name: "KORAMANGALA",
-    phone: "+91 6366940175",
+    phone: "+91 7625051785",
     address:
       "Unit No. 22, 2nd floor, 80 Feet Rd, S.T. Bed, 4th Block, Koramangala, Bengaluru, Karnataka 560034",
     image: `${ASSETS}/koramangala.jpeg`,
