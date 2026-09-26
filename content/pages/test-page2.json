@@ -1,0 +1,54 @@
+{
+  "slug": "test-page2",
+  "title": "test_page2",
+  "seo": {
+    "title": "test2",
+    "description": "this is the description of test page 2",
+    "canonical": "/test-page2",
+    "noIndex": true
+  },
+  "blocks": [
+    {
+      "id": "hero_mui79u49",
+      "type": "Hero",
+      "props": {
+        "ctaHref": "",
+        "ctaLabel": "",
+        "headline": "test page 2",
+        "highlight": "this is the heighlight",
+        "paragraph": "",
+        "videoUrl": ""
+      }
+    },
+    {
+      "id": "technology_mui79vst",
+      "type": "Technology",
+      "props": {
+        "heading": "this is the dummy page again!",
+        "items": [
+          {
+            "description": "this is the description!",
+            "icon": "https://stance-development-upload.s3.us-east-1.amazonaws.com/stance-health/uploads/2026/09/d72f7bc99aeb15fe.jpeg",
+            "id": "1",
+            "name": "helmoo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "partnercontactform_mui7a379",
+      "type": "PartnerContactForm",
+      "props": {
+        "description": "",
+        "emailLabel": "",
+        "headingHighlight": "",
+        "headingPrefix": "",
+        "messageLabel": "",
+        "nameLabel": "",
+        "organisationLabel": "",
+        "submitLabel": ""
+      }
+    }
+  ],
+  "schemaVersion": 1
+}

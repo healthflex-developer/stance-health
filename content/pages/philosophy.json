@@ -1,0 +1,167 @@
+{
+  "slug": "philosophy",
+  "title": "Our Philosophy",
+  "seo": {
+    "title": "Our Philosophy",
+    "description": "Our clinical and data-backed approach combines technology assessment, physiotherapy, strength and conditioning, and at-home technology for complete recovery.",
+    "canonical": "/philosophy"
+  },
+  "blocks": [
+    {
+      "id": "philosophy-hero",
+      "type": "PhilosophyHero",
+      "props": {
+        "backgroundImage": "/assets/images/philosophy-banner.svg",
+        "eyebrow": "Philosophy",
+        "headingHighlight": "Approach",
+        "headingPrefix": "Our ",
+        "subheading": "Clinical and Data-Backed"
+      }
+    },
+    {
+      "id": "philosophy-pillars",
+      "type": "PhilosophyHowWeDoIt",
+      "props": {
+        "headingHighlight": "do it?",
+        "headingPrefix": "How we ",
+        "intro": "Four integrated pillars that deliver measurable, sustainable, and personalised outcomes.",
+        "pillars": [
+          {
+            "body": "We use the latest tools across running analysis, muscle strength, range of motion, and endurance tracking to measure and contextualise your progress. Our technology-driven assessments provide objective data that guides clinical decision-making and personalised treatment.",
+            "heading": "State-of-the-Art Technology Assessments",
+            "id": "tech",
+            "image1": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/Philosophy_technology1.png",
+            "image2": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/Philosophy_technology2.png",
+            "label": "Technology Assessment",
+            "points": [
+              {
+                "text": "Running gait and biomechanical analysis with wearable sensor technology"
+              },
+              {
+                "text": "Isometric strength testing with VALD Force Frame"
+              },
+              {
+                "text": "Explosive power and balance assessment with VALD Force Decks"
+              },
+              {
+                "text": "Portable dynamometry with VALD Dynamo"
+              }
+            ],
+            "tabIcon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/tab-1.svg"
+          },
+          {
+            "body": "Our physiotherapists conduct comprehensive MSK evaluations and deliver targeted injury management through evidence-based manual therapy. We create customised preventive exercise regimens tailored to your unique condition and goals.",
+            "heading": "Expert Physiotherapy Care",
+            "id": "physio",
+            "image1": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/ph-1.png",
+            "image2": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/Physio2.png",
+            "label": "Physiotherapy",
+            "points": [
+              {
+                "text": "Comprehensive musculoskeletal health evaluation"
+              },
+              {
+                "text": "Injury management via manual therapy techniques"
+              },
+              {
+                "text": "Customised preventive exercise programmes"
+              },
+              {
+                "text": "Maitland, McKenzie and neurodynamic treatment approaches"
+              }
+            ],
+            "tabIcon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/tab-2.svg"
+          },
+          {
+            "body": "Our strength and conditioning programmes are designed to build the functional capacity needed for daily activities and sporting performance. We use advanced progress measurement technology to ensure every session delivers measurable improvement.",
+            "heading": "Performance-Focused Strength \u0026 Conditioning",
+            "id": "sc",
+            "image1": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/sc-1.png",
+            "image2": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/sc-2.png",
+            "label": "Strength \u0026 Conditioning",
+            "points": [
+              {
+                "text": "Functional strength for everyday activities and sport"
+              },
+              {
+                "text": "Data-driven progress tracking and programme adjustment"
+              },
+              {
+                "text": "Sport-specific conditioning protocols"
+              },
+              {
+                "text": "Injury-resilience training and load management"
+              }
+            ],
+            "tabIcon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/tab-3.svg"
+          },
+          {
+            "body": "Through our HealthFlex platform with AI-driven motion sensors, we deliver remote sessions with real-time feedback and movement tracking. This ensures continuity of care and consistent progress monitoring regardless of where you are.",
+            "heading": "AI-Powered At-Home Recovery",
+            "id": "athome",
+            "image1": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/at-1.png",
+            "image2": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/at-2.png",
+            "label": "At-Home Technology",
+            "points": [
+              {
+                "text": "Remote sessions via HealthFlex AI platform"
+              },
+              {
+                "text": "Real-time movement feedback and correction"
+              },
+              {
+                "text": "Progress tracking between clinic visits"
+              },
+              {
+                "text": "Self-paced recovery pathways with clinical oversight"
+              }
+            ],
+            "tabIcon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/tab-4.svg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "philosophy-differentiators",
+      "type": "PhilosophyDifferentiators",
+      "props": {
+        "description": "Four pillars that make our approach uniquely effective.",
+        "heading": "Why choose Stance?",
+        "items": [
+          {
+            "description": "We equip patients with the knowledge to understand their condition and take ownership of their recovery. An informed patient achieves better long-term outcomes.",
+            "icon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/f-1.png",
+            "title": "Patient Education"
+          },
+          {
+            "description": "Every clinical decision is supported by objective data. Our technology tools eliminate guesswork and ensure your programme is precisely calibrated to your needs.",
+            "icon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/f-2.png",
+            "title": "Evidence-Based Technology"
+          },
+          {
+            "description": "Our team continuously trains and updates their skills across diverse clinical and sporting contexts, bringing the highest level of expertise to every patient.",
+            "icon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/f-3.png",
+            "title": "Expert Therapists"
+          },
+          {
+            "description": "Sports orthopaedics, physical therapy, and strength \u0026 conditioning work seamlessly together across all phases of your recovery and performance journey.",
+            "icon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/f-4.png",
+            "title": "Multidisciplinary Approach"
+          }
+        ]
+      }
+    },
+    {
+      "id": "philosophy-cta",
+      "type": "PhilosophyCTA",
+      "props": {
+        "ctaLabel": "Book an Appointment",
+        "description": "Book an assessment and see how our clinical and data-backed methodology transforms your recovery and performance.",
+        "headingHighlight": "approach",
+        "headingPrefix": "Experience our ",
+        "headingSuffix": " first-hand"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}

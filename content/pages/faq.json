@@ -1,0 +1,90 @@
+{
+  "slug": "faq",
+  "title": "Frequently Asked Questions",
+  "seo": {
+    "title": "Frequently Asked Questions",
+    "description": "Everything you need to know before your first visit to Stance Health.",
+    "canonical": "/faq"
+  },
+  "blocks": [
+    {
+      "id": "faq-hero",
+      "type": "FAQHero",
+      "props": {
+        "description": "Everything you need to know before your first visit.",
+        "eyebrow": "Support",
+        "headingHighlight": "Questions",
+        "headingPrefix": "Frequently Asked "
+      }
+    },
+    {
+      "id": "faq-list",
+      "type": "FAQList",
+      "props": {
+        "faqs": [
+          {
+            "answer": "We currently have five centers across Bengaluru: HSR Layout, Whitefield, Indiranagar, JP Nagar, and Koramangala.",
+            "question": "Which locations do you operate in?"
+          },
+          {
+            "answer": "You can book directly through our website at book.stance.health, or call your nearest center to schedule an assessment.",
+            "question": "How do I book an appointment?"
+          },
+          {
+            "answer": "We treat common musculoskeletal issues including knee pain, ACL injuries, back pain, sciatica, shoulder pain, frozen shoulder, neck pain, plantar fasciitis, ankle sprains, tennis elbow, and many other conditions. If you're not sure what's causing your pain, book an assessment and we'll help identify the cause.",
+            "question": "What conditions does Stance Health treat?"
+          },
+          {
+            "answer": "We offer session-based treatment plans tailored to your condition, along with multi-session packages that provide better value for ongoing care. Your physiotherapist will recommend the most suitable plan based on your assessment.",
+            "question": "What kind of plans does Stance Health offer?"
+          },
+          {
+            "answer": "Yes. Our sports performance team can support your Hyrox training using tools like VALD assessments to identify and improve weak points. We also incorporate injury prevention strategies if you have a history of injuries.",
+            "question": "Can Stance Health help me train for Hyrox?"
+          },
+          {
+            "answer": "No. A doctor's referral is not required. You can book a consultation directly with one of our physiotherapists.",
+            "question": "Do I need a doctor's referral to visit?"
+          },
+          {
+            "answer": "Yes, but only after your pain has been resolved. We first focus on physiotherapy to reduce pain and restore function. Once you're pain-free, we transition into Strength \u0026 Conditioning (S\u0026C) to build strength, improve resilience, and reduce the likelihood of recurring injuries.",
+            "question": "Do you combine Strength \u0026 Conditioning (S\u0026C) with physiotherapy?"
+          },
+          {
+            "answer": "Your first visit includes a comprehensive assessment of your condition, a review of your medical history, movement and strength testing using VALD technology, and a detailed musculoskeletal screening by a physiotherapist. These assessments help identify persistent pain, movement asymmetries, force production deficits, and other irregularities before creating a personalized treatment plan.",
+            "question": "What happens during my first visit?"
+          },
+          {
+            "answer": "Yes. We provide both prehabilitation programs to prepare you for surgery and structured post-surgical rehabilitation plans to support recovery. We also offer specialized care for prepartum and postpartum mothers, with treatment plans tailored to each individual's needs.",
+            "question": "Do you offer pre- and post-surgery rehabilitation programs?"
+          },
+          {
+            "answer": "Our approach focuses on active, exercise-based rehabilitation rather than passive treatments such as cupping or needling. We use evidence-based physiotherapy, structured exercise programs, manual therapy where appropriate, and sports massage to relieve muscle tightness and address the root cause of your condition.",
+            "question": "Does Stance Health offer services like IFT, cupping, or needling?"
+          },
+          {
+            "answer": "You can share your feedback through our app, website contact form, or directly with our clinic staff. We value your feedback and use it to continuously improve our care.",
+            "question": "How do I give feedback about my experience at Stance Health?"
+          },
+          {
+            "answer": "Missed sessions can usually be rescheduled. Please refer to our cancellation policy or contact your clinic for specific terms and assistance.",
+            "question": "What happens if I miss a scheduled session?"
+          },
+          {
+            "answer": "Yes. In most cases, a family member or guardian is welcome to accompany you, especially for pediatric or elderly patients.",
+            "question": "Can family members accompany me during my session?"
+          },
+          {
+            "answer": "Yes. You can continue your treatment plan at any Stance Health location that's more convenient for you.",
+            "question": "Can I switch clinic locations for my ongoing treatment?"
+          },
+          {
+            "answer": "You can refer them through our app or website, or simply ask them to contact any of our clinics to book an assessment.",
+            "question": "How do I refer a friend or family member to Stance Health?"
+          }
+        ]
+      }
+    }
+  ],
+  "schemaVersion": 1
+}

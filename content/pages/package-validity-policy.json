@@ -1,0 +1,46 @@
+{
+  "slug": "package-validity-policy",
+  "title": "Package Validity Policy",
+  "seo": {
+    "title": "Package Validity Policy",
+    "description": "How treatment packages work, when they expire, and how to request an extension.",
+    "canonical": "/package-validity-policy"
+  },
+  "blocks": [
+    {
+      "id": "package-validity-policy-hero",
+      "type": "PageHero",
+      "props": {
+        "description": "How treatment packages work, when they expire, and how to request an extension.",
+        "eyebrow": "Legal",
+        "headline": "Package Validity",
+        "highlight": "Policy"
+      }
+    },
+    {
+      "id": "package-validity-policy-section-1",
+      "type": "PageSection",
+      "props": {
+        "body": "Every package has a clearly communicated fixed validity duration.",
+        "heading": "Validity Period"
+      }
+    },
+    {
+      "id": "package-validity-policy-section-2",
+      "type": "PageSection",
+      "props": {
+        "body": "Unused sessions lapse after expiry unless an extension was approved in advance.",
+        "heading": "Automatic Expiry"
+      }
+    },
+    {
+      "id": "package-validity-policy-section-3",
+      "type": "PageSection",
+      "props": {
+        "body": "Request an extension before expiry in exceptional circumstances.",
+        "heading": "Extension Requests"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}

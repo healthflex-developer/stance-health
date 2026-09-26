@@ -1,0 +1,38 @@
+{
+  "slug": "conditions",
+  "title": "Conditions We Treat",
+  "seo": {
+    "title": "Conditions We Treat",
+    "description": "Every condition has a root cause. We use objective assessment, clinical expertise, and measurable data to understand it.",
+    "canonical": "/conditions"
+  },
+  "blocks": [
+    {
+      "id": "conditions-hero",
+      "type": "PageHero",
+      "props": {
+        "description": "Every condition has a root cause. We use objective assessment, clinical expertise, and measurable data to understand it.",
+        "eyebrow": "Conditions",
+        "headline": "Conditions we",
+        "highlight": "treat"
+      }
+    },
+    {
+      "id": "conditions-section-1",
+      "type": "PageSection",
+      "props": {
+        "body": "Explore evidence-based support for knee, back, shoulder, neck, ankle, elbow, and hip conditions.",
+        "heading": "Conditions by Body Region"
+      }
+    },
+    {
+      "id": "conditions-section-2",
+      "type": "PageSection",
+      "props": {
+        "body": "Book an assessment and we will identify the root cause with objective testing.",
+        "heading": "Not Sure About Your Diagnosis?"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}
