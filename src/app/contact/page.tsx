@@ -1,13 +1,5 @@
-import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { withPublishedSeo } from "@/lib/published-seo";
-
-export const metadata: Metadata = withPublishedSeo("contact", {
-  title: "Contact Us",
-  description: "Get in touch with the Stance Health team.",
-  alternates: { canonical: "/contact" },
-});
 
 export default function ContactPage() {
   return (

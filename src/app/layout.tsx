@@ -6,12 +6,8 @@ import MarketingScripts, { GtmNoScript } from "@/components/MarketingScripts";
 import TrackingInit from "@/components/TrackingInit";
 import LinkTracker from "@/components/LinkTracker";
 import AnalyticsProvider from "@/components/AnalyticsProvider";
-import { AdminPreviewBridge } from "@/components/AdminPreviewSection";
-import LibraryDraftPreview from "@/components/LibraryDraftPreview";
 import ScrollToTop from "@/components/ScrollToTop";
 import { BASE_URL, GSC_VERIFICATION, OG_ASSETS } from "@/lib/constants";
-import { applySiteDefaults, publishedBlockIndex, publishedStructuredData } from "@/lib/published-seo";
-import { PublishedBlocksProvider, PublishedJsonLd } from "@/components/PublishedContent";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -27,7 +23,7 @@ const unbounded = Unbounded({
   display: "swap",
 });
 
-export const metadata: Metadata = applySiteDefaults({
+export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
 
   title: {
@@ -105,7 +101,7 @@ export const metadata: Metadata = applySiteDefaults({
       "max-snippet": -1,
     },
   },
-});
+};
 
 /** Organization + LocalBusiness JSON-LD — present on every page. */
 const orgSchema = {
@@ -199,11 +195,7 @@ export default function RootLayout({
         </Suspense>
         {/* Forward captured params onto every internal/external link on click */}
         <LinkTracker />
-        <PublishedBlocksProvider blocks={publishedBlockIndex()}>
-          <PublishedJsonLd documents={publishedStructuredData()} />
-          <AdminPreviewBridge>{children}</AdminPreviewBridge>
-        </PublishedBlocksProvider>
-        <LibraryDraftPreview />
+        {children}
       </body>
     </html>
   );

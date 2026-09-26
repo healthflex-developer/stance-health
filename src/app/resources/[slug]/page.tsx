@@ -1,8 +1,10 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { getAllResources, getResourceBySlug } from "@/lib/seo-pages";
-import ResourceArticleView from "@/components/detail/ResourceArticleView";
+import type { BlogSection } from "@/lib/seo-pages";
 import type { Metadata } from "next";
-import { withPublishedSeo } from "@/lib/published-seo";
 import { BASE_URL } from "@/lib/constants";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -16,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const resource = await getResourceBySlug(slug);
   if (!resource) return {};
-  return withPublishedSeo(`resources/${slug}`, {
+  return {
     title: resource.seo.title,
     description: resource.seo.description,
     alternates: { canonical: `/resources/${slug}` },
@@ -32,7 +34,49 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: resource.seo.title,
       description: resource.seo.description,
     },
+  };
+}
+
+function formatDate(iso: string) {
+  return new Date(iso).toLocaleDateString("en-IN", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
   });
+}
+
+function Section({ section }: { section: BlogSection }) {
+  switch (section.type) {
+    case "heading":
+      return (
+        <h2 className="text-xl font-bold text-[#cdfe71] mt-10 mb-3">{section.content}</h2>
+      );
+    case "paragraph":
+      return (
+        <p className="text-white/70 leading-relaxed text-base">{section.content}</p>
+      );
+    case "tip":
+      return (
+        <div className="my-6 flex gap-3 bg-[#cdfe71]/5 border border-[#cdfe71]/20 rounded-xl p-4 hover:border-[#cdfe71]/40 transition-colors duration-300">
+          <span className="text-[#cdfe71] text-lg mt-0.5 flex-shrink-0">💡</span>
+          <p className="text-white/80 text-sm leading-relaxed">{section.content}</p>
+        </div>
+      );
+    case "list":
+      return (
+        <ul className="space-y-3 my-4">
+          {section.items.map((item, i) => (
+            <li key={i} className="flex gap-3 items-start text-white/70 text-base hover:text-white/90 transition-colors duration-200">
+              <svg viewBox="0 0 20 20" fill="none" className="mt-0.5 shrink-0 w-5 h-5 text-[#cdfe71]">
+                <circle cx="10" cy="10" r="10" fill="currentColor" fillOpacity="0.15" />
+                <path d="M6 10.5l2.5 2.5L14 7.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      );
+  }
 }
 
 export default async function ResourcePage({ params }: Props) {
@@ -56,31 +100,99 @@ export default async function ResourcePage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <ResourceArticleView
-        data={{
-          backLabel: "All resources",
-          format: resource.contentFormat,
-          conditionLabel: resource.condition.split("-").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" "),
-          conditionHref: resource.condition ? `/conditions/${resource.condition}` : "",
-          title: resource.title,
-          summary: resource.summary,
-          publishedAt: resource.publishedAt,
-          reviewStatus: resource.clinicalReviewStatus,
-          sections: resource.sections.map((section) => ({
-            type: section.type,
-            content: "content" in section ? section.content : "",
-            items: "items" in section ? section.items.map((text) => ({ text })) : [],
-          })),
-          relatedLabel: "Related condition",
-          relatedTitle: resource.condition ? `${resource.condition.split("-").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")} — full condition guide` : "",
-          relatedHref: resource.condition ? `/conditions/${resource.condition}` : "",
-          ctaHeadingPrefix: "Ready to take the ",
-          ctaHeadingHighlight: "next step",
-          ctaDescription: "Our clinical team is ready to build a personalised plan around your goals.",
-          ctaLabel: "Book an Assessment",
-          ctaHref: `https://book.stance.health/stance-health?utm_source=website&utm_medium=cta&utm_campaign=resource_${slug}`,
-        }}
-      />
+      <Navbar />
+      <main className="pt-24 pb-20 min-h-screen">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Back link */}
+          <Link
+            href="/resources"
+            className="inline-flex items-center gap-1.5 text-sm text-white/40 hover:text-[#cdfe71] transition-colors mb-8"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            All resources
+          </Link>
+
+          {/* Tags */}
+          <div className="flex flex-wrap gap-2 mb-4">
+            <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-[#cdfe71]/10 text-[#cdfe71]">
+              {resource.contentFormat}
+            </span>
+            {resource.condition && (
+              <Link
+                href={`/conditions/${resource.condition}`}
+                className="text-xs font-medium px-2.5 py-1 rounded-full bg-white/5 text-white/60 hover:bg-[#cdfe71]/10 hover:text-[#cdfe71] transition-colors"
+              >
+                {resource.condition
+                  .split("-")
+                  .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+                  .join(" ")}
+              </Link>
+            )}
+          </div>
+
+          {/* Title */}
+          <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4">
+            {resource.title}
+          </h1>
+
+          {/* Summary */}
+          <p className="text-white/60 text-lg leading-relaxed mb-6">{resource.summary}</p>
+
+          {/* Meta */}
+          <div className="flex items-center gap-3 mb-10 pb-8 border-b border-white/10">
+            <div className="ml-auto text-right">
+              <p className="text-xs text-white/40">{formatDate(resource.publishedAt)}</p>
+              <p className="text-xs text-white/30 capitalize">{resource.clinicalReviewStatus}</p>
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="space-y-4">
+            {resource.sections.map((section, i) => (
+              <Section key={i} section={section} />
+            ))}
+          </div>
+
+          {/* Related condition link */}
+          {resource.condition && (
+            <div className="mt-10 p-5 rounded-xl bg-[#1a3358] border border-white/5 hover:border-[#cdfe71]/20 hover:shadow-[0_6px_20px_rgba(205,254,113,0.06)] transition-all duration-300">
+              <p className="text-xs text-white/40 uppercase tracking-wider mb-2">Related condition</p>
+              <Link
+                href={`/conditions/${resource.condition}`}
+                className="text-sm font-semibold text-white hover:text-[#cdfe71] transition-colors flex items-center gap-1.5"
+              >
+                {resource.condition
+                  .split("-")
+                  .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+                  .join(" ")}{" "}
+                — full condition guide
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          )}
+
+          {/* CTA */}
+          <div className="mt-10 bg-[#1a3358] rounded-2xl p-8 border border-white/5 hover:border-[#cdfe71]/20 hover:shadow-[0_8px_30px_rgba(205,254,113,0.06)] transition-all duration-300 text-center">
+            <h3 className="text-xl font-bold text-white mb-2">Ready to take the <span className="text-[#cdfe71]">next step</span>?</h3>
+            <p className="text-white/60 text-sm mb-6">
+              Our clinical team is ready to build a personalised plan around your goals.
+            </p>
+            <a
+              href={`https://book.stance.health/stance-health?utm_source=website&utm_medium=cta&utm_campaign=resource_${slug}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="booking-cta inline-block bg-white text-[#132644] font-bold px-8 py-3 rounded-full hover:bg-[#cdfe71] hover:shadow-[0_8px_25px_rgba(205,254,113,0.3)] hover:scale-105 active:scale-95 transition-all duration-200"
+            >
+              Book an Assessment
+            </a>
+          </div>
+        </div>
+      </main>
+      <Footer />
     </>
   );
 }

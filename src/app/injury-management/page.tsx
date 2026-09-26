@@ -2,9 +2,8 @@ import ProgramPageLayout from "@/components/ProgramPageLayout";
 import { ASSETS, OG_ASSETS } from "@/lib/constants";
 
 import type { Metadata } from "next";
-import { withPublishedSeo } from "@/lib/published-seo";
 
-export const metadata: Metadata = withPublishedSeo("injury-management", {
+export const metadata: Metadata = {
   title: "Prevention & Recovery – Injury Management",
   description:
     "Advanced injury prevention and pain management at Stance Health — proactive screening, targeted interventions, and evidence-based rehab to keep you performing at your best.",
@@ -22,7 +21,7 @@ export const metadata: Metadata = withPublishedSeo("injury-management", {
     description: "Proactive injury screening and pain management.",
     images: [`${OG_ASSETS}/og-default.png`],
   },
-});
+};
 
 export default function InjuryManagementPage() {
   return (
