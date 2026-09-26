@@ -4,8 +4,14 @@ import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { ASSETS, NAV_LINKS } from "@/lib/constants";
+import AdminPreviewSection from "@/components/AdminPreviewSection";
 import BookingCta from "@/components/BookingCta";
+import { previewList, previewText, useAdminPreviewBlock } from "@/components/PreviewDraft";
+import { usePublishedBlock } from "@/components/PublishedContent";
+import { assetAlt } from "@/lib/asset-label";
+import { NAVBAR_DEFAULTS } from "@/lib/site-chrome";
+
+type NavLink = { label?: string; href?: string; children?: { label?: string; href?: string }[] };
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -13,19 +19,25 @@ export default function Navbar() {
   const [moreOpen, setMoreOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-
-  const programs = NAV_LINKS.find((l) => l.label === "Programs");
+  const draft = useAdminPreviewBlock("navbar-content", "NavbarContent");
+  const published = usePublishedBlock("navbar-content");
+  const logo = previewText(draft, "logo", NAVBAR_DEFAULTS.logo) || NAVBAR_DEFAULTS.logo;
+  const logoAlt = previewText(draft, "logoAlt", assetAlt(published?.props, "logo", NAVBAR_DEFAULTS.logoAlt)) || NAVBAR_DEFAULTS.logoAlt;
+  const ctaLabel = previewText(draft, "ctaLabel", NAVBAR_DEFAULTS.ctaLabel) || NAVBAR_DEFAULTS.ctaLabel;
+  const moreLabel = previewText(draft, "moreLabel", NAVBAR_DEFAULTS.moreLabel) || NAVBAR_DEFAULTS.moreLabel;
+  const primaryLinks = previewList<NavLink>(draft, "primaryLinks", NAVBAR_DEFAULTS.primaryLinks);
+  const moreLinks = previewList<NavLink>(draft, "moreLinks", NAVBAR_DEFAULTS.moreLinks);
+  const mobileLinks = [...primaryLinks, ...moreLinks];
 
   /** Check if a nav link is active based on current path */
-  const isActive = (href: string) => {
-    if (href === "/") return pathname === "/";
+  const isActive = (href?: string) => {
+    if (!href || href === "/") return pathname === "/";
     return pathname.startsWith(href);
   };
 
-  /** Check if any child of Programs is active */
+  /** Check if any child of a dropdown link is active */
   const isProgramsActive = () => {
-    const programsLink = NAV_LINKS.find((l) => l.children);
-    return programsLink?.children?.some((child) => pathname.startsWith(child.href)) ?? false;
+    return mobileLinks.some((link) => link.children?.some((child) => child.href && pathname.startsWith(child.href))) ?? false;
   };
 
   const closeMobileMenu = useCallback(() => {
@@ -61,7 +73,7 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
 
-  return (
+  const chrome = (
     <>
       {/* Header bar — always visible */}
       <header
@@ -74,10 +86,10 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link href="/" className="flex-shrink-0">
+            <Link href="/" data-admin-field="logoAlt" className="flex-shrink-0">
               <Image
-                src={`${ASSETS}/logo.png`}
-                alt="Stance Health"
+                src={logo}
+                alt={logoAlt}
                 width={170}
                 height={51}
                 className="h-14 w-auto"
@@ -87,7 +99,7 @@ export default function Navbar() {
 
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
-              {NAV_LINKS.filter(link => ["About", "Conditions", "Services", "Assessment"].includes(link.label)).map((link) =>
+              {primaryLinks.map((link, index) =>
                 link.children ? (
                   <div key={link.label} className="relative group">
                     <button
@@ -120,7 +132,7 @@ export default function Navbar() {
                           {link.children.map((child) => (
                             <Link
                               key={child.href}
-                              href={child.href}
+                              href={child.href || "/"}
                               className={`block px-4 py-2.5 text-sm transition-colors ${
                                 isActive(child.href)
                                   ? "text-[#cdfe71] bg-[#cdfe71]/5"
@@ -136,8 +148,11 @@ export default function Navbar() {
                   </div>
                 ) : (
                   <Link
-                    key={link.label}
-                    href={link.href}
+                    key={`${link.label}-${index}`}
+                    href={link.href || "/"}
+                    data-admin-list="primaryLinks"
+                    data-admin-list-index={index}
+                    data-admin-list-field="label"
                     className={`relative py-1 transition-colors duration-200 group/link ${
                       isActive(link.href)
                         ? "text-[#cdfe71]"
@@ -164,7 +179,7 @@ export default function Navbar() {
                   onMouseEnter={() => setMoreOpen(true)}
                   onMouseLeave={() => setMoreOpen(false)}
                 >
-                  More
+                  <span data-admin-field="moreLabel">{moreLabel}</span>
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
@@ -178,10 +193,13 @@ export default function Navbar() {
                     onMouseLeave={() => setMoreOpen(false)}
                   >
                     <div className="bg-[#1a3358] border border-white/10 rounded-xl shadow-xl overflow-hidden">
-                      {NAV_LINKS.filter(link => !["About", "Conditions", "Services", "Assessment"].includes(link.label)).map((link) => (
+                      {moreLinks.map((link, index) => (
                         <Link
-                          key={link.label}
-                          href={link.href}
+                          key={`${link.label}-${index}`}
+                          href={link.href || "/"}
+                          data-admin-list="moreLinks"
+                          data-admin-list-index={index}
+                          data-admin-list-field="label"
                           className={`block px-4 py-2.5 text-sm transition-colors ${
                             isActive(link.href)
                               ? "text-[#cdfe71] bg-[#cdfe71]/5"
@@ -199,7 +217,7 @@ export default function Navbar() {
 
             {/* CTA */}
             <div className="hidden lg:block">
-              <BookingCta className="btn-primary text-sm" label="Book an Appointment" />
+              <BookingCta className="btn-primary text-sm" label={ctaLabel} dataAdminField="ctaLabel" />
             </div>
 
             {/* Mobile/Tablet menu button */}
@@ -234,7 +252,7 @@ export default function Navbar() {
           {/* Menu panel — starts from top (behind header), only as tall as content */}
           <div className="fixed top-0 left-0 right-0 z-[55] bg-[#132644] lg:hidden pt-16">
             <div className="px-5 py-6 space-y-1">
-              {NAV_LINKS.map((link) =>
+              {mobileLinks.map((link, index) =>
                 link.children ? (
                   <div key={link.label}>
                     <button
@@ -253,7 +271,7 @@ export default function Navbar() {
                         {link.children.map((child) => (
                           <Link
                             key={child.href}
-                            href={child.href}
+                            href={child.href || "/"}
                             className={`block py-2 text-sm transition-colors ${
                               isActive(child.href)
                                 ? "text-[#cdfe71] font-medium"
@@ -269,8 +287,8 @@ export default function Navbar() {
                   </div>
                 ) : (
                   <Link
-                    key={link.label}
-                    href={link.href}
+                    key={`${link.label}-mobile-${index}`}
+                    href={link.href || "/"}
                     className={`block py-3 transition-colors ${
                       isActive(link.href)
                         ? "text-[#cdfe71] font-medium"
@@ -287,5 +305,12 @@ export default function Navbar() {
         </>
       )}
     </>
+  );
+
+  if (pathname !== "/navbar") return chrome;
+  return (
+    <AdminPreviewSection blockId="navbar-content" blockType="NavbarContent">
+      {chrome}
+    </AdminPreviewSection>
   );
 }
