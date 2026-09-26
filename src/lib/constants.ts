@@ -1,28 +1,57 @@
 export const BASE_URL = "https://www.stance.health";
 
-// ── Cloudinary asset base URLs ────────────────────────────────────────────
-// After running `bun scripts/upload-to-cloudinary.ts`, all assets are served
-// from Cloudinary with automatic format/quality optimization.
+// ── S3 asset base URLs ────────────────────────────────────────────────────
+// `node scripts/upload-to-s3.js` uploads everything in public/assets, keeping
+// the folder layout: images, SVG, mp4, mov, and fonts.
+// Set NEXT_PUBLIC_ASSET_BASE_URL to the public origin of that bucket
+// (CloudFront domain or https://<bucket>.s3.<region>.amazonaws.com).
 //
-// Cache-busting: We use Cloudinary's `_a` (analytics) query param with a
-// build-time timestamp. This forces CDN to serve fresh content after every
-// deployment without needing manual version bumping per image.
-// Update ASSET_VERSION when you replace images and need instant cache bust.
-const CLOUDINARY_CLOUD = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || "fxhi8rmk";
-const CLOUDINARY_BASE = `https://res.cloudinary.com/${CLOUDINARY_CLOUD}`;
+// Bump NEXT_PUBLIC_ASSET_VERSION after replacing a file so browsers request
+// the new object. `cb()` and `normalizeAssetUrl()` append `?_v=`.
+const ASSET_BASE = (process.env.NEXT_PUBLIC_ASSET_BASE_URL || "").replace(/\/$/, "");
 const ASSET_VERSION = process.env.NEXT_PUBLIC_ASSET_VERSION || "1";
 
-// Images: auto format (webp/avif) + auto quality + cache bust
-export const ASSETS = `${CLOUDINARY_BASE}/image/upload/f_auto,q_auto/stance-health/images`;
+export const ASSETS = `${ASSET_BASE}/stance-health/images`;
+export const VIDEO_ASSETS = `${ASSET_BASE}/stance-health/images`;
+export const OG_ASSETS = ASSETS;
 
-// Append cache-bust query param to any asset URL
-export const cb = (url: string) => `${url}?_v=${ASSET_VERSION}`;
+export const cb = (url: string) => {
+  const hashIndex = url.indexOf("#");
+  const hash = hashIndex === -1 ? "" : url.slice(hashIndex);
+  const withoutHash = hashIndex === -1 ? url : url.slice(0, hashIndex);
+  const queryIndex = withoutHash.indexOf("?");
+  const path = queryIndex === -1 ? withoutHash : withoutHash.slice(0, queryIndex);
+  const params = new URLSearchParams(queryIndex === -1 ? "" : withoutHash.slice(queryIndex + 1));
+  params.set("_v", ASSET_VERSION);
+  return `${path}?${params.toString()}${hash}`;
+};
 
-// Videos: served without transformations (Cloudinary streams them efficiently)
-export const VIDEO_ASSETS = `${CLOUDINARY_BASE}/video/upload/stance-health/images`;
+export const HERO_VIDEO = cb(`${ASSET_BASE}/stance-health/home_video_mglaq1.mp4`);
 
-// OG images: full absolute URL for social sharing metadata
-export const OG_ASSETS = `${CLOUDINARY_BASE}/image/upload/f_auto,q_auto/stance-health/images`;
+// Saved content may still point at Cloudinary or at /assets on this website.
+// Both are served from the same S3 key once NEXT_PUBLIC_ASSET_BASE_URL is set.
+export function normalizeAssetUrl(value: string): string {
+  const raw = value.trim();
+  if (!raw || !ASSET_BASE) return raw;
+
+  const hashIndex = raw.indexOf("#");
+  const hash = hashIndex === -1 ? "" : raw.slice(hashIndex);
+  const withoutHash = hashIndex === -1 ? raw : raw.slice(0, hashIndex);
+
+  let url = withoutHash;
+  const cloudinaryMarker = "/stance-health/";
+  if (withoutHash.includes("res.cloudinary.com") && withoutHash.includes(cloudinaryMarker)) {
+    url = `${ASSET_BASE}/${withoutHash.slice(withoutHash.indexOf(cloudinaryMarker) + 1)}`;
+  } else {
+    const local = withoutHash.match(/^(?:https?:\/\/(?:www\.)?stance\.health)?\/assets\/(\S+)$/);
+    if (local) url = `${ASSET_BASE}/stance-health/${local[1]}`;
+  }
+
+  const owned = url.startsWith(ASSET_BASE) || url.includes(".amazonaws.com/");
+  return owned ? `${cb(url)}${hash}` : raw;
+}
+
+export const normalizeCloudinaryAsset = normalizeAssetUrl;
 
 // ── Marketing / Analytics IDs ─────────────────────────────────────────────
 // Fill these in with your real IDs. An empty string disables that provider.
@@ -165,7 +194,7 @@ export const ASSESSMENT_SECTIONS = [
       "Immediate left-to-right comparison",
       "Repeatable positions for future reassessment",
     ],
-    image: `${ASSETS}/forceframe.png`,
+    image: cb(`${ASSETS}/forceframe.png`),
   },
   {
     id: "forcedecks",
@@ -179,7 +208,7 @@ export const ASSESSMENT_SECTIONS = [
       "Landing symmetry and balance",
       "Load absorption and weight distribution",
     ],
-    image: `${ASSETS}/forcedeck.png`,
+    image: cb(`${ASSETS}/forcedeck.png`),
   },
   {
     id: "dynamo",
@@ -193,7 +222,7 @@ export const ASSESSMENT_SECTIONS = [
       "Grip strength measurement",
       "Portable, targeted testing",
     ],
-    image: `${ASSETS}/assessment/dynamo.png`,
+    image: cb(`${ASSETS}/assessment/dynamo.png`),
   },
   {
     id: "output",
@@ -207,7 +236,7 @@ export const ASSESSMENT_SECTIONS = [
       "Power measurement",
       "Set-to-set and reassessment comparison",
     ],
-    image: `${ASSETS}/assessment/Output_sensor.png`,
+    image: cb(`${ASSETS}/assessment/Output_sensor.png`),
   },
   {
     id: "smartspeed",
@@ -303,7 +332,7 @@ export const TESTIMONIALS = [
     name: "Ritura Biswas",
     role: "Fintech Growth Lead",
     condition: "ACL & Meniscus Surgery",
-    image: `${ASSETS}/ritura.png`,
+    image: cb(`${ASSETS}/ritura.png`),
     quote:
       "I tore through an ACL, surgery 6 months ago and have worked with multiple people to get back to action. The thoroughness of assessment and knowledgeable consultation with the Physio at Stance helped me to understand the underlying issues which helped me to plan my recovery better.",
   },
@@ -311,7 +340,7 @@ export const TESTIMONIALS = [
     name: "Anuj Jindal",
     role: "SVP MediAssist",
     condition: "Chronic Back Pain",
-    image: `${ASSETS}/anuj.png`,
+    image: cb(`${ASSETS}/anuj.png`),
     quote:
       "After dealing with prolonged back pain for years, I had the opportunity of visiting Stance where I received a comprehensive assessment of my spinal condition. The transparent diagnosis and data-based assessments provided a series of relief to upkeep my rehab goals.",
   },
@@ -319,7 +348,7 @@ export const TESTIMONIALS = [
     name: "Nikhil Thard",
     role: "Chairman Edifice Labs",
     condition: "Low Back Pain",
-    image: `${ASSETS}/nikhil.png`,
+    image: cb(`${ASSETS}/nikhil.png`),
     quote:
       "After consulting with the physios at Stance, they reassured me that I was undergoing progress and worked all my problems out. They explained the process of treatment and care enabled me to gain immense confidence in my abilities.",
   },
@@ -327,7 +356,7 @@ export const TESTIMONIALS = [
     name: "Divyanshu",
     role: "Founder Glam+",
     condition: "Health Enthusiast",
-    image: `${ASSETS}/divyanshu.png`,
+    image: cb(`${ASSETS}/divyanshu.png`),
     quote:
       "The team at Stance helped with a thorough assessment of my body to understand the right exercise programme for me, creating personalised plans that have significantly improved my athletic performance.",
   },
@@ -335,7 +364,7 @@ export const TESTIMONIALS = [
     name: "Ashish Lingamneni",
     role: "Marketing Leader",
     condition: "Basketball Enthusiast",
-    image: `${ASSETS}/linganmeni.png`,
+    image: cb(`${ASSETS}/linganmeni.png`),
     quote:
       "Stance's approach to sports rehabilitation is exceptional. Their expertise in biomechanics and movement analysis has helped me return to peak performance and prevent future injuries.",
   },
@@ -343,7 +372,7 @@ export const TESTIMONIALS = [
     name: "Aastha Gupta",
     role: "Adobe Digital Experience Architect",
     condition: "Anterior Knee Pain",
-    image: `${ASSETS}/aastha.png`,
+    image: cb(`${ASSETS}/aastha.png`),
     quote:
       "The detailed assessment at Stance gave me a clear understanding of my knee condition. The personalised rehab programme has dramatically reduced my pain and improved my quality of life.",
   },
@@ -351,7 +380,7 @@ export const TESTIMONIALS = [
     name: "Saumya Dubey",
     role: "Product Leader",
     condition: "Recurrent Ankle Pain",
-    image: `${ASSETS}/saumya.png`,
+    image: cb(`${ASSETS}/saumya.png`),
     quote:
       "After struggling with recurring ankle pain that kept me off the field, Stance's comprehensive approach and technology-driven assessment identified the root cause and got me back stronger than before.",
   },
@@ -359,7 +388,7 @@ export const TESTIMONIALS = [
     name: "Pranav Iyer",
     role: "Founding Team Stable Money",
     condition: "ACL Surgery",
-    image: `${ASSETS}/pranav.png`,
+    image: cb(`${ASSETS}/pranav.png`),
     quote:
       "My ACL recovery at Stance was exceptional. The data-driven approach, regular assessments, and personalised programme gave me confidence throughout rehabilitation and helped me return to sport ahead of schedule.",
   },
@@ -370,14 +399,14 @@ export const TEAM = [
     name: "Durga Joshi",
     role: "Lead Musculoskeletal and Sports Physiotherapist",
     experience: "12+ years experience",
-    image: `${ASSETS}/durga.jpg`,
+    image: cb(`${ASSETS}/durga.jpg`),
     bio: "Durga brings over 12 years of experience in musculoskeletal and sports physiotherapy, specializing in manual therapy techniques such as Maitland, McKenzie, Clinical Pilates, and Butler's Neurodynamic treatments. Her professional journey includes collaborations with esteemed institutions like Sakra World Hospital and YOS Sports Health Specialists, as well as working closely with industry's best physiotherapists and sports medicine doctors.",
   },
   // {
   //   name: "Sumesh Ashokan",
   //   role: "Senior Musculoskeletal and Sports Physiotherapist",
   //   experience: "8+ years experience",
-  //   image: `${ASSETS}/team-2.svg`,
+  //   image: cb(`${ASSETS}/team-2.svg`),
   //   bio: "As an athlete turned physiotherapist, Sumesh's mission at Stance is to guide you from injury recovery to performance enhancement. With his experience in various sports and a deep understanding of human anatomy, he provides personalized care tailored to your needs. His holistic approach ensures accurate diagnosis and prevention of future injuries, helping you achieve a better tomorrow.",
   // },
   {
@@ -391,14 +420,14 @@ export const TEAM = [
     name: "Arjun K Raj",
     role: "Senior Strength and Conditioning Coach",
     experience: "6+ years experience",
-    image: `${ASSETS}/Arjun.jpg`,
+    image: cb(`${ASSETS}/Arjun.jpg`),
     bio: "At Stance, Arjun's goal is to help you achieve your fitness aspirations through personalized, meticulously crafted training programs. By understanding your unique needs, he tailors each plan to guide you towards peak performance and a healthier lifestyle. Together, you will unlock your full potential and ensure every step is taken towards your success.",
   },
   {
     name: "Surbhi Paranjpe",
     role: "Senior Musculoskeletal and Sports Physiotherapist",
     experience: "5+ years experience",
-    image: `${ASSETS}/Surbhi.jpg`,
+    image: cb(`${ASSETS}/Surbhi.jpg`),
     bio: "With a commitment to precise diagnosis and evidence-based treatment, Surbhi helps you manage and overcome musculoskeletal conditions. Her focus is on pain management and performance enhancement, ensuring you achieve your objectives while minimizing injury risks. Through tailored programs and education, she empowers you to reach your full athletic potential.",
   },
   //new members
@@ -406,168 +435,168 @@ export const TEAM = [
   //   name: "Maitri Gala",
   //   role: "Physiotherapist",
   //   experience: "5+ years experience",
-  //   image: `${ASSETS}/team-5.svg`,
+  //   image: cb(`${ASSETS}/team-5.svg`),
   //   bio: "Maitri is a physiotherapist with experience working with national-level athletes across sports such as hockey, volleyball, and football. Her work focuses on injury prevention, rehabilitation, and optimizing physical performance through individualized treatment strategies. She applies evidence-based physiotherapy to support recovery from musculoskeletal injuries and improve functional movement.",
   // },
   {
     name: "Vignesh Seetharaman",
     role: "Sports Physiotherapist",
     experience: "6+ years experience",
-    image: `${ASSETS}/team-6.png`,
+    image: cb(`${ASSETS}/team-6.png`),
     bio: "Vignesh is a sports physiotherapist with a degree in physiotherapy and advanced training in sports physiotherapy, specializing in injury rehabilitation and return-to-play protocols. His work includes musculoskeletal assessments, manual therapy techniques, and sports-specific rehabilitation strategies. He has supported athletes across football, squash, hockey, kabaddi, volleyball, and weightlifting.",
   },
   {
     name: "Sneha Jain",
     role: "Sports Physiotherapist",
     experience: "4+ years experience",
-    image: `${ASSETS}/team-7.png`,
+    image: cb(`${ASSETS}/team-7.png`),
     bio: "Sneha holds a degree in Physiotherapy and is pursuing specialization in Sports Physiotherapy. Her work focuses on post-operative sports injury rehabilitation, including ACL reconstruction and shoulder instability cases, alongside movement screening and performance recovery.",
   },
   // {
   //   name: "Vaishnavi Balani",
   //   role: "Musculoskeletal Physiotherapist",
   //   experience: "4+ years experience",
-  //   image: `${ASSETS}/team-8.png`,
+  //   image: cb(`${ASSETS}/team-8.png`),
   //   bio: "Vaishnavi holds a degree in Physiotherapy and is pursuing a specialization in Musculoskeletal Physiotherapy. Her work focuses on orthopedic rehabilitation, post-operative recovery, and patient-specific exercise therapy.",
   // },
   {
     name: "Shreya Poojary",
     role: "Physiotherapist",
     experience: "4+ years experience",
-    image: `${ASSETS}/team-9.png`,
+    image: cb(`${ASSETS}/team-9.png`),
     bio: "Shreya holds a degree in Physiotherapy with experience in musculoskeletal rehabilitation and sports physiotherapy. Her work includes treating orthopedic and spinal conditions, designing rehabilitation programs, and providing on-field physiotherapy support.",
   },
   {
     name: "Vanshika Tandon",
     role: "Musculoskeletal Physiotherapist",
     experience: "4+ years experience",
-    image: `${ASSETS}/team-10.png`,
+    image: cb(`${ASSETS}/team-10.png`),
     bio: "Vanshika holds a degree in Physiotherapy and is pursuing specialization in Musculoskeletal and Manual Therapy. Her work focuses on rehabilitation planning, functional mobility restoration, and manual therapy techniques.",
   },
   {
     name: "Arun Raj",
     role: "Sports Physiotherapist",
     experience: "6+ years experience",
-    image: `${ASSETS}/Arun.jpg`,
+    image: cb(`${ASSETS}/Arun.jpg`),
     bio: "Arun holds degrees in Physiotherapy and Musculoskeletal & Sports Physiotherapy and focuses on orthopedic and sports injury rehabilitation. His work emphasizes individualized rehabilitation protocols, injury prevention strategies, and functional recovery.",
   },
   {
     name: "Keerthana S",
     role: "Sports Physiotherapist",
     experience: "4+ years experience",
-    image: `${ASSETS}/team-12.png`,
+    image: cb(`${ASSETS}/team-12.png`),
     bio: "Keerthana holds a degree in Physiotherapy and is pursuing specialization in Sports Physiotherapy. Her work focuses on athlete assessment, injury prevention, kinesiology taping, and return-to-sport rehabilitation.",
   },
   {
     name: "Erica D'Costa",
     role: "Musculoskeletal Physiotherapist",
     experience: "4+ years experience",
-    image: `${ASSETS}/Erica.png`,
+    image: cb(`${ASSETS}/Erica.png`),
     bio: "Erica holds a degree in Physiotherapy and is pursuing specialization in Musculoskeletal Physiotherapy. Her work focuses on assessment and rehabilitation of musculoskeletal injuries through exercise therapy and manual therapy approaches.",
   },
   {
     name: "Pandieswari Pandian",
     role: "Sports Physiotherapist",
     experience: "5+ years experience",
-    image: `${ASSETS}/Eswari.jpg`,
+    image: cb(`${ASSETS}/Eswari.jpg`),
     bio: "Pandieswari holds a degree in Physiotherapy with experience in musculoskeletal and sports injury rehabilitation. She utilizes techniques such as dry needling, myofascial release, joint mobilization, and kinesiology taping to support patient recovery.",
   },
   {
     name: "Kiandra Fernandes",
     role: "Musculoskeletal Physiotherapist",
     experience: "5+ years experience",
-    image: `${ASSETS}/Kiandra.png`,
+    image: cb(`${ASSETS}/Kiandra.png`),
     bio: "Kiandra is a musculoskeletal physiotherapist pursuing specialization in Musculoskeletal Sciences, with a background in exercise-based rehabilitation and manual therapy. She focuses on structured rehabilitation for musculoskeletal and sports-related injuries.",
   },
   {
     name: "Harini Bidari",
     role: "Musculoskeletal Physiotherapist",
     experience: "5+ years experience",
-    image: `${ASSETS}/team-16.png`,
+    image: cb(`${ASSETS}/team-16.png`),
     bio: "Harini is a musculoskeletal physiotherapist specializing in post-operative rehabilitation, biomechanics, and exercise-based recovery. She integrates manual therapy, movement assessment, and strength-focused rehabilitation to support patient outcomes.",
   },
   {
     name: "Pradyumna Bopaiah",
     role: "Strength and Conditioning Coach",
     experience: "10+ years experience",
-    image: `${ASSETS}/team-18.png`,
+    image: cb(`${ASSETS}/team-18.png`),
     bio: "Pradyumna is a high-performance strength and conditioning coach with a background in sprinting. He has worked with international cricketers, elite track and field athletes, and national-level football players.",
   },
   {
     name: "Srinivas M",
     role: "Strength and Conditioning Coach",
     experience: "8+ years experience",
-    image: `${ASSETS}/team-19.png`,
+    image: cb(`${ASSETS}/team-19.png`),
     bio: "Srinivas is a physiotherapist and sports scientist working in strength and conditioning. He integrates clinical expertise with evidence-based training to build strength, resilience, and long-term athletic capacity.",
   },
   {
     name: "Sharvari Godase",
     role: "Strength and Conditioning Coach",
     experience: "5+ years experience",
-    image: `${ASSETS}/team-20.png`,
+    image: cb(`${ASSETS}/team-20.png`),
     bio: "Sharvari holds a degree in Sports and Exercise Science and focuses on structured strength testing, sport-specific program design, and functional strength development. She brings competitive sporting experience into her coaching approach.",
   },
   {
     name: "Shubh Gupta",
     role: "Strength and Conditioning Coach",
     experience: "5+ years experience",
-    image: `${ASSETS}/team-21.png`,
+    image: cb(`${ASSETS}/team-21.png`),
     bio: "Shubh holds a degree in Exercise and Sports Science with training in biomechanics, exercise physiology, and athlete performance testing. His work focuses on strength programming, biomechanical analysis, and return-to-play support.",
   },
   {
     name: "Kaushik Jadhav",
     role: "Strength and Conditioning Coach",
     experience: "6+ years experience",
-    image: `${ASSETS}/team-22.png`,
+    image: cb(`${ASSETS}/team-22.png`),
     bio: "Kaushik holds a BPED qualification and ASCA Level 1 certification in Strength and Conditioning. His coaching focuses on structured performance testing, strength development, and safe return-to-sport progression.",
   },
   {
     name: "Sanket Sharma",
     role: "Strength and Conditioning Coach",
     experience: "8+ years experience",
-    image: `${ASSETS}/team-23.png`,
+    image: cb(`${ASSETS}/team-23.png`),
     bio: "Sanket is a Certified Strength and Conditioning Specialist (CSCS) with additional training in sports nutrition and sports psychology. His work focuses on speed, power development, and sport-specific conditioning.",
   },
   {
     name: "Vamshi P",
     role: "Strength and Conditioning Coach",
     experience: "5+ years experience",
-    image: `${ASSETS}/team-24.png`,
+    image: cb(`${ASSETS}/team-24.png`),
     bio: "Vamshi holds a degree in Sports and Exercise Science with training in biomechanics, exercise physiology, and athlete performance testing. His work involves strength and conditioning program design alongside physiological and biomechanical assessments.",
   },
   {
     name: "Rajath M",
     role: "Strength and Conditioning Coach",
     experience: "5+ years experience",
-    image: `${ASSETS}/team-25.png`,
+    image: cb(`${ASSETS}/team-25.png`),
     bio: "Rajath holds a degree in Sports Science with training in biomechanics, exercise physiology, and sports nutrition. His work focuses on performance assessment, strength and conditioning program design, and recovery strategies.",
   },
   {
     name: "Soham Veer",
     role: "Strength and Conditioning Coach",
     experience: "5+ years experience",
-    image: `${ASSETS}/soham.jpg`,
+    image: cb(`${ASSETS}/soham.jpg`),
     bio: "Soham holds a degree in Sports and Exercise Science with specialization in sports biomechanics and strength and conditioning. He develops sport-specific strength and conditioning programs to improve movement efficiency and athletic performance.",
   },
   {
     name: "Pooja Khandelwal",
     role: "Strength and Conditioning Coach",
     experience: "7+ years experience",
-    image: `${ASSETS}/pooja.png`,
+    image: cb(`${ASSETS}/pooja.png`),
     bio: "Pooja is a Certified Strength and Conditioning Specialist (CSCS) with additional certifications in personal training and fitness nutrition. She focuses on strength development, conditioning, and injury prevention through individualized training programs.",
   },
   {
     name: "Prajwal Acharya",
     role: "Strength and Conditioning Coach",
     experience: "6+ years experience",
-    image: `${ASSETS}/team-28.png`,
+    image: cb(`${ASSETS}/team-28.png`),
     bio: "Prajwal holds degrees in Exercise and Sports Science with specialization in strength and conditioning, biomechanics, and exercise physiology. His work focuses on athlete performance testing and data-driven training program design.",
   },
   // {
   //   name: "Hemanth Das",
   //   role: "Strength and Conditioning Coach",
   //   experience: "6+ years experience",
-  //   image: `${ASSETS}/team-29.png`,
+  //   image: cb(`${ASSETS}/team-29.png`),
   //   bio: "Hemanth is a Strength and Conditioning Coach with experience working with elite and team sport athletes. He designs individualized training programs and periodized plans to help athletes build strength, improve resilience, and return to sport safely.",
   // },
   {
@@ -584,7 +613,7 @@ export const PROGRAMS = [
     id: "running",
     label: "In Your Stride",
     href: "/running",
-    image: `${ASSETS}/pt-1.svg`,
+    image: cb(`${ASSETS}/pt-1.svg`),
     description:
       "Extensive running program designed for grassroots and elite runners. Backed by high-end technology-based analysis to improve your running efficiency. Our approach focuses on preventing injuries and maximising performance.",
   },
@@ -592,7 +621,7 @@ export const PROGRAMS = [
     id: "back-to-sports",
     label: "Reclaim Your Game",
     href: "/back-to-sports",
-    image: `/assets/images/pt-2.svg`,
+    image: cb(`${ASSETS}/pt-2.svg`),
     description:
       "Comprehensive return-to-sport rehabilitation programme designed to safely guide athletes back to their chosen sport after injury, using evidence-based protocols and performance testing.",
   },
@@ -600,7 +629,7 @@ export const PROGRAMS = [
     id: "surgical-rehab",
     label: "Back on your feet",
     href: "/surgical-rehab",
-    image: `${ASSETS}/pt-3.svg`,
+    image: cb(`${ASSETS}/pt-3.svg`),
     description:
       "Specialised pre and post-operative rehabilitation programme to optimise surgical outcomes, reduce recovery time, and restore full function and performance.",
   },
@@ -608,7 +637,7 @@ export const PROGRAMS = [
     id: "injury-management",
     label: "Prevention & Recovery",
     href: "/injury-management",
-    image: `${ASSETS}/pt-4.svg`,
+    image: cb(`${ASSETS}/pt-4.svg`),
     description:
       "Proactive injury prevention and management programme combining screening, education, and targeted interventions to keep you performing at your best.",
   },
@@ -616,7 +645,7 @@ export const PROGRAMS = [
     id: "performance-training",
     label: "Breaking Barriers",
     href: "/performance-training",
-    image: `${ASSETS}/pt-5.svg`,
+    image: cb(`${ASSETS}/pt-5.svg`),
     description:
       "High-performance training programme for individuals looking to elevate their athletic performance and overcome physical barriers through evidence-based strength and conditioning.",
   },
@@ -809,7 +838,7 @@ export const CENTERS = [
     phone: "+91 6360014559",
     address:
       "2nd Floor, 1555, 19th Main Rd, Agara, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102",
-    image: `${ASSETS}/HSR.JPG`,
+    image: cb(`${ASSETS}/HSR.JPG`),
     maps: "https://maps.app.goo.gl/RHWQ7VEB45CYPAE66",
   },
   {
@@ -817,7 +846,7 @@ export const CENTERS = [
     phone: "+91 6361056456",
     address:
       "4th Floor, Kailash Parbat, No. 149, Doddanakundi, 2nd Phase, Hoodi, Whitefield, Bengaluru, Karnataka 560048",
-    image: `${ASSETS}/whitefield.webp`,
+    image: cb(`${ASSETS}/whitefield.webp`),
     maps: "https://maps.app.goo.gl/FCk4gaXCgviPFJMG8",
   },
   {
@@ -825,7 +854,7 @@ export const CENTERS = [
     phone: "+91 9008417804",
     address:
       "3rd Floor, Srinivasan Towers, ESI Hospital Road, Defence Colony, Indiranagar, Bengaluru, Karnataka 560038",
-    image: `${ASSETS}/indra.webp`,
+    image: cb(`${ASSETS}/indra.webp`),
     maps: "https://maps.app.goo.gl/xLpXLPXRtuY8S21w8",
   },
   {
@@ -833,7 +862,7 @@ export const CENTERS = [
     phone: "+91 6366940195",
     address:
       "Ward No.57, 3rd Floor, V.B.R Ruddhi, 558, 9th Cross Rd, 3rd Phase, J. P. Nagar, Bengaluru, Karnataka 560078",
-    image: `${ASSETS}/JP_Nagar.jpg`,
+    image: cb(`${ASSETS}/JP_Nagar.jpg`),
     maps: "https://maps.app.goo.gl/NHvNAa1mRZbmjsKv9",
   },
   {
@@ -841,7 +870,7 @@ export const CENTERS = [
     phone: "+91 7625051785",
     address:
       "Unit No. 22, 2nd floor, 80 Feet Rd, S.T. Bed, 4th Block, Koramangala, Bengaluru, Karnataka 560034",
-    image: `${ASSETS}/koramangala.jpeg`,
+    image: cb(`${ASSETS}/koramangala.jpeg`),
     maps: "https://maps.app.goo.gl/Pe6diykLUL22aLfa9",
   },
 ];

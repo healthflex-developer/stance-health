@@ -6,10 +6,12 @@
     "dev": "next dev -p 3002",
     "build": "next build",
     "start": "next start -p 3002",
-    "lint": "eslint"
+    "lint": "eslint",
+    "upload-assets": "node scripts/upload-to-s3.js",
+    "replace-image": "node scripts/replace-image.js"
   },
   "dependencies": {
-    "cloudinary": "^2.10.0",
+    "@aws-sdk/client-s3": "^3.1139.0",
     "firebase": "^12.16.0",
     "framer-motion": "^11.18.2",
     "gsap": "^3.15.0",
@@ -17,6 +19,7 @@
     "qrcode": "1.5.4",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "sharp": "0.34.5",
     "swiper": "^12.2.0"
   },
   "devDependencies": {

@@ -1,5 +1,6 @@
 import path from "path";
 import { promises as fs } from "fs";
+import { normalizeAssetUrl } from "@/lib/constants";
 
 export type BlogSection =
   | { type: "paragraph"; content: string }
@@ -29,7 +30,11 @@ export async function getAllBlogs(): Promise<BlogPost[]> {
   if (_cache) return _cache;
   const filePath = path.join(process.cwd(), "public", "data", "blogs.json");
   const raw = await fs.readFile(filePath, "utf-8");
-  _cache = JSON.parse(raw) as BlogPost[];
+  _cache = (JSON.parse(raw) as BlogPost[]).map((post) => ({
+    ...post,
+    coverImage: normalizeAssetUrl(post.coverImage),
+    author: { ...post.author, avatar: normalizeAssetUrl(post.author.avatar) },
+  }));
   return _cache;
 }
 

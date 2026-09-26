@@ -2,11 +2,25 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
+    // SVGs are served as files from S3. Next blocks remote SVG unless this is set.
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "cdn.stance.health",
+      },
+      {
+        protocol: "https",
+        hostname: "**.amazonaws.com",
+      },
+      {
+        protocol: "https",
+        hostname: "stance-development-upload.s3.us-east-1.amazonaws.com",
+      },
+      {
+        protocol: "https",
         hostname: "res.cloudinary.com",
-        pathname: "/fxhi8rmk/**",
       },
       {
         protocol: "https",
@@ -18,7 +32,6 @@ const nextConfig: NextConfig = {
         hostname: "images.unsplash.com",
       },
     ],
-    // Cloudinary handles format negotiation — request webp/avif via URL params
     formats: ["image/avif", "image/webp"],
   },
 };
