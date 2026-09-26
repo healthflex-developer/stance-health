@@ -28,7 +28,7 @@ export default function BackToSportsPage() {
     <ProgramPageLayout
       title="Reclaim Your Game"
       subtitle="Our return-to-play programme leverages the latest in sports health and physiotherapy to maximise your recovery and performance."
-      bannerImage={`/assets/images/pt-2.svg`}
+      bannerImage={`${ASSETS}/pt-2.svg`}
       intro="Our comprehensive return-to-sport rehabilitation programme is designed to safely guide athletes back to their chosen sport after injury. Using evidence-based protocols and performance testing, we create customised athlete recovery pathways that facilitate smooth transitions back to sport-specific performance levels."
       whyTitle="Our Return-to-Play Approach"
       features={[

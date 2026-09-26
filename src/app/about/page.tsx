@@ -59,7 +59,7 @@ export default function AboutPage() {
         <section className="relative min-h-[420px] flex items-end pb-16 pt-32 bg-[#132644]">
           <div className="absolute inset-0 overflow-hidden">
             <Image
-              src={`/assets/images/about-banner.svg`}
+              src={`${ASSETS}/about-banner.svg`}
               alt="About Stance Health"
               fill
               className="object-cover object-center opacity-30"
