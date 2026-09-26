@@ -1,0 +1,46 @@
+{
+  "slug": "terms-and-conditions",
+  "title": "Terms and Conditions",
+  "seo": {
+    "title": "Terms and Conditions",
+    "description": "Please read these terms and conditions carefully before using Stance Health services.",
+    "canonical": "/terms-and-conditions"
+  },
+  "blocks": [
+    {
+      "id": "terms-and-conditions-hero",
+      "type": "PageHero",
+      "props": {
+        "description": "Please read these terms and conditions carefully before using Stance Health services.",
+        "eyebrow": "Legal",
+        "headline": "Terms and",
+        "highlight": "Conditions"
+      }
+    },
+    {
+      "id": "terms-and-conditions-section-1",
+      "type": "PageSection",
+      "props": {
+        "body": "The conditions that govern access to this website and its materials.",
+        "heading": "Terms of Use"
+      }
+    },
+    {
+      "id": "terms-and-conditions-section-2",
+      "type": "PageSection",
+      "props": {
+        "body": "Permitted use of website materials and associated restrictions.",
+        "heading": "Licence and Limitations"
+      }
+    },
+    {
+      "id": "terms-and-conditions-section-3",
+      "type": "PageSection",
+      "props": {
+        "body": "The legal framework applicable to these terms.",
+        "heading": "Governing Law"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}

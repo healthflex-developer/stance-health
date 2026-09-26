@@ -1,0 +1,217 @@
+{
+  "slug": "assessment",
+  "title": "Stance Objective Assessment",
+  "seo": {
+    "title": "Stance Objective Assessment",
+    "description": "Technology-driven assessments that measure strength, movement, and physical capacity for a personalised recovery plan.",
+    "canonical": "/assessment"
+  },
+  "blocks": [
+    {
+      "id": "assessment-hero",
+      "type": "AssessmentHero",
+      "props": {
+        "ctaLabel": "Book an Assessment",
+        "description": "Our technology-driven assessments provide an objective picture of your strength, movement and physical capacity. Combined with a detailed clinical assessment, this data helps us personalise your treatment, monitor progress and determine what your body needs to move and perform with confidence.",
+        "eyebrow": "Stance Objective Assessment",
+        "headlineHighlight": "Measurable",
+        "headlinePrefix": "Technology That Makes Progress "
+      }
+    },
+    {
+      "id": "assessment-tool-navigation",
+      "type": "AssessmentToolNavigation",
+      "props": {
+        "heading": "Our Assessment Tools",
+        "tools": [
+          {
+            "id": "forceframe",
+            "label": "VALD ForceFrame",
+            "num": "01"
+          },
+          {
+            "id": "forcedecks",
+            "label": "VALD ForceDecks",
+            "num": "02"
+          },
+          {
+            "id": "dynamo",
+            "label": "VALD DynaMo",
+            "num": "03"
+          },
+          {
+            "id": "output",
+            "label": "Output Sports Sensors",
+            "num": "04"
+          },
+          {
+            "id": "smartspeed",
+            "label": "VALD SmartSpeed",
+            "num": "05"
+          }
+        ]
+      }
+    },
+    {
+      "id": "assessment-tool-details",
+      "type": "AssessmentToolDetails",
+      "props": {
+        "tools": [
+          {
+            "badge": "VALD FORCEFRAME",
+            "description": "ForceFrame gives our team objective measurements of strength across major joints and muscle groups. This allows us to identify weaknesses and side-to-side imbalances, personalise your treatment and show you how your strength is improving over time.",
+            "id": "forceframe",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/forceframe.png",
+            "num": "01",
+            "points": [
+              {
+                "text": "Joint-specific strength measurement"
+              },
+              {
+                "text": "Immediate left-to-right comparison"
+              },
+              {
+                "text": "Repeatable positions for future reassessment"
+              },
+              {
+                "text": "heelooo"
+              }
+            ],
+            "title": "Measure Strength and Identify Imbalances"
+          },
+          {
+            "badge": "VALD FORCEDECKS",
+            "description": "By analysing how you jump, land, balance and absorb force, ForceDecks helps our team identify movement strategies that may limit your recovery or performance. You receive a clearer understanding of your capabilities and a progression plan based on measurable results.",
+            "id": "forcedecks",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/forcedeck.png",
+            "num": "02",
+            "points": [
+              {
+                "text": "Jump height, force and power"
+              },
+              {
+                "text": "Landing symmetry and balance"
+              },
+              {
+                "text": "Load absorption and weight distribution"
+              }
+            ],
+            "title": "Understand Power, Balance and Movement"
+          },
+          {
+            "badge": "VALD DYNAMO",
+            "description": "Portable strength testing with Dynamo enables our team to assess specific muscles and joints wherever targeted testing is required. The results help us focus your treatment on the areas that need the most attention and demonstrate whether those areas are becoming stronger.",
+            "id": "dynamo",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/assessment/dynamo.png",
+            "num": "03",
+            "points": [
+              {
+                "text": "Push and pull strength tests"
+              },
+              {
+                "text": "Grip strength measurement"
+              },
+              {
+                "text": "Portable, targeted testing"
+              }
+            ],
+            "title": "Pinpoint Muscle Weaknesses"
+          },
+          {
+            "badge": "OUTPUT SPORTS SENSORS",
+            "description": "Output Sports sensors provide real-time information about movement velocity, power and exercise performance. This helps our team select appropriate loads, adjust your training intensity and progress exercises at the right time, giving you a programme that responds to your individual capabilities.",
+            "id": "output",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/assessment/Output_sensor.png",
+            "num": "04",
+            "points": [
+              {
+                "text": "Movement and repetition velocity"
+              },
+              {
+                "text": "Power measurement"
+              },
+              {
+                "text": "Set-to-set and reassessment comparison"
+              }
+            ],
+            "title": "Personalise Training Intensity"
+          },
+          {
+            "badge": "VALD SMARTSPEED",
+            "description": "SmartSpeed timing gates accurately measure acceleration, sprint speed and change-of-direction performance. Our team uses this information to tailor speed and agility training, while helping you track progress and prepare for the real demands of your sport.",
+            "id": "smartspeed",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/assessment/smartspeed.png?_v=1",
+            "num": "05",
+            "points": [
+              {
+                "text": "Sprint speed and total time"
+              },
+              {
+                "text": "Acceleration and split times"
+              },
+              {
+                "text": "Selected agility and reactivity tests"
+              }
+            ],
+            "title": "Track Speed and Agility"
+          },
+          {
+            "badge": "helmooo",
+            "description": "this is the descriptionnnn",
+            "id": "",
+            "image": "",
+            "num": "06",
+            "points": [
+              {
+                "text": "hello"
+              },
+              {
+                "text": "helmoo"
+              },
+              {
+                "text": "hui huii"
+              }
+            ],
+            "title": "helooo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "assessment-performance-data",
+      "type": "AssessmentPerformanceData",
+      "props": {
+        "description": "Side-to-side comparisons make strength gaps easy to understand and give your clinician a clear benchmark for the next phase of your programme.",
+        "eyebrow": "Objective Performance Data",
+        "heading": "See exactly where you stand",
+        "measurements": [
+          {
+            "asym": "0.4% Left",
+            "left": "117.3 N",
+            "right": "117.8 N",
+            "title": "Knee Flexion – Prone"
+          },
+          {
+            "asym": "26.1% Left",
+            "left": "325.1 N",
+            "right": "440.2 N",
+            "title": "Knee Extension"
+          },
+          {
+            "asym": "12.3% Left",
+            "left": "607.3 N",
+            "right": "692.4 N",
+            "title": "Ankle Plantarflexion"
+          },
+          {
+            "asym": "6.9% Right",
+            "left": "234.5 N",
+            "right": "251.8 N",
+            "title": "Hip AD/AB – 45"
+          }
+        ]
+      }
+    }
+  ],
+  "schemaVersion": 1
+}

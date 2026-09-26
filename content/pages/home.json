@@ -1,0 +1,395 @@
+{
+  "slug": "home",
+  "title": "Home",
+  "seo": {
+    "title": "Stance Health",
+    "description": "Evidence-backed Orthopaedic Rehab and Sports Performance in Bangalore.",
+    "canonical": "/"
+  },
+  "blocks": [
+    {
+      "id": "hero",
+      "type": "Hero",
+      "props": {
+        "ctaHref": "https://book.stance.health/stance-health",
+        "ctaLabel": "Book an Appointment",
+        "headline": "Welcome To Stance Health ",
+        "highlight": "Stance Health",
+        "paragraph": "Evidence-backed Orthopaedic Rehab and Sports Performance."
+      }
+    },
+    {
+      "id": "framework",
+      "type": "Framework",
+      "props": {
+        "heading": "Guiding Each Stride in Your Journey",
+        "steps": [
+          {
+            "description": "Evaluate your MSK health comprehensively with Stance's advanced diagnostic tools and expert tests, gaining insights into your body's needs while discovering root causes for conditions. Our experienced team supports your assessment and recommends personalised treatment plans tailored to your unique requirements...",
+            "icon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/assess.png",
+            "id": "assess",
+            "label": "Asses"
+          },
+          {
+            "description": "Start your personalised recovery journey with expert support, integrating evidence-based practices and technology to address your MSK conditions, enhance physical performance, and achieve your health goals.",
+            "icon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/rehab.svg",
+            "id": "rehab",
+            "label": "Rehab"
+          },
+          {
+            "description": "Our team helps you apply rehabilitation insights to real life, using our platform to track your exercises, ensuring you stay on track and successfully re-engage with your daily activities and sporting pursuits.",
+            "icon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/engage.svg",
+            "id": "engage",
+            "label": "Re-engage"
+          },
+          {
+            "description": "Review your progress with regular check-ins and assessments. Stance helps you stay on track by refining your training programme to ensure your continued success.",
+            "icon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/enhance.svg",
+            "id": "enhance",
+            "label": "Enhance"
+          }
+        ]
+      }
+    },
+    {
+      "id": "technology",
+      "type": "Technology",
+      "props": {
+        "heading": "Technology",
+        "items": [
+          {
+            "description": "This is the demo desciptionnnn",
+            "icon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/run.svg",
+            "id": "gait-analysis",
+            "name": "Testingg name"
+          },
+          {
+            "description": "Wearable sensor technology for objective running analysis — measuring foot strike, cadence, braking, and symmetry across every step",
+            "icon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/run.svg",
+            "id": "gait-analysis",
+            "name": "Gait Analysis"
+          },
+          {
+            "description": "Portable Dynamometer and inclinometer for testing strength and range of motion",
+            "icon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/dynamo.svg",
+            "id": "vald-dynamo",
+            "name": "VALD | Dynamo"
+          },
+          {
+            "description": "Accurate testing of isometric strength across various muscle groups",
+            "icon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/forceframe.png",
+            "id": "vald-force-frame",
+            "name": "VALD | Force Frame"
+          },
+          {
+            "description": "Dual force plates for accurately testing explosive power, balance and neuromuscular control",
+            "icon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/forcedeck.png",
+            "id": "vald-force-decks",
+            "name": "VALD | Force Decks"
+          }
+        ]
+      }
+    },
+    {
+      "id": "testimonials",
+      "type": "Testimonials",
+      "props": {
+        "heading": "What Our Patients Say",
+        "items": [
+          {
+            "condition": "ACL \u0026 Meniscus Surgery",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/ritura.png",
+            "name": "Ritura Biswas",
+            "quote": "I tore through an ACL, surgery 6 months ago and have worked with multiple people to get back to action. The thoroughness of assessment and knowledgeable consultation with the Physio at Stance helped me to understand the underlying issues which helped me to plan my recovery better.",
+            "role": "Fintech Growth Lead"
+          },
+          {
+            "condition": "Chronic Back Pain",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/anuj.png",
+            "name": "Anuj Jindal",
+            "quote": "After dealing with prolonged back pain for years, I had the opportunity of visiting Stance where I received a comprehensive assessment of my spinal condition. The transparent diagnosis and data-based assessments provided a series of relief to upkeep my rehab goals.",
+            "role": "SVP MediAssist"
+          },
+          {
+            "condition": "Low Back Pain",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/nikhil.png",
+            "name": "Nikhil Thard",
+            "quote": "After consulting with the physios at Stance, they reassured me that I was undergoing progress and worked all my problems out. They explained the process of treatment and care enabled me to gain immense confidence in my abilities.",
+            "role": "Chairman Edifice Labs"
+          },
+          {
+            "condition": "Health Enthusiast",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/divyanshu.png",
+            "name": "Divyanshu",
+            "quote": "The team at Stance helped with a thorough assessment of my body to understand the right exercise programme for me, creating personalised plans that have significantly improved my athletic performance.",
+            "role": "Founder Glam+"
+          },
+          {
+            "condition": "Basketball Enthusiast",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/linganmeni.png",
+            "name": "Ashish Lingamneni",
+            "quote": "Stance's approach to sports rehabilitation is exceptional. Their expertise in biomechanics and movement analysis has helped me return to peak performance and prevent future injuries.",
+            "role": "Marketing Leader"
+          },
+          {
+            "condition": "Anterior Knee Pain",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/aastha.png",
+            "name": "Aastha Gupta",
+            "quote": "The detailed assessment at Stance gave me a clear understanding of my knee condition. The personalised rehab programme has dramatically reduced my pain and improved my quality of life.",
+            "role": "Adobe Digital Experience Architect"
+          },
+          {
+            "condition": "Recurrent Ankle Pain",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/saumya.png",
+            "name": "Saumya Dubey",
+            "quote": "After struggling with recurring ankle pain that kept me off the field, Stance's comprehensive approach and technology-driven assessment identified the root cause and got me back stronger than before.",
+            "role": "Product Leader"
+          },
+          {
+            "condition": "ACL Surgery",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/pranav.png",
+            "name": "Pranav Iyer",
+            "quote": "My ACL recovery at Stance was exceptional. The data-driven approach, regular assessments, and personalised programme gave me confidence throughout rehabilitation and helped me return to sport ahead of schedule.",
+            "role": "Founding Team Stable Money"
+          }
+        ]
+      }
+    },
+    {
+      "id": "team",
+      "type": "Team",
+      "props": {
+        "heading": "Meet the Team",
+        "members": [
+          {
+            "bio": "Durga brings over 12 years of experience in musculoskeletal and sports physiotherapy, specializing in manual therapy techniques such as Maitland, McKenzie, Clinical Pilates, and Butler's Neurodynamic treatments. Her professional journey includes collaborations with esteemed institutions like Sakra World Hospital and YOS Sports Health Specialists, as well as working closely with industry's best physiotherapists and sports medicine doctors.",
+            "experience": "12+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/durga.jpg",
+            "name": "Durga Joshi",
+            "role": "Lead Musculoskeletal and Sports Physiotherapist"
+          },
+          {
+            "bio": "Anand is a strength and conditioning coach and sports science professional with over 15 years of experience working with high-performance athletes. His work focuses on performance development, injury recovery, and return-to-sport preparation through structured strength and conditioning programs. He applies high-performance training and recovery strategies to help athletes and active individuals move and perform better.",
+            "experience": "15+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/Anand.png?_v=1",
+            "name": "Anand Date",
+            "role": "S\u0026C"
+          },
+          {
+            "bio": "At Stance, Arjun's goal is to help you achieve your fitness aspirations through personalized, meticulously crafted training programs. By understanding your unique needs, he tailors each plan to guide you towards peak performance and a healthier lifestyle. Together, you will unlock your full potential and ensure every step is taken towards your success.",
+            "experience": "6+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/Arjun.jpg",
+            "name": "Arjun K Raj",
+            "role": "Senior Strength and Conditioning Coach"
+          },
+          {
+            "bio": "With a commitment to precise diagnosis and evidence-based treatment, Surbhi helps you manage and overcome musculoskeletal conditions. Her focus is on pain management and performance enhancement, ensuring you achieve your objectives while minimizing injury risks. Through tailored programs and education, she empowers you to reach your full athletic potential.",
+            "experience": "5+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/Surbhi.jpg",
+            "name": "Surbhi Paranjpe",
+            "role": "Senior Musculoskeletal and Sports Physiotherapist"
+          },
+          {
+            "bio": "Vignesh is a sports physiotherapist with a degree in physiotherapy and advanced training in sports physiotherapy, specializing in injury rehabilitation and return-to-play protocols. His work includes musculoskeletal assessments, manual therapy techniques, and sports-specific rehabilitation strategies. He has supported athletes across football, squash, hockey, kabaddi, volleyball, and weightlifting.",
+            "experience": "6+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/team-6.png",
+            "name": "Vignesh Seetharaman",
+            "role": "Sports Physiotherapist"
+          },
+          {
+            "bio": "Sneha holds a degree in Physiotherapy and is pursuing specialization in Sports Physiotherapy. Her work focuses on post-operative sports injury rehabilitation, including ACL reconstruction and shoulder instability cases, alongside movement screening and performance recovery.",
+            "experience": "4+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/team-7.png",
+            "name": "Sneha Jain",
+            "role": "Sports Physiotherapist"
+          },
+          {
+            "bio": "Shreya holds a degree in Physiotherapy with experience in musculoskeletal rehabilitation and sports physiotherapy. Her work includes treating orthopedic and spinal conditions, designing rehabilitation programs, and providing on-field physiotherapy support.",
+            "experience": "4+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/team-9.png",
+            "name": "Shreya Poojary",
+            "role": "Physiotherapist"
+          },
+          {
+            "bio": "Vanshika holds a degree in Physiotherapy and is pursuing specialization in Musculoskeletal and Manual Therapy. Her work focuses on rehabilitation planning, functional mobility restoration, and manual therapy techniques.",
+            "experience": "4+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/team-10.png",
+            "name": "Vanshika Tandon",
+            "role": "Musculoskeletal Physiotherapist"
+          },
+          {
+            "bio": "Arun holds degrees in Physiotherapy and Musculoskeletal \u0026 Sports Physiotherapy and focuses on orthopedic and sports injury rehabilitation. His work emphasizes individualized rehabilitation protocols, injury prevention strategies, and functional recovery.",
+            "experience": "6+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/Arun.jpg",
+            "name": "Arun Raj",
+            "role": "Sports Physiotherapist"
+          },
+          {
+            "bio": "Keerthana holds a degree in Physiotherapy and is pursuing specialization in Sports Physiotherapy. Her work focuses on athlete assessment, injury prevention, kinesiology taping, and return-to-sport rehabilitation.",
+            "experience": "4+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/team-12.png",
+            "name": "Keerthana S",
+            "role": "Sports Physiotherapist"
+          },
+          {
+            "bio": "Erica holds a degree in Physiotherapy and is pursuing specialization in Musculoskeletal Physiotherapy. Her work focuses on assessment and rehabilitation of musculoskeletal injuries through exercise therapy and manual therapy approaches.",
+            "experience": "4+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/Erica.png",
+            "name": "Erica D'Costa",
+            "role": "Musculoskeletal Physiotherapist"
+          },
+          {
+            "bio": "Pandieswari holds a degree in Physiotherapy with experience in musculoskeletal and sports injury rehabilitation. She utilizes techniques such as dry needling, myofascial release, joint mobilization, and kinesiology taping to support patient recovery.",
+            "experience": "5+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/Eswari.jpg",
+            "name": "Pandieswari Pandian",
+            "role": "Sports Physiotherapist"
+          },
+          {
+            "bio": "Kiandra is a musculoskeletal physiotherapist pursuing specialization in Musculoskeletal Sciences, with a background in exercise-based rehabilitation and manual therapy. She focuses on structured rehabilitation for musculoskeletal and sports-related injuries.",
+            "experience": "5+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/Kiandra.png",
+            "name": "Kiandra Fernandes",
+            "role": "Musculoskeletal Physiotherapist"
+          },
+          {
+            "bio": "Harini is a musculoskeletal physiotherapist specializing in post-operative rehabilitation, biomechanics, and exercise-based recovery. She integrates manual therapy, movement assessment, and strength-focused rehabilitation to support patient outcomes.",
+            "experience": "5+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/team-16.png",
+            "name": "Harini Bidari",
+            "role": "Musculoskeletal Physiotherapist"
+          },
+          {
+            "bio": "Pradyumna is a high-performance strength and conditioning coach with a background in sprinting. He has worked with international cricketers, elite track and field athletes, and national-level football players.",
+            "experience": "10+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/team-18.png",
+            "name": "Pradyumna Bopaiah",
+            "role": "Strength and Conditioning Coach"
+          },
+          {
+            "bio": "Srinivas is a physiotherapist and sports scientist working in strength and conditioning. He integrates clinical expertise with evidence-based training to build strength, resilience, and long-term athletic capacity.",
+            "experience": "8+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/team-19.png",
+            "name": "Srinivas M",
+            "role": "Strength and Conditioning Coach"
+          },
+          {
+            "bio": "Sharvari holds a degree in Sports and Exercise Science and focuses on structured strength testing, sport-specific program design, and functional strength development. She brings competitive sporting experience into her coaching approach.",
+            "experience": "5+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/team-20.png",
+            "name": "Sharvari Godase",
+            "role": "Strength and Conditioning Coach"
+          },
+          {
+            "bio": "Shubh holds a degree in Exercise and Sports Science with training in biomechanics, exercise physiology, and athlete performance testing. His work focuses on strength programming, biomechanical analysis, and return-to-play support.",
+            "experience": "5+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/team-21.png",
+            "name": "Shubh Gupta",
+            "role": "Strength and Conditioning Coach"
+          },
+          {
+            "bio": "Kaushik holds a BPED qualification and ASCA Level 1 certification in Strength and Conditioning. His coaching focuses on structured performance testing, strength development, and safe return-to-sport progression.",
+            "experience": "6+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/team-22.png",
+            "name": "Kaushik Jadhav",
+            "role": "Strength and Conditioning Coach"
+          },
+          {
+            "bio": "Sanket is a Certified Strength and Conditioning Specialist (CSCS) with additional training in sports nutrition and sports psychology. His work focuses on speed, power development, and sport-specific conditioning.",
+            "experience": "8+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/team-23.png",
+            "name": "Sanket Sharma",
+            "role": "Strength and Conditioning Coach"
+          },
+          {
+            "bio": "Vamshi holds a degree in Sports and Exercise Science with training in biomechanics, exercise physiology, and athlete performance testing. His work involves strength and conditioning program design alongside physiological and biomechanical assessments.",
+            "experience": "5+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/team-24.png",
+            "name": "Vamshi P",
+            "role": "Strength and Conditioning Coach"
+          },
+          {
+            "bio": "Rajath holds a degree in Sports Science with training in biomechanics, exercise physiology, and sports nutrition. His work focuses on performance assessment, strength and conditioning program design, and recovery strategies.",
+            "experience": "5+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/team-25.png",
+            "name": "Rajath M",
+            "role": "Strength and Conditioning Coach"
+          },
+          {
+            "bio": "Soham holds a degree in Sports and Exercise Science with specialization in sports biomechanics and strength and conditioning. He develops sport-specific strength and conditioning programs to improve movement efficiency and athletic performance.",
+            "experience": "5+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/soham.jpg",
+            "name": "Soham Veer",
+            "role": "Strength and Conditioning Coach"
+          },
+          {
+            "bio": "Pooja is a Certified Strength and Conditioning Specialist (CSCS) with additional certifications in personal training and fitness nutrition. She focuses on strength development, conditioning, and injury prevention through individualized training programs.",
+            "experience": "7+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/pooja.png",
+            "name": "Pooja Khandelwal",
+            "role": "Strength and Conditioning Coach"
+          },
+          {
+            "bio": "Prajwal holds degrees in Exercise and Sports Science with specialization in strength and conditioning, biomechanics, and exercise physiology. His work focuses on athlete performance testing and data-driven training program design.",
+            "experience": "6+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/team-28.png",
+            "name": "Prajwal Acharya",
+            "role": "Strength and Conditioning Coach"
+          },
+          {
+            "bio": "I'm Anmol Khanna, a Strength \u0026 Conditioning Coach specialising in athletic performance, rehabilitation, and return to performance. I've worked with IPL and domestic cricket players, athletes across multiple sports, and individuals across age groups and performance levels from recreational to professional. With over a decade of experience as a competitive cricketer, I bring a practical understanding of the demands of sport into my coaching. My approach is individualised, purposeful, and performance-driven building stronger, more resilient athletes and humans who are prepared to perform at their best.",
+            "experience": "4+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/Anmol.png?_v=1",
+            "name": "Anmol Khanna",
+            "role": "Strength and Conditioning Coach"
+          }
+        ]
+      }
+    },
+    {
+      "id": "centers",
+      "type": "Centers",
+      "props": {
+        "heading": "Our Centers",
+        "items": [
+          {
+            "address": "2nd Floor, 1555, 19th Main Rd, Agara, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/HSR.JPG",
+            "maps": "https://maps.app.goo.gl/RHWQ7VEB45CYPAE66",
+            "name": "HSR Layout",
+            "phone": "+91 6360014559"
+          },
+          {
+            "address": "4th Floor, Kailash Parbat, No. 149, Doddanakundi, 2nd Phase, Hoodi, Whitefield, Bengaluru, Karnataka 560048",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/whitefield.webp",
+            "maps": "https://maps.app.goo.gl/FCk4gaXCgviPFJMG8",
+            "name": "Whitefield",
+            "phone": "+91 6361056456"
+          },
+          {
+            "address": "3rd Floor, Srinivasan Towers, ESI Hospital Road, Defence Colony, Indiranagar, Bengaluru, Karnataka 560038",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/indra.webp",
+            "maps": "https://maps.app.goo.gl/xLpXLPXRtuY8S21w8",
+            "name": "Indiranagar",
+            "phone": "+91 9008417804"
+          },
+          {
+            "address": "Ward No.57, 3rd Floor, V.B.R Ruddhi, 558, 9th Cross Rd, 3rd Phase, J. P. Nagar, Bengaluru, Karnataka 560078",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/JP_Nagar.jpg",
+            "maps": "https://maps.app.goo.gl/NHvNAa1mRZbmjsKv9",
+            "name": "JP NAGAR",
+            "phone": "+91 6366940195"
+          },
+          {
+            "address": "Unit No. 22, 2nd floor, 80 Feet Rd, S.T. Bed, 4th Block, Koramangala, Bengaluru, Karnataka 560034",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/koramangala.jpeg",
+            "maps": "https://maps.app.goo.gl/Pe6diykLUL22aLfa9",
+            "name": "KORAMANGALA",
+            "phone": "+91 7625051785"
+          }
+        ]
+      }
+    }
+  ],
+  "schemaVersion": 1
+}
