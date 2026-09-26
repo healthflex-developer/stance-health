@@ -90,11 +90,7 @@ h1, h2, h3, h4, h5, h6,
   color: #ffffff;
 }
 
-.section-title .heading-prefix {
-  color: #ffffff;
-}
-
-.section-title .heading-highlight {
+.section-title span {
   color: var(--yellow);
 }
 
@@ -1045,17 +1041,4 @@ h1, h2, h3, h4, h5, h6,
 }
 .animate-marquee:hover {
   animation-play-state: paused;
-}
-
-/* ── Admin iframe selection marker ────────────────────────────────────────
-   Active only when Stance Admin loads the real site with ?adminPreview=1. */
-[data-admin-block-id] {
-  scroll-margin-top: 6rem;
-}
-[data-admin-block-id].admin-preview-selected {
-  outline: 3px solid var(--yellow);
-  outline-offset: -3px;
-  box-shadow: 0 0 0 6px rgba(205, 254, 113, 0.22);
-  position: relative;
-  z-index: 1;
 }

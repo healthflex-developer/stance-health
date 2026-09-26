@@ -6,9 +6,7 @@ import { useCta } from "@/hooks/useCta";
 interface Props {
   className?: string;
   label?: string;
-  href?: string;
   children?: React.ReactNode;
-  dataAdminField?: string;
 }
 
 /**
@@ -16,13 +14,11 @@ interface Props {
  * Use this anywhere a "Book an Appointment" link appears.
  * Includes Framer Motion hover/tap effects for a polished interaction.
  */
-export default function BookingCta({ className, label, href, children, dataAdminField }: Props) {
+export default function BookingCta({ className, label, children }: Props) {
   const { bookingUrl } = useCta();
-  const destination = href || bookingUrl;
   return (
     <motion.a
-      data-admin-field={dataAdminField}
-      href={destination}
+      href={bookingUrl}
       target="_blank"
       rel="noopener noreferrer"
       className={`booking-cta ${className ?? ""}`}

@@ -8,7 +8,6 @@ import {
   getLocationBySlug,
 } from "@/lib/seo-pages";
 import type { Metadata } from "next";
-import { withPublishedSeo } from "@/lib/published-seo";
 
 type Props = { params: Promise<{ slug: string; location: string }> };
 
@@ -39,12 +38,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const description = `Expert ${condition.title.toLowerCase()} assessment and rehab near ${locationData.name}, Bangalore. ${condition.summary.slice(0, 100)}...`;
   const canonical = `/conditions/${slug}/in-${location}`;
 
-  return withPublishedSeo(`conditions/${slug}/in-${location}`, {
+  return {
     title,
     description,
     alternates: { canonical },
     openGraph: { title: ogTitle, description, url: canonical, type: "website" },
-  });
+  };
 }
 
 function toTitleCase(slug: string) {

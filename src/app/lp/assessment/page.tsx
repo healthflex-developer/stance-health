@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { withPublishedSeo } from "@/lib/published-seo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AdHero from "@/components/lp/AdHero";
@@ -12,12 +11,12 @@ import StickyMobileCta from "@/components/lp/StickyMobileCta";
 
 // Ad-only landing page for paid campaigns — not linked in nav, excluded from
 // the sitemap, and marked noindex so it doesn't compete with /  in search.
-export const metadata: Metadata = withPublishedSeo("lp/assessment", {
+export const metadata: Metadata = {
   title: "Stop Guessing Why It Still Hurts – MSK Assessment",
   description:
     "Book a data-driven MSK assessment at Stance Health. Find the root cause of your pain with VALD diagnostics and a personalised recovery plan — Bangalore.",
   robots: { index: false, follow: false },
-});
+};
 
 export default function AdAssessmentLandingPage() {
   return (

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { withPublishedSeo } from "@/lib/published-seo";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/sections/Hero";
-import AdminPreviewSection from "@/components/AdminPreviewSection";
 import Framework from "@/components/sections/Framework";
 import Technology from "@/components/sections/Technology";
 import Testimonials from "@/components/sections/Testimonials";
@@ -12,13 +10,13 @@ import Centers from "@/components/sections/Centers";
 import Footer from "@/components/Footer";
 import { BASE_URL, OG_ASSETS } from "@/lib/constants";
 
-export const metadata: Metadata = withPublishedSeo("home", {
+export const metadata: Metadata = {
   alternates: { canonical: "/" },
   openGraph: {
     url: "/",
     images: [{ url: `${OG_ASSETS}/og-default.png`, width: 1200, height: 630 }],
   },
-});
+};
 
 // WebSite + FAQPage JSON-LD for the home page
 const homeSchema = {
@@ -85,25 +83,13 @@ export default function Home() {
       />
       <Navbar />
       <main>
-        <AdminPreviewSection blockId="hero" blockType="Hero">
-          <Hero />
-        </AdminPreviewSection>
-        <AdminPreviewSection blockId="framework" blockType="Framework">
-          <Framework />
-        </AdminPreviewSection>
-        <AdminPreviewSection blockId="technology" blockType="Technology">
-          <Technology />
-        </AdminPreviewSection>
-        <AdminPreviewSection blockId="testimonials" blockType="Testimonials">
-          <Testimonials />
-        </AdminPreviewSection>
-        <AdminPreviewSection blockId="team" blockType="Team">
-          <Team />
-        </AdminPreviewSection>
+        <Hero />
+        <Framework />
+        <Technology />
+        <Testimonials />
+        <Team />
         {/* <Programs /> */}
-        <AdminPreviewSection blockId="centers" blockType="Centers">
-          <Centers />
-        </AdminPreviewSection>
+        <Centers />
       </main>
       <Footer />
     </>

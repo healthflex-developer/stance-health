@@ -12,8 +12,6 @@ export default function ScrollToTop() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("adminPreview") === "1" || window.parent !== window) return;
     window.scrollTo(0, 0);
   }, [pathname]);
 

@@ -6,9 +6,6 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { motion } from "framer-motion";
 import { FRAMEWORK_STEPS } from "@/lib/constants";
-import { previewList, previewText, useAdminPreviewBlock, type AdminPreviewBlock } from "@/components/PreviewDraft";
-import { usePublishedBlock } from "@/components/PublishedContent";
-import { applyAssetMeta, assetAlt } from "@/lib/asset-label";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40, scale: 0.95 },
@@ -33,44 +30,34 @@ const headingVariants = {
   },
 };
 
-export default function Framework({ previewBlock }: { previewBlock?: AdminPreviewBlock | null } = {}) {
-  const listened = useAdminPreviewBlock("framework", "Framework");
-  const draft = previewBlock !== undefined ? previewBlock : listened;
-  const published = usePublishedBlock("framework");
-  const steps = applyAssetMeta(previewList(draft, "steps", FRAMEWORK_STEPS), published?.props?.steps, ["icon"]).map((step, index) => ({
-    ...step,
-    id: step.id || `step-${index + 1}`,
-    label: step.label || `Step ${index + 1}`,
-    icon: step.icon || "",
-    description: step.description || "Add step description",
-  }));
-  const heading = previewText(draft, "heading", "Guiding Each Stride in Your Journey") || "Guiding Each Stride in Your Journey";
-  const container = useRef<HTMLDivElement>(null);
+export default function Framework() {
+  const container2 = useRef<HTMLDivElement>(null);
   const sections = useRef<(HTMLElement | null)[]>([]);
   const dots = useRef<(HTMLSpanElement | null)[]>([]);
-  // null until the viewport is measured, so the pinned desktop tree is never
-  // mounted and then immediately removed on a narrow preview pane.
-  const [isMobile, setIsMobile] = useState<boolean | null>(null);
-  const stepKey = steps.map((step) => step.id).join("|");
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== "undefined" ? window.innerWidth <= 768 : false
+  );
 
   useEffect(() => {
-    const media = window.matchMedia("(max-width: 768px)");
-    const update = () => setIsMobile(media.matches);
-    update();
-    media.addEventListener("change", update);
-    return () => media.removeEventListener("change", update);
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   useLayoutEffect(() => {
-    if (isMobile !== false) return;
+    if (isMobile) return;
 
     gsap.registerPlugin(ScrollTrigger);
+
     const ctx = gsap.context(() => {
-      if (!container.current) return;
-      const endPosition = container.current.clientHeight * 2;
-      const timeline = gsap.timeline({
+      if (!container2.current) return;
+
+      const endPosition = container2.current.clientHeight * 2;
+
+      const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: container.current,
+          trigger: container2.current,
           start: "-=100",
           end: `+=${endPosition}`,
           pin: true,
@@ -79,29 +66,64 @@ export default function Framework({ previewBlock }: { previewBlock?: AdminPrevie
         },
       });
 
-      sections.current.forEach((section, index) => {
-        if (!section) return;
-        const image = section.querySelector(".pr-img");
-        const content = section.querySelector(".pr-con");
+      sections.current.forEach((sec, index) => {
+        if (!sec) return;
+
+        const img = sec.querySelector(".pr-img");
+        const heading = sec.querySelector(".pr-con");
 
         if (index > 0) {
           const dot = dots.current[index];
-          if (dot) timeline.from(dot, { duration: 4, opacity: 0.5 }, "-=2");
-          if (image) timeline.from(image, { duration: 4, yPercent: 20, opacity: 0 }, "-=2");
-          if (content) timeline.from(content, { duration: 4, yPercent: 20, opacity: 0 }, "-=2");
+
+          if (dot) {
+            tl.from(dot, {
+              duration: 4,
+              opacity: 0.5,
+            }, "-=2");
+          }
+
+          if (img) {
+            tl.from(img, {
+              duration: 4,
+              yPercent: 20,
+              opacity: 0,
+            }, "-=2");
+          }
+
+          if (heading) {
+            tl.from(heading, {
+              duration: 4,
+              yPercent: 20,
+              opacity: 0,
+            }, "-=2");
+          }
         }
 
         if (index < sections.current.length - 1) {
-          if (image) timeline.to(image, { duration: 4, yPercent: -20, opacity: 0 }, "-=2");
-          if (content) timeline.to(content, { duration: 4, yPercent: -20, opacity: 0 }, "-=2");
+          if (img) {
+            tl.to(img, {
+              duration: 4,
+              yPercent: -20,
+              opacity: 0,
+            }, "-=2");
+          }
+
+          if (heading) {
+            tl.to(heading, {
+              duration: 4,
+              yPercent: -20,
+              opacity: 0,
+            }, "-=2");
+          }
         }
       });
-    }, container);
+    }, container2);
 
     return () => {
       ctx.revert();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, [isMobile, stepKey]);
+  }, [isMobile]);
 
   return (
     <>
@@ -116,57 +138,45 @@ export default function Framework({ previewBlock }: { previewBlock?: AdminPrevie
                 whileInView="visible"
                 viewport={{ once: true, margin: "-50px" }}
               >
-                <h2 className="sec-head" data-admin-field="heading">{heading}</h2>
+                <h2 className="sec-head">
+                  Guiding Each Stride in <span>Your Journey</span>
+                </h2>
               </motion.div>
             </div>
           </div>
         </div>
       </section>
 
-      {isMobile === false && (
-        <div className="banner-bottom-sec" ref={container}>
+      {/* Desktop: GSAP scroll-pinned layout */}
+      {!isMobile && (
+        <div className="banner-bottom-sec" ref={container2}>
           <div className="dots">
-            {steps.map((_, index) => (
-              <span
-                key={index}
-                ref={(element) => {
-                  dots.current[index] = element;
-                }}
-              />
+            {FRAMEWORK_STEPS.map((_, index) => (
+              <span key={index} ref={(el) => {
+                if (el) dots.current[index] = el;
+              }} />
             ))}
           </div>
           <div className="btm-wrapper">
-            {steps.map((step, index) => (
+            {FRAMEWORK_STEPS.map((step, index) => (
               <section
                 className="btm-sec sec"
-                data-admin-list="steps"
-                data-admin-list-index={index}
-                ref={(element) => {
-                  sections.current[index] = element;
+                ref={(el) => {
+                  if (el) sections.current[index] = el;
                 }}
-                key={`${step.id}-${index}`}
+                key={step.id}
               >
                 <div className="container">
                   <div className="row align-items-center">
                     <div className="col-lg-7 col-12">
                       <div className="pr-img">
-                        {step.icon ? (
-                          <Image
-                            src={step.icon}
-                            alt={assetAlt(step, "icon", step.label)}
-                            width={1200}
-                            height={1200}
-                            data-admin-list-field="icon"
-                          />
-                        ) : (
-                          <div data-admin-list-field="icon" className="w-full h-full bg-[#3a5070]" aria-label="Framework icon placeholder" />
-                        )}
+                        <Image src={step.icon} alt={step.label} width={1200} height={1200} />
                       </div>
                     </div>
                     <div className="col-lg-4 offset-lg-1 col-12">
                       <div className="pr-con">
-                        <h3 className="sec-head green" data-admin-list-field="label">{step.label}</h3>
-                        <p className="para big" data-admin-list-field="description">{step.description}</p>
+                        <h3 className="sec-head green">{step.label}</h3>
+                        <p className="para big">{step.description}</p>
                       </div>
                     </div>
                   </div>
@@ -174,50 +184,42 @@ export default function Framework({ previewBlock }: { previewBlock?: AdminPrevie
               </section>
             ))}
           </div>
-        </div>
-      )}
+        </div >
+      )
+      }
 
-      {isMobile === true && (
-        <section className="sec framework-cards-section">
-          <div className="container">
-            <div className="framework-cards-grid">
-              {steps.map((step, index) => (
-                <motion.div
-                  className="framework-card"
-                  data-admin-list="steps"
-                  data-admin-list-index={index}
-                  key={`${step.id}-${index}`}
-                  custom={index}
-                  variants={cardVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-40px" }}
-                  whileHover={{ y: -6, boxShadow: "0 16px 40px rgba(0, 0, 0, 0.25)" }}
-                  transition={{ type: "spring", stiffness: 300, damping: 22 }}
-                >
-                  <div className="framework-card-img">
-                      {step.icon ? (
-                        <Image
-                          src={step.icon}
-                          alt={assetAlt(step, "icon", step.label)}
-                          width={800}
-                          height={800}
-                          data-admin-list-field="icon"
-                        />
-                      ) : (
-                        <div data-admin-list-field="icon" className="w-full h-full bg-[#3a5070]" aria-label="Framework icon placeholder" />
-                      )}
-                  </div>
-                  <div className="framework-card-content">
-                    <h3 data-admin-list-field="label">{step.label}</h3>
-                    <p data-admin-list-field="description">{step.description}</p>
-                  </div>
-                </motion.div>
-              ))}
+      {/* Tablet/Mobile: Vertical card layout with Framer Motion */}
+      {
+        isMobile && (
+          <section className="sec framework-cards-section">
+            <div className="container">
+              <div className="framework-cards-grid">
+                {FRAMEWORK_STEPS.map((step, index) => (
+                  <motion.div
+                    className="framework-card"
+                    key={step.id}
+                    custom={index}
+                    variants={cardVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-40px" }}
+                    whileHover={{ y: -6, boxShadow: "0 16px 40px rgba(0, 0, 0, 0.25)" }}
+                    transition={{ type: "spring", stiffness: 300, damping: 22 }}
+                  >
+                    <div className="framework-card-img">
+                      <Image src={step.icon} alt={step.label} width={800} height={800} />
+                    </div>
+                    <div className="framework-card-content">
+                      <h3>{step.label}</h3>
+                      <p>{step.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
-      )}
+          </section>
+        )
+      }
     </>
   );
 }
