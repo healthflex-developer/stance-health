@@ -1,0 +1,38 @@
+{
+  "slug": "services",
+  "title": "Services",
+  "seo": {
+    "title": "Services",
+    "description": "Every Stance service starts with an objective assessment and a programme built from your numbers.",
+    "canonical": "/services"
+  },
+  "blocks": [
+    {
+      "id": "services-hero",
+      "type": "PageHero",
+      "props": {
+        "description": "Every Stance service starts with an objective assessment and a programme built from your numbers.",
+        "eyebrow": "Services",
+        "headline": "What we",
+        "highlight": "offer"
+      }
+    },
+    {
+      "id": "services-section-1",
+      "type": "PageSection",
+      "props": {
+        "body": "Explore clinical services for pain recovery, surgery, sports injury, running, strength, and wellness.",
+        "heading": "Our Services"
+      }
+    },
+    {
+      "id": "services-section-2",
+      "type": "PageSection",
+      "props": {
+        "body": "Book an assessment and our clinical team will identify the right pathway for your goals.",
+        "heading": "Not Sure Which Service Is Right?"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}

@@ -1,0 +1,79 @@
+{
+  "slug": "navbar",
+  "title": "Navbar",
+  "seo": {
+    "title": "Navbar",
+    "description": "The links and booking button shown at the top of every Stance Health page.",
+    "canonical": "/navbar",
+    "noIndex": true
+  },
+  "blocks": [
+    {
+      "id": "navbar-content",
+      "type": "NavbarContent",
+      "props": {
+        "ctaLabel": "Book an Appointment",
+        "logo": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/logo.png",
+        "logoAlt": "Stance Health",
+        "moreLabel": "More",
+        "moreLinks": [
+          {
+            "href": "/philosophy",
+            "label": "Philosophy"
+          },
+          {
+            "href": "/locations",
+            "label": "Locations"
+          },
+          {
+            "href": "/partners",
+            "label": "Partners"
+          },
+          {
+            "href": "/careers",
+            "label": "Careers"
+          },
+          {
+            "href": "/faq",
+            "label": "FAQ"
+          },
+          {
+            "href": "/contact",
+            "label": "Contact"
+          }
+        ],
+        "primaryLinks": [
+          {
+            "href": "/test-page2",
+            "label": "test_page2"
+          },
+          {
+            "href": "/testing",
+            "label": "test_page1"
+          },
+          {
+            "href": "/about",
+            "label": "About"
+          },
+          {
+            "href": "/conditions",
+            "label": "Conditions"
+          },
+          {
+            "href": "/services",
+            "label": "Services"
+          },
+          {
+            "href": "/assessment",
+            "label": "Assessment"
+          },
+          {
+            "href": "/testing",
+            "label": "newPageee"
+          }
+        ]
+      }
+    }
+  ],
+  "schemaVersion": 1
+}

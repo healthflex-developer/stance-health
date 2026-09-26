@@ -1,0 +1,62 @@
+{
+  "slug": "lp/assessment",
+  "title": "MSK Assessment",
+  "seo": {
+    "title": "MSK Assessment",
+    "description": "Book a data-driven MSK assessment to find the root cause of pain with objective diagnostics and a personalised plan.",
+    "canonical": "/lp/assessment"
+  },
+  "blocks": [
+    {
+      "id": "lp-assessment-hero",
+      "type": "PageHero",
+      "props": {
+        "description": "Book a data-driven MSK assessment to find the root cause of pain with objective diagnostics and a personalised plan.",
+        "eyebrow": "Assessment",
+        "headline": "Stop Guessing Why It Still",
+        "highlight": "Hurts"
+      }
+    },
+    {
+      "id": "lp-assessment-section-1",
+      "type": "PageSection",
+      "props": {
+        "body": "Identify the concerns that persist and need a clearer path forward.",
+        "heading": "Pain Points"
+      }
+    },
+    {
+      "id": "lp-assessment-section-2",
+      "type": "PageSection",
+      "props": {
+        "body": "Book an assessment, understand your data, and follow a personalised plan.",
+        "heading": "How It Works"
+      }
+    },
+    {
+      "id": "lp-assessment-section-3",
+      "type": "PageSection",
+      "props": {
+        "body": "Objective technology guides assessment and progression.",
+        "heading": "Technology Credibility"
+      }
+    },
+    {
+      "id": "lp-assessment-section-4",
+      "type": "PageSection",
+      "props": {
+        "body": "Read patient experiences with Stance assessment and care.",
+        "heading": "Social Proof"
+      }
+    },
+    {
+      "id": "lp-assessment-section-5",
+      "type": "PageSection",
+      "props": {
+        "body": "Get answers and book your assessment.",
+        "heading": "Questions and Next Steps"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}
