@@ -2,8 +2,9 @@ import ProgramPageLayout from "@/components/ProgramPageLayout";
 import { ASSETS, OG_ASSETS } from "@/lib/constants";
 
 import type { Metadata } from "next";
+import { withPublishedSeo } from "@/lib/published-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublishedSeo("surgical-rehab", {
   title: "Back on Your Feet – Surgical Rehab",
   description:
     "Specialised pre and post-operative rehabilitation at Stance Health — optimise surgical outcomes, reduce recovery time, and restore full function.",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     description: "Surgical rehab to restore full function faster.",
     images: [`${OG_ASSETS}/og-default.png`],
   },
-};
+});
 
 export default function SurgicalRehabPage() {
   return (

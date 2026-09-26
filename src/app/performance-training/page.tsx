@@ -2,8 +2,9 @@ import ProgramPageLayout from "@/components/ProgramPageLayout";
 import { ASSETS, OG_ASSETS } from "@/lib/constants";
 
 import type { Metadata } from "next";
+import { withPublishedSeo } from "@/lib/published-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublishedSeo("performance-training", {
   title: "Breaking Barriers – Performance Training",
   description:
     "High-performance training programme at Stance Health — evidence-based strength and conditioning to elevate athletic performance and break through physical limits.",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     description: "Evidence-based performance training to break limits.",
     images: [`${OG_ASSETS}/og-default.png`],
   },
-};
+});
 
 export default function PerformanceTrainingPage() {
   return (

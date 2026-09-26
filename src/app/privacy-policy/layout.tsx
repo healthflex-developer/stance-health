@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
+import { withPublishedSeo } from "@/lib/published-seo";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description:
-    "Stance Health's privacy policy — how we collect, use, and protect your personal and health-related information.",
-  alternates: { canonical: "/privacy-policy" },
-};
+export const metadata: Metadata = withPublishedSeo("privacy-policy", {});
 
-export default function PrivacyPolicyLayout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return children;
 }
