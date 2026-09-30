@@ -4,6 +4,9 @@ const assetVersion = process.env.NEXT_PUBLIC_ASSET_VERSION || "1";
 
 const nextConfig: NextConfig = {
   images: {
+    // In development, render the S3 URL as the image src. Next's default
+    // optimizer rewrites it to /_next/image and resizes it on this server.
+    unoptimized: process.env.NODE_ENV !== "production",
     // Local files from public/ use ?_v= for cache busting. Next.js 16 rejects
     // that query unless it is listed here. The empty search keeps images
     // without a query string allowed.
