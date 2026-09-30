@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
+    // In development, render the S3 URL as the image src. Next's default
+    // optimizer rewrites it to /_next/image and resizes it on this server.
+    unoptimized: process.env.NODE_ENV !== "production",
     // SVGs are served as files from S3. Next blocks remote SVG unless this is set.
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
