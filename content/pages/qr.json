@@ -1,0 +1,30 @@
+{
+  "slug": "qr",
+  "title": "Download Stance Health",
+  "seo": {
+    "title": "Download Stance Health",
+    "description": "Scan a QR code or use a store button to download the Stance Health app.",
+    "canonical": "/qr"
+  },
+  "blocks": [
+    {
+      "id": "qr-hero",
+      "type": "PageHero",
+      "props": {
+        "description": "Scan a QR code or use a store button to download the Stance Health app.",
+        "eyebrow": "Get the App",
+        "headline": "Download Stance",
+        "highlight": "Health"
+      }
+    },
+    {
+      "id": "qr-section-1",
+      "type": "PageSection",
+      "props": {
+        "body": "Use the QR code or a store button to install Stance Health on your phone.",
+        "heading": "Download the App"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}

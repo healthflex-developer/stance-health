@@ -1,0 +1,121 @@
+{
+  "slug": "footer",
+  "title": "Footer",
+  "seo": {
+    "title": "Footer",
+    "description": "The description, social links, and link columns shown at the bottom of every Stance Health page.",
+    "canonical": "/footer",
+    "noIndex": true
+  },
+  "blocks": [
+    {
+      "id": "footer-content",
+      "type": "FooterContent",
+      "props": {
+        "columns": [
+          {
+            "links": [
+              {
+                "href": "/",
+                "label": "Home"
+              },
+              {
+                "href": "/about",
+                "label": "About Us"
+              },
+              {
+                "href": "/philosophy",
+                "label": "Philosophy"
+              },
+              {
+                "href": "/partners",
+                "label": "Partner With Us"
+              }
+            ],
+            "title": "About Us"
+          },
+          {
+            "links": [
+              {
+                "href": "/locations",
+                "label": "Locations"
+              },
+              {
+                "href": "/conditions",
+                "label": "Conditions We Treat"
+              },
+              {
+                "href": "/services",
+                "label": "Services"
+              },
+              {
+                "href": "/blog",
+                "label": "Blog"
+              },
+              {
+                "href": "/resources",
+                "label": "Resources"
+              }
+            ],
+            "title": "Other Links"
+          },
+          {
+            "links": [
+              {
+                "href": "/privacy-policy",
+                "label": "Privacy Policy"
+              },
+              {
+                "href": "/terms-and-conditions",
+                "label": "Terms \u0026 Conditions"
+              },
+              {
+                "href": "/package-validity-policy",
+                "label": "Package Validity Policy"
+              },
+              {
+                "href": "/patient-consent-waiver",
+                "label": "Patient Consent \u0026 Waiver"
+              },
+              {
+                "href": "/doctor-disclaimer",
+                "label": "Doctor Disclaimer"
+              },
+              {
+                "href": "/delete-account",
+                "label": "Delete Account"
+              },
+              {
+                "href": "/testing",
+                "label": "newPageee"
+              }
+            ],
+            "title": "Policies"
+          }
+        ],
+        "copyright": "Stance – All rights reserved.",
+        "description": "Evidence-backed Orthopaedic Rehab, where Medical Science \u0026 Technology are tailored for your performance and recovery.",
+        "logo": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/logo.png",
+        "logoAlt": "Stance Health",
+        "socials": [
+          {
+            "href": "https://www.instagram.com/stance.health?stkn=MWQ5eWpucDN1dTdhMQ==",
+            "label": "Instagram",
+            "platform": "instagram"
+          },
+          {
+            "href": "https://linkedin.com/company/stancehealth",
+            "label": "LinkedIn",
+            "platform": "linkedin"
+          },
+          {
+            "href": "https://www.facebook.com/p/Stance-Health-61560825009195/",
+            "label": "Facebook",
+            "platform": "facebook"
+          }
+        ]
+      }
+    }
+  ],
+  "schemaVersion": 1
+}

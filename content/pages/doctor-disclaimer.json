@@ -1,0 +1,46 @@
+{
+  "slug": "doctor-disclaimer",
+  "title": "Doctor Disclaimer",
+  "seo": {
+    "title": "Doctor Disclaimer",
+    "description": "Important information regarding orthopaedic consultations at Stance Health.",
+    "canonical": "/doctor-disclaimer"
+  },
+  "blocks": [
+    {
+      "id": "doctor-disclaimer-hero",
+      "type": "PageHero",
+      "props": {
+        "description": "Important information regarding orthopaedic consultations at Stance Health.",
+        "eyebrow": "Legal",
+        "headline": "Doctor",
+        "highlight": "Disclaimer"
+      }
+    },
+    {
+      "id": "doctor-disclaimer-section-1",
+      "type": "PageSection",
+      "props": {
+        "body": "Consulting doctors provide diagnoses and opinions independently.",
+        "heading": "Independent Medical Opinion"
+      }
+    },
+    {
+      "id": "doctor-disclaimer-section-2",
+      "type": "PageSection",
+      "props": {
+        "body": "The scope of Stance Health physiotherapy, rehabilitation, and strength services.",
+        "heading": "Scope of Services"
+      }
+    },
+    {
+      "id": "doctor-disclaimer-section-3",
+      "type": "PageSection",
+      "props": {
+        "body": "How to contact us with queries about this disclaimer.",
+        "heading": "Questions"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}

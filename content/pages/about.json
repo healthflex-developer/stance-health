@@ -1,0 +1,164 @@
+{
+  "slug": "about",
+  "title": "We are Stance",
+  "seo": {
+    "title": "We are Stance",
+    "description": "Meet the expert team behind Stance Health — leading physiotherapists and strength coaches dedicated to evidence-backed orthopaedic rehabilitation.",
+    "canonical": "/about",
+    "ogImage": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/og-about.png"
+  },
+  "blocks": [
+    {
+      "id": "about-hero",
+      "type": "AboutHero",
+      "props": {
+        "backgroundImage": "/assets/images/about-banner.svg",
+        "backgroundImageAlt": "about-banner",
+        "backgroundImageDecorative": false,
+        "description": "Evidence-backed Orthopaedic Rehab, where Medical Science \u0026 Technology are tailored for your performance and recovery.",
+        "eyebrow": "About Us",
+        "headingHighlight": "Stance",
+        "headingPrefix": "We are "
+      }
+    },
+    {
+      "id": "about-mission",
+      "type": "AboutMission",
+      "props": {
+        "ctaLabel": "Book an Appointment",
+        "headingHighlight": "Mission",
+        "headingPrefix": "Our ",
+        "imageOne": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/about-1-img.PNG",
+        "imageOneAlt": "about-mission1",
+        "imageTwo": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/about-2-img.jpeg",
+        "imageTwoAlt": "about-mission2",
+        "paragraphOne": "At Stance, we're committed to providing high-quality care to all who aspire to have an active life. Our goal is to redefine healthcare standards by fostering innovation and integrating cutting-edge technology with expert clinical practice.",
+        "paragraphTwo": "We restore function, reduce pain, and promote overall well-being through personalised physiotherapy and strengthening programmes, guided by a multi-disciplinary team of professionals."
+      }
+    },
+    {
+      "id": "about-values",
+      "type": "AboutValues",
+      "props": {
+        "headingHighlight": "Apart",
+        "headingPrefix": "What Sets Us ",
+        "intro": "Our approach combines the best of clinical expertise, technology, and personalised care.",
+        "values": [
+          {
+            "description": "We believe in empowering our patients with knowledge. Understanding your condition and recovery process is key to long-term success.",
+            "title": "Patient Education"
+          },
+          {
+            "description": "Our clinical decisions are guided by data. We use cutting-edge diagnostic tools to measure, track, and optimise your recovery objectively.",
+            "title": "Evidence-Based Technology"
+          },
+          {
+            "description": "Our team comprises continuously trained professionals with diverse experience across sports, orthopaedics, and performance.",
+            "title": "Expert Therapists"
+          },
+          {
+            "description": "We combine sports orthopaedics, physical therapy, and strength \u0026 conditioning across all phases of recovery and performance.",
+            "title": "Multidisciplinary Integration"
+          },
+          {
+            "description": "helmooo",
+            "title": "testinggg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "about-team",
+      "type": "AboutTeam",
+      "props": {
+        "headingHighlight": "Team",
+        "headingPrefix": "Meet Our ",
+        "intro": "Our clinical team brings decades of combined experience in sports physiotherapy, rehabilitation, and performance.",
+        "members": [
+          {
+            "bio": "Durga brings over 12 years of experience in musculoskeletal and sports physiotherapy, specializing in manual therapy techniques such as Maitland, McKenzie, Clinical Pilates, and Butler's Neurodynamic treatments. Her professional journey includes collaborations with esteemed institutions like Sakra World Hospital and YOS Sports Health Specialists, as well as working closely with industry's best physiotherapists and sports medicine doctors.",
+            "experience": "12+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/durga.jpg",
+            "imageAlt": "team-photo",
+            "name": "Durga Joshi",
+            "role": "Lead Musculoskeletal and Sports Physiotherapist"
+          },
+          {
+            "bio": "Anand is a strength and conditioning coach and sports science professional with over 15 years of experience working with high-performance athletes. His work focuses on performance development, injury recovery, and return-to-sport preparation through structured strength and conditioning programs. He applies high-performance training and recovery strategies to help athletes and active individuals move and perform better.",
+            "experience": "15+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/Anand.png?_v=1",
+            "imageAlt": "team-photo2",
+            "name": "Anand Date",
+            "role": "S\u0026C"
+          },
+          {
+            "bio": "At Stance, Arjun's goal is to help you achieve your fitness aspirations through personalized, meticulously crafted training programs. By understanding your unique needs, he tailors each plan to guide you towards peak performance and a healthier lifestyle. Together, you will unlock your full potential and ensure every step is taken towards your success.",
+            "experience": "6+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/Arjun.jpg",
+            "imageAlt": "team-photo3",
+            "name": "Arjun K Raj",
+            "role": "Senior Strength and Conditioning Coach"
+          },
+          {
+            "bio": "With a commitment to precise diagnosis and evidence-based treatment, Surbhi helps you manage and overcome musculoskeletal conditions. Her focus is on pain management and performance enhancement, ensuring you achieve your objectives while minimizing injury risks. Through tailored programs and education, she empowers you to reach your full athletic potential.",
+            "experience": "5+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/Surbhi.jpg",
+            "imageAlt": "team-photo4",
+            "name": "Surbhi Paranjpe",
+            "role": "Senior Musculoskeletal and Sports Physiotherapist"
+          },
+          {
+            "bio": "Vignesh is a sports physiotherapist with a degree in physiotherapy and advanced training in sports physiotherapy, specializing in injury rehabilitation and return-to-play protocols. His work includes musculoskeletal assessments, manual therapy techniques, and sports-specific rehabilitation strategies. He has supported athletes across football, squash, hockey, kabaddi, volleyball, and weightlifting.",
+            "experience": "6+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/team-6.png",
+            "imageAlt": "team-photo5",
+            "name": "Vignesh Seetharaman",
+            "role": "Sports Physiotherapist"
+          },
+          {
+            "bio": "Sneha holds a degree in Physiotherapy and is pursuing specialization in Sports Physiotherapy. Her work focuses on post-operative sports injury rehabilitation, including ACL reconstruction and shoulder instability cases, alongside movement screening and performance recovery.",
+            "experience": "4+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/team-7.png",
+            "imageAlt": "team-photo6",
+            "name": "Sneha Jain",
+            "role": "Sports Physiotherapist"
+          },
+          {
+            "bio": "Shreya holds a degree in Physiotherapy with experience in musculoskeletal rehabilitation and sports physiotherapy. Her work includes treating orthopedic and spinal conditions, designing rehabilitation programs, and providing on-field physiotherapy support.",
+            "experience": "4+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/team-9.png",
+            "imageAlt": "team-photo7",
+            "name": "Shreya Poojary",
+            "role": "Physiotherapist"
+          },
+          {
+            "bio": "Vanshika holds a degree in Physiotherapy and is pursuing specialization in Musculoskeletal and Manual Therapy. Her work focuses on rehabilitation planning, functional mobility restoration, and manual therapy techniques.",
+            "experience": "4+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/team-10.png",
+            "imageAlt": "team-photo8",
+            "name": "Vanshika Tandon",
+            "role": "Musculoskeletal Physiotherapist"
+          },
+          {
+            "bio": "Arun holds degrees in Physiotherapy and Musculoskeletal \u0026 Sports Physiotherapy and focuses on orthopedic and sports injury rehabilitation. His work emphasizes individualized rehabilitation protocols, injury prevention strategies, and functional recovery.",
+            "experience": "6+ years experience",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/Arun.jpg",
+            "imageAlt": "team-photo9",
+            "name": "Arun Raj",
+            "role": "Sports Physiotherapist"
+          }
+        ]
+      }
+    },
+    {
+      "id": "about-cta",
+      "type": "AboutCta",
+      "props": {
+        "ctaLabel": "Book an Appointment",
+        "description": "Our team is ready to help you achieve your performance and recovery goals.",
+        "heading": "Ready to begin your journey?"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}
