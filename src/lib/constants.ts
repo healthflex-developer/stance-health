@@ -8,7 +8,10 @@ export const BASE_URL = "https://www.stance.health";
 //
 // Bump NEXT_PUBLIC_ASSET_VERSION after replacing a file so browsers request
 // the new object. `cb()` and `normalizeAssetUrl()` append `?_v=`.
-const ASSET_BASE = (process.env.NEXT_PUBLIC_ASSET_BASE_URL || "").replace(/\/$/, "");
+const ASSET_BASE = (
+  process.env.NEXT_PUBLIC_ASSET_BASE_URL ||
+  "https://stance-development-upload.s3.us-east-1.amazonaws.com"
+).replace(/\/$/, "");
 const ASSET_VERSION = process.env.NEXT_PUBLIC_ASSET_VERSION || "1";
 
 export const ASSETS = `${ASSET_BASE}/stance-health/images`;
