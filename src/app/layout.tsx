@@ -177,15 +177,24 @@ export default function RootLayout({
     <html
       lang="en"
       className={`h-full ${montserrat.variable} ${unbounded.variable}`}
+      suppressHydrationWarning
     >
-      <head>
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        {/* Runs before hydration. Swiper loop mode and the tag-manager
+            snippets move nodes React still owns; removeChild then throws
+            because the node is no longer in that parent. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var p=Node.prototype,o=p.removeChild;p.removeChild=function(c){if(c.parentNode!==this)return c;return o.call(this,c);};})();`,
+          }}
+        />
+        {/* Scripts stay in the body. A manual <head> lets GTM and the Meta
+            pixel move nodes React still owns, which throws removeChild. */}
         <MarketingScripts />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
-      </head>
-      <body className="min-h-full flex flex-col">
         <GtmNoScript />
         {/* Capture & persist UTM / click-ID params on every navigation */}
         <Suspense fallback={null}>

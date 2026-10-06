@@ -8,6 +8,7 @@ import Team from "@/components/sections/Team";
 import Programs from "@/components/sections/Programs";
 import Centers from "@/components/sections/Centers";
 import Footer from "@/components/Footer";
+import AdminPreviewBridge from "@/components/AdminPreviewBridge";
 import { BASE_URL, OG_ASSETS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -82,14 +83,15 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }}
       />
       <Navbar />
+      <AdminPreviewBridge />
       <main>
-        <Hero />
-        <Framework />
-        <Technology />
-        <Testimonials />
-        <Team />
+        <div data-preview-block="Hero"><Hero /></div>
+        <div data-preview-block="Framework"><Framework /></div>
+        <div data-preview-block="Technology"><Technology /></div>
+        <div data-preview-block="Testimonials"><Testimonials /></div>
+        <div data-preview-block="Team"><Team /></div>
         {/* <Programs /> */}
-        <Centers />
+        <div data-preview-block="Centers"><Centers /></div>
       </main>
       <Footer />
     </>

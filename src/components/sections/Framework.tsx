@@ -34,9 +34,9 @@ export default function Framework() {
   const container2 = useRef<HTMLDivElement>(null);
   const sections = useRef<(HTMLElement | null)[]>([]);
   const dots = useRef<(HTMLSpanElement | null)[]>([]);
-  const [isMobile, setIsMobile] = useState(() =>
-    typeof window !== "undefined" ? window.innerWidth <= 768 : false
-  );
+  // Start with the desktop tree so the server HTML and the first client
+  // render match. The effect below switches to the card layout after mount.
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 768);
@@ -46,7 +46,12 @@ export default function Framework() {
   }, []);
 
   useLayoutEffect(() => {
-    if (isMobile) return;
+    const mobile = window.innerWidth <= 768;
+    if (mobile !== isMobile) {
+      setIsMobile(mobile);
+      return;
+    }
+    if (mobile) return;
 
     gsap.registerPlugin(ScrollTrigger);
 
