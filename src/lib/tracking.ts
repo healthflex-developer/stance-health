@@ -65,6 +65,15 @@ const SESSION_KEY = "stance_session";
 // A new session starts after this much inactivity (or on a brand-new browser).
 const SESSION_TTL_MS = 30 * 60 * 1000; // 30 minutes
 
+/** Host that receives appointment bookings started on this website. */
+export const BOOKING_HOST = "book.stance.health";
+
+/**
+ * Source written onto every booking link that leaves this site.
+ * This is the current source: the appointment is being booked from the website.
+ */
+export const WEBSITE_UTM_SOURCE = "website";
+
 // The keys we actually append to links. `landing_page` / `referrer` are context
 // for analytics, not query params we want to smear onto every URL.
 const FORWARD_KEYS: readonly string[] = [
@@ -195,6 +204,43 @@ export function captureTrackingParams(): TrackingData {
 
 // ── Forwarding ──────────────────────────────────────────────────────────────
 
+function isBookingDestination(url: URL): boolean {
+  return url.hostname === BOOKING_HOST;
+}
+
+/**
+ * Stamp `utm_source=website` onto a booking URL.
+ *
+ * Safe during render and SSR: it does not read localStorage. An earlier
+ * marketing source already on the link is kept as `prev_utm_source`.
+ * Non-booking URLs are returned unchanged.
+ */
+export function ensureWebsiteBookingSource(destination: string): string {
+  if (!destination) return destination;
+  try {
+    const url = new URL(destination);
+    if (!isBookingDestination(url)) return destination;
+
+    const current = url.searchParams.get("utm_source");
+    let changed = false;
+    if (current && current !== WEBSITE_UTM_SOURCE && !url.searchParams.has("prev_utm_source")) {
+      url.searchParams.set("prev_utm_source", current);
+      changed = true;
+    }
+    if (current !== WEBSITE_UTM_SOURCE) {
+      url.searchParams.set("utm_source", WEBSITE_UTM_SOURCE);
+      changed = true;
+    }
+    if (!url.searchParams.has("utm_medium")) {
+      url.searchParams.set("utm_medium", "cta");
+      changed = true;
+    }
+    return changed ? url.toString() : destination;
+  } catch {
+    return destination;
+  }
+}
+
 /**
  * Append the forwardable tracking params to a destination URL.
  *
@@ -202,6 +248,11 @@ export function captureTrackingParams(): TrackingData {
  * absolute external URLs (`https://book.stance.health/...`). Params already
  * present in the destination are never overwritten. Non-http schemes
  * (`tel:`, `mailto:`, `#…`, `javascript:`) are returned untouched.
+ *
+ * Booking links are the exception for `utm_source`: the current source is
+ * always `website`, because the appointment is being booked from this site.
+ * A different source already stored from an ad or an earlier landing is kept
+ * as `prev_utm_source`.
  *
  * Internal same-origin results come back root-relative so Next's client router
  * treats them as in-app navigation; external results keep their full origin.
@@ -220,12 +271,40 @@ export function buildTrackedUrl(destination: string): string {
 
     if (url.protocol !== "http:" && url.protocol !== "https:") return destination;
 
+    const booking = isBookingDestination(url);
     const stored = readStoredParams();
+    const incomingSource = url.searchParams.get("utm_source");
+    const rememberedSource = stored.utm_source;
+    const previousSource =
+      incomingSource && incomingSource !== WEBSITE_UTM_SOURCE
+        ? incomingSource
+        : rememberedSource && rememberedSource !== WEBSITE_UTM_SOURCE
+          ? rememberedSource
+          : undefined;
+
     let paramsAdded = false;
     for (const key of FORWARD_KEYS) {
       const value = stored[key as keyof TrackingData];
+      // Don't copy a campaign source onto a booking link. The current
+      // booking source is the website; the earlier source is prev_utm_source.
+      if (booking && key === "utm_source") continue;
       if (value && !url.searchParams.has(key)) {
         url.searchParams.set(key, value);
+        paramsAdded = true;
+      }
+    }
+
+    if (booking) {
+      if (url.searchParams.get("utm_source") !== WEBSITE_UTM_SOURCE) {
+        url.searchParams.set("utm_source", WEBSITE_UTM_SOURCE);
+        paramsAdded = true;
+      }
+      if (!url.searchParams.has("utm_medium")) {
+        url.searchParams.set("utm_medium", "cta");
+        paramsAdded = true;
+      }
+      if (previousSource && !url.searchParams.has("prev_utm_source")) {
+        url.searchParams.set("prev_utm_source", previousSource);
         paramsAdded = true;
       }
     }

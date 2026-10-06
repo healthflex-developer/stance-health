@@ -83,10 +83,12 @@ const PLAY_STORE_BASE = "https://play.google.com/store/apps/details?id=com.stanc
 
 /**
  * Static fallback used in Server Components and anchor hrefs.
- * The TrackingInit + buildTrackedUrl() flow will append live UTM / click-ID
- * params client-side via the useCta() hook (see src/hooks/useCta.ts).
+ * Every appointment booked from this site is attributed to the website.
+ * The TrackingInit + buildTrackedUrl() flow still appends live click-ID
+ * params client-side via the useCta() hook (see src/hooks/useCta.ts), and
+ * keeps an earlier marketing source as prev_utm_source.
  */
-export const BOOKING_URL = DASHBOARD_BASE;
+export const BOOKING_URL = `${DASHBOARD_BASE}?utm_source=website&utm_medium=cta`;
 export const APP_STORE_URL = `${APP_STORE_BASE}?utm_source=website&utm_medium=cta&utm_campaign=app_install`;
 export const PLAY_STORE_URL = `${PLAY_STORE_BASE}&utm_source=website&utm_medium=cta&utm_campaign=app_install`;
 
