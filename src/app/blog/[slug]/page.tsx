@@ -191,7 +191,7 @@ export default async function BlogPostPage({ params }: Props) {
               Our clinical team is ready to build a personalised plan around your goals.
             </p>
             <a
-              href="https://book.stance.health/stance-health?utm_source=blog&utm_medium=cta&utm_campaign=blog_article"
+              href="https://book.stance.health/stance-health?utm_source=website&utm_medium=cta&utm_campaign=blog_article"
               target="_blank"
               rel="noopener noreferrer"
               className="booking-cta inline-block bg-white text-[#132644] font-bold px-8 py-3 rounded-full hover:bg-[#cdfe71] hover:shadow-[0_8px_25px_rgba(205,254,113,0.3)] hover:scale-105 active:scale-95 transition-all duration-200"
