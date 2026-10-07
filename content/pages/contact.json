@@ -1,0 +1,30 @@
+{
+  "slug": "contact",
+  "title": "Contact Us",
+  "seo": {
+    "title": "Contact Us",
+    "description": "Get in touch with the Stance Health team.",
+    "canonical": "/contact"
+  },
+  "blocks": [
+    {
+      "id": "contact-hero",
+      "type": "PageHero",
+      "props": {
+        "description": "Get in touch with the Stance Health team.",
+        "eyebrow": "Contact",
+        "headline": "Contact",
+        "highlight": "Us"
+      }
+    },
+    {
+      "id": "contact-section-1",
+      "type": "PageSection",
+      "props": {
+        "body": "This page is currently under construction.",
+        "heading": "Contact"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}

@@ -1,0 +1,30 @@
+{
+  "slug": "blog",
+  "title": "Stance Blog",
+  "seo": {
+    "title": "Stance Blog",
+    "description": "Evidence-based insights on orthopaedic rehab, sports performance, and recovery from our clinical team.",
+    "canonical": "/blog"
+  },
+  "blocks": [
+    {
+      "id": "blog-hero",
+      "type": "PageHero",
+      "props": {
+        "description": "Evidence-based insights on orthopaedic rehab, sports performance, and recovery from our clinical team.",
+        "eyebrow": "Insights",
+        "headline": "Stance",
+        "highlight": "Blog"
+      }
+    },
+    {
+      "id": "blog-section-1",
+      "type": "PageSection",
+      "props": {
+        "body": "Browse clinical insights, practical recovery guidance, and performance education.",
+        "heading": "Latest Articles"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}
