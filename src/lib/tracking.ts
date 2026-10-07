@@ -69,8 +69,8 @@ const SESSION_TTL_MS = 30 * 60 * 1000; // 30 minutes
 export const BOOKING_HOST = "book.stance.health";
 
 /**
- * Source written onto every booking link that leaves this site.
- * This is the current source: the appointment is being booked from the website.
+ * Source used only when the visitor opened the site with no utm_source.
+ * Any earlier source (instagram, google, youtube, …) is kept as-is.
  */
 export const WEBSITE_UTM_SOURCE = "website";
 
@@ -209,36 +209,28 @@ function isBookingDestination(url: URL): boolean {
 }
 
 /**
- * Stamp `utm_source=website` onto a booking URL.
- *
- * Safe during render and SSR: it does not read localStorage. An earlier
- * marketing source already on the link is kept as `prev_utm_source`.
- * Non-booking URLs are returned unchanged.
+ * Direct-visit default for a booking URL. Does not read localStorage, so it
+ * is safe during SSR. A source already on the link is left alone. The click
+ * handler in {@link buildTrackedUrl} replaces a bare `website` source with
+ * the visitor's real first-touch source and sets `utm_referer`.
  */
 export function ensureWebsiteBookingSource(destination: string): string {
   if (!destination) return destination;
   try {
     const url = new URL(destination);
     if (!isBookingDestination(url)) return destination;
-
-    const current = url.searchParams.get("utm_source");
-    let changed = false;
-    if (current && current !== WEBSITE_UTM_SOURCE && !url.searchParams.has("prev_utm_source")) {
-      url.searchParams.set("prev_utm_source", current);
-      changed = true;
-    }
-    if (current !== WEBSITE_UTM_SOURCE) {
-      url.searchParams.set("utm_source", WEBSITE_UTM_SOURCE);
-      changed = true;
-    }
-    if (!url.searchParams.has("utm_medium")) {
-      url.searchParams.set("utm_medium", "cta");
-      changed = true;
-    }
-    return changed ? url.toString() : destination;
+    if (url.searchParams.has("utm_source")) return destination;
+    url.searchParams.set("utm_source", WEBSITE_UTM_SOURCE);
+    return url.toString();
   } catch {
     return destination;
   }
+}
+
+/** Page the visitor is on when they click through to booking. `/` is home. */
+function currentPageReferer(): string {
+  const path = window.location.pathname || "/";
+  return path.startsWith("/") ? path : `/${path}`;
 }
 
 /**
@@ -249,10 +241,10 @@ export function ensureWebsiteBookingSource(destination: string): string {
  * present in the destination are never overwritten. Non-http schemes
  * (`tel:`, `mailto:`, `#…`, `javascript:`) are returned untouched.
  *
- * Booking links are the exception for `utm_source`: the current source is
- * always `website`, because the appointment is being booked from this site.
- * A different source already stored from an ad or an earlier landing is kept
- * as `prev_utm_source`.
+ * Booking links keep the visitor's first-touch `utm_source` (instagram,
+ * google, or any other value on the landing URL). `website` is used only
+ * when that visit had no source. `utm_referer` is the Stance page they
+ * clicked Book from, set fresh on every click.
  *
  * Internal same-origin results come back root-relative so Next's client router
  * treats them as in-app navigation; external results keep their full origin.
@@ -273,20 +265,12 @@ export function buildTrackedUrl(destination: string): string {
 
     const booking = isBookingDestination(url);
     const stored = readStoredParams();
-    const incomingSource = url.searchParams.get("utm_source");
-    const rememberedSource = stored.utm_source;
-    const previousSource =
-      incomingSource && incomingSource !== WEBSITE_UTM_SOURCE
-        ? incomingSource
-        : rememberedSource && rememberedSource !== WEBSITE_UTM_SOURCE
-          ? rememberedSource
-          : undefined;
 
     let paramsAdded = false;
     for (const key of FORWARD_KEYS) {
       const value = stored[key as keyof TrackingData];
-      // Don't copy a campaign source onto a booking link. The current
-      // booking source is the website; the earlier source is prev_utm_source.
+      // Booking source is applied below so a hardcoded `website` default
+      // does not block the real first-touch source.
       if (booking && key === "utm_source") continue;
       if (value && !url.searchParams.has(key)) {
         url.searchParams.set(key, value);
@@ -295,16 +279,22 @@ export function buildTrackedUrl(destination: string): string {
     }
 
     if (booking) {
-      if (url.searchParams.get("utm_source") !== WEBSITE_UTM_SOURCE) {
-        url.searchParams.set("utm_source", WEBSITE_UTM_SOURCE);
+      const linkSource = url.searchParams.get("utm_source");
+      const source =
+        stored.utm_source ||
+        (linkSource && linkSource !== WEBSITE_UTM_SOURCE ? linkSource : "") ||
+        WEBSITE_UTM_SOURCE;
+      if (url.searchParams.get("utm_source") !== source) {
+        url.searchParams.set("utm_source", source);
         paramsAdded = true;
       }
-      if (!url.searchParams.has("utm_medium")) {
-        url.searchParams.set("utm_medium", "cta");
+      const referer = currentPageReferer();
+      if (url.searchParams.get("utm_referer") !== referer) {
+        url.searchParams.set("utm_referer", referer);
         paramsAdded = true;
       }
-      if (previousSource && !url.searchParams.has("prev_utm_source")) {
-        url.searchParams.set("prev_utm_source", previousSource);
+      if (url.searchParams.has("prev_utm_source")) {
+        url.searchParams.delete("prev_utm_source");
         paramsAdded = true;
       }
     }

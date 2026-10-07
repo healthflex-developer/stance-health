@@ -13,8 +13,8 @@ interface Props {
 /**
  * CTA anchor that appends stored UTM / click-ID params to the booking URL.
  * Use this anywhere a "Book an Appointment" link appears.
- * The current utm_source is always "website". An earlier marketing source
- * is preserved as prev_utm_source when the click is tracked.
+ * utm_source stays the first place the visitor came from. Direct visits
+ * use "website". The click also adds utm_referer for this page.
  * Includes Framer Motion hover/tap effects for a polished interaction.
  */
 export default function BookingCta({ className, label, children }: Props) {

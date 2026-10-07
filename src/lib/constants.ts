@@ -83,10 +83,9 @@ const PLAY_STORE_BASE = "https://play.google.com/store/apps/details?id=com.stanc
 
 /**
  * Static fallback used in Server Components and anchor hrefs.
- * Every appointment booked from this site is attributed to the website.
- * The TrackingInit + buildTrackedUrl() flow still appends live click-ID
- * params client-side via the useCta() hook (see src/hooks/useCta.ts), and
- * keeps an earlier marketing source as prev_utm_source.
+ * `utm_source=website` is the direct-visit default. On click, buildTrackedUrl()
+ * replaces it with the first-touch source when the visitor arrived from an ad
+ * or any other campaign, and adds `utm_referer` for the page they clicked from.
  */
 export const BOOKING_URL = `${DASHBOARD_BASE}?utm_source=website&utm_medium=cta`;
 export const APP_STORE_URL = `${APP_STORE_BASE}?utm_source=website&utm_medium=cta&utm_campaign=app_install`;
