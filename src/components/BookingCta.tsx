@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useCta } from "@/hooks/useCta";
+import { ensureWebsiteBookingSource } from "@/lib/tracking";
 
 interface Props {
   className?: string;
@@ -14,11 +15,13 @@ interface Props {
 /**
  * CTA anchor that appends stored UTM / click-ID params to the booking URL.
  * Use this anywhere a "Book an Appointment" link appears.
+ * utm_source stays the first place the visitor came from. Direct visits
+ * use "website". The click also adds utm_referer for this page.
  * Includes Framer Motion hover/tap effects for a polished interaction.
  */
 export default function BookingCta({ className, label, href, children, dataAdminField }: Props) {
   const { bookingUrl } = useCta();
-  const destination = href || bookingUrl;
+  const destination = ensureWebsiteBookingSource(href || bookingUrl);
   return (
     <motion.a
       data-admin-field={dataAdminField}

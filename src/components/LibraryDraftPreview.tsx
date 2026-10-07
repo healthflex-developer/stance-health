@@ -9,6 +9,8 @@ import Framework from "@/components/sections/Framework";
 import Technology from "@/components/sections/Technology";
 import Testimonials from "@/components/sections/Testimonials";
 import type { AdminPreviewBlock } from "@/components/PreviewDraft";
+import { ensureWebsiteBookingSource } from "@/lib/tracking";
+import { BOOKING_URL } from "@/lib/constants";
 
 type DraftBlock = {
   id: string;
@@ -38,7 +40,7 @@ function fillBlock(block: DraftBlock): AdminPreviewBlock {
     props.highlight = text(props.highlight, "headline");
     props.paragraph = text(props.paragraph, "Add a short description");
     props.ctaLabel = text(props.ctaLabel, "Add button label");
-    props.ctaHref = text(props.ctaHref, "https://book.stance.health/stance-health");
+    props.ctaHref = text(props.ctaHref, BOOKING_URL);
   }
   if (block.type === "Team") {
     props.heading = text(props.heading, "Flawless Team");
@@ -105,7 +107,7 @@ function fillBlock(block: DraftBlock): AdminPreviewBlock {
     props.heading = text(props.heading, "Ready to begin your journey?");
     props.description = text(props.description, "Our team is ready to help you achieve your performance and recovery goals.");
     props.ctaLabel = text(props.ctaLabel, "Book an Appointment");
-    props.ctaHref = text(props.ctaHref, "https://book.stance.health/stance-health");
+    props.ctaHref = text(props.ctaHref, BOOKING_URL);
   }
   return { id: block.id, type: block.type, props };
 }
@@ -133,7 +135,7 @@ function CtaTemplate({ block }: { block: AdminPreviewBlock }) {
       <div className="mx-auto max-w-3xl">
         <h2 data-admin-field="heading" className="mb-4 text-3xl font-extrabold text-black sm:text-4xl">{text(props.heading, "Ready to begin your journey?")}</h2>
         <p data-admin-field="description" className="mb-8 text-black/70">{text(props.description, "Our team is ready to help you achieve your performance and recovery goals.")}</p>
-        <a data-admin-field="ctaLabel" href={text(props.ctaHref, "https://book.stance.health/stance-health")} target="_blank" rel="noreferrer" className="booking-cta inline-block rounded-full bg-black px-8 py-3 font-semibold text-white">
+        <a data-admin-field="ctaLabel" href={ensureWebsiteBookingSource(text(props.ctaHref, BOOKING_URL))} target="_blank" rel="noreferrer" className="booking-cta inline-block rounded-full bg-black px-8 py-3 font-semibold text-white">
           {text(props.ctaLabel, "Book an Appointment")}
         </a>
       </div>
@@ -249,7 +251,7 @@ function PlaceholderSection({ block }: { block: DraftBlock }) {
             <SplitHeading prefix={props.headingPrefix} highlight={props.headingHighlight} fallbackPrefix="Add a heading " fallbackHighlight="highlight" />
             <p data-admin-field="paragraphOne" className="mt-4 text-white/70">{text(props.paragraphOne, "Add the first paragraph")}</p>
             <p data-admin-field="paragraphTwo" className="mt-4 text-white/70">{text(props.paragraphTwo, "Add the second paragraph")}</p>
-            <a data-admin-field="ctaLabel" href={text(props.ctaHref, "https://book.stance.health/stance-health")} className="booking-cta mt-6 inline-block rounded-full bg-white px-6 py-3 font-bold text-[#132644]">{text(props.ctaLabel, "Add button label")}</a>
+            <a data-admin-field="ctaLabel" href={ensureWebsiteBookingSource(text(props.ctaHref, BOOKING_URL))} className="booking-cta mt-6 inline-block rounded-full bg-white px-6 py-3 font-bold text-[#132644]">{text(props.ctaLabel, "Add button label")}</a>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div data-admin-field="imageOne" className="aspect-[4/5] rounded-2xl bg-[#3a5070]" />

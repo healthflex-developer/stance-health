@@ -3,7 +3,7 @@
 import BookingCta from "@/components/BookingCta";
 import { previewText, useAdminPreviewBlock, type AdminPreviewBlock } from "@/components/PreviewDraft";
 import { usePublishedBlock } from "@/components/PublishedContent";
-import { HERO_VIDEO } from "@/lib/constants";
+import { BOOKING_URL, HERO_VIDEO } from "@/lib/constants";
 
 const VIDEO_URL = HERO_VIDEO;
 const DEFAULT_HEADLINE = "Welcome To Stance Health";
@@ -22,7 +22,7 @@ export default function Hero({ previewBlock }: { previewBlock?: AdminPreviewBloc
   const paragraph = previewText(draft, "paragraph", DEFAULT_PARAGRAPH);
   const videoUrl = previewText(draft, "videoUrl", VIDEO_URL) || VIDEO_URL;
   const ctaLabel = previewText(draft, "ctaLabel", "Book an Appointment");
-  const ctaHref = previewText(draft, "ctaHref", "https://book.stance.health/stance-health") || "https://book.stance.health/stance-health";
+  const ctaHref = previewText(draft, "ctaHref", BOOKING_URL) || BOOKING_URL;
 
   const highlightAt = highlight ? headline.indexOf(highlight) : -1;
   const beforeHighlight = highlightAt >= 0 ? headline.slice(0, highlightAt) : headline;

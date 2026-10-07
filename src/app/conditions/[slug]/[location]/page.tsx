@@ -9,6 +9,7 @@ import {
 } from "@/lib/seo-pages";
 import type { Metadata } from "next";
 import { withPublishedSeo } from "@/lib/published-seo";
+import { ensureWebsiteBookingSource } from "@/lib/tracking";
 
 type Props = { params: Promise<{ slug: string; location: string }> };
 
@@ -210,7 +211,7 @@ export default async function ConditionLocationPage({ params }: Props) {
               Our clinical team is ready to assess your {condition.title.toLowerCase()} and build a personalised recovery plan.
             </p>
             <a
-              href={`https://book.stance.health/stance-health?utm_source=website&utm_medium=cta&utm_campaign=condition_location&utm_content=${condition.slug}_${location}`}
+              href={ensureWebsiteBookingSource(`https://book.stance.health/stance-health?utm_source=website&utm_medium=cta&utm_campaign=condition_location&utm_content=${condition.slug}_${location}`)}
               target="_blank"
               rel="noopener noreferrer"
               className="booking-cta inline-block bg-white text-[#132644] font-bold px-8 py-3 rounded-full hover:bg-[#cdfe71] hover:shadow-[0_8px_25px_rgba(205,254,113,0.3)] hover:scale-105 active:scale-95 transition-all duration-200"

@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AdminPreviewSection from "@/components/AdminPreviewSection";
 import { previewList, previewText, useAdminPreviewBlock } from "@/components/PreviewDraft";
+import { ensureWebsiteBookingSource } from "@/lib/tracking";
 
 type Item = { text?: string };
 type Place = { label?: string; href?: string };
@@ -151,7 +152,7 @@ export default function ConditionDetail({ data }: { data: ConditionDetailData })
                 <span data-admin-field="headingHighlight" className="text-[#cdfe71]">{previewText(cta, "headingHighlight", data.ctaHeadingHighlight)}</span>?
               </h3>
               <p data-admin-field="description" className="text-white/60 text-sm mb-6">{previewText(cta, "description", data.ctaDescription)}</p>
-              <a data-admin-field="ctaLabel" href={previewText(cta, "ctaHref", data.ctaHref)} target="_blank" rel="noopener noreferrer" className="booking-cta inline-block bg-white text-[#132644] font-bold px-8 py-3 rounded-full">{previewText(cta, "ctaLabel", data.ctaLabel)}</a>
+              <a data-admin-field="ctaLabel" href={ensureWebsiteBookingSource(previewText(cta, "ctaHref", data.ctaHref))} target="_blank" rel="noopener noreferrer" className="booking-cta inline-block bg-white text-[#132644] font-bold px-8 py-3 rounded-full">{previewText(cta, "ctaLabel", data.ctaLabel)}</a>
             </div>
           </AdminPreviewSection>
         </div>

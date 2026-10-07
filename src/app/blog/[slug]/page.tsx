@@ -88,7 +88,7 @@ export default async function BlogPostPage({ params }: Props) {
           ctaHeadingHighlight: "next step",
           ctaDescription: "Our clinical team is ready to build a personalised plan around your goals.",
           ctaLabel: "Book an Assessment",
-          ctaHref: "https://book.stance.health/stance-health?utm_source=blog&utm_medium=cta&utm_campaign=blog_article",
+          ctaHref: "https://book.stance.health/stance-health?utm_source=website&utm_medium=cta&utm_campaign=blog_article",
         }}
       />
     </>
