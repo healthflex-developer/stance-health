@@ -1,0 +1,46 @@
+{
+  "slug": "delete-account",
+  "title": "Delete Your Account",
+  "seo": {
+    "title": "Delete Your Account",
+    "description": "Request deletion of your Stance Health account and associated data.",
+    "canonical": "/delete-account"
+  },
+  "blocks": [
+    {
+      "id": "delete-account-hero",
+      "type": "PageHero",
+      "props": {
+        "description": "Request deletion of your Stance Health account and associated data.",
+        "eyebrow": "Account",
+        "headline": "Delete Your",
+        "highlight": "Account"
+      }
+    },
+    {
+      "id": "delete-account-section-1",
+      "type": "PageSection",
+      "props": {
+        "body": "Steps for requesting account deletion through the support team.",
+        "heading": "How to Request Deletion"
+      }
+    },
+    {
+      "id": "delete-account-section-2",
+      "type": "PageSection",
+      "props": {
+        "body": "The personal, appointment, billing, and device data removed with your account.",
+        "heading": "What Gets Deleted"
+      }
+    },
+    {
+      "id": "delete-account-section-3",
+      "type": "PageSection",
+      "props": {
+        "body": "Limited data that may be retained temporarily for legal and compliance requirements.",
+        "heading": "Data Retained"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}
