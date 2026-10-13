@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { getAllBlogs, getBlogBySlug } from "@/lib/blogs";
 import type { BlogSection } from "@/lib/blogs";
 import type { Metadata } from "next";
-import { BASE_URL } from "@/lib/constants";
+import { BASE_URL, BOOKING_URL } from "@/lib/constants";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -191,7 +191,7 @@ export default async function BlogPostPage({ params }: Props) {
               Our clinical team is ready to build a personalised plan around your goals.
             </p>
             <a
-              href="https://book.stance.health/stance-health?utm_source=website&utm_medium=cta&utm_campaign=blog_article"
+              href={`${BOOKING_URL}&utm_campaign=blog_article`}
               target="_blank"
               rel="noopener noreferrer"
               className="booking-cta inline-block bg-white text-[#132644] font-bold px-8 py-3 rounded-full hover:bg-[#cdfe71] hover:shadow-[0_8px_25px_rgba(205,254,113,0.3)] hover:scale-105 active:scale-95 transition-all duration-200"

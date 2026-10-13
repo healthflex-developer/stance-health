@@ -238,8 +238,9 @@ function currentPageReferer(): string {
  *
  * Works for both relative internal paths (`/about`, `/conditions/x?foo=1`) and
  * absolute external URLs (`https://book.stance.health/...`). Params already
- * present in the destination are never overwritten. Non-http schemes
- * (`tel:`, `mailto:`, `#…`, `javascript:`) are returned untouched.
+ * present in the destination are kept, except a book-button `utm_medium=cta`
+ * (or `utm_source=website`) which loses to an earlier ad click. Non-http
+ * schemes (`tel:`, `mailto:`, `#…`, `javascript:`) are returned untouched.
  *
  * Booking links keep the visitor's first-touch `utm_source` (instagram,
  * google, or any other value on the landing URL). `website` is used only
@@ -279,20 +280,7 @@ export function buildTrackedUrl(destination: string): string {
     }
 
     if (booking) {
-      const linkSource = url.searchParams.get("utm_source");
-      const source =
-        stored.utm_source ||
-        (linkSource && linkSource !== WEBSITE_UTM_SOURCE ? linkSource : "") ||
-        WEBSITE_UTM_SOURCE;
-      if (url.searchParams.get("utm_source") !== source) {
-        url.searchParams.set("utm_source", source);
-        paramsAdded = true;
-      }
-      const referer = currentPageReferer();
-      if (url.searchParams.get("utm_referer") !== referer) {
-        url.searchParams.set("utm_referer", referer);
-        paramsAdded = true;
-      }
+      paramsAdded = applyBookingAttribution(url, stored) || paramsAdded;
       if (url.searchParams.has("prev_utm_source")) {
         url.searchParams.delete("prev_utm_source");
         paramsAdded = true;
@@ -313,4 +301,53 @@ export function buildTrackedUrl(destination: string): string {
   } catch {
     return destination;
   }
+}
+
+/**
+ * Book links may be tagged `utm_medium=cta` for a direct website visit.
+ * An earlier ad click (stored medium, or a Google click id) keeps its own medium.
+ * Direct visits with no medium yet are tagged `cta`.
+ */
+function applyBookingAttribution(url: URL, stored: TrackingData): boolean {
+  let changed = false;
+  const googleClick = Boolean(stored.gclid || stored.gbraid || stored.wbraid);
+  const storedMedium = stored.utm_medium;
+  const currentMedium = url.searchParams.get("utm_medium");
+
+  if (googleClick && (!currentMedium || currentMedium === "cta")) {
+    if (currentMedium !== "cpc") {
+      url.searchParams.set("utm_medium", "cpc");
+      changed = true;
+    }
+  } else if (storedMedium && currentMedium === "cta" && storedMedium !== "cta") {
+    url.searchParams.set("utm_medium", storedMedium);
+    changed = true;
+  } else if (!storedMedium && !currentMedium && !googleClick) {
+    url.searchParams.set("utm_medium", "cta");
+    changed = true;
+  }
+
+  const storedSource = stored.utm_source;
+  const currentSource = url.searchParams.get("utm_source");
+  const placeholderSource = currentSource === "website" || currentSource === "blog";
+  if (googleClick && (!currentSource || placeholderSource)) {
+    if (currentSource !== "google") {
+      url.searchParams.set("utm_source", "google");
+      changed = true;
+    }
+  } else if (storedSource && placeholderSource && storedSource !== currentSource) {
+    url.searchParams.set("utm_source", storedSource);
+    changed = true;
+  } else if (!storedSource && !currentSource && !googleClick) {
+    url.searchParams.set("utm_source", "website");
+    changed = true;
+  }
+
+  const page = currentPageReferer();
+  if (url.searchParams.get("utm_referer") !== page) {
+    url.searchParams.set("utm_referer", page);
+    changed = true;
+  }
+
+  return changed;
 }

@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getAllServices, getServiceBySlug, getAllConditions } from "@/lib/seo-pages";
 import type { Metadata } from "next";
-import { BASE_URL } from "@/lib/constants";
+import { BASE_URL, BOOKING_URL } from "@/lib/constants";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -135,7 +135,7 @@ export default async function ServicePage({ params }: Props) {
               Book an assessment and our clinical team will build a personalised plan for your goals.
             </p>
             <a
-              href={`https://book.stance.health/stance-health?utm_source=website&utm_medium=cta&utm_campaign=service_${slug}`}
+              href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="booking-cta inline-block bg-white text-[#132644] font-bold px-8 py-3 rounded-full hover:bg-[#cdfe71] hover:shadow-[0_8px_25px_rgba(205,254,113,0.3)] hover:scale-105 active:scale-95 transition-all duration-200"

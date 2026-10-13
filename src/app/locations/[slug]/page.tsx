@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getAllLocations, getLocationBySlug, getAllConditions } from "@/lib/seo-pages";
 import type { Metadata } from "next";
-import { BASE_URL } from "@/lib/constants";
+import { BASE_URL, BOOKING_URL } from "@/lib/constants";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -197,7 +197,7 @@ export default async function LocationPage({ params }: Props) {
               Start with a comprehensive assessment and get a personalised recovery or performance plan.
             </p>
             <a
-              href={`https://book.stance.health/stance-health?utm_source=website&utm_medium=cta&utm_campaign=location_page&utm_content=${slug}`}
+              href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="booking-cta inline-block bg-white text-[#132644] font-bold px-8 py-3 rounded-full hover:bg-[#cdfe71] hover:shadow-[0_8px_25px_rgba(205,254,113,0.3)] hover:scale-105 active:scale-95 transition-all duration-200"
