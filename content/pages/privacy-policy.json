@@ -1,0 +1,46 @@
+{
+  "slug": "privacy-policy",
+  "title": "Privacy Policy",
+  "seo": {
+    "title": "Privacy Policy",
+    "description": "Learn how Stance Health collects, uses, protects, and retains personal and health-related information.",
+    "canonical": "/privacy-policy"
+  },
+  "blocks": [
+    {
+      "id": "privacy-policy-hero",
+      "type": "PageHero",
+      "props": {
+        "description": "Learn how Stance Health collects, uses, protects, and retains personal and health-related information.",
+        "eyebrow": "Legal",
+        "headline": "Privacy",
+        "highlight": "Policy"
+      }
+    },
+    {
+      "id": "privacy-policy-section-1",
+      "type": "PageSection",
+      "props": {
+        "body": "Our commitments to transparent, legitimate, and secure data handling.",
+        "heading": "Privacy Commitments"
+      }
+    },
+    {
+      "id": "privacy-policy-section-2",
+      "type": "PageSection",
+      "props": {
+        "body": "How information is collected, used, processed, and protected.",
+        "heading": "Information and Use"
+      }
+    },
+    {
+      "id": "privacy-policy-section-3",
+      "type": "PageSection",
+      "props": {
+        "body": "How to request access, correction, deletion, or clarification about your data.",
+        "heading": "Your Rights"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}

@@ -1,0 +1,108 @@
+{
+  "slug": "home-template",
+  "title": "home-template",
+  "seo": {
+    "title": "homee",
+    "description": "home description",
+    "canonical": "/homee",
+    "noIndex": true,
+    "noFollow": true
+  },
+  "blocks": [
+    {
+      "id": "hero_0",
+      "type": "Hero",
+      "props": {
+        "ctaHref": "#",
+        "ctaLabel": "Enter button label",
+        "headline": "Enter heading",
+        "highlight": "Enter heading",
+        "paragraph": "Enter description",
+        "videoUrl": "/placeholders/video.mp4"
+      }
+    },
+    {
+      "id": "framework_1",
+      "type": "Framework",
+      "props": {
+        "heading": "Enter heading",
+        "steps": [
+          {
+            "description": "Enter description",
+            "icon": "/placeholders/image.svg",
+            "id": "item",
+            "label": "Enter label"
+          }
+        ]
+      }
+    },
+    {
+      "id": "technology_2",
+      "type": "Technology",
+      "props": {
+        "heading": "Enter heading",
+        "items": [
+          {
+            "description": "Enter description",
+            "icon": "/placeholders/image.svg",
+            "id": "item",
+            "name": "Enter name"
+          }
+        ]
+      }
+    },
+    {
+      "id": "testimonials_3",
+      "type": "Testimonials",
+      "props": {
+        "heading": "Enter heading",
+        "items": [
+          {
+            "condition": "Enter condition",
+            "image": "/placeholders/image.svg",
+            "imageDecorative": true,
+            "name": "Enter name",
+            "quote": "Enter description",
+            "role": "Enter role"
+          }
+        ]
+      }
+    },
+    {
+      "id": "team_4",
+      "type": "Team",
+      "props": {
+        "heading": "Enter heading",
+        "members": [
+          {
+            "bio": "Enter description",
+            "experience": "Enter experience",
+            "image": "/placeholders/image.svg",
+            "imageDecorative": true,
+            "name": "Enter name",
+            "role": "Enter role"
+          }
+        ],
+        "subtext": "Enter description"
+      }
+    },
+    {
+      "id": "centers_5",
+      "type": "Centers",
+      "props": {
+        "heading": "Enter heading",
+        "items": [
+          {
+            "address": "Enter address",
+            "image": "/placeholders/image.svg",
+            "imageDecorative": true,
+            "maps": "#",
+            "name": "Enter name",
+            "phone": "Enter phone"
+          }
+        ]
+      }
+    }
+  ],
+  "schemaVersion": 1
+}
