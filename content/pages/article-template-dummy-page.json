@@ -1,0 +1,60 @@
+{
+  "slug": "article-template-dummy-page",
+  "title": "Test_article_page",
+  "seo": {
+    "title": "test-article-page",
+    "description": "testttt",
+    "canonical": "/test",
+    "noIndex": true,
+    "noFollow": true,
+    "redirectFrom": "/"
+  },
+  "blocks": [
+    {
+      "id": "blogarticle_0",
+      "type": "BlogArticle",
+      "props": {
+        "authorAvatar": "/placeholders/image.svg",
+        "authorAvatarDecorative": true,
+        "authorName": "Enter name",
+        "authorRole": "Enter role",
+        "backLabel": "Enter back label",
+        "coverImage": "/placeholders/image.svg",
+        "coverImageDecorative": true,
+        "publishedAt": "Enter published date",
+        "readMinutes": "Enter read time",
+        "summary": "Enter description",
+        "tags": [],
+        "title": "Enter heading"
+      }
+    },
+    {
+      "id": "blogbody_1",
+      "type": "BlogBody",
+      "props": {
+        "sections": [
+          {
+            "content": "Enter description",
+            "items": [
+              {
+                "text": "Enter description"
+              }
+            ],
+            "type": "Enter type"
+          }
+        ]
+      }
+    },
+    {
+      "id": "aboutcta_2",
+      "type": "AboutCta",
+      "props": {
+        "ctaHref": "#",
+        "ctaLabel": "Enter button label",
+        "description": "Enter description",
+        "heading": "Enter heading"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}
