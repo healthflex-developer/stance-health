@@ -1,0 +1,108 @@
+{
+  "slug": "partners",
+  "title": "Partner with Us",
+  "seo": {
+    "title": "Partner with Us",
+    "description": "Our multi-disciplinary approach helps doctors, hospitals, sports academies, and corporates maximise outcomes.",
+    "canonical": "/partners"
+  },
+  "blocks": [
+    {
+      "id": "partners-hero",
+      "type": "PartnersHero",
+      "props": {
+        "backgroundImage": "/assets/images/about-banner.svg",
+        "description": "Our multi-disciplinary approach can help you maximise outcomes for your tribe. We collaborate with Doctors, Hospitals, Sports Academies \u0026 Corporates.",
+        "eyebrow": "Partnerships",
+        "headingHighlight": "with us",
+        "headingPrefix": "Partner "
+      }
+    },
+    {
+      "id": "partners-types",
+      "type": "PartnerTypes",
+      "props": {
+        "description": "Whether you're a clinician, sports organisation, or corporate entity — we have a tailored collaboration model for you.",
+        "headingHighlight": "partner with",
+        "headingPrefix": "Who we ",
+        "partnerTypes": [
+          {
+            "description": "We elevate services for orthopaedic specialists, physiotherapists, and hospitals through assessments, outcome-focused treatment protocols, and remote patient engagement.",
+            "icon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/grad.svg",
+            "points": [
+              {
+                "text": "Shared outcome-based treatment protocols"
+              },
+              {
+                "text": "Advanced diagnostic assessments for referred patients"
+              },
+              {
+                "text": "Remote patient monitoring and engagement tools"
+              },
+              {
+                "text": "Collaborative clinical reporting"
+              }
+            ],
+            "title": "Medical Professionals"
+          },
+          {
+            "description": "We develop sport-specific protocols and support both amateur and professional organisations, working with teams and individual athletes to enhance performance and reduce injury risk.",
+            "icon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/grad.svg",
+            "points": [
+              {
+                "text": "Sport-specific injury prevention programmes"
+              },
+              {
+                "text": "Return-to-play protocols and monitoring"
+              },
+              {
+                "text": "Performance screening and benchmarking"
+              },
+              {
+                "text": "Strength \u0026 conditioning integration"
+              }
+            ],
+            "title": "Sports Academies \u0026 Clubs"
+          },
+          {
+            "description": "Our corporate wellness solutions combine in-office musculoskeletal assessments, expert practitioners, and technology-enabled remote solutions for employee health programmes.",
+            "icon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/grad.svg",
+            "points": [
+              {
+                "text": "On-site MSK health screening camps"
+              },
+              {
+                "text": "Employee wellness programme design"
+              },
+              {
+                "text": "Remote physiotherapy and recovery tools"
+              },
+              {
+                "text": "Workplace injury prevention training"
+              }
+            ],
+            "title": "Corporate Entities"
+          }
+        ]
+      }
+    },
+    {
+      "id": "partners-contact",
+      "type": "PartnerContactForm",
+      "props": {
+        "description": "Tell us about your organisation and how you'd like to collaborate.",
+        "emailLabel": "Email",
+        "headingHighlight": "touch",
+        "headingPrefix": "Get in ",
+        "messageLabel": "Message",
+        "nameLabel": "Full Name",
+        "organisationLabel": "Organisation",
+        "roleLabel": "I am a...",
+        "submitLabel": "Send Message",
+        "successMessage": "We've received your message and will be in touch within 2 business days.",
+        "successTitle": "Thank you!"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}

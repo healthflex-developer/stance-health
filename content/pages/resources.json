@@ -1,0 +1,30 @@
+{
+  "slug": "resources",
+  "title": "Resources",
+  "seo": {
+    "title": "Resources",
+    "description": "Clinical guides, explainers, and performance articles built to help you understand your body and make better decisions.",
+    "canonical": "/resources"
+  },
+  "blocks": [
+    {
+      "id": "resources-hero",
+      "type": "PageHero",
+      "props": {
+        "description": "Clinical guides, explainers, and performance articles built to help you understand your body and make better decisions.",
+        "eyebrow": "Resources",
+        "headline": "Evidence-based",
+        "highlight": "education"
+      }
+    },
+    {
+      "id": "resources-section-1",
+      "type": "PageSection",
+      "props": {
+        "body": "Explore guides, explainers, articles, myths, case studies, and FAQs.",
+        "heading": "Resource Library"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}
