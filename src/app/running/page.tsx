@@ -2,9 +2,8 @@ import ProgramPageLayout from "@/components/ProgramPageLayout";
 import { ASSETS, OG_ASSETS } from "@/lib/constants";
 
 import type { Metadata } from "next";
-import { withPublishedSeo } from "@/lib/published-seo";
 
-export const metadata: Metadata = withPublishedSeo("running", {
+export const metadata: Metadata = {
   title: "In Your Stride – Running Programme",
   description:
     "Running programme at Stance Health — assessment of strength movement and physical capacity tailored to your goals. Improve efficiency, prevent injury, and perform at your best.",
@@ -22,7 +21,7 @@ export const metadata: Metadata = withPublishedSeo("running", {
     description: "Objective running assessment and strength testing for runners at Stance Health",
     images: [`${OG_ASSETS}/og-default.png`],
   },
-});
+};
 
 export default function RunningPage() {
   return (

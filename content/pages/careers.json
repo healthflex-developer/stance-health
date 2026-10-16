@@ -1,0 +1,553 @@
+{
+  "slug": "careers",
+  "title": "Careers at Stance",
+  "seo": {
+    "title": "Careers at Stance",
+    "description": "Build your clinical or performance career with expert mentorship, objective data, and meaningful responsibility.",
+    "canonical": "/careers"
+  },
+  "blocks": [
+    {
+      "id": "careers-hero",
+      "type": "CareersHero",
+      "props": {
+        "ctaLabel": "See Open Roles",
+        "headlinePrefix": "Where your career ",
+        "highlightOne": "actually",
+        "highlightTwo": "accelerates.",
+        "impactHeading": "Where our team has made an impact",
+        "paragraphOne": "Most S\u0026C coaches and physios in India spend years waiting for elite exposure — a national athlete on their table, real data instead of guesswork, a mentor worth learning from.",
+        "paragraphTwo": "At Stance, that's the job from day one."
+      }
+    },
+    {
+      "id": "careers-statistics",
+      "type": "CareerStatistics",
+      "props": {
+        "description": "At Stance, you won't just gain experience. You'll develop under people who've built systems, coached elite athletes and continue raising the standard of sports science every single day.",
+        "headingHighlight": "Chapter",
+        "headingPrefix": "Your Next ",
+        "stats": [
+          {
+            "icon": "users",
+            "label": "Total Users",
+            "sub": "Patients treated across all centres",
+            "value": "2000+"
+          },
+          {
+            "icon": "athlete",
+            "label": "Total Athletes",
+            "sub": "Professional \u0026 amateur athletes trained",
+            "value": "500+"
+          },
+          {
+            "icon": "center",
+            "label": "Active Centres",
+            "sub": "Across Bengaluru",
+            "value": "5"
+          },
+          {
+            "icon": "data",
+            "label": "Data Systems",
+            "sub": "VALD, Output Sports, ForceDecks \u0026 more",
+            "value": "6"
+          }
+        ]
+      }
+    },
+    {
+      "id": "careers-tracks",
+      "type": "CareerTracks",
+      "props": {
+        "tracks": [
+          {
+            "badge": "PERFORMANCE TRACK",
+            "description": "Instead of counting sessions, you'll learn how elite performance systems are designed, challenged and continuously refined.",
+            "id": "snc",
+            "joinLabel": "Join the Track",
+            "levels": [
+              {
+                "level": "L3",
+                "sub": "3+ yrs · lead coach",
+                "title": "SENIOR"
+              },
+              {
+                "level": "L2",
+                "sub": "1-3 yrs · staff \u0026 combined",
+                "title": "JUNIOR"
+              },
+              {
+                "level": "L1",
+                "sub": "structured 3-month pathway",
+                "title": "INTERN"
+              }
+            ],
+            "tagline": "Become the coach athletes ask for by name.",
+            "title": "STRENGTH \u0026 CONDITIONING"
+          },
+          {
+            "badge": "CLINICAL TRACK",
+            "description": "Work with cutting-edge diagnostic tools, evidence-based protocols, and a multi-disciplinary team that elevates your clinical reasoning every day.",
+            "id": "physio",
+            "joinLabel": "Join the Track",
+            "levels": [
+              {
+                "level": "L3",
+                "sub": "5+ yrs · lead clinician",
+                "title": "SENIOR"
+              },
+              {
+                "level": "L2",
+                "sub": "2-5 yrs · MSK \u0026 sports",
+                "title": "JUNIOR"
+              },
+              {
+                "level": "L1",
+                "sub": "structured clinical rotation",
+                "title": "INTERN"
+              }
+            ],
+            "tagline": "Treat the athlete, not just the injury.",
+            "title": "SPORTS PHYSIOTHERAPY"
+          }
+        ]
+      }
+    },
+    {
+      "id": "careers-open-roles",
+      "type": "CareerOpenRoles",
+      "props": {
+        "description": "Filter by domain and location. Every role links to the full brief and an inline application.",
+        "headingHighlight": "Roles",
+        "headingPrefix": "Open ",
+        "roles": [
+          {
+            "category": "Clinical \u0026 Performance",
+            "description": "Lead performance training for athletes and active individuals. Beyond coaching, this role owns mentorship, project ownership, operational excellence and cross-team collaboration.",
+            "experience": "3+ years full-time (excluding internship)",
+            "location": "Bengaluru (HSR · Whitefield · Indiranagar)",
+            "qualification": "BSc Sports/Exercise Science with 3+ yrs, or MSc Sports Science / Exercise Physiology / S\u0026C with 2+ yrs — in an academy, pro team, high-performance centre or elite facility.",
+            "sections": [
+              {
+                "points": [
+                  "Design and deliver evidence-based programmes.",
+                  "Run athlete assessments and performance profiling.",
+                  "Build sport-specific performance plans.",
+                  "Lead individual and small-group sessions.",
+                  "Maintain flawless documentation."
+                ],
+                "title": "Strength \u0026 Conditioning delivery"
+              },
+              {
+                "points": [
+                  "Use VALD ForceFrame, ForceDecks, DynaMo, Output Sports Sensors and other assessment tools.",
+                  "Contribute to testing protocols and performance standards."
+                ],
+                "title": "Sports science \u0026 technology"
+              },
+              {
+                "points": [
+                  "Bridge rehab and performance with physiotherapists.",
+                  "Own injury prevention and load management.",
+                  "Educate athletes on recovery and performance."
+                ],
+                "title": "Return-to-performance"
+              },
+              {
+                "points": [
+                  "Mentor junior coaches and interns.",
+                  "Support onboarding and skill development.",
+                  "Lead internal workshops and knowledge shares."
+                ],
+                "title": "Leadership \u0026 team development"
+              },
+              {
+                "points": [
+                  "ASCA Level 1/2, EXOS, NSCA-CSCS, FMS, UKSCA, ACSM Performance."
+                ],
+                "title": "Preferred certifications"
+              }
+            ],
+            "slug": "senior-sc",
+            "title": "Senior Strength \u0026 Conditioning Coach",
+            "type": "Full-time",
+            "whyJoin": [
+              "India's first fully technology-integrated sports physio + rehab ecosystem.",
+              "Work alongside experienced physios, sports scientists and coaches.",
+              "Cutting-edge sports science and performance tech.",
+              "High-growth environment with leadership pathways."
+            ]
+          },
+          {
+            "category": "Clinical \u0026 Performance",
+            "description": "Support senior coaches in delivering performance programmes. Own a caseload, run assessments, and grow under structured mentorship.",
+            "experience": "1-3 years",
+            "location": "Bengaluru (HSR · Whitefield · Indiranagar)",
+            "qualification": "BSc Sports/Exercise Science or equivalent. Exposure to team or individual sport settings preferred.",
+            "sections": [
+              {
+                "points": [
+                  "Deliver S\u0026C sessions under senior supervision.",
+                  "Run assessments using VALD and ForceDecks.",
+                  "Document athlete progress and session notes.",
+                  "Support programme design for assigned athletes."
+                ],
+                "title": "Core responsibilities"
+              },
+              {
+                "points": [
+                  "Weekly case discussions with senior coaches.",
+                  "Attend internal workshops and CPD sessions.",
+                  "Shadow return-to-performance cases."
+                ],
+                "title": "Growth \u0026 learning"
+              }
+            ],
+            "slug": "junior-sc",
+            "title": "Junior Strength \u0026 Conditioning Coach",
+            "type": "Full-time",
+            "whyJoin": [
+              "Structured mentorship from day one.",
+              "Real athlete caseload within the first month.",
+              "Access to elite-level technology and data systems.",
+              "Clear promotion pathway to Senior within 18-24 months."
+            ]
+          },
+          {
+            "category": "Clinical \u0026 Performance",
+            "description": "A structured 3-month internship with floor exposure, supervised coaching, and progressive responsibility.",
+            "experience": "Final year or recent graduate",
+            "location": "Bengaluru (HSR · Whitefield · Indiranagar)",
+            "qualification": "BSc Sports Science / Exercise Science (final year or completed).",
+            "sections": [
+              {
+                "points": [
+                  "Shadow and assist senior coaches on the floor.",
+                  "Learn assessment protocols and documentation.",
+                  "Gradually take on supervised sessions.",
+                  "Present a case study at the end of the programme."
+                ],
+                "title": "What you'll do"
+              }
+            ],
+            "slug": "sc-intern",
+            "title": "Strength \u0026 Conditioning Intern",
+            "type": "Internship (3 months)",
+            "whyJoin": [
+              "Stipend provided.",
+              "Real coaching experience from week one.",
+              "Potential conversion to full-time role.",
+              "Mentorship from India's leading S\u0026C professionals."
+            ]
+          },
+          {
+            "category": "Clinical \u0026 Performance",
+            "description": "Lead clinical decision-making, manage complex cases, and mentor junior physiotherapists. This is a clinical leadership role.",
+            "experience": "5+ years",
+            "location": "Bengaluru",
+            "qualification": "MPT in Orthopaedics / Sports / Musculoskeletal. Additional certifications in manual therapy or sports rehab preferred.",
+            "sections": [
+              {
+                "points": [
+                  "Manage complex MSK and sports injury caseloads.",
+                  "Design and execute rehabilitation programmes.",
+                  "Use VALD, ForceDecks and motion analysis in clinical reasoning.",
+                  "Collaborate with S\u0026C coaches on return-to-performance."
+                ],
+                "title": "Clinical delivery"
+              },
+              {
+                "points": [
+                  "Mentor junior physios and interns.",
+                  "Lead clinical audits and case presentations.",
+                  "Contribute to SOPs and protocol development."
+                ],
+                "title": "Leadership"
+              }
+            ],
+            "slug": "senior-physio",
+            "title": "Senior / In-charge Physiotherapist — MSK \u0026 Sports",
+            "type": "Full-time",
+            "whyJoin": [
+              "India's first fully technology-integrated sports physio + rehab ecosystem.",
+              "Multi-disciplinary team environment.",
+              "Clinical leadership pathway.",
+              "Work with elite and recreational athletes."
+            ]
+          },
+          {
+            "category": "Clinical \u0026 Performance",
+            "description": "Deliver hands-on physiotherapy, manage a caseload, and grow your clinical reasoning under experienced clinicians.",
+            "experience": "2-5 years",
+            "location": "Bengaluru (HSR · Whitefield)",
+            "qualification": "BPT / MPT. Interest in sports and MSK physiotherapy.",
+            "sections": [
+              {
+                "points": [
+                  "Assess and treat MSK conditions.",
+                  "Use technology-assisted diagnostics.",
+                  "Document patient progress meticulously.",
+                  "Collaborate with S\u0026C on rehab-to-performance transition."
+                ],
+                "title": "Core responsibilities"
+              }
+            ],
+            "slug": "junior-physio",
+            "title": "Junior Sports Physiotherapist",
+            "type": "Full-time",
+            "whyJoin": [
+              "Structured mentorship and case discussions.",
+              "Access to cutting-edge assessment technology.",
+              "Diverse caseload — athletes to weekend warriors.",
+              "Clear growth pathway to senior clinician."
+            ]
+          },
+          {
+            "category": "Clinical \u0026 Performance",
+            "description": "A structured clinical rotation with supervised caseload, case discussions, and hands-on learning.",
+            "experience": "Final year BPT or recent graduate",
+            "location": "Bengaluru (All centres)",
+            "qualification": "BPT (final year or completed).",
+            "sections": [
+              {
+                "points": [
+                  "Observe and assist senior physiotherapists.",
+                  "Learn assessment and documentation protocols.",
+                  "Take supervised patient sessions.",
+                  "Present a clinical case study."
+                ],
+                "title": "What you'll do"
+              }
+            ],
+            "slug": "physio-intern",
+            "title": "Physiotherapy Intern",
+            "type": "Internship (2 months)",
+            "whyJoin": [
+              "Stipend provided.",
+              "Hands-on clinical exposure from day one.",
+              "Potential conversion to full-time.",
+              "Work in a multi-disciplinary sports health setting."
+            ]
+          },
+          {
+            "category": "Patient Care \u0026 Operations",
+            "description": "Own the patient experience from booking to discharge. Coordinate schedules, manage communications, and ensure seamless operations.",
+            "experience": "1+ years in healthcare/hospitality",
+            "location": "Bengaluru (Indiranagar)",
+            "qualification": "Graduate in any discipline. Strong communication skills.",
+            "sections": [
+              {
+                "points": [
+                  "Manage patient bookings and schedules.",
+                  "Coordinate between clinicians and patients.",
+                  "Handle patient queries via phone and WhatsApp.",
+                  "Maintain documentation and billing support."
+                ],
+                "title": "Core responsibilities"
+              }
+            ],
+            "slug": "patient-care",
+            "title": "Patient Care Coordinator",
+            "type": "Full-time",
+            "whyJoin": [
+              "Work in a fast-paced healthcare startup.",
+              "Direct impact on patient experience.",
+              "Growth into operations leadership.",
+              "Collaborative and supportive team."
+            ]
+          },
+          {
+            "category": "Corporate \u0026 Leadership",
+            "description": "Support centre operations, vendor management, and process optimization across multiple locations.",
+            "experience": "2+ years in operations/startups",
+            "location": "Bengaluru",
+            "qualification": "Graduate/MBA. Startup or healthcare operations experience preferred.",
+            "sections": [
+              {
+                "points": [
+                  "Manage day-to-day centre operations.",
+                  "Coordinate with vendors and suppliers.",
+                  "Track operational KPIs and reporting.",
+                  "Support new centre launches."
+                ],
+                "title": "Core responsibilities"
+              }
+            ],
+            "slug": "operations",
+            "title": "Operations Associate",
+            "type": "Full-time",
+            "whyJoin": [
+              "Multi-location operations experience.",
+              "High ownership from day one.",
+              "Fast-growing healthcare company.",
+              "Work directly with founding team."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "careers-centers",
+      "type": "CareerCenters",
+      "props": {
+        "heading": "Our Centers",
+        "items": [
+          {
+            "address": "2nd Floor, 1555, 19th Main Rd, Agara, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/HSR.JPG",
+            "maps": "https://maps.app.goo.gl/RHWQ7VEB45CYPAE66",
+            "name": "HSR Layout",
+            "phone": "+91 6360014559"
+          },
+          {
+            "address": "4th Floor, Kailash Parbat, No. 149, Doddanakundi, 2nd Phase, Hoodi, Whitefield, Bengaluru, Karnataka 560048",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/whitefield.webp",
+            "maps": "https://maps.app.goo.gl/FCk4gaXCgviPFJMG8",
+            "name": "Whitefield",
+            "phone": "+91 6361056456"
+          },
+          {
+            "address": "3rd Floor, Srinivasan Towers, ESI Hospital Road, Defence Colony, Indiranagar, Bengaluru, Karnataka 560038",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/indra.webp",
+            "maps": "https://maps.app.goo.gl/xLpXLPXRtuY8S21w8",
+            "name": "Indiranagar",
+            "phone": "+91 9008417804"
+          },
+          {
+            "address": "Ward No.57, 3rd Floor, V.B.R Ruddhi, 558, 9th Cross Rd, 3rd Phase, J. P. Nagar, Bengaluru, Karnataka 560078",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/JP_Nagar.jpg",
+            "maps": "https://maps.app.goo.gl/NHvNAa1mRZbmjsKv9",
+            "name": "JP NAGAR",
+            "phone": "+91 6366940195"
+          },
+          {
+            "address": "Unit No. 22, 2nd floor, 80 Feet Rd, S.T. Bed, 4th Block, Koramangala, Bengaluru, Karnataka 560034",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/koramangala.jpeg",
+            "maps": "https://maps.app.goo.gl/Pe6diykLUL22aLfa9",
+            "name": "KORAMANGALA",
+            "phone": "+91 7625051785"
+          }
+        ]
+      }
+    },
+    {
+      "id": "careers-team-stories",
+      "type": "CareerTeamStories",
+      "props": {
+        "description": "What it's like to build a career at Stance.",
+        "headingHighlight": "Team",
+        "headingPrefix": "From the ",
+        "stories": [
+          {
+            "initials": "A",
+            "name": "Anjali",
+            "quote": "I'm learning something new every day, which is helping me grow both personally and professionally. I believe this experience is helping me become a better physiotherapist and will contribute significantly to my development as a clinician in the future. The work environment is supportive, well-organized, and professionally managed, making it a great place to learn and grow.",
+            "role": "Physio Intern"
+          },
+          {
+            "initials": "A",
+            "name": "Akshat",
+            "quote": "It's been a great learning experience with a supportive team and a professional environment. It has improved my practical skills, confidence, and understanding of strength and conditioning in real-world settings. Stance offers a more structured approach, better mentorship, and greater exposure to athlete assessment and evidence-based training.",
+            "role": "S\u0026C Intern"
+          },
+          {
+            "initials": "R",
+            "name": "Richwin",
+            "quote": "Working at Stance has been incredibly rewarding. As an early-career physiotherapist, mentorship from experienced clinicians and exposure to evidence-based practice have strengthened my clinical reasoning, confidence, and hands-on skills. What stands out most is Stance's collaborative culture and individualised approach to care, looking beyond symptoms to understand the root cause. Its focus on quality, teamwork, and continuous learning makes it a place where both patients and therapists can thrive.",
+            "role": "Physiotherapist"
+          },
+          {
+            "initials": "M",
+            "name": "Muskan Agrawal",
+            "quote": "Working at Stance has been a great learning experience so far. As an intern, I've had the opportunity to enhance my clinical reasoning, assessment skills, and confidence through an evidence-based approach and excellent mentorship. What sets Stance apart is its focus on objective assessments, individualized rehabilitation, and continuous learning. The collaborative environment has made it a valuable place for both my professional and personal growth. I'm grateful to be part of the team.",
+            "role": "Physiotherapy Intern"
+          },
+          {
+            "initials": "P",
+            "name": "Paramjeet",
+            "quote": "I joined Stance to build my expertise in return-to-sport, performance, and clinical care, and the exposure to a wide range of injuries and conditions has made the experience incredibly valuable.",
+            "role": "S\u0026C Intern"
+          },
+          {
+            "initials": "B",
+            "name": "Bhuvanshree",
+            "quote": "Working at Stance has been a truly rewarding experience. The professional and supportive environment encourages continuous learning, and everyone on the team is approachable and always willing to help. Through exposure to evidence-based assessments, rehabilitation methods, and advanced technology, I have strengthened my clinical knowledge, practical skills, and clinical reasoning. This experience has played an important role in my professional growth.",
+            "role": "Physiotherapy Intern"
+          }
+        ]
+      }
+    },
+    {
+      "id": "careers-values",
+      "type": "CareerValues",
+      "props": {
+        "description": "We don't run on hierarchy. We run on reasoning, speed, and people who'd rather fix something than flag it.",
+        "headingHighlight": "signing up for",
+        "headingPrefix": "What you're actually ",
+        "values": [
+          {
+            "body": "That's less a value statement and more just how work happens here.",
+            "icon": "wrench",
+            "title": "Bring a problem, leave with a fix"
+          },
+          {
+            "body": "We hire for how you think, not how your CV reads. Nowhere to hide once they do.",
+            "icon": "brain",
+            "title": "Reasoning over résumé"
+          },
+          {
+            "body": "No ladder to climb before someone hears you out. Nowhere to hide once they do.",
+            "icon": "chat",
+            "title": "Ideas don't wait in line"
+          },
+          {
+            "body": "Every decision has a number attached. That's just how the place runs.",
+            "icon": "chart",
+            "title": "We don't guess"
+          },
+          {
+            "body": "50,000+ sessions delivered, 4 centers live, a 5th on the way. You'll feel the pace in week one.",
+            "icon": "bolt",
+            "title": "We move fast"
+          },
+          {
+            "body": "Thursdays, we trade laptops for a ball. Football, cricket, pickleball — by vote.",
+            "icon": "gamepad",
+            "title": "Compete a little, unwind a lot"
+          }
+        ]
+      }
+    },
+    {
+      "id": "careers-faq",
+      "type": "CareerFAQ",
+      "props": {
+        "description": "Common questions about applying, interviews and internships at Stance.",
+        "faqs": [
+          {
+            "answer": "We currently have five centers across Bengaluru: HSR Layout, Whitefield, Indiranagar, JP Nagar and Koramangala.",
+            "question": "Which locations do you operate in?"
+          },
+          {
+            "answer": "You can book directly through our website at book.stance.health, or call your nearest center to schedule an assessment ",
+            "question": "How do I book an appointment?"
+          }
+        ],
+        "headingHighlight": "FAQ",
+        "headingPrefix": "Careers "
+      }
+    },
+    {
+      "id": "careers-cta",
+      "type": "CareersCTA",
+      "props": {
+        "ctaLabel": "Email careers@stance.health",
+        "description": "We're always looking for people who care about the craft. Send us a note and we'll route it to the right team.",
+        "email": "careers@stance.health",
+        "headingHighlight": "Say hello anyway.",
+        "headingPrefix": "Don't see your role? "
+      }
+    }
+  ],
+  "schemaVersion": 1
+}

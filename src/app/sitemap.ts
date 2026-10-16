@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { BASE_URL } from "@/lib/constants";
-import { applyPublishedSitemap } from "@/lib/published-seo";
 import { getAllBlogs } from "@/lib/blogs";
 import {
   getAllConditions,
@@ -183,7 +182,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
     }));
 
-  return applyPublishedSitemap([
+  return [
     ...STATIC_ROUTES,
     ...blogRoutes,
     ...conditionRoutes,
@@ -191,5 +190,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...locationRoutes,
     ...serviceRoutes,
     ...resourceRoutes,
-  ]);
+  ];
 }
