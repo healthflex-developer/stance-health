@@ -55,7 +55,7 @@ import {
 } from "@/components/composed/CmsBlocks";
 
 const SERVICE_PLACEHOLDERS = [
-  { slug: "item", title: "Enter heading", summary: "Enter description", ctaLabel: "Learn more", href: "" },
+  { slug: "item", title: "Sample service", summary: "Describe this service.", ctaLabel: "Learn more", href: "" },
 ];
 
 const HERO_COPY: Record<string, [string, string, string, string]> = {

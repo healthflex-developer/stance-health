@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { isGenericPreviewLabel, slugFromPreviewHref, unmarkedBlocks } from "../src/lib/preview-sync";
+import { isGenericPreviewLabel, slugFromPreviewHref, unmarkedBlocks, isGenericPlaceholderCopy, blankGenericPlaceholderCopy } from "../src/lib/preview-sync";
 
 const ORIGIN = "http://localhost:3002";
 
@@ -67,5 +67,29 @@ describe("isGenericPreviewLabel", () => {
     expect(isGenericPreviewLabel("Patient Education")).toBe(false);
     expect(isGenericPreviewLabel("Button")).toBe(true);
     expect(isGenericPreviewLabel("Link 2")).toBe(true);
+  });
+});
+
+describe("generic editor placeholders", () => {
+  test("treats editor prompts as blank and keeps typed section copy", () => {
+    expect(isGenericPlaceholderCopy("Enter heading")).toBe(true);
+    expect(isGenericPlaceholderCopy("Enter description")).toBe(true);
+    expect(isGenericPlaceholderCopy("Enter button label")).toBe(true);
+    expect(isGenericPlaceholderCopy("#")).toBe(true);
+    expect(isGenericPlaceholderCopy("Who this is for")).toBe(false);
+    expect(isGenericPlaceholderCopy("Book an Assessment")).toBe(false);
+    expect(blankGenericPlaceholderCopy({
+      heading: "Enter heading",
+      body: "Knee pain that keeps returning",
+      href: "#",
+      image: "/placeholders/image.svg",
+      features: [{ text: "Enter description" }],
+    })).toEqual({
+      heading: "",
+      body: "Knee pain that keeps returning",
+      href: "",
+      image: "/placeholders/image.svg",
+      features: [{ text: "" }],
+    });
   });
 });

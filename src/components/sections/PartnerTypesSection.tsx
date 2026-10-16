@@ -69,7 +69,7 @@ export function PartnerTypesSection({ partners = LIVE_PARTNER_TYPES }: { partner
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           {cards.map((partner, index) => {
-            const title = previewString(partner.title, "Enter heading");
+            const title = previewString(partner.title, "Partner type");
             const points = partnerPoints(partner.points);
             return (
               <div
@@ -82,7 +82,7 @@ export function PartnerTypesSection({ partners = LIVE_PARTNER_TYPES }: { partner
                 <h3 className="text-[#cdfe71] font-bold text-lg sm:text-xl mb-3" data-preview-field={`partnerTypes[${index}].title`}>
                   {title}
                 </h3>
-                <p className="text-white/60 text-sm leading-relaxed mb-5">{previewString(partner.description, "Enter description")}</p>
+                <p className="text-white/60 text-sm leading-relaxed mb-5">{previewString(partner.description, "Describe this partnership.")}</p>
                 <ul className="space-y-3 mt-auto">
                   {points.map((point, pointIndex) => (
                     <li key={`${point}-${pointIndex}`} className="flex gap-3 items-start group-hover:text-white/80 transition-colors duration-200">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import Hero from "@/components/sections/Hero";
 import Team from "@/components/sections/Team";
@@ -9,8 +9,11 @@ import Framework from "@/components/sections/Framework";
 import Technology from "@/components/sections/Technology";
 import Testimonials from "@/components/sections/Testimonials";
 import type { AdminPreviewBlock } from "@/components/PreviewDraft";
+import { SectionForType } from "@/components/composed/SectionRegistry";
+import { PreviewBlocksContext } from "@/components/preview/usePreviewDraft";
 import { ensureWebsiteBookingSource } from "@/lib/tracking";
 import { BOOKING_URL } from "@/lib/constants";
+import { blankGenericPlaceholderCopy, isGenericPlaceholderCopy } from "@/lib/preview-sync";
 
 type DraftBlock = {
   id: string;
@@ -22,11 +25,26 @@ type DraftMessage = {
   blocks?: DraftBlock[];
 };
 
+function adminPreviewEnabled() {
+  return new URLSearchParams(window.location.search).get("adminPreview") === "1";
+}
+
+function subscribePreviewFlag() {
+  return () => {};
+}
+
+function useAdminPreviewEnabled() {
+  return useSyncExternalStore(subscribePreviewFlag, adminPreviewEnabled, () => false);
+}
+
 const SET_DRAFT_MESSAGE = "stance-admin/set-draft";
 const PREVIEW_READY_MESSAGE = "stance-admin/preview-ready";
 
 function text(value: unknown, fallback = "") {
-  return typeof value === "string" && value.trim() ? value : fallback;
+  if (typeof value !== "string") return fallback;
+  const trimmed = value.trim();
+  if (!trimmed || isGenericPlaceholderCopy(trimmed)) return fallback;
+  return trimmed;
 }
 
 function rows(value: unknown): Record<string, unknown>[] {
@@ -143,52 +161,6 @@ function CtaTemplate({ block }: { block: AdminPreviewBlock }) {
   );
 }
 
-function humanize(key: string) {
-  const spaced = key.replace(/([A-Z])/g, " $1").replace(/[_-]/g, " ").trim().toLowerCase();
-  return spaced.charAt(0).toUpperCase() + spaced.slice(1);
-}
-
-function itemLabel(item: Record<string, unknown>, fallback: string) {
-  for (const value of Object.values(item)) {
-    if (typeof value === "string" && value.trim()) return value;
-  }
-  for (const value of Object.values(item)) {
-    const nested = rows(value);
-    if (nested.length > 0) return itemLabel(nested[0], fallback);
-  }
-  return fallback;
-}
-
-function GenericBlock({ block }: { block: DraftBlock }) {
-  const props = block.props;
-  const strings = Object.entries(props).filter((entry): entry is [string, string] => typeof entry[1] === "string");
-  const lists = Object.entries(props).filter((entry): entry is [string, unknown] => Array.isArray(entry[1]));
-  const heading = text(props.heading) || text(props.headline) || text(props.title) || text(props.headingPrefix) || "Add a heading";
-  return (
-    <section className="bg-[#0d1f3c] px-6 py-12 text-white">
-      <div className="mx-auto max-w-5xl">
-        <h2 data-admin-field="heading" className="text-2xl font-bold">{heading}</h2>
-        {strings.filter(([key]) => !["heading", "headline", "title", "headingPrefix"].includes(key)).map(([key, value]) => (
-          <p key={key} data-admin-field={key} className="mt-3 max-w-2xl text-white/70">{text(value, `Add ${humanize(key).toLowerCase()}`)}</p>
-        ))}
-        {lists.map(([key, value]) => {
-          const items = rows(value);
-          const visible = items.length > 0 ? items : [{}];
-          return (
-            <div key={key} className="mt-6 grid gap-4 sm:grid-cols-2">
-              {visible.map((item, index) => (
-                <article key={index} className="rounded-2xl border border-white/10 bg-[#132644] p-4" data-admin-list={key} data-admin-list-index={index}>
-                  <h3 className="font-semibold">{itemLabel(item, `${humanize(key)} ${index + 1}`)}</h3>
-                </article>
-              ))}
-            </div>
-          );
-        })}
-      </div>
-    </section>
-  );
-}
-
 function SplitHeading({ prefix, highlight, fallbackPrefix, fallbackHighlight }: { prefix: unknown; highlight: unknown; fallbackPrefix: string; fallbackHighlight: string }) {
   return (
     <h2 className="text-3xl font-extrabold sm:text-4xl">
@@ -263,11 +235,22 @@ function PlaceholderSection({ block }: { block: DraftBlock }) {
   }
 
   if (block.type === "ServiceAudience" || block.type === "ServiceApproach" || block.type === "ConditionApproach") {
+    const headingFallback = block.type === "ServiceAudience"
+      ? "Who this is for"
+      : block.type === "ServiceApproach"
+        ? "How it works"
+        : "How this is approached";
+    const bodyFallback = block.type === "ServiceAudience"
+      ? "Describe who this service is for."
+      : block.type === "ServiceApproach"
+        ? "Describe how this service works."
+        : "Describe the approach for this condition.";
+    const panel = block.type === "ServiceAudience";
     return (
       <section className={tone}>
-        <div className={`${wrap} max-w-3xl`}>
-          <h2 data-admin-field="heading" className="text-3xl font-extrabold">{text(props.heading, "Add a heading")}</h2>
-          <p data-admin-field="body" className="mt-4 text-lg text-white/70">{text(props.body, "Add a paragraph")}</p>
+        <div className={`${wrap} max-w-3xl ${panel ? "rounded-2xl border border-white/5 bg-[#1a3358] p-6" : ""}`}>
+          <h2 data-admin-field="heading" className={`${panel ? "text-lg" : "text-3xl"} font-extrabold text-[#cdfe71]`}>{text(props.heading, headingFallback)}</h2>
+          <p data-admin-field="body" className="mt-4 text-lg leading-relaxed text-white/70">{text(props.body, bodyFallback)}</p>
         </div>
       </section>
     );
@@ -275,15 +258,23 @@ function PlaceholderSection({ block }: { block: DraftBlock }) {
 
   if (block.type === "ServiceFeatures" || block.type === "ConditionSymptoms" || block.type === "ConditionCauses") {
     const listKey = block.type === "ServiceFeatures" ? "features" : "items";
+    const headingFallback = block.type === "ServiceFeatures"
+      ? "What's included"
+      : block.type === "ConditionSymptoms"
+        ? "Common symptoms"
+        : "Common causes";
     const features = rows(props[listKey]);
     const items = features.length ? features : [{}];
     return (
       <section className={tone}>
         <div className={`${wrap} max-w-3xl`}>
-          <h2 data-admin-field="heading" className="mb-6 text-3xl font-extrabold">{text(props.heading, "Add a heading")}</h2>
+          <h2 data-admin-field="heading" className="mb-6 text-3xl font-extrabold text-[#cdfe71]">{text(props.heading, headingFallback)}</h2>
           <ul className="space-y-3">
             {items.map((item, index) => (
-              <li key={index} data-admin-list={listKey} data-admin-list-index={index} className="rounded-xl border border-white/10 px-4 py-3 text-white/80">{text(item.text, `Add point ${index + 1}`)}</li>
+              <li key={index} data-admin-list={listKey} data-admin-list-index={index} className="flex items-start gap-3 text-white/80">
+                <span className="mt-0.5 text-[#cdfe71]">•</span>
+                <span data-admin-list-field="text">{text(item.text, `Sample point ${index + 1}`)}</span>
+              </li>
             ))}
           </ul>
         </div>
@@ -457,7 +448,47 @@ function PlaceholderSection({ block }: { block: DraftBlock }) {
     );
   }
 
-  return <GenericBlock block={block} />;
+  if (
+    block.type === "ServiceConditions" ||
+    block.type === "LocationConditions" ||
+    block.type === "ConditionLocations" ||
+    block.type === "ConditionServices"
+  ) {
+    const listKey = block.type === "ConditionLocations"
+      ? "locations"
+      : block.type === "ConditionServices"
+        ? "services"
+        : "conditions";
+    const links = rows(props[listKey]);
+    const items = links.length ? links : [{}];
+    return (
+      <section className={tone}>
+        <div className={`${wrap} max-w-3xl`}>
+          <h2 data-admin-field="heading" className="mb-6 text-3xl font-extrabold">{text(props.heading, "Related links")}</h2>
+          <div className="flex flex-wrap gap-3">
+            {items.map((item, index) => {
+              const label = text(item.title || item.label || item.name, `Sample link ${index + 1}`);
+              const summary = text(item.summary, "");
+              return (
+                <a
+                  key={index}
+                  href={text(item.href, "#")}
+                  data-admin-list={listKey}
+                  data-admin-list-index={index}
+                  className="rounded-full border border-white/10 bg-[#132644] px-4 py-2 text-sm text-white/80 hover:border-[#cdfe71]/40 hover:text-[#cdfe71]"
+                >
+                  <span data-admin-list-field={block.type === "ConditionLocations" ? "label" : "title"}>{label}</span>
+                  {summary ? <span className="mt-1 block text-xs text-white/50">{summary}</span> : null}
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  return <SectionForType type={block.type} />;
 }
 
 function SectionTemplate({ block }: { block: DraftBlock }) {
@@ -477,13 +508,11 @@ function SectionTemplate({ block }: { block: DraftBlock }) {
 // It runs only inside the admin preview iframe, so the public site is unchanged.
 export default function LibraryDraftPreview() {
   const [blocks, setBlocks] = useState<DraftBlock[]>([]);
-  const [enabled, setEnabled] = useState(false);
+  const enabled = useAdminPreviewEnabled();
   const [slot, setSlot] = useState<HTMLElement | null>(null);
 
   useEffect(() => {
-    const preview = new URLSearchParams(window.location.search).get("adminPreview") === "1";
-    setEnabled(preview);
-    if (!preview) return;
+    if (!enabled) return;
 
     const apply = (value: unknown) => {
       if (!value || typeof value !== "object") return;
@@ -505,17 +534,24 @@ export default function LibraryDraftPreview() {
     window.addEventListener("message", onMessage);
     window.parent.postMessage({ type: PREVIEW_READY_MESSAGE }, "*");
     return () => window.removeEventListener("message", onMessage);
-  }, []);
+  }, [enabled]);
 
   if (!enabled || blocks.length === 0) return null;
+  const previewBlocks = blocks.map((block) => ({
+    id: block.id,
+    type: block.type,
+    props: blankGenericPlaceholderCopy(block.props) as Record<string, unknown>,
+  }));
   const content = (
-    <div data-admin-library-preview="true">
-      {blocks.map((block) => (
-        <div key={`${block.id}:${JSON.stringify(block.props)}`} data-admin-block-id={block.id} data-admin-block-type={block.type}>
-          <SectionTemplate block={block} />
-        </div>
-      ))}
-    </div>
+    <PreviewBlocksContext.Provider value={previewBlocks}>
+      <div data-admin-library-preview="true">
+        {blocks.map((block) => (
+          <div key={`${block.id}:${JSON.stringify(block.props)}`} data-admin-block-id={block.id} data-admin-block-type={block.type}>
+            <SectionTemplate block={block} />
+          </div>
+        ))}
+      </div>
+    </PreviewBlocksContext.Provider>
   );
   if (slot) return createPortal(content, slot);
   return content;

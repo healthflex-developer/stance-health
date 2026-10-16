@@ -64,7 +64,7 @@ export function PhilosophyDifferentiatorsSection({ items = LIVE_DIFFERENTIATORS 
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((item, index) => {
-            const title = previewString(item.title, "Enter heading");
+            const title = previewString(item.title, "Sample pillar");
             return (
               <div
                 key={`${title}-${index}`}
@@ -88,7 +88,7 @@ export function PhilosophyDifferentiatorsSection({ items = LIVE_DIFFERENTIATORS 
                 </div>
                 <div className="p-5">
                   <h3 className="text-[#132644] font-bold text-lg mb-2" data-preview-field={`items[${index}].title`}>{title}</h3>
-                  <p className="text-[#132644]/60 text-sm leading-relaxed">{previewString(item.description, "Enter description")}</p>
+                  <p className="text-[#132644]/60 text-sm leading-relaxed">{previewString(item.description, "Describe this pillar.")}</p>
                 </div>
                 <div className="absolute bottom-0 left-0 h-1 bg-[#cdfe71] w-0 group-hover:w-full transition-all duration-500 ease-out" />
               </div>

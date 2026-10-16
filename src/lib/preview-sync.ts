@@ -45,3 +45,39 @@ export function isGenericPreviewLabel(label: string): boolean {
   if (text.length < 2) return true;
   return text === "Button" || /^(Link|Item) \d+$/.test(text);
 }
+
+// Editor defaults such as "Enter heading" and "#" are field prompts, not
+// section copy. The preview keeps the section layout and its sample text
+// until someone types a real value.
+const GENERIC_PLACEHOLDER_COPY = new Set([
+  "#",
+  "enter heading",
+  "enter description",
+  "enter button label",
+  "enter name",
+  "enter role",
+  "enter email",
+  "enter phone",
+  "enter address",
+  "enter question",
+  "enter label",
+  "enter text",
+  "enter alt",
+]);
+
+export function isGenericPlaceholderCopy(value: string): boolean {
+  const text = normalizePreviewText(value).toLowerCase();
+  if (GENERIC_PLACEHOLDER_COPY.has(text)) return true;
+  return /^enter [a-z0-9][a-z0-9 '/-]{0,40}$/.test(text);
+}
+
+export function blankGenericPlaceholderCopy(value: unknown): unknown {
+  if (typeof value === "string") return isGenericPlaceholderCopy(value) ? "" : value;
+  if (Array.isArray(value)) return value.map(blankGenericPlaceholderCopy);
+  if (value && typeof value === "object") {
+    return Object.fromEntries(
+      Object.entries(value as Record<string, unknown>).map(([key, child]) => [key, blankGenericPlaceholderCopy(child)]),
+    );
+  }
+  return value;
+}
