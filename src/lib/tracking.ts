@@ -247,6 +247,11 @@ function currentPageReferer(): string {
  * when that visit had no source. `utm_referer` is the Stance page they
  * clicked Book from, set fresh on every click.
  *
+ * Booking links keep the visitor's first-touch `utm_source` (instagram,
+ * google, or any other value on the landing URL). `website` is used only
+ * when that visit had no source. `utm_referer` is the Stance page they
+ * clicked Book from, set fresh on every click.
+ *
  * Internal same-origin results come back root-relative so Next's client router
  * treats them as in-app navigation; external results keep their full origin.
  */

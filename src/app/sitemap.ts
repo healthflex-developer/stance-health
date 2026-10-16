@@ -173,12 +173,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  const resourceRoutes: MetadataRoute.Sitemap = resources.map((r) => ({
-    url: `${BASE_URL}/resources/${r.slug}`,
-    lastModified: new Date(r.publishedAt),
-    changeFrequency: "monthly",
-    priority: 0.6,
-  }));
+  const resourceRoutes: MetadataRoute.Sitemap = resources
+    .filter((resource) => resource.clinicalReviewStatus !== "draft")
+    .map((r) => ({
+      url: `${BASE_URL}/resources/${r.slug}`,
+      lastModified: new Date(r.publishedAt),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    }));
 
   return [
     ...STATIC_ROUTES,

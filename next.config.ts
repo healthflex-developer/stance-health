@@ -28,11 +28,11 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "stance-development-upload.s3.us-east-1.amazonaws.com",
+        hostname: "stance-health-production-upload.s3.ap-south-1.amazonaws.com",
       },
       {
         protocol: "https",
-        hostname: "res.cloudinary.com",
+        hostname: "stance-development-upload.s3.us-east-1.amazonaws.com",
       },
       {
         protocol: "https",

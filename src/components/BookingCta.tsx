@@ -7,7 +7,9 @@ import { ensureWebsiteBookingSource } from "@/lib/tracking";
 interface Props {
   className?: string;
   label?: string;
+  href?: string;
   children?: React.ReactNode;
+  dataAdminField?: string;
 }
 
 /**
@@ -17,11 +19,13 @@ interface Props {
  * use "website". The click also adds utm_referer for this page.
  * Includes Framer Motion hover/tap effects for a polished interaction.
  */
-export default function BookingCta({ className, label, children }: Props) {
+export default function BookingCta({ className, label, href, children, dataAdminField }: Props) {
   const { bookingUrl } = useCta();
+  const destination = ensureWebsiteBookingSource(href || bookingUrl);
   return (
     <motion.a
-      href={ensureWebsiteBookingSource(bookingUrl)}
+      data-admin-field={dataAdminField}
+      href={destination}
       target="_blank"
       rel="noopener noreferrer"
       className={`booking-cta ${className ?? ""}`}

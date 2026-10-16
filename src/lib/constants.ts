@@ -31,8 +31,7 @@ export const cb = (url: string) => {
 
 export const HERO_VIDEO = cb(`${ASSET_BASE}/stance-health/home_video_mglaq1.mp4`);
 
-// Saved content may still point at Cloudinary or at /assets on this website.
-// Both are served from the same S3 key once NEXT_PUBLIC_ASSET_BASE_URL is set.
+// Older saved links and /assets paths use the same S3 object key.
 export function normalizeAssetUrl(value: string): string {
   const raw = value.trim();
   if (!raw || !ASSET_BASE) return raw;
@@ -42,9 +41,9 @@ export function normalizeAssetUrl(value: string): string {
   const withoutHash = hashIndex === -1 ? raw : raw.slice(0, hashIndex);
 
   let url = withoutHash;
-  const cloudinaryMarker = "/stance-health/";
-  if (withoutHash.includes("res.cloudinary.com") && withoutHash.includes(cloudinaryMarker)) {
-    url = `${ASSET_BASE}/${withoutHash.slice(withoutHash.indexOf(cloudinaryMarker) + 1)}`;
+  const legacyMarker = "/stance-health/";
+  if (withoutHash.includes("res.cloudinary.com") && withoutHash.includes(legacyMarker)) {
+    url = `${ASSET_BASE}/${withoutHash.slice(withoutHash.indexOf(legacyMarker) + 1)}`;
   } else {
     const local = withoutHash.match(/^(?:https?:\/\/(?:www\.)?stance\.health)?\/assets\/(\S+)$/);
     if (local) url = `${ASSET_BASE}/stance-health/${local[1]}`;
@@ -53,8 +52,6 @@ export function normalizeAssetUrl(value: string): string {
   const owned = url.startsWith(ASSET_BASE) || url.includes(".amazonaws.com/");
   return owned ? `${cb(url)}${hash}` : raw;
 }
-
-export const normalizeCloudinaryAsset = normalizeAssetUrl;
 
 // ── Marketing / Analytics IDs ─────────────────────────────────────────────
 // Fill these in with your real IDs. An empty string disables that provider.

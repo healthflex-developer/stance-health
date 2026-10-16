@@ -11,7 +11,7 @@ import { ASSETS, VIDEO_ASSETS, TEAM_TESTIMONIALS, CAREER_VALUES, CAREER_FAQ } fr
 
 /* ─── DATA ─────────────────────────────────────────────────────────────── */
 
-// Floating partner/impact icons (placeholder paths — replace with cloudinary)
+// Partner and impact logos served from the site asset bucket.
 const IMPACT_ICONS = [
   `${ASSETS}/careers/logos/Bangalore_City_FC.webp`,
   `${ASSETS}/careers/logos/BCCI.svg`,
