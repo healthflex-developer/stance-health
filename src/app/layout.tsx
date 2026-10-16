@@ -8,6 +8,7 @@ import LinkTracker from "@/components/LinkTracker";
 import AnalyticsProvider from "@/components/AnalyticsProvider";
 import ScrollToTop from "@/components/ScrollToTop";
 import LibraryDraftPreview from "@/components/LibraryDraftPreview";
+import { PublishedCustomSections } from "@/components/published/PublishedCustomSections";
 import { BASE_URL, GSC_VERIFICATION, OG_ASSETS } from "@/lib/constants";
 
 const montserrat = Montserrat({
@@ -206,6 +207,7 @@ export default function RootLayout({
         {/* Forward captured params onto every internal/external link on click */}
         <LinkTracker />
         {children}
+        <PublishedCustomSections />
         <LibraryDraftPreview />
       </body>
     </html>

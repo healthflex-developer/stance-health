@@ -42,6 +42,7 @@ import {
   CareerValues,
   CareersCTA,
   CareersHero,
+  CareersImpact,
 } from "@/components/sections/CareersSections";
 import { AssessmentPerformanceData, AssessmentToolDetails } from "@/components/sections/AssessmentSections";
 import { FaqListSection, GradientHero } from "@/components/sections/FaqSections";
@@ -53,6 +54,8 @@ import {
   PartnerFormSection,
   ProseSection,
 } from "@/components/composed/CmsBlocks";
+import { CustomSectionView } from "@/components/sections/custom/registry";
+import { isCustomSectionType } from "@/lib/custom-sections";
 
 const SERVICE_PLACEHOLDERS = [
   { slug: "item", title: "Sample service", summary: "Describe this service.", ctaLabel: "Learn more", href: "" },
@@ -167,6 +170,8 @@ export function SectionForType({ type }: { type: string }) {
       return <AssessmentHero />;
     case "CareersHero":
       return <CareersHero />;
+    case "CareersImpact":
+      return <CareersImpact />;
     case "CareerStatistics":
       return <CareerStatistics />;
     case "CareerTracks":
@@ -247,6 +252,7 @@ export function SectionForType({ type }: { type: string }) {
     case "RoleGlance":
       return <ProseSection sourceType={type} heading="Section" body="Add the copy for this section." />;
     default: {
+      if (isCustomSectionType(type)) return <CustomSectionView type={type} />;
       const hero = HERO_COPY[type];
       if (hero) {
         return <GradientHero sourceType={type} eyebrow={hero[0]} prefix={hero[1]} highlight={hero[2]} description={hero[3]} />;
