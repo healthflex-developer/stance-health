@@ -4,15 +4,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { PreviewCta } from "@/components/preview/PreviewCta";
 import { buttonDestination } from "@/lib/button-destination";
-import { usePreviewProps } from "@/components/preview/usePreviewDraft";
-import { previewAsset, previewString } from "@/lib/preview-draft";
+import { useHeroProps, usePreviewProps, useSectionCta } from "@/components/preview/usePreviewDraft";
+import { previewAsset, previewJoinedPrefix, previewString } from "@/lib/preview-draft";
 import { categoriesFromProps, conditionCardHref, type ConditionCard } from "@/lib/condition-directory";
 
 export function ConditionsHeroSection({ sourceType = "ConditionsHero" }: { sourceType?: string }) {
-  const hero = usePreviewProps(sourceType);
+  const { props: hero, marker } = useHeroProps(sourceType);
   const backgroundImage = previewAsset(hero?.backgroundImage, "/assets/images/about-banner.svg");
   return (
-    <section className="relative min-h-[380px] flex items-end pb-16 pt-32 bg-[#132644]" data-preview-block={sourceType}>
+    <section className="relative min-h-[380px] flex items-end pb-16 pt-32 bg-[#132644]" data-preview-block={marker}>
       <div className="absolute inset-0 overflow-hidden">
         <Image src={backgroundImage} alt="Conditions we treat" fill className="object-cover object-center opacity-20" priority />
         <div className="absolute inset-0 bg-gradient-to-b from-[#132644]/60 to-[#132644]" />
@@ -20,7 +20,7 @@ export function ConditionsHeroSection({ sourceType = "ConditionsHero" }: { sourc
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <p className="text-[#cdfe71] text-sm font-semibold uppercase tracking-widest mb-3">{previewString(hero?.eyebrow, "Conditions")}</p>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
-          {previewString(hero?.headingPrefix, "Conditions we")}{" "}
+          {previewJoinedPrefix(hero?.headingPrefix ?? hero?.headline, "Conditions we")}{" "}
           <span className="text-[#cdfe71]">{previewString(hero?.headingHighlight, "treat")}</span>
         </h1>
         <p className="text-white/60 text-lg max-w-2xl">
@@ -79,9 +79,9 @@ export function ConditionDirectorySection({
 }
 
 export function ConditionsCtaSection({ sourceType = "ConditionsCTA" }: { sourceType?: string }) {
-  const cta = usePreviewProps(sourceType);
+  const { props: cta, marker } = useSectionCta(sourceType);
   return (
-    <section className="py-20 bg-[#cdfe71]" data-preview-block={sourceType}>
+    <section className="py-20 bg-[#cdfe71]" data-preview-block={marker}>
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-black mb-4">{previewString(cta?.heading, "Not sure about your diagnosis?")}</h2>
         <p className="text-black/70 mb-8">{previewString(cta?.description, "Book an assessment and we'll identify the root cause with objective testing.")}</p>

@@ -4,13 +4,16 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePreviewProps } from "@/components/preview/usePreviewDraft";
 import { TEAM, ASSETS } from "@/lib/constants";
-
-// Show 9 on desktop (3x3), 8 on tablets/mobile (2x4)
-// We render 9 and hide the last one on smaller screens via CSS
-const DISPLAYED_TEAM = TEAM.slice(0, 9);
+import { previewAsset, previewJoinedPrefix, previewList, previewString } from "@/lib/preview-draft";
 
 export default function AboutTeam() {
+  const team = usePreviewProps("AboutTeam");
+  const members = previewList(
+    team?.members,
+    TEAM.map((member) => ({ ...member })),
+  ).slice(0, 9);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const toggleBio = (index: number) => {
@@ -18,7 +21,7 @@ export default function AboutTeam() {
   };
 
   return (
-    <section className="py-20 bg-[#0c1b30]">
+    <section className="py-20 bg-[#0c1b30]" data-preview-block="AboutTeam">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -29,11 +32,14 @@ export default function AboutTeam() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="section-title mb-4">
-            Meet Our <span className="text-[#cdfe71]">Team</span>
+            {previewJoinedPrefix(team?.headingPrefix, "Meet Our")}{" "}
+            <span className="text-[#cdfe71]">{previewString(team?.headingHighlight, "Team")}</span>
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto">
-            Our clinical team brings decades of combined experience in sports physiotherapy,
-            rehabilitation, and performance.
+            {previewString(
+              team?.intro,
+              "Our clinical team brings decades of combined experience in sports physiotherapy, rehabilitation, and performance.",
+            )}
           </p>
         </motion.div>
 
@@ -57,7 +63,7 @@ export default function AboutTeam() {
 
         {/* Team Cards Grid — 2 per row on mobile, 3 on desktop */}
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-5 sm:gap-x-8 gap-y-10 sm:gap-y-12">
-          {DISPLAYED_TEAM.map((member, index) => (
+          {members.map((member, index) => (
             <motion.div
               key={member.name}
               className={`group cursor-pointer ${index === 8 ? "hidden lg:block" : ""}`}
@@ -70,7 +76,7 @@ export default function AboutTeam() {
               {/* Portrait Image */}
               <div className="relative w-full aspect-square rounded-lg overflow-hidden bg-[#3a5070] mb-4 group-hover:shadow-[0_8px_30px_rgba(205,254,113,0.08)] transition-all duration-400">
                 <Image
-                  src={member.image}
+                  src={previewAsset(member.image, `${ASSETS}/team.jpg`)}
                   alt={member.name}
                   fill
                   className="object-cover object-top brightness-100 group-hover:brightness-90 group-hover:scale-105 transition-all duration-500 ease-out"

@@ -59,6 +59,22 @@ export function groupConditions(conditions: readonly ConditionCard[]): Condition
   ];
 }
 
+function withMissingConditions(explicit: ConditionCategory[], fallback: readonly ConditionCard[]): ConditionCategory[] {
+  const seen = new Set(explicit.flatMap((category) => category.conditions.map((condition) => textOf(condition.slug))));
+  const missing = fallback.filter((condition) => {
+    const slug = textOf(condition.slug);
+    return slug && !seen.has(slug);
+  });
+  if (missing.length === 0) return explicit;
+  const categories = explicit.map((category) => ({ ...category, conditions: [...category.conditions] }));
+  for (const extra of groupConditions(missing)) {
+    const existing = categories.find((category) => category.label === extra.label);
+    if (existing) existing.conditions.push(...extra.conditions);
+    else categories.push(extra);
+  }
+  return categories;
+}
+
 function textOf(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
 }
@@ -81,7 +97,7 @@ export function categoriesFromProps(props: Record<string, unknown> | null | unde
     if (!label && cards.length === 0) return [];
     return [{ label: label || "Enter heading", conditions: cards }];
   });
-  if (explicit.length > 0) return explicit;
+  if (explicit.length > 0) return withMissingConditions(explicit, fallback);
   const conditions = Array.isArray(props?.conditions) ? props.conditions.flatMap((item) => {
     const card = row(item);
     return card ? [card as ConditionCard] : [];

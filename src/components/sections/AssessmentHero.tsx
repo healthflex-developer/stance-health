@@ -3,7 +3,7 @@
 import { PreviewCta } from "@/components/preview/PreviewCta";
 import { usePreviewProps } from "@/components/preview/usePreviewDraft";
 import { VIDEO_ASSETS } from "@/lib/constants";
-import { previewAsset, previewString } from "@/lib/preview-draft";
+import { previewAsset, previewJoinedPrefix, previewString } from "@/lib/preview-draft";
 
 const DEFAULT_EYEBROW = "Stance Objective Assessment";
 const DEFAULT_PREFIX = "Technology That Makes Progress";
@@ -20,7 +20,7 @@ function isStillMedia(src: string) {
 export default function AssessmentHero() {
   const hero = usePreviewProps("AssessmentHero");
   const eyebrow = previewString(hero?.eyebrow, DEFAULT_EYEBROW);
-  const prefix = previewString(hero?.headlinePrefix ?? hero?.headingPrefix, DEFAULT_PREFIX);
+  const prefix = previewJoinedPrefix(hero?.headlinePrefix ?? hero?.headingPrefix, DEFAULT_PREFIX);
   const highlight = previewString(hero?.headlineHighlight ?? hero?.headingHighlight, DEFAULT_HIGHLIGHT);
   const description = previewString(hero?.description, DEFAULT_DESCRIPTION);
   const ctaLabel = previewString(hero?.ctaLabel, "Book an Assessment");

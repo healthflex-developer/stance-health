@@ -8,6 +8,11 @@ import {
   getAllResources,
 } from "@/lib/seo-pages";
 
+function publishedDate(value: string): Date | undefined {
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? undefined : date;
+}
+
 const STATIC_ROUTES: MetadataRoute.Sitemap = [
   {
     url: BASE_URL,
@@ -138,14 +143,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const blogRoutes: MetadataRoute.Sitemap = blogs.map((b) => ({
     url: `${BASE_URL}/blog/${b.slug}`,
-    lastModified: new Date(b.publishedAt),
+    lastModified: publishedDate(b.publishedAt),
     changeFrequency: "monthly",
     priority: 0.6,
   }));
 
   const conditionRoutes: MetadataRoute.Sitemap = conditions.map((c) => ({
     url: `${BASE_URL}/conditions/${c.slug}`,
-    lastModified: new Date(c.lastModified),
+    lastModified: publishedDate(c.lastModified),
     changeFrequency: "monthly",
     priority: 0.8,
   }));
@@ -153,7 +158,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const conditionLocationRoutes: MetadataRoute.Sitemap = conditions.flatMap((c) =>
     c.locations.map((loc) => ({
       url: `${BASE_URL}/conditions/${c.slug}/in-${loc}`,
-      lastModified: new Date(c.lastModified),
+      lastModified: publishedDate(c.lastModified),
       changeFrequency: "monthly",
       priority: 0.7,
     }))
@@ -161,14 +166,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const locationRoutes: MetadataRoute.Sitemap = locations.map((l) => ({
     url: `${BASE_URL}/locations/${l.slug}`,
-    lastModified: new Date(l.lastModified),
+    lastModified: publishedDate(l.lastModified),
     changeFrequency: "monthly",
     priority: l.type === "centre" ? 0.8 : 0.6,
   }));
 
   const serviceRoutes: MetadataRoute.Sitemap = services.map((s) => ({
     url: `${BASE_URL}/services/${s.slug}`,
-    lastModified: new Date(s.lastModified),
+    lastModified: publishedDate(s.lastModified),
     changeFrequency: "monthly",
     priority: 0.8,
   }));
@@ -177,7 +182,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .filter((resource) => resource.clinicalReviewStatus !== "draft")
     .map((r) => ({
       url: `${BASE_URL}/resources/${r.slug}`,
-      lastModified: new Date(r.publishedAt),
+      lastModified: publishedDate(r.publishedAt),
       changeFrequency: "monthly" as const,
       priority: 0.6,
     }));

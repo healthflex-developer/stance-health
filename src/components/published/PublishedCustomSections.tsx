@@ -2,6 +2,7 @@ import { headers } from "next/headers";
 import { CustomSectionMount } from "@/components/sections/custom/registry";
 import { isCustomSectionType } from "@/lib/custom-sections";
 import { loadPublishedPage } from "@/lib/published-page";
+import { contentBlocks } from "@/lib/preview-sync";
 import { isHardcodedSiteSlug, slugFromPathname } from "@/lib/site-routes";
 
 // Existing pages keep their own markup. After publish, custom sections saved
@@ -16,7 +17,7 @@ export async function PublishedCustomSections() {
   if (!isHardcodedSiteSlug(slug)) return null;
   const page = await loadPublishedPage(slug);
   if (!page) return null;
-  const blocks = page.blocks.filter((block) => isCustomSectionType(block.type));
-  if (blocks.length === 0) return null;
+  const blocks = contentBlocks(page.blocks);
+  if (!blocks.some((block) => isCustomSectionType(block.type))) return null;
   return <CustomSectionMount blocks={blocks} />;
 }

@@ -11,6 +11,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { TECHNOLOGIES, ASSETS } from "@/lib/constants";
 import { previewList, previewText, useAdminPreviewBlock, type AdminPreviewBlock } from "@/components/PreviewDraft";
 import { usePublishedBlock } from "@/components/PublishedContent";
+import { publishedList, publishedString } from "@/lib/published-fields";
 import { applyAssetMeta, assetAlt } from "@/lib/asset-label";
 import gsap from "gsap";
 
@@ -31,14 +32,20 @@ export default function Technology({ previewBlock }: { previewBlock?: AdminPrevi
   const listened = useAdminPreviewBlock("technology", "Technology");
   const draft = previewBlock !== undefined ? previewBlock : listened;
   const published = usePublishedBlock("technology");
-  const technologies = applyAssetMeta(previewList(draft, "items", TECHNOLOGIES), published?.props?.items, ["icon"]).map((item, index) => ({
+  const technologies = applyAssetMeta(
+    draft ? previewList(draft, "items", TECHNOLOGIES) : publishedList(published?.props?.items, TECHNOLOGIES),
+    published?.props?.items,
+    ["icon"],
+  ).map((item, index) => ({
     ...item,
     id: item.id || `technology-${index + 1}`,
     name: item.name || `Technology ${index + 1}`,
     icon: item.icon || "",
     description: item.description || "Add technology description",
   }));
-  const heading = previewText(draft, "heading", "Technology Blended with Science") || "Technology Blended with Science";
+  const heading = draft
+    ? previewText(draft, "heading", "Technology Blended with Science") || "Technology Blended with Science"
+    : publishedString(published?.props, "heading", "Technology Blended with Science");
   const slideKey = technologies.map((item) => `${item.name}|${item.description}|${item.icon}`).join(";");
   const [tab, setTab] = useState<number | null>(null);
   const container = useRef<HTMLDivElement>(null);

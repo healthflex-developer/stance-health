@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePreviewProps } from "@/components/preview/usePreviewDraft";
 import { TEAM, ASSETS } from "@/lib/constants";
-import { previewAsset, previewList, previewString } from "@/lib/preview-draft";
+import { previewAsset, previewJoinedPrefix, previewList, previewString } from "@/lib/preview-draft";
 
 export function TeamHeroSection({ sourceType = "TeamHero" }: { sourceType?: string }) {
   const hero = usePreviewProps(sourceType);
@@ -39,7 +39,7 @@ export function TeamHeroSection({ sourceType = "TeamHero" }: { sourceType?: stri
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          {previewString(hero?.headingPrefix, "The")} <span className="text-[#cdfe71]">{previewString(hero?.headingHighlight, "Team")}</span>
+          {previewJoinedPrefix(hero?.headingPrefix, "The")} <span className="text-[#cdfe71]">{previewString(hero?.headingHighlight, "Team")}</span>
         </motion.h1>
         <motion.p
           className="text-white/60 text-lg max-w-2xl mx-auto"

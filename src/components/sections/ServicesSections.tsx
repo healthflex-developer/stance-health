@@ -3,9 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { PreviewCta } from "@/components/preview/PreviewCta";
-import { usePreviewProps } from "@/components/preview/usePreviewDraft";
+import { useHeroProps, usePreviewProps, useSectionCta } from "@/components/preview/usePreviewDraft";
 import { buttonDestination } from "@/lib/button-destination";
-import { previewAsset, previewList, previewString } from "@/lib/preview-draft";
+import { unionBySlug } from "@/lib/content-catalog";
+import { previewAsset, previewJoinedPrefix, previewString } from "@/lib/preview-draft";
 import { serviceCardHref } from "@/lib/service-links";
 
 type ServiceCard = {
@@ -17,11 +18,11 @@ type ServiceCard = {
 };
 
 export function ServicesHeroSection({ sourceType = "ServicesHero" }: { sourceType?: string }) {
-  const hero = usePreviewProps(sourceType);
+  const { props: hero, marker } = useHeroProps(sourceType);
   const backgroundImage = previewAsset(hero?.backgroundImage, "/assets/images/about-banner.svg");
 
   return (
-      <section className="relative min-h-[380px] flex items-end pb-16 pt-32 bg-[#132644]" data-preview-block={sourceType}>
+      <section className="relative min-h-[380px] flex items-end pb-16 pt-32 bg-[#132644]" data-preview-block={marker}>
         <div className="absolute inset-0 overflow-hidden">
           <Image
             src={backgroundImage}
@@ -37,7 +38,7 @@ export function ServicesHeroSection({ sourceType = "ServicesHero" }: { sourceTyp
             {previewString(hero?.eyebrow, "Services")}
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
-            {previewString(hero?.headingPrefix, "What we")}{" "}
+            {previewJoinedPrefix(hero?.headingPrefix ?? hero?.headline, "What we")}{" "}
             <span className="text-[#cdfe71]">{previewString(hero?.headingHighlight, "offer")}</span>
           </h1>
           <p className="text-white/60 text-lg max-w-2xl">
@@ -61,7 +62,7 @@ export function ServiceCardsSection({
   listKey?: string;
 }) {
   const cards = usePreviewProps(sourceType);
-  const items = previewList(cards?.[listKey], services);
+  const items = unionBySlug(cards?.[listKey], services);
 
   return (
       <section className="py-20 bg-[#0c1b30]" data-preview-block={sourceType}>
@@ -93,10 +94,10 @@ export function ServiceCardsSection({
 }
 
 export function ServicesCtaSection({ sourceType = "ServicesCTA" }: { sourceType?: string }) {
-  const cta = usePreviewProps(sourceType);
+  const { props: cta, marker } = useSectionCta(sourceType);
 
   return (
-      <section className="py-20 bg-[#cdfe71]" data-preview-block={sourceType}>
+      <section className="py-20 bg-[#cdfe71]" data-preview-block={marker}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-black mb-4">
             {previewString(cta?.heading, "Not sure which service is right for you?")}

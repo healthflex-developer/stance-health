@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePreviewProps } from "@/components/preview/usePreviewDraft";
 import { FAQ_GENERAL } from "@/lib/constants";
-import { previewList, previewString } from "@/lib/preview-draft";
+import { previewJoinedPrefix, previewList, previewString } from "@/lib/preview-draft";
 
 export function GradientHero({
   sourceType,
@@ -28,7 +28,7 @@ export function GradientHero({
           {previewString(hero?.eyebrow, eyebrow)}
         </p>
         <h1 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight mb-3 font-[family-name:var(--font-unbounded)]">
-          {previewString(hero?.headingPrefix ?? hero?.headline, prefix)}{" "}
+          {previewJoinedPrefix(hero?.headingPrefix ?? hero?.headline, prefix)}{" "}
           <span className="text-[#cdfe71]">{previewString(hero?.headingHighlight ?? hero?.highlight, highlight)}</span>
         </h1>
         <p className="text-white/60 text-lg">

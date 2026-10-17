@@ -4,8 +4,12 @@ import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useChromeBlock } from "@/components/published/PublishedChrome";
 import { ASSETS, NAV_LINKS } from "@/lib/constants";
+import { chromeHref, chromeLinks, chromeText, hasPublishedRows } from "@/lib/site-chrome";
 import BookingCta from "@/components/BookingCta";
+
+const DESKTOP_PRIMARY = ["About", "Conditions", "Services", "Assessment"];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -13,8 +17,21 @@ export default function Navbar() {
   const [moreOpen, setMoreOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-
-  const programs = NAV_LINKS.find((l) => l.label === "Programs");
+  const { props } = useChromeBlock("NavbarContent");
+  const fallbackPrimary = NAV_LINKS.filter((link) => DESKTOP_PRIMARY.includes(link.label));
+  const fallbackMore = NAV_LINKS.filter((link) => !DESKTOP_PRIMARY.includes(link.label));
+  const primaryPublished = hasPublishedRows(props?.primaryLinks);
+  const morePublished = hasPublishedRows(props?.moreLinks);
+  const primaryLinks = chromeLinks(primaryPublished ? props?.primaryLinks : undefined, fallbackPrimary);
+  const moreLinks = chromeLinks(morePublished ? props?.moreLinks : undefined, fallbackMore);
+  const mobileLinks = primaryPublished || morePublished
+    ? [...primaryLinks, ...moreLinks.filter((link) => !primaryLinks.some((item) => item.href === link.href))]
+    : NAV_LINKS;
+  const logo = chromeText(props, "logo", `${ASSETS}/logo.png`);
+  const logoAlt = chromeText(props, "logoAlt", "Stance Health");
+  const moreLabel = chromeText(props, "moreLabel", "More");
+  const ctaLabel = chromeText(props, "ctaLabel", "Book an Appointment");
+  const ctaHref = chromeHref(props, "ctaHref") ?? undefined;
 
   /** Check if a nav link is active based on current path */
   const isActive = (href: string) => {
@@ -22,11 +39,9 @@ export default function Navbar() {
     return pathname.startsWith(href);
   };
 
-  /** Check if any child of Programs is active */
-  const isProgramsActive = () => {
-    const programsLink = NAV_LINKS.find((l) => l.children);
-    return programsLink?.children?.some((child) => pathname.startsWith(child.href)) ?? false;
-  };
+  /** Check if any child of a bar link is active */
+  const isProgramsActive = () =>
+    primaryLinks.some((link) => link.children?.some((child) => pathname.startsWith(child.href))) ?? false;
 
   const closeMobileMenu = useCallback(() => {
     setMobileOpen(false);
@@ -76,8 +91,8 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex-shrink-0">
               <Image
-                src={`${ASSETS}/logo.png`}
-                alt="Stance Health"
+                src={logo}
+                alt={logoAlt}
                 width={170}
                 height={51}
                 className="h-14 w-auto"
@@ -87,7 +102,7 @@ export default function Navbar() {
 
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
-              {NAV_LINKS.filter(link => ["About", "Conditions", "Services", "Assessment"].includes(link.label)).map((link) =>
+              {primaryLinks.map((link) =>
                 link.children ? (
                   <div key={link.label} className="relative group">
                     <button
@@ -164,7 +179,7 @@ export default function Navbar() {
                   onMouseEnter={() => setMoreOpen(true)}
                   onMouseLeave={() => setMoreOpen(false)}
                 >
-                  More
+                  {moreLabel}
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
@@ -178,7 +193,7 @@ export default function Navbar() {
                     onMouseLeave={() => setMoreOpen(false)}
                   >
                     <div className="bg-[#1a3358] border border-white/10 rounded-xl shadow-xl overflow-hidden">
-                      {NAV_LINKS.filter(link => !["About", "Conditions", "Services", "Assessment"].includes(link.label)).map((link) => (
+                      {moreLinks.map((link) => (
                         <Link
                           key={link.label}
                           href={link.href}
@@ -199,7 +214,7 @@ export default function Navbar() {
 
             {/* CTA */}
             <div className="hidden lg:block">
-              <BookingCta className="btn-primary text-sm" label="Book an Appointment" />
+              <BookingCta className="btn-primary text-sm" label={ctaLabel} href={ctaHref} />
             </div>
 
             {/* Mobile/Tablet menu button */}
@@ -234,7 +249,7 @@ export default function Navbar() {
           {/* Menu panel — starts from top (behind header), only as tall as content */}
           <div className="fixed top-0 left-0 right-0 z-[55] bg-[#132644] lg:hidden pt-16">
             <div className="px-5 py-6 space-y-1">
-              {NAV_LINKS.map((link) =>
+              {mobileLinks.map((link) =>
                 link.children ? (
                   <div key={link.label}>
                     <button

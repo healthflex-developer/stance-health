@@ -3,12 +3,28 @@
 import BookingCta from "@/components/BookingCta";
 import { previewText, useAdminPreviewBlock, type AdminPreviewBlock } from "@/components/PreviewDraft";
 import { usePublishedBlock } from "@/components/PublishedContent";
+import { publishedString } from "@/lib/published-fields";
 import { BOOKING_URL, HERO_VIDEO } from "@/lib/constants";
 
 const VIDEO_URL = HERO_VIDEO;
 const DEFAULT_HEADLINE = "Welcome To Stance Health";
 const DEFAULT_PARAGRAPH =
   "Evidence-backed Orthopaedic Rehab, where Medical Science & Technology are tailored for your performance and recovery";
+
+// The published booking address is the same destination the site already tracks.
+// A bare copy of that address keeps the existing utm query. A different address is used as saved.
+function heroCtaHref(value: string, fallback: string): string {
+  try {
+    const next = new URL(value);
+    const current = new URL(fallback);
+    const samePath = next.origin === current.origin
+      && next.pathname.replace(/\/+$/, "") === current.pathname.replace(/\/+$/, "");
+    if (samePath && !next.search) return fallback;
+  } catch {
+    return fallback;
+  }
+  return value || fallback;
+}
 
 export default function Hero({ previewBlock }: { previewBlock?: AdminPreviewBlock | null } = {}) {
   const listened = useAdminPreviewBlock("hero", "Hero");
@@ -17,12 +33,27 @@ export default function Hero({ previewBlock }: { previewBlock?: AdminPreviewBloc
   const videoProps = draft?.props ?? published?.props;
   const videoTitle = typeof videoProps?.videoUrlTitle === "string" ? videoProps.videoUrlTitle.trim() : "";
   const videoDecorative = videoProps?.videoUrlDecorative === true;
-  const headline = previewText(draft, "headline", DEFAULT_HEADLINE);
-  const highlight = previewText(draft, "highlight", "Stance Health");
-  const paragraph = previewText(draft, "paragraph", DEFAULT_PARAGRAPH);
-  const videoUrl = previewText(draft, "videoUrl", VIDEO_URL) || VIDEO_URL;
-  const ctaLabel = previewText(draft, "ctaLabel", "Book an Appointment");
-  const ctaHref = previewText(draft, "ctaHref", BOOKING_URL) || BOOKING_URL;
+  const headline = draft
+    ? previewText(draft, "headline", DEFAULT_HEADLINE)
+    : publishedString(published?.props, "headline", DEFAULT_HEADLINE);
+  const highlight = draft
+    ? previewText(draft, "highlight", "Stance Health")
+    : publishedString(published?.props, "highlight", "Stance Health");
+  const paragraph = draft
+    ? previewText(draft, "paragraph", DEFAULT_PARAGRAPH)
+    : publishedString(published?.props, "paragraph", DEFAULT_PARAGRAPH);
+  const videoUrl = (draft
+    ? previewText(draft, "videoUrl", VIDEO_URL)
+    : publishedString(published?.props, "videoUrl", VIDEO_URL)) || VIDEO_URL;
+  const ctaLabel = draft
+    ? previewText(draft, "ctaLabel", "Book an Appointment")
+    : publishedString(published?.props, "ctaLabel", "Book an Appointment");
+  const ctaHref = heroCtaHref(
+    (draft
+      ? previewText(draft, "ctaHref", BOOKING_URL)
+      : publishedString(published?.props, "ctaHref", BOOKING_URL)) || BOOKING_URL,
+    BOOKING_URL,
+  );
 
   const highlightAt = highlight ? headline.indexOf(highlight) : -1;
   const beforeHighlight = highlightAt >= 0 ? headline.slice(0, highlightAt) : headline;
