@@ -2,9 +2,8 @@ import ProgramPageLayout from "@/components/ProgramPageLayout";
 import { ASSETS, OG_ASSETS } from "@/lib/constants";
 
 import type { Metadata } from "next";
-import { withPublishedSeo } from "@/lib/published-seo";
 
-export const metadata: Metadata = withPublishedSeo("back-to-sports", {
+export const metadata: Metadata = {
   title: "Reclaim Your Game – Return-to-Sport Rehab",
   description:
     "Return-to-play programme using evidence-based protocols and VALD performance testing to safely guide athletes back to their sport after injury.",
@@ -22,7 +21,7 @@ export const metadata: Metadata = withPublishedSeo("back-to-sports", {
     description: "Return-to-sport rehab with VALD performance testing.",
     images: [`${OG_ASSETS}/og-default.png`],
   },
-});
+};
 
 export default function BackToSportsPage() {
   return (

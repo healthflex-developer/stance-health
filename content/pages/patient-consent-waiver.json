@@ -1,0 +1,46 @@
+{
+  "slug": "patient-consent-waiver",
+  "title": "Patient Consent \u0026 Waiver",
+  "seo": {
+    "title": "Patient Consent \u0026 Waiver",
+    "description": "Please read this carefully before beginning your care at Stance Health.",
+    "canonical": "/patient-consent-waiver"
+  },
+  "blocks": [
+    {
+      "id": "patient-consent-waiver-hero",
+      "type": "PageHero",
+      "props": {
+        "description": "Please read this carefully before beginning your care at Stance Health.",
+        "eyebrow": "Legal",
+        "headline": "Patient Consent \u0026",
+        "highlight": "Waiver"
+      }
+    },
+    {
+      "id": "patient-consent-waiver-section-1",
+      "type": "PageSection",
+      "props": {
+        "body": "The terms of consent for physiotherapy, assessments, exercise, and related services.",
+        "heading": "Consent to Receive Services"
+      }
+    },
+    {
+      "id": "patient-consent-waiver-section-2",
+      "type": "PageSection",
+      "props": {
+        "body": "Your responsibility to provide accurate and complete medical information.",
+        "heading": "Accuracy of Medical Information"
+      }
+    },
+    {
+      "id": "patient-consent-waiver-section-3",
+      "type": "PageSection",
+      "props": {
+        "body": "How to contact us with queries about care or consent.",
+        "heading": "Questions"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}
