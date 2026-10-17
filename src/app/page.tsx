@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { withPublishedSeo } from "@/lib/published-seo";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/sections/Hero";
-import AdminPreviewSection from "@/components/AdminPreviewSection";
 import Framework from "@/components/sections/Framework";
 import Technology from "@/components/sections/Technology";
 import Testimonials from "@/components/sections/Testimonials";
@@ -10,15 +8,24 @@ import Team from "@/components/sections/Team";
 import Programs from "@/components/sections/Programs";
 import Centers from "@/components/sections/Centers";
 import Footer from "@/components/Footer";
+import AdminPreviewBridge from "@/components/AdminPreviewBridge";
+import { PublishedBlocksProvider } from "@/components/PublishedContent";
 import { BASE_URL, OG_ASSETS } from "@/lib/constants";
+import { homePageMetadata } from "@/lib/page-metadata";
+import { publishedBlocksById } from "@/lib/published-fields";
+import { loadPublishedPage } from "@/lib/published-page";
+import { loadPublishedSite } from "@/lib/site-content";
 
-export const metadata: Metadata = withPublishedSeo("home", {
-  alternates: { canonical: "/" },
-  openGraph: {
-    url: "/",
-    images: [{ url: `${OG_ASSETS}/og-default.png`, width: 1200, height: 630 }],
-  },
-});
+const HOME_SOCIAL_IMAGE = `${OG_ASSETS}/og-default.png`;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const [page, site] = await Promise.all([loadPublishedPage("home"), loadPublishedSite()]);
+  return homePageMetadata(page?.seo, site, {
+    image: HOME_SOCIAL_IMAGE,
+    twitterSite: "@stancehealth",
+    twitterCreator: "@stancehealth",
+  });
+}
 
 // WebSite + FAQPage JSON-LD for the home page
 const homeSchema = {
@@ -76,36 +83,26 @@ const homeSchema = {
   ],
 };
 
-export default function Home() {
+export default async function Home() {
+  const published = await loadPublishedPage("home");
   return (
-    <>
+    <PublishedBlocksProvider blocks={publishedBlocksById(published)}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }}
       />
       <Navbar />
+      <AdminPreviewBridge />
       <main>
-        <AdminPreviewSection blockId="hero" blockType="Hero">
-          <Hero />
-        </AdminPreviewSection>
-        <AdminPreviewSection blockId="framework" blockType="Framework">
-          <Framework />
-        </AdminPreviewSection>
-        <AdminPreviewSection blockId="technology" blockType="Technology">
-          <Technology />
-        </AdminPreviewSection>
-        <AdminPreviewSection blockId="testimonials" blockType="Testimonials">
-          <Testimonials />
-        </AdminPreviewSection>
-        <AdminPreviewSection blockId="team" blockType="Team">
-          <Team />
-        </AdminPreviewSection>
+        <div data-preview-block="Hero"><Hero /></div>
+        <div data-preview-block="Framework"><Framework /></div>
+        <div data-preview-block="Technology"><Technology /></div>
+        <div data-preview-block="Testimonials"><Testimonials /></div>
+        <div data-preview-block="Team"><Team /></div>
         {/* <Programs /> */}
-        <AdminPreviewSection blockId="centers" blockType="Centers">
-          <Centers />
-        </AdminPreviewSection>
+        <div data-preview-block="Centers"><Centers /></div>
       </main>
       <Footer />
-    </>
+    </PublishedBlocksProvider>
   );
 }

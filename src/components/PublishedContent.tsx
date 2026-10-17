@@ -2,9 +2,9 @@
 
 import { createContext, useContext } from "react";
 import { usePathname } from "next/navigation";
-import type { PublishedBlock } from "@/lib/published-seo";
+import type { PublishedBlock } from "@/lib/published-page";
 
-const PublishedBlocksContext = createContext<Record<string, PublishedBlock>>({});
+export const PublishedBlocksContext = createContext<Record<string, PublishedBlock>>({});
 
 export function PublishedBlocksProvider({
   blocks,

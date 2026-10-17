@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { usePreviewProps } from "@/components/preview/usePreviewDraft";
-import { previewList, previewString } from "@/lib/preview-draft";
+import { useHeroProps, usePreviewProps } from "@/components/preview/usePreviewDraft";
+import { unionBySlug } from "@/lib/content-catalog";
+import { previewString } from "@/lib/preview-draft";
 import { resourceCardHref, resourceDate, resourceFormatLabel } from "@/lib/resource-links";
 
 export type ResourceCard = {
@@ -15,9 +16,9 @@ export type ResourceCard = {
 };
 
 export function ResourcesHeroSection() {
-  const props = usePreviewProps("ResourcesHero");
+  const { props, marker } = useHeroProps("ResourcesHero");
   return (
-    <div className="mb-12" data-preview-block="ResourcesHero">
+    <div className="mb-12" data-preview-block={marker}>
       <p className="text-[#cdfe71] text-sm font-semibold uppercase tracking-widest mb-3" data-preview-field="eyebrow">
         {previewString(props?.eyebrow, "Resources")}
       </p>
@@ -33,7 +34,7 @@ export function ResourcesHeroSection() {
 
 export function ResourceListSection({ resources }: { resources: ResourceCard[] }) {
   const props = usePreviewProps("ResourceList");
-  const cards = previewList<ResourceCard>(props?.resources, resources);
+  const cards = unionBySlug<ResourceCard>(props?.resources, resources);
   return (
     <div data-preview-block="ResourceList">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">

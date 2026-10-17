@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePreviewProps } from "@/components/preview/usePreviewDraft";
 import { ASSETS, CAREER_FAQ, CAREER_VALUES, TEAM_TESTIMONIALS, VIDEO_ASSETS } from "@/lib/constants";
 import { buttonDestination } from "@/lib/button-destination";
-import { previewList, previewString } from "@/lib/preview-draft";
+import { previewJoinedPrefix, previewList, previewString } from "@/lib/preview-draft";
 
 const IMPACT_LOGOS = [
   "Bangalore_City_FC.webp",
@@ -138,25 +138,20 @@ function ValueIcon({ name }: { name: string }) {
   return <svg className={common} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>;
 }
 
-export function CareersHero() {
+export function CareersHero({ blockId }: { blockId?: string }) {
   const hero = usePreviewProps("CareersHero");
-  const prefix = previewString(hero?.headlinePrefix, "Where your career");
+  const prefix = previewJoinedPrefix(hero?.headlinePrefix, "Where your career");
   const highlightOne = previewString(hero?.highlightOne, "actually");
   const highlightTwo = previewString(hero?.highlightTwo, "accelerates.");
   const paragraphOne = previewString(hero?.paragraphOne, "Most S&C coaches and physios in India spend years waiting for elite exposure — a national athlete on their table, real data instead of guesswork, a mentor worth learning from.");
   const paragraphTwo = previewString(hero?.paragraphTwo, "At Stance, that's the job from day one.");
   const ctaLabel = previewString(hero?.ctaLabel, "See Open Roles");
   const ctaHref = previewString(hero?.ctaHref, "#open-roles");
-  const impactHeading = previewString(hero?.impactHeading, "Where our team has made an impact");
-  const seconds = previewString(hero?.marqueeSeconds, "30");
-  const gap = textOf(hero?.logoGap);
   const chosen = chosenMedia(hero?.videoUrl, `${VIDEO_ASSETS}/careers/hero.mp4`);
   const videoUrl = chosen === "/placeholders/image.svg" ? "/placeholders/video.mp4" : chosen;
-  const logos = previewList(hero?.logos, IMPACT_LOGOS);
-  const ribbon = [...logos, ...logos];
 
   return (
-    <section className="relative min-h-[100vh] flex flex-col justify-between bg-[#0d1f3c] overflow-hidden" data-preview-block="CareersHero">
+    <section className="relative min-h-[calc(100vh-12rem)] flex flex-col bg-[#0d1f3c] overflow-hidden" data-preview-block="CareersHero" {...(blockId ? { "data-admin-block-id": blockId } : {})}>
       <div className="absolute inset-0">
         {isStill(videoUrl) ? (
           <img src={videoUrl} alt="" className="w-full h-full object-cover" />
@@ -182,24 +177,36 @@ export function CareersHero() {
           </div>
         </div>
       </div>
-      <div className="relative w-full pb-8 pt-4">
-        <hr className="border-0 border-t border-white/[0.04] mb-5" />
-        <p className="text-center text-white/30 text-xs uppercase tracking-[3px] mb-6">{impactHeading}</p>
-        <div className="overflow-hidden">
-          <div
-            className={`flex animate-marquee ${gap ? "" : "gap-20"}`}
-            style={{ animationDuration: `${Number(seconds) > 0 ? seconds : 30}s`, gap: gap ? `${gap}px` : undefined }}
-          >
-            {ribbon.map((logo, index) => {
-              const sourceIndex = index % logos.length;
-              const src = chosenMedia(logo.image, IMPACT_LOGOS[sourceIndex]?.image ?? "/placeholders/image.svg");
-              return (
-                <div key={`${src}-${index}`} data-preview-field={`logos[${index % logos.length}].alt`} className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 relative opacity-70 hover:opacity-100 transition-opacity duration-300">
-                  <Image src={src} alt={previewString(logo.alt, "partner")} fill className="object-contain" />
-                </div>
-              );
-            })}
-          </div>
+    </section>
+  );
+}
+
+export function CareersImpact({ blockId }: { blockId?: string }) {
+  const impact = usePreviewProps("CareersImpact");
+  const impactHeading = previewString(impact?.impactHeading, "Where our team has made an impact");
+  const seconds = previewString(impact?.marqueeSeconds, "30");
+  const gap = textOf(impact?.logoGap);
+  const logos = previewList(impact?.logos, IMPACT_LOGOS);
+  const ribbon = [...logos, ...logos];
+
+  return (
+    <section className="relative w-full bg-[#0d1f3c] overflow-hidden pb-8 pt-4" data-preview-block="CareersImpact" {...(blockId ? { "data-admin-block-id": blockId } : {})}>
+      <hr className="border-0 border-t border-white/[0.04] mb-5" />
+      <p className="text-center text-white/30 text-xs uppercase tracking-[3px] mb-6">{impactHeading}</p>
+      <div className="overflow-hidden">
+        <div
+          className={`flex animate-marquee ${gap ? "" : "gap-20"}`}
+          style={{ animationDuration: `${Number(seconds) > 0 ? seconds : 30}s`, gap: gap ? `${gap}px` : undefined }}
+        >
+          {ribbon.map((logo, index) => {
+            const sourceIndex = index % logos.length;
+            const src = chosenMedia(logo.image, IMPACT_LOGOS[sourceIndex]?.image ?? "/placeholders/image.svg");
+            return (
+              <div key={`${src}-${index}`} data-preview-field={`logos[${index % logos.length}].alt`} className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 relative opacity-70 hover:opacity-100 transition-opacity duration-300">
+                <Image src={src} alt={previewString(logo.alt, "partner")} fill className="object-contain" />
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -208,7 +215,7 @@ export function CareersHero() {
 
 export function CareerStatistics() {
   const draft = usePreviewProps("CareerStatistics");
-  const prefix = previewString(draft?.headingPrefix, "Your Next");
+  const prefix = previewJoinedPrefix(draft?.headingPrefix, "Your Next");
   const highlight = previewString(draft?.headingHighlight, "Chapter");
   const description = previewString(draft?.description, "At Stance, you won't just gain experience. You'll develop under people who've built systems, coached elite athletes and continue raising the standard of sports science every single day.");
   const stats = previewList(draft?.stats, DEFAULT_STATS);
@@ -338,7 +345,7 @@ export function CareerTracks() {
 
 export function CareerOpenRoles() {
   const draft = usePreviewProps("CareerOpenRoles");
-  const prefix = previewString(draft?.headingPrefix, "Open");
+  const prefix = previewJoinedPrefix(draft?.headingPrefix, "Open");
   const highlight = previewString(draft?.headingHighlight, "Roles");
   const description = previewString(draft?.description, "Filter by domain and location. Every role links to the full brief and an inline application.");
   const roles = previewList(draft?.roles, DEFAULT_ROLES);
@@ -384,7 +391,7 @@ export function CareerOpenRoles() {
 
 export function CareerTeamStories() {
   const draft = usePreviewProps("CareerTeamStories");
-  const prefix = previewString(draft?.headingPrefix, "From the");
+  const prefix = previewJoinedPrefix(draft?.headingPrefix, "From the");
   const highlight = previewString(draft?.headingHighlight, "Team");
   const description = previewString(draft?.description, "What it's like to build a career at Stance.");
   const stories = previewList(draft?.stories, TEAM_TESTIMONIALS);
@@ -421,7 +428,7 @@ export function CareerTeamStories() {
 
 export function CareerValues() {
   const draft = usePreviewProps("CareerValues");
-  const prefix = previewString(draft?.headingPrefix, "What you're actually");
+  const prefix = previewJoinedPrefix(draft?.headingPrefix, "What you're actually");
   const highlight = previewString(draft?.headingHighlight, "signing up for");
   const description = previewString(draft?.description, "We don't run on hierarchy. We run on reasoning, speed, and people who'd rather fix something than flag it.");
   const values = previewList(draft?.values, CAREER_VALUES.map((value) => ({ icon: value.icon, title: value.title, body: value.body })));
@@ -460,7 +467,7 @@ export function CareerValues() {
 
 export function CareerFAQ() {
   const draft = usePreviewProps("CareerFAQ");
-  const prefix = previewString(draft?.headingPrefix, "Careers");
+  const prefix = previewJoinedPrefix(draft?.headingPrefix, "Careers");
   const highlight = previewString(draft?.headingHighlight, "FAQ");
   const description = previewString(draft?.description, "Common questions about applying, interviews and internships at Stance.");
   const faqs = previewList(draft?.faqs, CAREER_FAQ.map((faq) => ({ question: faq.question, answer: faq.answer })));
@@ -499,7 +506,7 @@ export function CareerFAQ() {
 
 export function CareersCTA() {
   const draft = usePreviewProps("CareersCTA");
-  const prefix = previewString(draft?.headingPrefix, "Don't see your role?");
+  const prefix = previewJoinedPrefix(draft?.headingPrefix, "Don't see your role?");
   const highlight = previewString(draft?.headingHighlight, "Say hello anyway.");
   const description = previewString(draft?.description, "We're always looking for people who care about the craft. Send us a note and we'll route it to the right team.");
   const email = previewString(draft?.email, "careers@stance.health");

@@ -1,5 +1,7 @@
 import path from "path";
 import { promises as fs } from "fs";
+import { mergeConditions, mergeLocations, mergeResources, mergeServices } from "@/lib/content-catalog";
+import { listPublishedPages } from "@/lib/published-page";
 import type { BlogSection } from "./blogs";
 
 export type { BlogSection };
@@ -76,9 +78,14 @@ async function loadJson<T>(filename: string): Promise<T[]> {
   return JSON.parse(raw) as T[];
 }
 
+async function publishedPages() {
+  return listPublishedPages().catch(() => []);
+}
+
 export async function getAllConditions(): Promise<ConditionPage[]> {
   if (_conditionsCache) return _conditionsCache;
-  _conditionsCache = await loadJson<ConditionPage>("conditions.json");
+  const [legacy, pages] = await Promise.all([loadJson<ConditionPage>("conditions.json"), publishedPages()]);
+  _conditionsCache = mergeConditions(legacy, pages);
   return _conditionsCache;
 }
 
@@ -89,7 +96,8 @@ export async function getConditionBySlug(slug: string): Promise<ConditionPage | 
 
 export async function getAllLocations(): Promise<LocationPage[]> {
   if (_locationsCache) return _locationsCache;
-  _locationsCache = await loadJson<LocationPage>("locations.json");
+  const [legacy, pages] = await Promise.all([loadJson<LocationPage>("locations.json"), publishedPages()]);
+  _locationsCache = mergeLocations(legacy, pages);
   return _locationsCache;
 }
 
@@ -100,7 +108,8 @@ export async function getLocationBySlug(slug: string): Promise<LocationPage | nu
 
 export async function getAllServices(): Promise<ServicePage[]> {
   if (_servicesCache) return _servicesCache;
-  _servicesCache = await loadJson<ServicePage>("services.json");
+  const [legacy, pages] = await Promise.all([loadJson<ServicePage>("services.json"), publishedPages()]);
+  _servicesCache = mergeServices(legacy, pages);
   return _servicesCache;
 }
 
@@ -111,7 +120,8 @@ export async function getServiceBySlug(slug: string): Promise<ServicePage | null
 
 export async function getAllResources(): Promise<ResourcePage[]> {
   if (_resourcesCache) return _resourcesCache;
-  _resourcesCache = await loadJson<ResourcePage>("resources.json");
+  const [legacy, pages] = await Promise.all([loadJson<ResourcePage>("resources.json"), publishedPages()]);
+  _resourcesCache = mergeResources(legacy, pages);
   return _resourcesCache;
 }
 

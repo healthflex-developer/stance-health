@@ -3,8 +3,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePreviewProps } from "@/components/preview/usePreviewDraft";
 import { ASSETS } from "@/lib/constants";
-import { previewList, previewText, useAdminPreviewBlock } from "@/components/PreviewDraft";
+import { previewAsset, previewJoinedPrefix, previewList, previewString } from "@/lib/preview-draft";
 
 const PILLARS = [
   {
@@ -69,80 +70,46 @@ const PILLARS = [
   },
 ];
 
-type PillarPointDraft = string | { text?: string };
-
-type PillarDraft = {
-  id?: string;
-  label?: string;
-  tabIcon?: string;
-  image1?: string;
-  image2?: string;
-  heading?: string;
-  body?: string;
-  points?: PillarPointDraft[];
-};
-
-type ResolvedPillar = {
-  id: string;
-  label: string;
-  tabIcon: string;
-  image1: string;
-  image2: string;
-  heading: string;
-  body: string;
-  points: string[];
-};
-
-const EMPTY_PILLAR: ResolvedPillar = {
-  id: "new-pillar",
-  label: "New pillar",
-  tabIcon: "",
-  image1: "",
-  image2: "",
-  heading: "New philosophy pillar",
-  body: "Add the pillar description",
-  points: [],
-};
-
-function displayValue(value: string | undefined, placeholder: string): string {
-  return value?.trim() || placeholder;
-}
-
-function resolvePillars(items: PillarDraft[]): ResolvedPillar[] {
-  return items.map((item, index) => {
-    const fallback = PILLARS[index];
-    const points = (item.points ?? []).map((point, pointIndex) => {
-      const text = typeof point === "string" ? point : point?.text;
-      return displayValue(text, `Add pillar point ${pointIndex + 1}`);
-    });
-    return {
-      id: displayValue(item.id, fallback?.id ?? `pillar-${index + 1}`),
-      label: displayValue(item.label, fallback?.label ?? `Pillar ${index + 1}`),
-      tabIcon: displayValue(item.tabIcon, fallback?.tabIcon ?? `${ASSETS}/tab-1.svg`),
-      image1: item.image1?.trim() ?? fallback?.image1 ?? "",
-      image2: item.image2?.trim() ?? fallback?.image2 ?? "",
-      heading: displayValue(item.heading, fallback?.heading ?? EMPTY_PILLAR.heading),
-      body: displayValue(item.body, fallback?.body ?? EMPTY_PILLAR.body),
-      points,
-    };
+function pillarPoints(value: unknown, fallback: string[]): string[] {
+  if (!Array.isArray(value)) return fallback;
+  const points = value.flatMap((item) => {
+    if (typeof item === "string" && item.trim()) return [item.trim()];
+    if (item && typeof item === "object" && "text" in item && typeof item.text === "string" && item.text.trim()) {
+      return [item.text.trim()];
+    }
+    return [];
   });
+  return points.length > 0 ? points : fallback;
 }
 
 export default function PhilosophyPillars() {
-  const draft = useAdminPreviewBlock("philosophy-pillars", "PhilosophyHowWeDoIt");
-  const headingPrefix = previewText(draft, "headingPrefix", "How we ");
-  const headingHighlight = previewText(draft, "headingHighlight", "do it?");
-  const intro = previewText(draft, "intro", "Four integrated pillars that deliver measurable, sustainable, and personalised outcomes.");
-  const pillars = resolvePillars(
-    previewList<PillarDraft>(draft, "pillars", PILLARS),
-  );
-  const visiblePillars = pillars.length > 0 ? pillars : [EMPTY_PILLAR];
+  const draft = usePreviewProps("PhilosophyHowWeDoIt");
+  const pillars = previewList(draft?.pillars, PILLARS).map((pillar, index) => {
+    const fallback = PILLARS[index] ?? PILLARS[0];
+    return {
+      ...fallback,
+      ...pillar,
+      id: previewString(pillar.id, fallback?.id ?? `pillar-${index}`),
+      label: previewString(pillar.label, fallback?.label ?? ""),
+      heading: previewString(pillar.heading, fallback?.heading ?? ""),
+      body: previewString(pillar.body, fallback?.body ?? ""),
+      tabIcon: previewAsset(pillar.tabIcon, fallback?.tabIcon ?? ""),
+      image1: previewAsset(pillar.image1, fallback?.image1 ?? ""),
+      image2: previewAsset(pillar.image2, fallback?.image2 ?? ""),
+      points: pillarPoints(pillar.points, fallback?.points ?? []),
+    };
+  });
   const [active, setActive] = useState(0);
-  const activeIndex = Math.min(active, Math.max(visiblePillars.length - 1, 0));
-  const pillar = visiblePillars[activeIndex];
+  const pillar = pillars[Math.min(active, Math.max(pillars.length - 1, 0))] ?? pillars[0];
+  const headingPrefix = previewJoinedPrefix(draft?.headingPrefix, "How we");
+  const headingHighlight = previewString(draft?.headingHighlight, "do it?");
+  const intro = previewString(
+    draft?.intro,
+    "Four integrated pillars that deliver measurable, sustainable, and personalised outcomes.",
+  );
 
   return (
-    <section className="py-20 bg-[#0c1b30]" data-admin-block-id="philosophy-pillars" data-admin-block-type="PhilosophyHowWeDoIt">
+    <section className="py-20 bg-[#0c1b30]" data-preview-block="PhilosophyHowWeDoIt">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <motion.div
@@ -153,9 +120,9 @@ export default function PhilosophyPillars() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="section-title mb-4">
-            <span data-admin-field="headingPrefix">{headingPrefix}</span><span data-admin-field="headingHighlight" className="text-[#cdfe71]">{headingHighlight}</span>
+            {headingPrefix} <span className="text-[#cdfe71]">{headingHighlight}</span>
           </h2>
-          <p data-admin-field="intro" className="text-white/50 text-lg max-w-2xl mx-auto">
+          <p className="text-white/50 text-lg max-w-2xl mx-auto">
             {intro}
           </p>
         </motion.div>
@@ -168,14 +135,12 @@ export default function PhilosophyPillars() {
           viewport={{ once: true, margin: "-30px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          {visiblePillars.map((p, i) => (
+          {pillars.map((p, i) => (
             <button
               key={p.id}
-              data-admin-list="pillars"
-              data-admin-list-index={i}
               onClick={() => setActive(i)}
               className={`group flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
-                i === activeIndex
+                i === active
                   ? "bg-[#cdfe71] text-[#132644] shadow-[0_4px_20px_rgba(205,254,113,0.3)]"
                   : "border border-white/15 text-white/60 hover:border-[#cdfe71]/40 hover:text-white"
               }`}
@@ -185,12 +150,11 @@ export default function PhilosophyPillars() {
                 alt=""
                 width={20}
                 height={20}
-                data-admin-list-field="tabIcon"
                 className={`transition-all duration-300 ${
-                  i === activeIndex ? "brightness-0" : "opacity-60 group-hover:opacity-100"
+                  i === active ? "brightness-0" : "opacity-60 group-hover:opacity-100"
                 }`}
               />
-              <span data-admin-list-field="label" className="hidden sm:inline">{p.label}</span>
+              <span className="hidden sm:inline">{p.label}</span>
             </button>
           ))}
         </motion.div>
@@ -199,9 +163,8 @@ export default function PhilosophyPillars() {
         <AnimatePresence mode="wait">
           <motion.div
             key={pillar.id}
-            data-admin-list="pillars"
-            data-admin-list-index={activeIndex}
             initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center"
@@ -214,17 +177,12 @@ export default function PhilosophyPillars() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.15, duration: 0.5 }}
               >
-                {pillar.image1 ? (
-                  <Image
-                    src={pillar.image1}
-                    alt={pillar.label}
-                    fill
-                    data-admin-list-field="image1"
-                    className="object-cover group-hover/img:scale-105 transition-transform duration-500"
-                  />
-                ) : (
-                  <div data-admin-list-field="image1" className="absolute inset-0 bg-[#3a5070]" aria-label="Pillar image placeholder" />
-                )}
+                <Image
+                  src={pillar.image1}
+                  alt={pillar.label}
+                  fill
+                  className="object-cover group-hover/img:scale-105 transition-transform duration-500"
+                />
               </motion.div>
               <motion.div
                 className="rounded-2xl overflow-hidden aspect-[4/5] relative mt-8 bg-[#1a3358] border border-white/5 hover:shadow-[0_12px_40px_rgba(205,254,113,0.1)] transition-all duration-300 group/img2"
@@ -232,17 +190,12 @@ export default function PhilosophyPillars() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.25, duration: 0.5 }}
               >
-                {pillar.image2 ? (
-                  <Image
-                    src={pillar.image2}
-                    alt={pillar.label}
-                    fill
-                    data-admin-list-field="image2"
-                    className="object-cover group-hover/img2:scale-105 transition-transform duration-500"
-                  />
-                ) : (
-                  <div data-admin-list-field="image2" className="absolute inset-0 bg-[#3a5070]" aria-label="Pillar image placeholder" />
-                )}
+                <Image
+                  src={pillar.image2}
+                  alt={pillar.label}
+                  fill
+                  className="object-cover group-hover/img2:scale-105 transition-transform duration-500"
+                />
               </motion.div>
             </div>
 
@@ -255,15 +208,14 @@ export default function PhilosophyPillars() {
                 transition={{ delay: 0.1, duration: 0.4 }}
               >
                 <div className="w-11 h-11 rounded-xl bg-[#cdfe71]/10 flex items-center justify-center border border-[#cdfe71]/20">
-                  <Image src={pillar.tabIcon} alt={pillar.label} width={24} height={24} data-admin-list-field="tabIcon" />
+                  <Image src={pillar.tabIcon} alt={pillar.label} width={24} height={24} />
                 </div>
-                <p className="text-[#cdfe71] text-xs font-semibold uppercase tracking-widest" data-admin-list-field="label">
+                <p className="text-[#cdfe71] text-xs font-semibold uppercase tracking-widest">
                   {pillar.label}
                 </p>
               </motion.div>
 
               <motion.h3
-                data-admin-list-field="heading"
                 className="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -273,7 +225,6 @@ export default function PhilosophyPillars() {
               </motion.h3>
 
               <motion.p
-                data-admin-list-field="body"
                 className="text-white/60 leading-relaxed mb-6"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -284,24 +235,22 @@ export default function PhilosophyPillars() {
 
               <motion.ul
                 className="space-y-3"
-                data-admin-list-child="points"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.4 }}
               >
-                {pillar.points.map((pt, pointIndex) => (
+                {pillar.points.map((pt, i) => (
                   <motion.li
                     key={pt}
-                    data-admin-list-child-index={pointIndex}
                     className="flex gap-3 items-start group/point"
                     initial={{ opacity: 0, x: 15 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.3 + pointIndex * 0.08, duration: 0.35 }}
+                    transition={{ delay: 0.3 + i * 0.08, duration: 0.35 }}
                   >
                     <div className="w-5 h-5 rounded-full bg-[#cdfe71]/15 flex items-center justify-center shrink-0 mt-0.5 group-hover/point:bg-[#cdfe71]/25 transition-colors">
                       <div className="w-2 h-2 rounded-full bg-[#cdfe71]" />
                     </div>
-                    <span data-admin-list-child-field="text" className="text-white/70 text-sm group-hover/point:text-white/90 transition-colors">
+                    <span className="text-white/70 text-sm group-hover/point:text-white/90 transition-colors">
                       {pt}
                     </span>
                   </motion.li>

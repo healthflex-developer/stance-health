@@ -1,27 +1,27 @@
-import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { withPublishedSeo } from "@/lib/published-seo";
+import { ContactIntro } from "@/components/sections/ContactIntro";
+import { PublishedPage } from "@/components/published/PublishedPage";
+import { OG_ASSETS } from "@/lib/constants";
+import { fixedPageMetadataFor } from "@/lib/page-metadata";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = withPublishedSeo("contact", {
-  title: "Contact Us",
-  description: "Get in touch with the Stance Health team.",
-  alternates: { canonical: "/contact" },
-});
+export async function generateMetadata(): Promise<Metadata> {
+  return fixedPageMetadataFor("contact", {
+    title: "Contact Us",
+    description: "Get in touch with the Stance Health team.",
+    image: `${OG_ASSETS}/og-default.png`,
+  });
+}
 
 export default function ContactPage() {
   return (
-    <>
+    <PublishedPage slug="contact">
       <Navbar />
       <main className="min-h-screen bg-[#0c1b30] flex items-center justify-center">
-        <div className="text-center px-4">
-          <h1 className="section-title mb-4">
-            Contact <span className="text-[#cdfe71]">Us</span>
-          </h1>
-          <p className="text-white/50 text-lg">This page is under construction.</p>
-        </div>
+        <ContactIntro />
       </main>
       <Footer />
-    </>
+    </PublishedPage>
   );
 }

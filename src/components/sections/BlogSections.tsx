@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePreviewProps } from "@/components/preview/usePreviewDraft";
+import { useHeroProps, usePreviewProps } from "@/components/preview/usePreviewDraft";
 import { blogCardHref, blogDate, blogTags } from "@/lib/blog-links";
-import { previewAsset, previewList, previewString } from "@/lib/preview-draft";
+import { unionBySlug } from "@/lib/content-catalog";
+import { previewAsset, previewJoinedPrefix, previewString } from "@/lib/preview-draft";
 
 export type BlogCard = {
   slug: string;
@@ -19,14 +20,14 @@ export type BlogCard = {
 };
 
 export function BlogHeroSection({ sourceType = "BlogHero" }: { sourceType?: string }) {
-  const hero = usePreviewProps(sourceType);
+  const { props: hero, marker } = useHeroProps(sourceType);
   return (
-    <section className="pt-24" data-preview-block={sourceType}>
+    <section className="pt-24" data-preview-block={marker}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <h1 className="section-title mb-3">
-            {previewString(hero?.headingPrefix, "Stance ")}
-            <span>{previewString(hero?.headingHighlight, "Blog")}</span>
+            {previewJoinedPrefix(hero?.headingPrefix ?? hero?.headline, "Stance")}{" "}
+            <span>{previewString(hero?.headingHighlight ?? hero?.highlight, "Blog")}</span>
           </h1>
           <p className="text-white/60 text-lg max-w-2xl">
             {previewString(hero?.description, "Evidence-based insights on orthopaedic rehab, sports performance, and recovery — from our clinical team.")}
@@ -45,7 +46,7 @@ export function BlogPostsSection({
   sourceType?: string;
 }) {
   const draft = usePreviewProps(sourceType);
-  const items = previewList(draft?.posts, posts);
+  const items = unionBySlug(draft?.posts, posts);
 
   return (
     <section className="pb-20" data-preview-block={sourceType}>

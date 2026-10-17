@@ -6,12 +6,12 @@ import MarketingScripts, { GtmNoScript } from "@/components/MarketingScripts";
 import TrackingInit from "@/components/TrackingInit";
 import LinkTracker from "@/components/LinkTracker";
 import AnalyticsProvider from "@/components/AnalyticsProvider";
-import { AdminPreviewBridge } from "@/components/AdminPreviewSection";
-import LibraryDraftPreview from "@/components/LibraryDraftPreview";
 import ScrollToTop from "@/components/ScrollToTop";
+import LibraryDraftPreview from "@/components/LibraryDraftPreview";
+import { PublishedCustomSections } from "@/components/published/PublishedCustomSections";
+import { PublishedChromeProvider } from "@/components/published/PublishedChrome";
 import { BASE_URL, GSC_VERIFICATION, OG_ASSETS } from "@/lib/constants";
-import { applySiteDefaults, publishedBlockIndex, publishedStructuredData } from "@/lib/published-seo";
-import { PublishedBlocksProvider, PublishedJsonLd } from "@/components/PublishedContent";
+import { loadPublishedPage } from "@/lib/published-page";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -27,7 +27,7 @@ const unbounded = Unbounded({
   display: "swap",
 });
 
-export const metadata: Metadata = applySiteDefaults({
+export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
 
   title: {
@@ -105,7 +105,7 @@ export const metadata: Metadata = applySiteDefaults({
       "max-snippet": -1,
     },
   },
-});
+};
 
 /** Organization + LocalBusiness JSON-LD — present on every page. */
 const orgSchema = {
@@ -174,22 +174,39 @@ const orgSchema = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const [navbarPage, footerPage] = await Promise.all([
+    loadPublishedPage("navbar"),
+    loadPublishedPage("footer"),
+  ]);
+  const chrome = {
+    navbar: navbarPage?.blocks.find((block) => block.type === "NavbarContent")?.props ?? null,
+    footer: footerPage?.blocks.find((block) => block.type === "FooterContent")?.props ?? null,
+  };
   return (
     <html
       lang="en"
       className={`h-full ${montserrat.variable} ${unbounded.variable}`}
+      suppressHydrationWarning
     >
-      <head>
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        {/* Runs before hydration. Swiper loop mode and the tag-manager
+            snippets move nodes React still owns; removeChild then throws
+            because the node is no longer in that parent. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var p=Node.prototype,o=p.removeChild;p.removeChild=function(c){if(c.parentNode!==this)return c;return o.call(this,c);};})();`,
+          }}
+        />
+        {/* Scripts stay in the body. A manual <head> lets GTM and the Meta
+            pixel move nodes React still owns, which throws removeChild. */}
         <MarketingScripts />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
-      </head>
-      <body className="min-h-full flex flex-col">
         <GtmNoScript />
         {/* Capture & persist UTM / click-ID params on every navigation */}
         <Suspense fallback={null}>
@@ -199,11 +216,11 @@ export default function RootLayout({
         </Suspense>
         {/* Forward captured params onto every internal/external link on click */}
         <LinkTracker />
-        <PublishedBlocksProvider blocks={publishedBlockIndex()}>
-          <PublishedJsonLd documents={publishedStructuredData()} />
-          <AdminPreviewBridge>{children}</AdminPreviewBridge>
-        </PublishedBlocksProvider>
-        <LibraryDraftPreview />
+        <PublishedChromeProvider navbar={chrome.navbar} footer={chrome.footer}>
+          {children}
+          <PublishedCustomSections />
+          <LibraryDraftPreview />
+        </PublishedChromeProvider>
       </body>
     </html>
   );
