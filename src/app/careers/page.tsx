@@ -1,34 +1,15 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Centers from "@/components/sections/Centers";
-import { ASSETS, VIDEO_ASSETS, TEAM_TESTIMONIALS, CAREER_VALUES, CAREER_FAQ } from "@/lib/constants";
+import { CareersHero, CareersImpact } from "@/components/sections/CareersSections";
+import { VIDEO_ASSETS, TEAM_TESTIMONIALS, CAREER_VALUES, CAREER_FAQ } from "@/lib/constants";
 
 /* ─── DATA ─────────────────────────────────────────────────────────────── */
-
-// Partner and impact logos served from the site asset bucket.
-const IMPACT_ICONS = [
-  `${ASSETS}/careers/logos/Bangalore_City_FC.webp`,
-  `${ASSETS}/careers/logos/BCCI.svg`,
-  `${ASSETS}/careers/logos/Blue_tigers.png`,
-  `${ASSETS}/careers/logos/Dream_United.png`,
-  `${ASSETS}/careers/logos/FC_Real.png`,
-  `${ASSETS}/careers/logos/images.jpg`,
-  `${ASSETS}/careers/logos/Kodagu.png`,
-  `${ASSETS}/careers/logos/Level_Pro.jpg`,
-  `${ASSETS}/careers/logos/Machaxi.webp`,
-  `${ASSETS}/careers/logos/Punjab_Kings.png`,
-  `${ASSETS}/careers/logos/RDS.png`,
-  `${ASSETS}/careers/logos/Rosh_Badminton_Academy.png`,
-  `${ASSETS}/careers/logos/RX_Cricket_Academy.png`,
-  `${ASSETS}/careers/logos/Six_Cricket.png`,
-  `${ASSETS}/careers/logos/True_Cricket.png`,
-];
 
 const STATS = [
   { icon: "users", value: "2000+", label: "Total Users", sub: "Patients treated across all centres" },
@@ -125,90 +106,8 @@ export default function CareersPage() {
       <Navbar />
       <main>
 
-        {/* ─── HERO SECTION ─────────────────────────────────────────────── */}
-        <section className="relative min-h-[100vh] flex flex-col justify-between bg-[#0d1f3c] overflow-hidden">
-          {/* BG Video */}
-          <div className="absolute inset-0">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full h-full object-cover"
-            >
-              <source src={`${VIDEO_ASSETS}/careers/hero.mp4`} type="video/mp4" />
-            </video>
-            {/* Gradient overlay: clear at top, dark navy at bottom */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0d1f3c]/30 via-[#0d1f3c]/60 to-[#0d1f3c]" />
-            {/* Left side overlay for text readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0d1f3c]/70 via-[#0d1f3c]/40 to-transparent" />
-          </div>
-
-          {/* Hero content */}
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 pt-40 w-full flex-1 flex items-center">
-            <div>
-              <motion.h1
-                className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight max-w-2xl font-[family-name:var(--font-unbounded)]"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7 }}
-              >
-                Where your career{" "}
-                <span className="text-[#cdfe71]">actually</span>{" "}
-                <span className="text-[#cdfe71]">accelerates.</span>
-              </motion.h1>
-
-            <motion.p
-              className="text-white/60 text-base sm:text-lg max-w-lg mt-6 leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              Most S&C coaches and physios in India spend years waiting for elite
-              exposure — a national athlete on their table, real data instead of
-              guesswork, a mentor worth learning from.
-            </motion.p>
-            <motion.p
-              className="text-white/50 text-sm sm:text-base max-w-lg mt-3"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              At Stance, that&apos;s the job from day one.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-8"
-            >
-              <a
-                href="#open-roles"
-                className="inline-block px-6 py-3 rounded-full border border-white text-white font-semibold text-sm hover:bg-white hover:text-[#132644] transition-all duration-300"
-              >
-                See Open Roles
-              </a>
-            </motion.div>
-            </div>
-          </div>
-
-          {/* Icons at bottom of hero */}
-          <div className="relative w-full pb-8 pt-4">
-            <hr className="border-0 border-t border-white/[0.04] mb-5" />
-
-            <p className="text-center text-white/30 text-xs uppercase tracking-[3px] mb-6">
-              Where our team has made an impact
-            </p>
-            <div className="flex gap-20 animate-marquee">
-              {[...IMPACT_ICONS, ...IMPACT_ICONS].map((icon, i) => (
-                <div key={i} className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 relative opacity-70 hover:opacity-100 transition-opacity duration-300">
-                  <Image src={icon} alt="partner" fill className="object-contain" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <CareersHero blockId="careers-hero" />
+        <CareersImpact blockId="careers-impact" />
 
         {/* ─── YOUR NEXT CHAPTER (STATS) ────────────────────────────────── */}
         <section className="py-20 bg-[#0d1f3c]">

@@ -138,7 +138,7 @@ function ValueIcon({ name }: { name: string }) {
   return <svg className={common} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>;
 }
 
-export function CareersHero() {
+export function CareersHero({ blockId }: { blockId?: string }) {
   const hero = usePreviewProps("CareersHero");
   const prefix = previewString(hero?.headlinePrefix, "Where your career");
   const highlightOne = previewString(hero?.highlightOne, "actually");
@@ -147,16 +147,11 @@ export function CareersHero() {
   const paragraphTwo = previewString(hero?.paragraphTwo, "At Stance, that's the job from day one.");
   const ctaLabel = previewString(hero?.ctaLabel, "See Open Roles");
   const ctaHref = previewString(hero?.ctaHref, "#open-roles");
-  const impactHeading = previewString(hero?.impactHeading, "Where our team has made an impact");
-  const seconds = previewString(hero?.marqueeSeconds, "30");
-  const gap = textOf(hero?.logoGap);
   const chosen = chosenMedia(hero?.videoUrl, `${VIDEO_ASSETS}/careers/hero.mp4`);
   const videoUrl = chosen === "/placeholders/image.svg" ? "/placeholders/video.mp4" : chosen;
-  const logos = previewList(hero?.logos, IMPACT_LOGOS);
-  const ribbon = [...logos, ...logos];
 
   return (
-    <section className="relative min-h-[100vh] flex flex-col justify-between bg-[#0d1f3c] overflow-hidden" data-preview-block="CareersHero">
+    <section className="relative min-h-[calc(100vh-12rem)] flex flex-col bg-[#0d1f3c] overflow-hidden" data-preview-block="CareersHero" {...(blockId ? { "data-admin-block-id": blockId } : {})}>
       <div className="absolute inset-0">
         {isStill(videoUrl) ? (
           <img src={videoUrl} alt="" className="w-full h-full object-cover" />
@@ -182,24 +177,36 @@ export function CareersHero() {
           </div>
         </div>
       </div>
-      <div className="relative w-full pb-8 pt-4">
-        <hr className="border-0 border-t border-white/[0.04] mb-5" />
-        <p className="text-center text-white/30 text-xs uppercase tracking-[3px] mb-6">{impactHeading}</p>
-        <div className="overflow-hidden">
-          <div
-            className={`flex animate-marquee ${gap ? "" : "gap-20"}`}
-            style={{ animationDuration: `${Number(seconds) > 0 ? seconds : 30}s`, gap: gap ? `${gap}px` : undefined }}
-          >
-            {ribbon.map((logo, index) => {
-              const sourceIndex = index % logos.length;
-              const src = chosenMedia(logo.image, IMPACT_LOGOS[sourceIndex]?.image ?? "/placeholders/image.svg");
-              return (
-                <div key={`${src}-${index}`} data-preview-field={`logos[${index % logos.length}].alt`} className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 relative opacity-70 hover:opacity-100 transition-opacity duration-300">
-                  <Image src={src} alt={previewString(logo.alt, "partner")} fill className="object-contain" />
-                </div>
-              );
-            })}
-          </div>
+    </section>
+  );
+}
+
+export function CareersImpact({ blockId }: { blockId?: string }) {
+  const impact = usePreviewProps("CareersImpact");
+  const impactHeading = previewString(impact?.impactHeading, "Where our team has made an impact");
+  const seconds = previewString(impact?.marqueeSeconds, "30");
+  const gap = textOf(impact?.logoGap);
+  const logos = previewList(impact?.logos, IMPACT_LOGOS);
+  const ribbon = [...logos, ...logos];
+
+  return (
+    <section className="relative w-full bg-[#0d1f3c] overflow-hidden pb-8 pt-4" data-preview-block="CareersImpact" {...(blockId ? { "data-admin-block-id": blockId } : {})}>
+      <hr className="border-0 border-t border-white/[0.04] mb-5" />
+      <p className="text-center text-white/30 text-xs uppercase tracking-[3px] mb-6">{impactHeading}</p>
+      <div className="overflow-hidden">
+        <div
+          className={`flex animate-marquee ${gap ? "" : "gap-20"}`}
+          style={{ animationDuration: `${Number(seconds) > 0 ? seconds : 30}s`, gap: gap ? `${gap}px` : undefined }}
+        >
+          {ribbon.map((logo, index) => {
+            const sourceIndex = index % logos.length;
+            const src = chosenMedia(logo.image, IMPACT_LOGOS[sourceIndex]?.image ?? "/placeholders/image.svg");
+            return (
+              <div key={`${src}-${index}`} data-preview-field={`logos[${index % logos.length}].alt`} className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 relative opacity-70 hover:opacity-100 transition-opacity duration-300">
+                <Image src={src} alt={previewString(logo.alt, "partner")} fill className="object-contain" />
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

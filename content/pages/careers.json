@@ -15,9 +15,15 @@
         "headlinePrefix": "Where your career ",
         "highlightOne": "actually",
         "highlightTwo": "accelerates.",
-        "impactHeading": "Where our team has made an impact",
         "paragraphOne": "Most S\u0026C coaches and physios in India spend years waiting for elite exposure — a national athlete on their table, real data instead of guesswork, a mentor worth learning from.",
         "paragraphTwo": "At Stance, that's the job from day one."
+      }
+    },
+    {
+      "id": "careers-impact",
+      "type": "CareersImpact",
+      "props": {
+        "impactHeading": "Where our team has made an impact"
       }
     },
     {
