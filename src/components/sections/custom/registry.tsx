@@ -76,7 +76,13 @@ export function CustomSectionMount({
         const id = block.id || `${block.type}-${customIndex}`;
         customIndex += 1;
         return (
-          <div key={id} data-custom-id={id} data-published-custom-section="" data-preview-block={block.type}>
+          <div
+            key={id}
+            id={block.id || undefined}
+            data-custom-id={id}
+            data-published-custom-section=""
+            data-preview-block={block.type}
+          >
             <Renderer props={block.props} blockId={block.id} />
           </div>
         );

@@ -46,6 +46,11 @@ export function normalizeAssetUrl(value: string): string {
     url = `${ASSET_BASE}/${withoutHash.slice(withoutHash.indexOf(legacyMarker) + 1)}`;
   } else {
     const local = withoutHash.match(/^(?:https?:\/\/(?:www\.)?stance\.health)?\/assets\/(\S+)$/);
+    // Keep local video files in /public/assets — rewriting them to the upload
+    // bucket 403s when the object was never published (e.g. academies hero).
+    if (local && /\.(mp4|webm|mov|m4v)(\?|$)/i.test(local[1])) {
+      return `${withoutHash}${hash}`;
+    }
     if (local) url = `${ASSET_BASE}/stance-health/${local[1]}`;
   }
 
@@ -106,6 +111,7 @@ export const NAV_LINKS: Array<{ label: string; href: string; children?: { label:
   { label: "Conditions", href: "/conditions" },
   { label: "Locations", href: "/locations" },
   { label: "Partners", href: "/partners" },
+  { label: "Academies", href: "/academies" },
   { label: "Careers", href: "/careers" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },

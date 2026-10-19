@@ -4,6 +4,7 @@
 const HARDCODED_SLUGS = new Set([
   "home",
   "about",
+  "academies",
   "assessment",
   "back-to-sports",
   "blog",

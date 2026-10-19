@@ -30,7 +30,12 @@ export default function ComposedSitePage({
       <Navbar />
       <main data-composed-page={slug}>
         {blocks.map((block, index) => (
-          <div key={block.id || `${block.type}-${index}`} data-preview-block={block.type} data-preview-id={block.id}>
+          <div
+            key={block.id || `${block.type}-${index}`}
+            id={block.id || undefined}
+            data-preview-block={block.type}
+            data-preview-id={block.id}
+          >
             <SectionForType type={block.type} />
           </div>
         ))}

@@ -47,6 +47,9 @@ export default function Team({ previewBlock }: { previewBlock?: AdminPreviewBloc
   const subtext = draft
     ? previewText(draft, "subtext", "Experience That Matters") || "Experience That Matters"
     : publishedString(published?.props, "subtext", "Experience That Matters");
+  const note = draft
+    ? previewText(draft, "note", "") || ""
+    : publishedString(published?.props, "note", "");
   const slideKey = members.map((member) => `${member.name}|${member.role}|${member.bio}|${member.image}`).join(";");
   const sliderRef = useRef<SwiperRef>(null);
   const [isBeginning, setIsBeginning] = useState(true);
@@ -64,7 +67,7 @@ export default function Team({ previewBlock }: { previewBlock?: AdminPreviewBloc
   }, []);
 
   return (
-    <section className="sec test-sec team-sec-wrap">
+    <section className="sec test-sec team-sec-wrap bg-[#0c1b30]">
       <div className="container">
         <div className="row">
           <div className="col-12 text-center">
@@ -80,7 +83,7 @@ export default function Team({ previewBlock }: { previewBlock?: AdminPreviewBloc
             </motion.h3>
             <motion.p
               data-admin-field="subtext"
-              className="para sub-txt"
+              className="mx-auto max-w-3xl px-4 text-sm leading-relaxed text-white/60 sm:text-[15px]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -88,6 +91,18 @@ export default function Team({ previewBlock }: { previewBlock?: AdminPreviewBloc
             >
               {subtext}
             </motion.p>
+            {note ? (
+              <motion.p
+                data-admin-field="note"
+                className="mx-auto mt-3 max-w-3xl px-4 text-sm font-semibold text-[#cdfe71] sm:text-base"
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.45, delay: 0.15 }}
+              >
+                {note}
+              </motion.p>
+            ) : null}
           </div>
           <div className="col-12">
             <div

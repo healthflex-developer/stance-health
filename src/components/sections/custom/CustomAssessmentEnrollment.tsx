@@ -62,6 +62,8 @@ export function CustomAssessmentEnrollment({
   );
   const [audience, setAudience] = useState<"player" | "academy">(initialAudience);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
   const heading = previewString(
     source.heading,
@@ -103,12 +105,58 @@ export function CustomAssessmentEnrollment({
           className="min-w-0 rounded-[28px] bg-white p-4 shadow-xl sm:p-7"
           onSubmit={(event) => {
             event.preventDefault();
-            void import("@/lib/analytics").then(({ track }) => {
-              const formMeta = { form_name: "custom_assessment_enrollment", audience, lead_type: audience };
-              track("web_form_submit", formMeta);
-              track("web_lead_created", formMeta);
-            });
-            setSubmitted(true);
+            if (submitting || submitted) return;
+            const form = event.currentTarget;
+            const data = new FormData(form);
+            const leadType = audience === "academy" ? "Academy" : "Player";
+            const body =
+              audience === "player"
+                ? {
+                    leadType,
+                    playerName: String(data.get("playerName") || ""),
+                    contactPerson: String(data.get("playerName") || ""),
+                    age: String(data.get("age") || ""),
+                    mobile: String(data.get("mobile") || ""),
+                    sports: String(data.get("sport") || ""),
+                    academyName: String(data.get("academy") || ""),
+                    coach: String(data.get("coach") || ""),
+                    location: String(data.get("location") || ""),
+                  }
+                : {
+                    leadType,
+                    academyName: String(data.get("academyName") || ""),
+                    sports: String(data.get("sportsCoached") || ""),
+                    contactPerson: String(data.get("contact") || ""),
+                    mobile: String(data.get("mobile") || ""),
+                    email: String(data.get("email") || ""),
+                    athletes: String(data.get("athletes") || ""),
+                    location: String(data.get("location") || ""),
+                  };
+            setError("");
+            setSubmitting(true);
+            void (async () => {
+              try {
+                const response = await fetch("/api/academies/lead", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify(body),
+                });
+                if (!response.ok) {
+                  const payload = (await response.json().catch(() => ({}))) as { error?: string };
+                  throw new Error(payload.error || "Could not save your details. Please try again.");
+                }
+                void import("@/lib/analytics").then(({ track }) => {
+                  const formMeta = { form_name: "custom_assessment_enrollment", audience, lead_type: audience };
+                  track("web_form_submit", formMeta);
+                  track("web_lead_created", formMeta);
+                });
+                setSubmitted(true);
+              } catch (err) {
+                setError(err instanceof Error ? err.message : "Could not save your details. Please try again.");
+              } finally {
+                setSubmitting(false);
+              }
+            })();
           }}
         >
           <div className="grid grid-cols-2 gap-1 rounded-full bg-[#eef1f4] p-1" role="group" aria-label="Who is enrolling">
@@ -183,8 +231,14 @@ export function CustomAssessmentEnrollment({
             </div>
           )}
 
-          <button type="submit" className="mt-5 w-full rounded-full bg-[#10233f] px-4 py-3.5 text-sm font-bold text-[#cdfe71] sm:text-base" data-preview-field="submitLabel">
-            {submitted ? "Sent" : submitLabel}
+          {error ? <p className="mt-4 text-center text-sm text-[#e11d48]">{error}</p> : null}
+          <button
+            type="submit"
+            disabled={submitting || submitted}
+            className="mt-5 w-full rounded-full bg-[#10233f] px-4 py-3.5 text-sm font-bold text-[#cdfe71] disabled:opacity-70 sm:text-base"
+            data-preview-field="submitLabel"
+          >
+            {submitted ? "Sent" : submitting ? "Saving…" : submitLabel}
           </button>
           <p className="mt-3 text-center text-xs leading-relaxed text-[#7b8794]">
             <span data-preview-field="note">{previewString(source.note, DEFAULT_NOTE)} </span>

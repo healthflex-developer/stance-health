@@ -37,7 +37,7 @@ export default function Testimonials({ previewBlock }: { previewBlock?: AdminPre
   const handleNext = useCallback(() => sliderRef.current?.swiper.slideNext(), []);
 
   return (
-    <section className="sec test-sec">
+    <section className="sec test-sec bg-[#0c1b30]">
       <div className="container">
         <div className="row">
           <div className="col-12 text-center">

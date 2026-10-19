@@ -30,9 +30,14 @@
             "label": "Partners"
           },
           {
+            "href": "/academies",
+            "label": "Academies"
+          },
+          {
             "href": "/careers",
             "label": "Careers"
           },
+
           {
             "href": "/faq",
             "label": "FAQ"
@@ -43,10 +48,6 @@
           }
         ],
         "primaryLinks": [
-          {
-            "href": "/article-template-dummy-page",
-            "label": "Test_article_page"
-          },
           {
             "href": "/about",
             "label": "About"

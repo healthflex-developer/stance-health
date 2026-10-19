@@ -34,6 +34,12 @@ import { ResourceListSection, ResourcesHeroSection } from "@/components/sections
 import { TeamDirectorySection, TeamHeroSection } from "@/components/sections/TeamPageSections";
 import AssessmentHero from "@/components/sections/AssessmentHero";
 import {
+  AcademiesPartnersSection,
+  AcademiesReportSection,
+  AcademiesStatsSection,
+  AcademiesWaysSection,
+} from "@/components/sections/AcademiesSections";
+import {
   CareerFAQ,
   CareerOpenRoles,
   CareerStatistics,
@@ -204,6 +210,16 @@ export function SectionForType({ type }: { type: string }) {
       return <SocialProof />;
     case "FaqCta":
       return <FaqCta />;
+    case "AcademiesStats":
+      return <AcademiesStatsSection />;
+    case "AcademiesPartners":
+      return <AcademiesPartnersSection />;
+    case "AcademiesWays":
+      return <AcademiesWaysSection />;
+    case "AcademiesReport":
+      return <AcademiesReportSection />;
+    case "AcademiesHero":
+      return <AboutHeroSection sourceType="AcademiesHero" />;
     case "PartnerContactForm":
     case "RoleApply":
       return <PartnerFormSection sourceType={type} />;

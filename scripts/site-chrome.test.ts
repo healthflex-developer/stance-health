@@ -38,7 +38,6 @@ describe("published site chrome", () => {
     const props = pageProps("../content/pages/navbar.json", "navbar", "NavbarContent");
     expect(hasPublishedRows(props?.primaryLinks)).toBe(true);
     expect(chromeLinks(props?.primaryLinks, FALLBACK_PRIMARY).map((link) => link.label)).toEqual([
-      "Test_article_page",
       "About",
       "Conditions",
       "Services",
@@ -48,6 +47,7 @@ describe("published site chrome", () => {
       "/philosophy",
       "/locations",
       "/partners",
+      "/academies",
       "/careers",
       "/faq",
       "/contact",

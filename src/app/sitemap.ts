@@ -39,6 +39,12 @@ const STATIC_ROUTES: MetadataRoute.Sitemap = [
     priority: 0.6,
   },
   {
+    url: `${BASE_URL}/academies`,
+    lastModified: new Date("2026-10-19"),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  },
+  {
     url: `${BASE_URL}/running`,
     lastModified: new Date("2025-05-20"),
     changeFrequency: "monthly",

@@ -55,9 +55,12 @@ export default function Hero({ previewBlock }: { previewBlock?: AdminPreviewBloc
     BOOKING_URL,
   );
 
+  // Highlight is styled only when it appears inside the headline. If CMS copy
+  // leaves it out (e.g. "Welcome To" + highlight "Stance Health"), append it.
   const highlightAt = highlight ? headline.indexOf(highlight) : -1;
   const beforeHighlight = highlightAt >= 0 ? headline.slice(0, highlightAt) : headline;
   const afterHighlight = highlightAt >= 0 ? headline.slice(highlightAt + highlight.length) : "";
+  const appendHighlight = Boolean(highlight) && highlightAt < 0;
 
   return (
     <header className="homepage-banner">
@@ -83,6 +86,12 @@ export default function Hero({ previewBlock }: { previewBlock?: AdminPreviewBloc
             <h1 data-admin-field="headline">
               {beforeHighlight}
               {highlightAt >= 0 && <span data-admin-field="highlight">{highlight}</span>}
+              {appendHighlight && (
+                <>
+                  {beforeHighlight.endsWith(" ") ? null : " "}
+                  <span data-admin-field="highlight">{highlight}</span>
+                </>
+              )}
               {afterHighlight}
             </h1>
             <p className="para" data-admin-field="paragraph">{paragraph}</p>

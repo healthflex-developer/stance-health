@@ -32,7 +32,11 @@ const VALUES = [
 
 export function AboutHeroSection({ sourceType = "AboutHero" }: { sourceType?: string }) {
   const hero = usePreviewProps(sourceType);
-  const heroImage = previewAsset(hero?.backgroundImage, `${ASSETS}/about-banner.svg`);
+  const rawBackground = previewString(hero?.backgroundImage, `${ASSETS}/about-banner.svg`);
+  const heroImage =
+    rawBackground.startsWith("/assets/") || rawBackground.startsWith("/placeholders/")
+      ? rawBackground
+      : previewAsset(hero?.backgroundImage, `${ASSETS}/about-banner.svg`);
 
   return (
       <section className="relative min-h-[420px] flex items-end pb-16 pt-32 bg-[#132644]" data-preview-block={sourceType}>
@@ -152,20 +156,23 @@ export function AboutCtaSection({ sourceType = "AboutCta" }: { sourceType?: stri
   const highlight = previewString(cta?.headingHighlight, "");
   const suffix = previewString(cta?.headingSuffix, "");
   const ctaHref = previewString(cta?.ctaHref, "");
+  // Explicit empty description hides the subtext (e.g. academies CTA).
+  const description =
+    typeof cta?.description === "string"
+      ? cta.description.trim()
+      : "Our team is ready to help you achieve your performance and recovery goals.";
 
   return (
       <section className="py-20 bg-[#cdfe71]" data-preview-block={sourceType}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-black mb-4">
+          <h2 className={`text-3xl sm:text-4xl font-extrabold text-black ${description ? "mb-4" : "mb-8"}`}>
             {heading || (
               <>
                 {prefix || "Ready to"} {highlight ? <span>{highlight}</span> : "begin"} {suffix}
               </>
             )}
           </h2>
-          <p className="text-black/70 mb-8">
-            {previewString(cta?.description, "Our team is ready to help you achieve your performance and recovery goals.")}
-          </p>
+          {description ? <p className="mb-8 text-black/70">{description}</p> : null}
           <PreviewCta
             className="inline-block bg-black text-white font-semibold px-8 py-3 rounded-full hover:bg-black/80 transition-colors"
             label={previewString(cta?.ctaLabel, "Book an Appointment")}

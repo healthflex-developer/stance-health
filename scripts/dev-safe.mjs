@@ -1,10 +1,43 @@
 // Starts the site and stops it before it can exhaust the Mac's memory.
 // Turbopack's compile workers were the process that froze the machine.
 import { spawn, execFileSync } from "node:child_process";
+import { createRequire } from "node:module";
+import { existsSync, rmSync } from "node:fs";
+import { join } from "node:path";
 
-const MAX_MB = 1800;
+// Next 16 webpack spikes past 1.8GB briefly while compiling; allow headroom but
+// still kill if RSS stays high. Prefer sustained overshoot over one-sample kills.
+const MAX_MB = 2400;
+const OVER_SAMPLES = 5;
 const CRITICAL = 8;
 const URGENT = 4;
+
+/** Next 15+ defaults to Turbopack; --webpack opts out. Next 14 already uses webpack. */
+function nextDevArgs() {
+  const args = ["dev", "-p", "3002"];
+  try {
+    const require = createRequire(import.meta.url);
+    const version = require("next/package.json").version || "";
+    const major = Number(version.split(".")[0]);
+    if (major >= 15) args.splice(1, 0, "--webpack");
+  } catch {
+    /* keep webpack-default args */
+  }
+  return args;
+}
+
+function pruneStaleDevCache() {
+  const dir = join(process.cwd(), ".next", "dev");
+  if (!existsSync(dir)) return;
+  try {
+    const mb = Math.round(Number(execFileSync("du", ["-sm", dir], { encoding: "utf8" }).split(/\s+/)[0]) || 0);
+    if (mb < 400) return;
+    console.warn(`memguard: clearing bloated .next/dev cache (${mb}MB) before start`);
+    rmSync(dir, { recursive: true, force: true });
+  } catch {
+    /* ignore prune failures */
+  }
+}
 
 function pressure() {
   try {
@@ -73,12 +106,14 @@ if (pressure() >= CRITICAL) {
   process.exit(1);
 }
 
-const child = spawn("node_modules/.bin/next", ["dev", "--webpack", "-p", "3002"], {
+pruneStaleDevCache();
+
+const child = spawn("node_modules/.bin/next", nextDevArgs(), {
   stdio: "inherit",
   detached: true,
   env: {
     ...process.env,
-    NODE_OPTIONS: [process.env.NODE_OPTIONS, "--max-old-space-size=1536"].filter(Boolean).join(" "),
+    NODE_OPTIONS: [process.env.NODE_OPTIONS, "--max-old-space-size=2048"].filter(Boolean).join(" "),
   },
 });
 
@@ -115,6 +150,6 @@ setInterval(() => {
     return;
   }
   over += 1;
-  if (!hard && over < 2) return;
+  if (!hard && over < OVER_SAMPLES) return;
   stop(child, reason);
 }, 1000);

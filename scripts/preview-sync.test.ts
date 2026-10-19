@@ -12,6 +12,7 @@ const NAVBAR_PAGES = [
   "faq",
   "locations",
   "partners",
+  "academies",
   "philosophy",
   "team",
   "services",

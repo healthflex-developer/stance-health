@@ -1,0 +1,272 @@
+{
+  "slug": "academies",
+  "title": "Stance Health Academies",
+  "seo": {
+    "title": "Stance Health Academies",
+    "description": "Athlete assessments, field programs, and rehab for sports academies and players in Bengaluru.",
+    "canonical": "/academies"
+  },
+  "blocks": [
+    {
+      "id": "academies-hero",
+      "type": "AssessmentHero",
+      "props": {
+        "layout": "left",
+        "headlinePrefix": "Coaching Without Data",
+        "headlineSecond": "Is Guesswork.",
+        "headlineHighlight": "Stance Helps You Measure Progress.",
+        "description": "",
+        "ctaLabel": "",
+        "videoUrl": "/assets/academies-hero.mp4",
+        "trustLabel": "Trusted by athletes from",
+        "trustItems": [
+          { "label": "BCCI", "icon": "shield" },
+          { "label": "Punjab Kings", "icon": "trophy" },
+          { "label": "National & International Competitors", "icon": "users" }
+        ]
+      }
+    },
+    {
+      "id": "academies-stats",
+      "type": "AcademiesStats",
+      "props": {
+        "stats": [
+          {
+            "value": "500+",
+            "label": "Athletes assessed"
+          },
+          {
+            "value": "12+",
+            "label": "Sports covered"
+          },
+          {
+            "value": "5+",
+            "label": "Academies served"
+          }
+        ]
+      }
+    },
+    {
+      "id": "academies-partners",
+      "type": "AcademiesPartners",
+      "props": {
+        "heading": "Academies already training with Stance",
+        "marqueeSeconds": "40",
+        "logos": [
+          {
+            "image": "https://stance-logo.s3.ap-south-1.amazonaws.com/smaash_badminton.png",
+            "alt": "Smaash Badminton"
+          },
+          {
+            "image": "https://stance-logo.s3.ap-south-1.amazonaws.com/machaxi_badminton_academy.png",
+            "alt": "Machaxi Badminton Academy"
+          },
+          {
+            "image": "https://stance-logo.s3.ap-south-1.amazonaws.com/Kodagu_FC.jpeg",
+            "alt": "Kodagu FC"
+          },
+          {
+            "image": "https://stance-logo.s3.ap-south-1.amazonaws.com/Stride_Sports_FC.jpeg",
+            "alt": "Stride Sports FC"
+          },
+          {
+            "image": "https://stance-logo.s3.ap-south-1.amazonaws.com/images.jpeg",
+            "alt": "Maverick Master's Cricket Academy"
+          },
+          {
+            "image": "https://stance-logo.s3.ap-south-1.amazonaws.com/bangalore_city_fc.png",
+            "alt": "Bangalore City FC"
+          }
+        ]
+      }
+    },
+    {
+      "id": "academies-enrollment",
+      "type": "CustomAssessmentEnrollment",
+      "props": {
+        "heading": "Let's Get Your Athletes Assessed",
+        "description": "Tell us who you are and we'll get back with a plan tailored to your sport and squad.",
+        "note": "We use your details only to contact you about Stance Health Academies.",
+        "playerLabel": "I'm a player",
+        "academyLabel": "I run an academy",
+        "submitLabel": "Enroll now",
+        "benefits": [
+          { "icon": "document", "title": "Individual performance report" },
+          { "icon": "target", "title": "Sport-specific programs" },
+          { "icon": "pulse", "title": "Rehab to performance" },
+          { "icon": "flask", "title": "Tested, not guessed" },
+          { "icon": "shield", "title": "Injury risk screening" },
+          { "icon": "users", "title": "Works with your coach" }
+        ],
+        "sports": [
+          { "label": "Football" },
+          { "label": "Cricket" },
+          { "label": "Badminton" },
+          { "label": "Hockey" },
+          { "label": "Tennis" },
+          { "label": "Running" }
+        ],
+        "locations": [
+          { "label": "HSR" },
+          { "label": "Whitefield" },
+          { "label": "Indiranagar" },
+          { "label": "JP Nagar" }
+        ]
+      }
+    },
+    {
+      "id": "academies-ways",
+      "type": "AcademiesWays",
+      "props": {
+        "heading": "One System. Four Ways to Train.",
+        "description": "Whether it's one athlete or a full squad, everything starts with data and ends with performance.",
+        "cards": [
+          {
+            "pill": "VALD technology",
+            "title": "In-Centre Assessment",
+            "description": "Know the body before you train it. MSK screening plus VALD ForceFrame and ForceDeck testing reveal strength, asymmetries and readiness.",
+            "image": "https://stance-logo.s3.ap-south-1.amazonaws.com/In%20centre%20assessment.jpeg",
+            "href": "#academies-enrollment"
+          },
+          {
+            "pill": "Real conditions",
+            "title": "On-Field Assessment",
+            "description": "Testing where the sport is played. Speed, endurance, change of direction and agility tests show how they work together in real conditions.",
+            "image": "https://stance-logo.s3.ap-south-1.amazonaws.com/On%20field%20assessment.png",
+            "href": "#academies-enrollment"
+          },
+          {
+            "pill": "Individual & team",
+            "title": "Performance Programs",
+            "description": "Individualised rehab and performance plans, delivered in-centre, with teams or on-field. Team modules for academies, 1-on-1 for athletes.",
+            "image": "https://stance-logo.s3.ap-south-1.amazonaws.com/Performance%20program.png",
+            "href": "#academies-enrollment"
+          },
+          {
+            "pill": "Seasonal",
+            "title": "Summer Camps",
+            "description": "On-field camps with individual assessment reports, covering strength, speed, agility, plyometrics and conditioning. Customisable to your sport.",
+            "image": "https://stance-logo.s3.ap-south-1.amazonaws.com/Summer%20camps.png",
+            "href": "#academies-enrollment"
+          }
+        ]
+      }
+    },
+    {
+      "id": "academies-report",
+      "type": "AcademiesReport",
+      "props": {
+        "heading": "Every Athlete Gets a Performance Report",
+        "description": "No guesswork. Every metric is measured, explained and turned into a plan you can act on.",
+        "ctaLabel": "Get your report",
+        "ctaHref": "#academies-enrollment",
+        "image": "https://stance-logo.s3.ap-south-1.amazonaws.com/performance_report.jpeg",
+        "imageAlt": "Sample Stance performance report: readiness score of 75 out of 100 with strength, power, endurance, ground fitness and change-of-direction scores"
+      }
+    },
+    {
+      "id": "testimonials",
+      "type": "Testimonials",
+      "props": {
+        "heading": "Hear It From the Field",
+        "items": [
+          {
+            "condition": "Sports Rehab",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/pranav.png",
+            "name": "Pranav Iyer",
+            "quote": "My ACL recovery at Stance was exceptional. The data-driven approach, regular assessments, and personalised programme gave me confidence throughout rehabilitation and helped me return to sport ahead of schedule.",
+            "role": "Athlete"
+          },
+          {
+            "condition": "Performance",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/linganmeni.png",
+            "name": "Ashish Lingamneni",
+            "quote": "Stance's approach to sports rehabilitation is exceptional. Their expertise in biomechanics and movement analysis has helped me return to peak performance and prevent future injuries.",
+            "role": "Basketball Enthusiast"
+          },
+          {
+            "condition": "Assessment",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/divyanshu.png",
+            "name": "Divyanshu",
+            "quote": "The team at Stance helped with a thorough assessment of my body to understand the right exercise programme for me, creating personalised plans that have significantly improved my athletic performance.",
+            "role": "Health Enthusiast"
+          },
+          {
+            "condition": "Ankle Rehab",
+            "image": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/saumya.png",
+            "name": "Saumya Dubey",
+            "quote": "After struggling with recurring ankle pain that kept me off the field, Stance's comprehensive approach and technology-driven assessment identified the root cause and got me back stronger than before.",
+            "role": "Athlete"
+          }
+        ]
+      }
+    },
+    {
+      "id": "team",
+      "type": "Team",
+      "props": {
+        "heading": "The People Behind the Performance",
+        "subtext": "Trusted by athletes from BCCI and Punjab Kings to national and international competitors. Stance Health builds structured, sport-specific, evidence-driven training that transfers to sport.",
+        "note": "Punjab Kings trained with Stance Health in September 2026"
+      }
+    },
+    {
+      "id": "centers",
+      "type": "Centers",
+      "props": {
+        "heading": "Find Us Across Bengaluru"
+      }
+    },
+    {
+      "id": "faq-list",
+      "type": "FAQList",
+      "props": {
+        "faqs": [
+          {
+            "question": "What exactly does Stance do for academies?",
+            "answer": "We assess your athletes with sport-specific testing, then deliver structured field programs, rehab support and summer camps based on the results."
+          },
+          {
+            "question": "Which sports do you work with?",
+            "answer": "Cricket, football, swimming, athletics, tennis, combat sports, endurance and more. Programs are customised to the demands of each sport."
+          },
+          {
+            "question": "How does an assessment help prevent injuries?",
+            "answer": "Our assessments check strength, asymmetries and movement efficiency, which can flag risk areas before they become injuries. Your report shows what to train and what to protect."
+          },
+          {
+            "question": "What age groups can enroll?",
+            "answer": "We work with junior and adult athletes. The exact assessment format is tailored to age, training history and sport."
+          },
+          {
+            "question": "How do I know I'm ready to return to play after an injury?",
+            "answer": "Readiness should be based on measurable data, not just how you feel. We test strength, force production and movement quality, then compare to sport-specific benchmarks."
+          },
+          {
+            "question": "Can you come to our academy for assessments?",
+            "answer": "Yes. We deliver field-based programs and on-field assessments at your ground, as well as at our centres."
+          },
+          {
+            "question": "Is a summer camp only for cricket?",
+            "answer": "No. The structure shown is our cricket format, and it can be fully customised to your sport and requirements."
+          },
+          {
+            "question": "What types of sports injuries can Stance help treat?",
+            "answer": "Stance treats ACL injuries, meniscus tears, runner's knee, ankle sprains, Achilles tendinopathy, shin splints, plantar fasciitis, rotator cuff issues, and other common sports injuries."
+          }
+        ]
+      }
+    },
+    {
+      "id": "academies-cta",
+      "type": "AboutCta",
+      "props": {
+        "heading": "Know where you stand. Then get stronger, faster and more resilient.",
+        "description": "",
+        "ctaLabel": "Enroll Now",
+        "ctaHref": "#academies-enrollment"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}

@@ -215,24 +215,45 @@ export function CareersImpact({ blockId }: { blockId?: string }) {
 
 export function CareerStatistics() {
   const draft = usePreviewProps("CareerStatistics");
-  const prefix = previewJoinedPrefix(draft?.headingPrefix, "Your Next");
-  const highlight = previewString(draft?.headingHighlight, "Chapter");
-  const description = previewString(draft?.description, "At Stance, you won't just gain experience. You'll develop under people who've built systems, coached elite athletes and continue raising the standard of sports science every single day.");
+  const hideHeader = draft?.hideHeader === true || draft?.hideHeader === "true";
+  const hideIcons = draft?.hideIcons === true || draft?.hideIcons === "true";
+  const prefix = hideHeader ? "" : previewJoinedPrefix(draft?.headingPrefix, "Your Next");
+  const highlight = hideHeader ? "" : previewString(draft?.headingHighlight, "Chapter");
+  const description = hideHeader
+    ? ""
+    : previewString(
+        draft?.description,
+        "At Stance, you won't just gain experience. You'll develop under people who've built systems, coached elite athletes and continue raising the standard of sports science every single day.",
+      );
   const stats = previewList(draft?.stats, DEFAULT_STATS);
   return (
     <section className="py-20 bg-[#0d1f3c]" data-preview-block="CareerStatistics">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="section-title mb-4">{prefix} <span className="text-[#cdfe71]">{highlight}</span></h2>
-        <p className="text-white/50 text-base sm:text-lg max-w-xl mb-12">{description}</p>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        {!hideHeader && (prefix || highlight) ? (
+          <h2 className="section-title mb-4">
+            {prefix} <span className="text-[#cdfe71]">{highlight}</span>
+          </h2>
+        ) : null}
+        {!hideHeader && description ? (
+          <p className="mb-12 max-w-xl text-base text-white/50 sm:text-lg">{description}</p>
+        ) : null}
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
           {stats.map((stat, index) => (
-            <div key={`${previewString(stat.label, "stat")}-${index}`} data-preview-field={`stats[${index}].value`} className="bg-[#132644] border border-white/8 rounded-2xl p-6 hover:border-[#cdfe71]/20 transition-colors duration-300">
-              <div className="w-10 h-10 rounded-full bg-[#cdfe71]/10 border border-[#cdfe71]/20 flex items-center justify-center mb-3">
-                <StatIcon name={previewString(stat.icon, "data")} />
-              </div>
-              <p className="text-white font-extrabold text-3xl sm:text-4xl font-[family-name:var(--font-unbounded)]">{previewString(stat.value, "")}</p>
-              <p className="text-white font-semibold text-sm mt-1">{previewString(stat.label, "")}</p>
-              <p className="text-white/40 text-xs mt-0.5">{previewString(stat.sub, "")}</p>
+            <div
+              key={`${previewString(stat.label, "stat")}-${index}`}
+              data-preview-field={`stats[${index}].value`}
+              className="rounded-2xl border border-white/8 bg-[#132644] p-6 transition-colors duration-300 hover:border-[#cdfe71]/20"
+            >
+              {!hideIcons ? (
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full border border-[#cdfe71]/20 bg-[#cdfe71]/10">
+                  <StatIcon name={previewString(stat.icon, "data")} />
+                </div>
+              ) : null}
+              <p className="font-[family-name:var(--font-unbounded)] text-3xl font-extrabold text-white sm:text-4xl">
+                {previewString(stat.value, "")}
+              </p>
+              <p className="mt-1 text-sm font-semibold text-white">{previewString(stat.label, "")}</p>
+              <p className="mt-0.5 text-xs text-white/40">{previewString(stat.sub, "")}</p>
             </div>
           ))}
         </div>
