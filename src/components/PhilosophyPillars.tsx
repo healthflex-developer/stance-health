@@ -3,7 +3,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePreviewProps } from "@/components/preview/usePreviewDraft";
 import { ASSETS } from "@/lib/constants";
+import { previewAsset, previewJoinedPrefix, previewList, previewString } from "@/lib/preview-draft";
 
 const PILLARS = [
   {
@@ -68,12 +70,46 @@ const PILLARS = [
   },
 ];
 
+function pillarPoints(value: unknown, fallback: string[]): string[] {
+  if (!Array.isArray(value)) return fallback;
+  const points = value.flatMap((item) => {
+    if (typeof item === "string" && item.trim()) return [item.trim()];
+    if (item && typeof item === "object" && "text" in item && typeof item.text === "string" && item.text.trim()) {
+      return [item.text.trim()];
+    }
+    return [];
+  });
+  return points.length > 0 ? points : fallback;
+}
+
 export default function PhilosophyPillars() {
+  const draft = usePreviewProps("PhilosophyHowWeDoIt");
+  const pillars = previewList(draft?.pillars, PILLARS).map((pillar, index) => {
+    const fallback = PILLARS[index] ?? PILLARS[0];
+    return {
+      ...fallback,
+      ...pillar,
+      id: previewString(pillar.id, fallback?.id ?? `pillar-${index}`),
+      label: previewString(pillar.label, fallback?.label ?? ""),
+      heading: previewString(pillar.heading, fallback?.heading ?? ""),
+      body: previewString(pillar.body, fallback?.body ?? ""),
+      tabIcon: previewAsset(pillar.tabIcon, fallback?.tabIcon ?? ""),
+      image1: previewAsset(pillar.image1, fallback?.image1 ?? ""),
+      image2: previewAsset(pillar.image2, fallback?.image2 ?? ""),
+      points: pillarPoints(pillar.points, fallback?.points ?? []),
+    };
+  });
   const [active, setActive] = useState(0);
-  const pillar = PILLARS[active];
+  const pillar = pillars[Math.min(active, Math.max(pillars.length - 1, 0))] ?? pillars[0];
+  const headingPrefix = previewJoinedPrefix(draft?.headingPrefix, "How we");
+  const headingHighlight = previewString(draft?.headingHighlight, "do it?");
+  const intro = previewString(
+    draft?.intro,
+    "Four integrated pillars that deliver measurable, sustainable, and personalised outcomes.",
+  );
 
   return (
-    <section className="py-20 bg-[#0c1b30]">
+    <section className="py-20 bg-[#0c1b30]" data-preview-block="PhilosophyHowWeDoIt">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <motion.div
@@ -84,10 +120,10 @@ export default function PhilosophyPillars() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="section-title mb-4">
-            How we <span className="text-[#cdfe71]">do it?</span>
+            {headingPrefix} <span className="text-[#cdfe71]">{headingHighlight}</span>
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto">
-            Four integrated pillars that deliver measurable, sustainable, and personalised outcomes.
+            {intro}
           </p>
         </motion.div>
 
@@ -99,7 +135,7 @@ export default function PhilosophyPillars() {
           viewport={{ once: true, margin: "-30px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          {PILLARS.map((p, i) => (
+          {pillars.map((p, i) => (
             <button
               key={p.id}
               onClick={() => setActive(i)}

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePreviewProps } from "@/components/preview/usePreviewDraft";
 import { ASSETS, CAREER_FAQ, CAREER_VALUES, TEAM_TESTIMONIALS, VIDEO_ASSETS } from "@/lib/constants";
 import { buttonDestination } from "@/lib/button-destination";
-import { previewList, previewString } from "@/lib/preview-draft";
+import { previewJoinedPrefix, previewList, previewString } from "@/lib/preview-draft";
 
 const IMPACT_LOGOS = [
   "Bangalore_City_FC.webp",
@@ -140,7 +140,7 @@ function ValueIcon({ name }: { name: string }) {
 
 export function CareersHero({ blockId }: { blockId?: string }) {
   const hero = usePreviewProps("CareersHero");
-  const prefix = previewString(hero?.headlinePrefix, "Where your career");
+  const prefix = previewJoinedPrefix(hero?.headlinePrefix, "Where your career");
   const highlightOne = previewString(hero?.highlightOne, "actually");
   const highlightTwo = previewString(hero?.highlightTwo, "accelerates.");
   const paragraphOne = previewString(hero?.paragraphOne, "Most S&C coaches and physios in India spend years waiting for elite exposure — a national athlete on their table, real data instead of guesswork, a mentor worth learning from.");
@@ -215,7 +215,7 @@ export function CareersImpact({ blockId }: { blockId?: string }) {
 
 export function CareerStatistics() {
   const draft = usePreviewProps("CareerStatistics");
-  const prefix = previewString(draft?.headingPrefix, "Your Next");
+  const prefix = previewJoinedPrefix(draft?.headingPrefix, "Your Next");
   const highlight = previewString(draft?.headingHighlight, "Chapter");
   const description = previewString(draft?.description, "At Stance, you won't just gain experience. You'll develop under people who've built systems, coached elite athletes and continue raising the standard of sports science every single day.");
   const stats = previewList(draft?.stats, DEFAULT_STATS);
@@ -345,7 +345,7 @@ export function CareerTracks() {
 
 export function CareerOpenRoles() {
   const draft = usePreviewProps("CareerOpenRoles");
-  const prefix = previewString(draft?.headingPrefix, "Open");
+  const prefix = previewJoinedPrefix(draft?.headingPrefix, "Open");
   const highlight = previewString(draft?.headingHighlight, "Roles");
   const description = previewString(draft?.description, "Filter by domain and location. Every role links to the full brief and an inline application.");
   const roles = previewList(draft?.roles, DEFAULT_ROLES);
@@ -391,7 +391,7 @@ export function CareerOpenRoles() {
 
 export function CareerTeamStories() {
   const draft = usePreviewProps("CareerTeamStories");
-  const prefix = previewString(draft?.headingPrefix, "From the");
+  const prefix = previewJoinedPrefix(draft?.headingPrefix, "From the");
   const highlight = previewString(draft?.headingHighlight, "Team");
   const description = previewString(draft?.description, "What it's like to build a career at Stance.");
   const stories = previewList(draft?.stories, TEAM_TESTIMONIALS);
@@ -428,7 +428,7 @@ export function CareerTeamStories() {
 
 export function CareerValues() {
   const draft = usePreviewProps("CareerValues");
-  const prefix = previewString(draft?.headingPrefix, "What you're actually");
+  const prefix = previewJoinedPrefix(draft?.headingPrefix, "What you're actually");
   const highlight = previewString(draft?.headingHighlight, "signing up for");
   const description = previewString(draft?.description, "We don't run on hierarchy. We run on reasoning, speed, and people who'd rather fix something than flag it.");
   const values = previewList(draft?.values, CAREER_VALUES.map((value) => ({ icon: value.icon, title: value.title, body: value.body })));
@@ -467,7 +467,7 @@ export function CareerValues() {
 
 export function CareerFAQ() {
   const draft = usePreviewProps("CareerFAQ");
-  const prefix = previewString(draft?.headingPrefix, "Careers");
+  const prefix = previewJoinedPrefix(draft?.headingPrefix, "Careers");
   const highlight = previewString(draft?.headingHighlight, "FAQ");
   const description = previewString(draft?.description, "Common questions about applying, interviews and internships at Stance.");
   const faqs = previewList(draft?.faqs, CAREER_FAQ.map((faq) => ({ question: faq.question, answer: faq.answer })));
@@ -506,7 +506,7 @@ export function CareerFAQ() {
 
 export function CareersCTA() {
   const draft = usePreviewProps("CareersCTA");
-  const prefix = previewString(draft?.headingPrefix, "Don't see your role?");
+  const prefix = previewJoinedPrefix(draft?.headingPrefix, "Don't see your role?");
   const highlight = previewString(draft?.headingHighlight, "Say hello anyway.");
   const description = previewString(draft?.description, "We're always looking for people who care about the craft. Send us a note and we'll route it to the right team.");
   const email = previewString(draft?.email, "careers@stance.health");

@@ -57,6 +57,11 @@ export function previewString(override: unknown, fallback: string): string {
   return typeof override === "string" && override.trim() !== "" ? override : fallback;
 }
 
+// Use when the JSX inserts the space before the highlight. Saved prefixes often already include one.
+export function previewJoinedPrefix(override: unknown, fallback: string): string {
+  return previewString(override, fallback).trim();
+}
+
 function usableSrc(value: string): boolean {
   return /^https?:\/\//.test(value) || value.startsWith("/");
 }

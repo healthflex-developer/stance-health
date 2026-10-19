@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { LegalHero } from "@/components/sections/LegalHero";
 
 const TERMS = [
   {
@@ -69,23 +70,15 @@ export default function TermsAndConditionsPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative min-h-[280px] flex items-end pb-14 pt-32 bg-[#132644]">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#132644] via-[#0c1b30] to-[#1a3358]" />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
-            <p className="text-[#cdfe71] text-sm font-semibold uppercase tracking-widest mb-3">
-              Legal
-            </p>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight mb-3">
-              Terms and <span className="text-[#cdfe71]">Conditions</span>
-            </h1>
-            <p className="text-white/60 text-lg">
-              Please read these terms and conditions carefully before using our services.
-            </p>
-          </div>
-        </section>
+        <LegalHero
+          eyebrow="Legal"
+          prefix="Terms and"
+          highlight="Conditions"
+          description="Please read these terms and conditions carefully before using our services."
+        />
 
         {/* Content */}
-        <section className="py-16 bg-[#0c1b30]">
+        <section className="py-16 bg-[#0c1b30]" data-preview-block="PageSection">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12">
 

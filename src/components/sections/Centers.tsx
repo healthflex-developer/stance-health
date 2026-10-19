@@ -5,6 +5,7 @@ import Image from "next/image";
 import { CENTERS } from "@/lib/constants";
 import { previewList, previewText, useAdminPreviewBlock, type AdminPreviewBlock } from "@/components/PreviewDraft";
 import { usePublishedBlock } from "@/components/PublishedContent";
+import { publishedList, publishedString } from "@/lib/published-fields";
 import { applyAssetMeta, assetAlt } from "@/lib/asset-label";
 
 const AUTOPLAY_MS = 3500;
@@ -31,7 +32,11 @@ export default function Centers({
   const listened = useAdminPreviewBlock(previewBlockId, previewBlockType);
   const draft = previewBlock !== undefined ? previewBlock : listened;
   const published = usePublishedBlock(previewBlockId);
-  const centers = applyAssetMeta(previewList<CenterItem>(draft, "items", fallbackCenters), published?.props?.items, ["image"]).map((center, index) => ({
+  const centers = applyAssetMeta(
+    draft ? previewList<CenterItem>(draft, "items", fallbackCenters) : publishedList(published?.props?.items, fallbackCenters),
+    published?.props?.items,
+    ["image"],
+  ).map((center, index) => ({
     ...center,
     image: center.image || "",
     name: center.name || `Centre ${index + 1}`,
@@ -39,7 +44,9 @@ export default function Centers({
     address: center.address || "Add address",
     maps: center.maps || "",
   }));
-  const heading = previewText(draft, "heading", "Our Centers") || "Our Centers";
+  const heading = draft
+    ? previewText(draft, "heading", "Our Centers") || "Our Centers"
+    : publishedString(published?.props, "heading", "Our Centers");
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
   const count = centers.length;

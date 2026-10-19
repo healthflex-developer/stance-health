@@ -4,8 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { DraftCta } from "@/components/preview/PreviewCta";
 import { usePreviewProps } from "@/components/preview/usePreviewDraft";
+import { unionBySlug } from "@/lib/content-catalog";
 import { locationCardHref } from "@/lib/location-links";
-import { previewAsset, previewList, previewString } from "@/lib/preview-draft";
+import { previewAsset, previewString } from "@/lib/preview-draft";
 
 export type CentreCard = {
   slug: string;
@@ -31,7 +32,7 @@ export function LocationsHeroSection() {
   return (
     <section className="relative min-h-[380px] flex items-end pb-16 pt-32 bg-[#132644]" data-preview-block="LocationsHero">
       <div className="absolute inset-0 overflow-hidden">
-        <Image src={image} alt="" fill className="object-cover object-center opacity-20" priority />
+        <Image src={image} alt="Our locations" fill className="object-cover object-center opacity-20" priority />
         <div className="absolute inset-0 bg-gradient-to-b from-[#132644]/60 to-[#132644]" />
       </div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -52,7 +53,7 @@ export function LocationsHeroSection() {
 
 export function LocationCentersSection({ centres }: { centres: CentreCard[] }) {
   const props = usePreviewProps("LocationCenters");
-  const cards = previewList<CentreCard>(props?.centers, centres);
+  const cards = unionBySlug<CentreCard>(props?.centers, centres);
   return (
     <section className="py-20 bg-[#0c1b30]" data-preview-block="LocationCenters">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -89,7 +90,7 @@ export function LocationCentersSection({ centres }: { centres: CentreCard[] }) {
 
 export function LocationNeighbourhoodsSection({ neighbourhoods }: { neighbourhoods: NeighbourhoodCard[] }) {
   const props = usePreviewProps("LocationNeighbourhoods");
-  const cards = previewList<NeighbourhoodCard>(props?.neighbourhoods, neighbourhoods);
+  const cards = unionBySlug<NeighbourhoodCard>(props?.neighbourhoods, neighbourhoods);
   return (
     <section className="py-12 sm:py-16 bg-[#132644]" data-preview-block="LocationNeighbourhoods">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

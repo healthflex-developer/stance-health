@@ -8,13 +8,18 @@ import Image from "next/image";
 import { TESTIMONIALS, ASSETS } from "@/lib/constants";
 import { previewList, previewText, useAdminPreviewBlock, type AdminPreviewBlock } from "@/components/PreviewDraft";
 import { usePublishedBlock } from "@/components/PublishedContent";
+import { publishedList, publishedString } from "@/lib/published-fields";
 import { applyAssetMeta, assetAlt } from "@/lib/asset-label";
 
 export default function Testimonials({ previewBlock }: { previewBlock?: AdminPreviewBlock | null } = {}) {
   const listened = useAdminPreviewBlock("testimonials", "Testimonials");
   const draft = previewBlock !== undefined ? previewBlock : listened;
   const published = usePublishedBlock("testimonials");
-  const testimonials = applyAssetMeta(previewList(draft, "items", TESTIMONIALS), published?.props?.items, ["image"]).map((testimonial, index) => ({
+  const testimonials = applyAssetMeta(
+    draft ? previewList(draft, "items", TESTIMONIALS) : publishedList(published?.props?.items, TESTIMONIALS),
+    published?.props?.items,
+    ["image"],
+  ).map((testimonial, index) => ({
     ...testimonial,
     name: testimonial.name || `Patient ${index + 1}`,
     role: testimonial.role || "Add role",
@@ -22,7 +27,9 @@ export default function Testimonials({ previewBlock }: { previewBlock?: AdminPre
     image: testimonial.image || "",
     quote: testimonial.quote || "Add testimonial quote",
   }));
-  const heading = previewText(draft, "heading", "Testimonial") || "Testimonial";
+  const heading = draft
+    ? previewText(draft, "heading", "Testimonial") || "Testimonial"
+    : publishedString(published?.props, "heading", "Testimonial");
   const slideKey = testimonials.map((item) => `${item.name}|${item.role}|${item.quote}|${item.image}`).join(";");
   const sliderRef = useRef<SwiperRef>(null);
 

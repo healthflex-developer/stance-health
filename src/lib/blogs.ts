@@ -1,6 +1,8 @@
 import path from "path";
 import { promises as fs } from "fs";
+import { mergeBlogs } from "@/lib/content-catalog";
 import { normalizeAssetUrl } from "@/lib/constants";
+import { listPublishedPages } from "@/lib/published-page";
 
 export type BlogSection =
   | { type: "paragraph"; content: string }
@@ -30,11 +32,13 @@ export async function getAllBlogs(): Promise<BlogPost[]> {
   if (_cache) return _cache;
   const filePath = path.join(process.cwd(), "public", "data", "blogs.json");
   const raw = await fs.readFile(filePath, "utf-8");
-  _cache = (JSON.parse(raw) as BlogPost[]).map((post) => ({
+  const legacy = (JSON.parse(raw) as BlogPost[]).map((post) => ({
     ...post,
     coverImage: normalizeAssetUrl(post.coverImage),
     author: { ...post.author, avatar: normalizeAssetUrl(post.author.avatar) },
   }));
+  const published = await listPublishedPages().catch(() => []);
+  _cache = mergeBlogs(legacy, published);
   return _cache;
 }
 

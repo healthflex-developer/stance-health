@@ -5,7 +5,7 @@ import { PreviewCta } from "@/components/preview/PreviewCta";
 import { usePreviewProps } from "@/components/preview/usePreviewDraft";
 import AboutTeam from "@/components/sections/AboutTeam";
 import { ASSETS } from "@/lib/constants";
-import { previewAsset, previewList, previewString } from "@/lib/preview-draft";
+import { previewAsset, previewJoinedPrefix, previewList, previewString } from "@/lib/preview-draft";
 
 const VALUES = [
   {
@@ -51,7 +51,7 @@ export function AboutHeroSection({ sourceType = "AboutHero" }: { sourceType?: st
             {previewString(hero?.eyebrow, "About Us")}
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
-            {previewString(hero?.headingPrefix, "We are")}{" "}
+            {previewJoinedPrefix(hero?.headingPrefix, "We are")}{" "}
             <span className="text-[#cdfe71]">{previewString(hero?.headingHighlight, "Stance")}</span>
           </h1>
           <p className="text-white/70 text-lg max-w-2xl">
@@ -77,7 +77,7 @@ export function AboutMissionSection({ sourceType = "AboutMission" }: { sourceTyp
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="section-title mb-6">
-                {previewString(mission?.headingPrefix, "Our")}{" "}
+                {previewJoinedPrefix(mission?.headingPrefix, "Our")}{" "}
                 <span className="text-[#cdfe71]">{previewString(mission?.headingHighlight, "Mission")}</span>
               </h2>
               <p className="text-white/70 text-lg leading-relaxed mb-6">
@@ -120,7 +120,7 @@ export function AboutValuesSection({ sourceType = "AboutValues" }: { sourceType?
       <section className="py-20 bg-[#132644]" data-preview-block={sourceType}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-title text-center mb-4">
-            {previewString(values?.headingPrefix, "What Sets Us")}{" "}
+            {previewJoinedPrefix(values?.headingPrefix, "What Sets Us")}{" "}
             <span className="text-[#cdfe71]">{previewString(values?.headingHighlight, "Apart")}</span>
           </h2>
           <p className="text-white/50 text-center text-lg mb-12 max-w-2xl mx-auto">

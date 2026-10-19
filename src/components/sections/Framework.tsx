@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { FRAMEWORK_STEPS } from "@/lib/constants";
 import { previewList, previewText, useAdminPreviewBlock, type AdminPreviewBlock } from "@/components/PreviewDraft";
 import { usePublishedBlock } from "@/components/PublishedContent";
+import { publishedList, publishedString } from "@/lib/published-fields";
 import { applyAssetMeta, assetAlt } from "@/lib/asset-label";
 
 const cardVariants = {
@@ -37,14 +38,20 @@ export default function Framework({ previewBlock }: { previewBlock?: AdminPrevie
   const listened = useAdminPreviewBlock("framework", "Framework");
   const draft = previewBlock !== undefined ? previewBlock : listened;
   const published = usePublishedBlock("framework");
-  const steps = applyAssetMeta(previewList(draft, "steps", FRAMEWORK_STEPS), published?.props?.steps, ["icon"]).map((step, index) => ({
+  const steps = applyAssetMeta(
+    draft ? previewList(draft, "steps", FRAMEWORK_STEPS) : publishedList(published?.props?.steps, FRAMEWORK_STEPS),
+    published?.props?.steps,
+    ["icon"],
+  ).map((step, index) => ({
     ...step,
     id: step.id || `step-${index + 1}`,
     label: step.label || `Step ${index + 1}`,
     icon: step.icon || "",
     description: step.description || "Add step description",
   }));
-  const heading = previewText(draft, "heading", "Guiding Each Stride in Your Journey") || "Guiding Each Stride in Your Journey";
+  const heading = draft
+    ? previewText(draft, "heading", "Guiding Each Stride in Your Journey") || "Guiding Each Stride in Your Journey"
+    : publishedString(published?.props, "heading", "Guiding Each Stride in Your Journey");
   const container = useRef<HTMLDivElement>(null);
   const sections = useRef<(HTMLElement | null)[]>([]);
   const dots = useRef<(HTMLSpanElement | null)[]>([]);

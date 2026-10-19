@@ -9,15 +9,23 @@ import Programs from "@/components/sections/Programs";
 import Centers from "@/components/sections/Centers";
 import Footer from "@/components/Footer";
 import AdminPreviewBridge from "@/components/AdminPreviewBridge";
+import { PublishedBlocksProvider } from "@/components/PublishedContent";
 import { BASE_URL, OG_ASSETS } from "@/lib/constants";
+import { homePageMetadata } from "@/lib/page-metadata";
+import { publishedBlocksById } from "@/lib/published-fields";
+import { loadPublishedPage } from "@/lib/published-page";
+import { loadPublishedSite } from "@/lib/site-content";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/" },
-  openGraph: {
-    url: "/",
-    images: [{ url: `${OG_ASSETS}/og-default.png`, width: 1200, height: 630 }],
-  },
-};
+const HOME_SOCIAL_IMAGE = `${OG_ASSETS}/og-default.png`;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const [page, site] = await Promise.all([loadPublishedPage("home"), loadPublishedSite()]);
+  return homePageMetadata(page?.seo, site, {
+    image: HOME_SOCIAL_IMAGE,
+    twitterSite: "@stancehealth",
+    twitterCreator: "@stancehealth",
+  });
+}
 
 // WebSite + FAQPage JSON-LD for the home page
 const homeSchema = {
@@ -75,9 +83,10 @@ const homeSchema = {
   ],
 };
 
-export default function Home() {
+export default async function Home() {
+  const published = await loadPublishedPage("home");
   return (
-    <>
+    <PublishedBlocksProvider blocks={publishedBlocksById(published)}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }}
@@ -94,6 +103,6 @@ export default function Home() {
         <div data-preview-block="Centers"><Centers /></div>
       </main>
       <Footer />
-    </>
+    </PublishedBlocksProvider>
   );
 }

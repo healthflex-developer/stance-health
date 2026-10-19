@@ -9,7 +9,9 @@ import AnalyticsProvider from "@/components/AnalyticsProvider";
 import ScrollToTop from "@/components/ScrollToTop";
 import LibraryDraftPreview from "@/components/LibraryDraftPreview";
 import { PublishedCustomSections } from "@/components/published/PublishedCustomSections";
+import { PublishedChromeProvider } from "@/components/published/PublishedChrome";
 import { BASE_URL, GSC_VERIFICATION, OG_ASSETS } from "@/lib/constants";
+import { loadPublishedPage } from "@/lib/published-page";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -172,9 +174,17 @@ const orgSchema = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const [navbarPage, footerPage] = await Promise.all([
+    loadPublishedPage("navbar"),
+    loadPublishedPage("footer"),
+  ]);
+  const chrome = {
+    navbar: navbarPage?.blocks.find((block) => block.type === "NavbarContent")?.props ?? null,
+    footer: footerPage?.blocks.find((block) => block.type === "FooterContent")?.props ?? null,
+  };
   return (
     <html
       lang="en"
@@ -206,9 +216,11 @@ export default function RootLayout({
         </Suspense>
         {/* Forward captured params onto every internal/external link on click */}
         <LinkTracker />
-        {children}
-        <PublishedCustomSections />
-        <LibraryDraftPreview />
+        <PublishedChromeProvider navbar={chrome.navbar} footer={chrome.footer}>
+          {children}
+          <PublishedCustomSections />
+          <LibraryDraftPreview />
+        </PublishedChromeProvider>
       </body>
     </html>
   );

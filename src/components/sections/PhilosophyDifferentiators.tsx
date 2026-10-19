@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import BookingCta from "@/components/BookingCta";
 import { usePreviewProps } from "@/components/preview/usePreviewDraft";
 import { ASSETS } from "@/lib/constants";
-import { previewAsset, previewList, previewString } from "@/lib/preview-draft";
+import { previewAsset, previewJoinedPrefix, previewList, previewString } from "@/lib/preview-draft";
 
 export type DifferentiatorCard = {
   icon?: string;
@@ -95,6 +96,57 @@ export function PhilosophyDifferentiatorsSection({ items = LIVE_DIFFERENTIATORS 
             );
           })}
         </div>
+      </div>
+    </section>
+  );
+}
+
+export function PhilosophyHeroSection() {
+  const hero = usePreviewProps("PhilosophyHero");
+  return (
+    <section className="relative min-h-[380px] flex items-end pb-16 pt-32 bg-[#132644]" data-preview-block="PhilosophyHero">
+      <div className="absolute inset-0 overflow-hidden">
+        <Image
+          src={previewAsset(hero?.backgroundImage, "/assets/images/philosophy-banner.svg")}
+          alt="Philosophy"
+          fill
+          className="object-cover object-center opacity-25"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#132644]/50 to-[#132644]" />
+      </div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
+        <p className="text-[#cdfe71] text-sm font-semibold uppercase tracking-widest mb-3">
+          {previewString(hero?.eyebrow, "Philosophy")}
+        </p>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
+          {previewJoinedPrefix(hero?.headingPrefix, "Our")}{" "}
+          <span className="text-[#cdfe71]">{previewString(hero?.headingHighlight, "Approach")}</span>
+        </h1>
+        <p className="text-white/60 text-xl">{previewString(hero?.subheading, "Clinical and Data-Backed")}</p>
+      </div>
+    </section>
+  );
+}
+
+export function PhilosophyCtaSection() {
+  const cta = usePreviewProps("PhilosophyCTA");
+  const prefix = previewJoinedPrefix(cta?.headingPrefix, "Experience our");
+  const highlight = previewString(cta?.headingHighlight, "approach");
+  const suffix = previewString(cta?.headingSuffix, "first-hand").trim();
+  return (
+    <section className="py-20 bg-[#0c1b30]" data-preview-block="PhilosophyCTA">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="section-title mb-4">
+          {prefix} <span className="text-[#cdfe71]">{highlight}</span> {suffix}
+        </h2>
+        <p className="text-white/60 mb-8">
+          {previewString(
+            cta?.description,
+            "Book an assessment and see how our clinical and data-backed methodology transforms your recovery and performance.",
+          )}
+        </p>
+        <BookingCta className="btn-primary" label={previewString(cta?.ctaLabel, "Book an Appointment")} />
       </div>
     </section>
   );

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { LegalHero } from "@/components/sections/LegalHero";
 
 const SECTIONS = [
   { id: "how-to", number: "01", title: "How to Request Deletion" },
@@ -24,24 +25,16 @@ export default function DeleteAccountPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative min-h-[280px] flex items-end pb-14 pt-32 bg-[#132644]">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#132644] via-[#0c1b30] to-[#1a3358]" />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
-            <p className="text-[#cdfe71] text-sm font-semibold uppercase tracking-widest mb-3">
-              Account
-            </p>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight mb-3">
-              Delete Your <span className="text-[#cdfe71]">Account</span>
-            </h1>
-            <p className="text-white/60 text-lg max-w-xl mx-auto">
-              You can request deletion of your Stance Health account and all associated data by
-              contacting us. We will process your request within 30 days.
-            </p>
-          </div>
-        </section>
+        <LegalHero
+          eyebrow="Account"
+          prefix="Delete Your"
+          highlight="Account"
+          description="You can request deletion of your Stance Health account and all associated data by contacting us. We will process your request within 30 days."
+          descriptionClassName="max-w-xl mx-auto"
+        />
 
         {/* Content */}
-        <section className="py-16 bg-[#0c1b30]">
+        <section className="py-16 bg-[#0c1b30]" data-preview-block="PageSection">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12">
 

@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import { TEAM, ASSETS } from "@/lib/constants";
 import { previewList, previewText, useAdminPreviewBlock, type AdminPreviewBlock } from "@/components/PreviewDraft";
 import { usePublishedBlock } from "@/components/PublishedContent";
+import { publishedList, publishedString } from "@/lib/published-fields";
 import { applyAssetMeta, assetAlt } from "@/lib/asset-label";
 
 const cardVariants = {
@@ -28,7 +29,11 @@ export default function Team({ previewBlock }: { previewBlock?: AdminPreviewBloc
   const listened = useAdminPreviewBlock("team", "Team");
   const draft = previewBlock !== undefined ? previewBlock : listened;
   const published = usePublishedBlock("team");
-  const members = applyAssetMeta(previewList(draft, "members", TEAM), published?.props?.members, ["image"]).map((member, index) => ({
+  const members = applyAssetMeta(
+    draft ? previewList(draft, "members", TEAM) : publishedList(published?.props?.members, TEAM),
+    published?.props?.members,
+    ["image"],
+  ).map((member, index) => ({
     ...member,
     image: member.image || "",
     name: member.name || `Team member ${index + 1}`,
@@ -36,8 +41,12 @@ export default function Team({ previewBlock }: { previewBlock?: AdminPreviewBloc
     experience: member.experience || "Add experience",
     bio: member.bio || "Add team member bio",
   }));
-  const heading = previewText(draft, "heading", "Flawless Team") || "Flawless Team";
-  const subtext = previewText(draft, "subtext", "Experience That Matters") || "Experience That Matters";
+  const heading = draft
+    ? previewText(draft, "heading", "Flawless Team") || "Flawless Team"
+    : publishedString(published?.props, "heading", "Flawless Team");
+  const subtext = draft
+    ? previewText(draft, "subtext", "Experience That Matters") || "Experience That Matters"
+    : publishedString(published?.props, "subtext", "Experience That Matters");
   const slideKey = members.map((member) => `${member.name}|${member.role}|${member.bio}|${member.image}`).join(";");
   const sliderRef = useRef<SwiperRef>(null);
   const [isBeginning, setIsBeginning] = useState(true);
