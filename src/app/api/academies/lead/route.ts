@@ -34,6 +34,17 @@ export async function POST(request: Request) {
     );
   }
 
+  const configured =
+    Boolean(process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL?.trim()) &&
+    Boolean(process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY?.trim());
+  if (!configured) {
+    console.error("Academy lead save failed: Google sheet credentials are not configured");
+    return NextResponse.json(
+      { error: "Lead storage is not configured. Add Google sheet credentials on the server." },
+      { status: 503 },
+    );
+  }
+
   try {
     await saveAcademyLead({
       leadType,

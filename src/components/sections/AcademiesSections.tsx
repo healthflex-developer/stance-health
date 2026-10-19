@@ -167,9 +167,9 @@ export function AcademiesWaysSection({ sourceType = "AcademiesWays" }: { sourceT
             <Link
               key={`${card.title}-${index}`}
               href={card.href}
-              className="group block overflow-hidden rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#132644]"
+              className="group block overflow-hidden rounded-2xl bg-white shadow-[0_12px_40px_rgba(19,38,68,0.08)] ring-1 ring-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#132644]"
             >
-              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-[#dfe3e8]">
+              <div className="relative aspect-[16/10] overflow-hidden bg-[#dfe3e8]">
                 <Image
                   src={card.image}
                   alt={card.title}
@@ -185,7 +185,9 @@ export function AcademiesWaysSection({ sourceType = "AcademiesWays" }: { sourceT
                   <h3 className="text-lg font-bold text-white sm:text-xl">{card.title}</h3>
                 </div>
               </div>
-              <p className="mt-3 text-sm leading-relaxed text-[#4E5C73] sm:text-[15px]">{card.description}</p>
+              <div className="p-4 sm:p-5">
+                <p className="text-sm leading-relaxed text-[#4E5C73] sm:text-[15px]">{card.description}</p>
+              </div>
             </Link>
           ))}
         </div>

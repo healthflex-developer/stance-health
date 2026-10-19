@@ -77,7 +77,15 @@ export type AcademyLeadInput = {
 };
 
 function privateKey() {
-  return (process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY || "").replace(/\\n/g, "\n");
+  let key = (process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY || "").trim();
+  // Vercel / dashboard pastes often wrap the PEM in quotes or use literal \n.
+  if (
+    (key.startsWith('"') && key.endsWith('"')) ||
+    (key.startsWith("'") && key.endsWith("'"))
+  ) {
+    key = key.slice(1, -1);
+  }
+  return key.replace(/\\n/g, "\n");
 }
 
 async function accessToken(useSubject: boolean) {
