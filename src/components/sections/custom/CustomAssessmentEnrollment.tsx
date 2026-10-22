@@ -34,6 +34,7 @@ const DEFAULT_LOCATIONS = [
   { label: "Whitefield" },
   { label: "Indiranagar" },
   { label: "JP Nagar" },
+  { label: "Koramangala" },
 ] as const;
 
 const inputClass =

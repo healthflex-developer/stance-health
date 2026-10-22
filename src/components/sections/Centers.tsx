@@ -23,11 +23,14 @@ export default function Centers({
   previewBlockType = "Centers",
   fallbackCenters = CENTERS,
   previewBlock,
+  displayPhone,
 }: {
   previewBlockId?: string;
   previewBlockType?: string;
   fallbackCenters?: readonly CenterItem[];
   previewBlock?: AdminPreviewBlock | null;
+  /** Replaces each centre phone. Leave unset so other pages keep their own numbers. */
+  displayPhone?: string;
 }) {
   const listened = useAdminPreviewBlock(previewBlockId, previewBlockType);
   const draft = previewBlock !== undefined ? previewBlock : listened;
@@ -40,7 +43,7 @@ export default function Centers({
     ...center,
     image: center.image || "",
     name: center.name || `Centre ${index + 1}`,
-    phone: center.phone || "Add phone",
+    phone: displayPhone || center.phone || "Add phone",
     address: center.address || "Add address",
     maps: center.maps || "",
   }));

@@ -290,6 +290,49 @@ h1, h2, h3, h4, h5, h6,
 }
 .banner-con .main-btn { margin-top: 0.5rem; }
 
+/* Academies hero only — keep the homepage banner untouched. */
+.academies-hero .banner-inner,
+.academies-hero .banner-con {
+  min-width: 0;
+  max-width: 100%;
+}
+.academies-hero .banner-con h1 {
+  font-size: 1.85rem;
+  line-height: 1.15;
+  margin-bottom: 0;
+  overflow-wrap: break-word;
+}
+.academies-hero .banner-con h1 span {
+  white-space: normal;
+}
+.academies-hero .academies-hero-highlight {
+  font-size: 0.78em;
+}
+@media (max-width: 767px) {
+  .academies-hero .banner-slide {
+    min-height: 100svh;
+  }
+  .academies-hero .banner-slide > video,
+  .academies-hero .banner-slide > img {
+    object-position: 12% center;
+  }
+  .academies-hero .banner-con {
+    padding: 6.5rem 0 2.25rem;
+  }
+  .academies-hero .banner-inner {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+@media (min-width: 640px) {
+  .academies-hero .banner-con h1 {
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+  }
+  .academies-hero .academies-hero-highlight {
+    font-size: 0.5em;
+  }
+}
+
 /* ── Program Banner (mirrors homepage hero) ─── */
 .program-banner {
   position: relative;

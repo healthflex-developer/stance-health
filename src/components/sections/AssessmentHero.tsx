@@ -88,13 +88,14 @@ export default function AssessmentHero() {
   const still = isStillMedia(videoUrl);
   const videoType = /\.mov(\?|$)/i.test(videoUrl) ? "video/quicktime" : "video/mp4";
 
+  const mediaClass = "absolute inset-0 h-full w-full object-cover";
   const media = still ? (
-    <img className="absolute inset-0 h-full w-full object-cover" src={videoUrl} alt="" />
+    <img className={mediaClass} src={videoUrl} alt="" />
   ) : (
     <video
       width="100%"
       height="100%"
-      className="absolute inset-0 h-full w-full object-cover"
+      className={mediaClass}
       muted
       autoPlay
       loop
@@ -107,7 +108,7 @@ export default function AssessmentHero() {
 
   if (left) {
     return (
-      <header className="homepage-banner" data-preview-block="AssessmentHero">
+      <header className="homepage-banner academies-hero" data-preview-block="AssessmentHero">
         <section className="banner-slide">
           {media}
           <div className="banner-overlay" />
@@ -116,11 +117,11 @@ export default function AssessmentHero() {
               {eyebrow ? (
                 <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#cdfe71]">{eyebrow}</p>
               ) : null}
-              <h1 className="text-[clamp(2.4rem,5vw,3.6rem)] font-extrabold leading-[1.12] text-white">
-                <span className="block whitespace-nowrap !text-white">{prefix}</span>
-                {second ? <span className="block whitespace-nowrap !text-white">{second}</span> : null}
+              <h1 className="max-w-full text-white">
+                <span className="block text-balance !text-white">{prefix}</span>
+                {second ? <span className="block text-balance !text-white">{second}</span> : null}
                 {highlight ? (
-                  <span className="mt-3 block whitespace-nowrap text-[0.5em] leading-[1.25] !text-[#cdfe71]">
+                  <span className="academies-hero-highlight mt-3 block text-balance leading-[1.25] !text-[#cdfe71]">
                     {highlight}
                   </span>
                 ) : null}
@@ -138,11 +139,11 @@ export default function AssessmentHero() {
                     </p>
                   ) : null}
                   {trustItems.length > 0 ? (
-                    <ul className="flex list-none flex-wrap gap-x-[22px] gap-y-2.5 p-0 sm:gap-x-7">
+                    <ul className="flex max-w-full list-none flex-wrap gap-x-4 gap-y-2.5 p-0 sm:gap-x-7">
                       {trustItems.map((item, index) => (
                         <li
                           key={`${item.label}-${index}`}
-                          className="flex items-center gap-2 text-sm font-semibold text-white sm:text-[0.95rem]"
+                          className="flex max-w-full items-center gap-2 text-sm font-semibold text-white sm:text-[0.95rem]"
                           data-preview-field={`trustItems[${index}].label`}
                         >
                           <TrustIcon name={item.icon} />
