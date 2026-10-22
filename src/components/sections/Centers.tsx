@@ -10,6 +10,20 @@ import { applyAssetMeta, assetAlt } from "@/lib/asset-label";
 
 const AUTOPLAY_MS = 3500;
 
+function whatsappHref(phone: string) {
+  const digits = phone.replace(/\D/g, "");
+  const text = encodeURIComponent("Hi, I'd like to know more about Stance Health Academies.");
+  return `https://wa.me/${digits}?text=${text}`;
+}
+
+function WhatsAppIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 shrink-0 fill-current">
+      <path d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 1.74.46 3.44 1.33 4.94L2 22l5.39-1.41a10.1 10.1 0 0 0 4.65 1.12h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2zm5.76 13.89c-.24.68-1.2 1.25-1.96 1.41-.52.11-1.2.2-3.48-.75-2.92-1.21-4.8-4.17-4.95-4.36-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.58.81 2 .88 2.15.07.14.12.32.02.51-.09.2-.14.32-.28.49-.14.17-.29.38-.42.51-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.12.59-.07.16-.19.68-.79.86-1.06.18-.27.36-.23.6-.14.24.09 1.54.73 1.8.86.27.13.44.2.51.31.07.11.07.64-.17 1.32z" />
+    </svg>
+  );
+}
+
 type CenterItem = {
   image?: string;
   name?: string;
@@ -23,14 +37,14 @@ export default function Centers({
   previewBlockType = "Centers",
   fallbackCenters = CENTERS,
   previewBlock,
-  displayPhone,
+  whatsappPhone,
 }: {
   previewBlockId?: string;
   previewBlockType?: string;
   fallbackCenters?: readonly CenterItem[];
   previewBlock?: AdminPreviewBlock | null;
-  /** Replaces each centre phone. Leave unset so other pages keep their own numbers. */
-  displayPhone?: string;
+  /** Academies only: hide the phone and open WhatsApp to this number. */
+  whatsappPhone?: string;
 }) {
   const listened = useAdminPreviewBlock(previewBlockId, previewBlockType);
   const draft = previewBlock !== undefined ? previewBlock : listened;
@@ -43,7 +57,7 @@ export default function Centers({
     ...center,
     image: center.image || "",
     name: center.name || `Centre ${index + 1}`,
-    phone: displayPhone || center.phone || "Add phone",
+    phone: center.phone || "Add phone",
     address: center.address || "Add address",
     maps: center.maps || "",
   }));
@@ -169,7 +183,20 @@ export default function Centers({
                       <h3 className="text-2xl sm:text-3xl font-bold text-[#cdfe71] mb-3" data-admin-list-field="name">
                         {center.name}
                       </h3>
-                      <p className="text-white text-sm sm:text-base mb-1" data-admin-list-field="phone">{center.phone}</p>
+                      {whatsappPhone ? (
+                        <a
+                          href={whatsappHref(whatsappPhone)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(event) => event.stopPropagation()}
+                          className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#cdfe71] px-4 py-2 text-sm font-semibold text-[#10233f] hover:bg-[#e4ff9a]"
+                        >
+                          <WhatsAppIcon />
+                          WhatsApp
+                        </a>
+                      ) : (
+                        <p className="text-white text-sm sm:text-base mb-1" data-admin-list-field="phone">{center.phone}</p>
+                      )}
                       <p className="text-white/70 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed" data-admin-list-field="address">
                         {center.address}
                       </p>

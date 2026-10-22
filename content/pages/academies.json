@@ -104,7 +104,8 @@
           { "label": "Badminton" },
           { "label": "Hockey" },
           { "label": "Tennis" },
-          { "label": "Running" }
+          { "label": "Running" },
+          { "label": "Others" }
         ],
         "locations": [
           { "label": "HSR" },

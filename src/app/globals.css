@@ -306,7 +306,8 @@ h1, h2, h3, h4, h5, h6,
   white-space: normal;
 }
 .academies-hero .academies-hero-highlight {
-  font-size: 0.78em;
+  font-size: 0.58em;
+  font-weight: 700;
 }
 @media (max-width: 767px) {
   .academies-hero .banner-slide {

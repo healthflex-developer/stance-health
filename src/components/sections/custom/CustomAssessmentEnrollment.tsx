@@ -27,6 +27,7 @@ const DEFAULT_SPORTS = [
   { label: "Hockey" },
   { label: "Tennis" },
   { label: "Running" },
+  { label: "Others" },
 ] as const;
 
 const DEFAULT_LOCATIONS = [
