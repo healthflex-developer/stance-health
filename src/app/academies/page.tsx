@@ -43,7 +43,7 @@ export default function AcademiesPage() {
         <div className="bg-[#0c1b30]">
           <Testimonials />
           <Team />
-          <Centers whatsappPhone="+91 9019410049" />
+          <Centers hidePhone whatsappPhone="+91 9019410049" />
         </div>
         <section className="bg-[#0c1b30] pt-16 pb-4">
           <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">

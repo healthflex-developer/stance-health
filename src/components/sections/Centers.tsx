@@ -37,13 +37,16 @@ export default function Centers({
   previewBlockType = "Centers",
   fallbackCenters = CENTERS,
   previewBlock,
+  hidePhone = false,
   whatsappPhone,
 }: {
   previewBlockId?: string;
   previewBlockType?: string;
   fallbackCenters?: readonly CenterItem[];
   previewBlock?: AdminPreviewBlock | null;
-  /** Academies only: hide the phone and open WhatsApp to this number. */
+  /** Academies only: leave the phone number off the centre card. */
+  hidePhone?: boolean;
+  /** Academies only: white button under the carousel, same style as Explore Now. */
   whatsappPhone?: string;
 }) {
   const listened = useAdminPreviewBlock(previewBlockId, previewBlockType);
@@ -183,18 +186,7 @@ export default function Centers({
                       <h3 className="text-2xl sm:text-3xl font-bold text-[#cdfe71] mb-3" data-admin-list-field="name">
                         {center.name}
                       </h3>
-                      {whatsappPhone ? (
-                        <a
-                          href={whatsappHref(whatsappPhone)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(event) => event.stopPropagation()}
-                          className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#cdfe71] px-4 py-2 text-sm font-semibold text-[#10233f] hover:bg-[#e4ff9a]"
-                        >
-                          <WhatsAppIcon />
-                          WhatsApp
-                        </a>
-                      ) : (
+                      {hidePhone ? null : (
                         <p className="text-white text-sm sm:text-base mb-1" data-admin-list-field="phone">{center.phone}</p>
                       )}
                       <p className="text-white/70 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed" data-admin-list-field="address">
@@ -231,6 +223,19 @@ export default function Centers({
             />
           ))}
         </div>
+        {whatsappPhone ? (
+          <div className="mt-8 flex justify-center">
+            <a
+              href={whatsappHref(whatsappPhone)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-[#cdfe71] px-6 py-3 text-sm font-bold text-[#10233f] transition hover:bg-[#e4ff9a]"
+            >
+              <WhatsAppIcon />
+              WhatsApp
+            </a>
+          </div>
+        ) : null}
       </div>
     </section>
   );
