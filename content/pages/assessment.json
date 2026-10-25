@@ -72,9 +72,6 @@
               },
               {
                 "text": "Repeatable positions for future reassessment"
-              },
-              {
-                "text": "heelooo"
               }
             ],
             "title": "Measure Strength and Identify Imbalances"
@@ -154,25 +151,6 @@
               }
             ],
             "title": "Track Speed and Agility"
-          },
-          {
-            "badge": "helmooo",
-            "description": "this is the descriptionnnn",
-            "id": "",
-            "image": "",
-            "num": "06",
-            "points": [
-              {
-                "text": "hello"
-              },
-              {
-                "text": "helmoo"
-              },
-              {
-                "text": "hui huii"
-              }
-            ],
-            "title": "helooo"
           }
         ]
       }
