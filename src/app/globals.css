@@ -290,11 +290,21 @@ h1, h2, h3, h4, h5, h6,
 }
 .banner-con .main-btn { margin-top: 0.5rem; }
 
-/* Academies hero only — keep the homepage banner untouched. */
+/* Academies hero only — keep the homepage banner untouched.
+   The copy shares the navbar column (max-w-7xl + px-4/6/8). The extra
+   6.5px clears the transparent margin inside the logo image so the type
+   meets the bolt. */
 .academies-hero .banner-inner,
 .academies-hero .banner-con {
   min-width: 0;
+}
+.academies-hero .banner-con {
   max-width: 100%;
+}
+.academies-hero .banner-inner {
+  max-width: 80rem;
+  padding-left: calc(1rem + 6.5px);
+  padding-right: calc(1rem + 6.5px);
 }
 .academies-hero .banner-con h1 {
   font-size: 1.85rem;
@@ -313,24 +323,26 @@ h1, h2, h3, h4, h5, h6,
   .academies-hero .banner-slide {
     min-height: 100svh;
   }
-  .academies-hero .banner-slide > video,
-  .academies-hero .banner-slide > img {
-    object-position: 12% center;
-  }
   .academies-hero .banner-con {
     padding: 6.5rem 0 2.25rem;
   }
-  .academies-hero .banner-inner {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
 }
 @media (min-width: 640px) {
+  .academies-hero .banner-inner {
+    padding-left: calc(1.5rem + 6.5px);
+    padding-right: calc(1.5rem + 6.5px);
+  }
   .academies-hero .banner-con h1 {
     font-size: clamp(2.4rem, 5vw, 3.6rem);
   }
   .academies-hero .academies-hero-highlight {
     font-size: 0.5em;
+  }
+}
+@media (min-width: 1024px) {
+  .academies-hero .banner-inner {
+    padding-left: calc(2rem + 6.5px);
+    padding-right: calc(2rem + 6.5px);
   }
 }
 

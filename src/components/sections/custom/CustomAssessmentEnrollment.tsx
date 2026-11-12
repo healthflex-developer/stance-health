@@ -44,7 +44,7 @@ const inputClass =
 export function CustomAssessmentEnrollment({
   props,
   blockId,
-  initialAudience = "player",
+  initialAudience = "academy",
 }: {
   props?: Record<string, unknown> | null;
   blockId?: string;
@@ -162,11 +162,11 @@ export function CustomAssessmentEnrollment({
           }}
         >
           <div className="grid grid-cols-2 gap-1 rounded-full bg-[#eef1f4] p-1" role="group" aria-label="Who is enrolling">
-            <ToggleButton active={audience === "player"} field="playerLabel" onClick={() => setAudience("player")}>
-              {playerLabel}
-            </ToggleButton>
             <ToggleButton active={audience === "academy"} field="academyLabel" onClick={() => setAudience("academy")}>
               {academyLabel}
+            </ToggleButton>
+            <ToggleButton active={audience === "player"} field="playerLabel" onClick={() => setAudience("player")}>
+              {playerLabel}
             </ToggleButton>
           </div>
           <input type="hidden" name="audience" value={audience} />

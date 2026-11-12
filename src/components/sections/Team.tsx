@@ -25,7 +25,34 @@ const cardVariants = {
   }),
 };
 
-export default function Team({ previewBlock }: { previewBlock?: AdminPreviewBlock | null } = {}) {
+function consultantKey(value: string) {
+  return value.toLowerCase().replace(/['’.]/g, "").replace(/\s+/g, " ").trim();
+}
+
+const CONSULTANT_ALIASES: Record<string, string> = {
+  "pandeshwari pandian": "pandieswari pandian",
+};
+
+function canonicalConsultant(value: string) {
+  const key = consultantKey(value);
+  return CONSULTANT_ALIASES[key] ?? key;
+}
+
+function membersInOrder<T extends { name?: string }>(members: T[], names: readonly string[]) {
+  const byName = new Map(members.map((member) => [canonicalConsultant(member.name || ""), member]));
+  return names.flatMap((name) => {
+    const member = byName.get(canonicalConsultant(name));
+    return member ? [member] : [];
+  });
+}
+
+export default function Team({
+  previewBlock,
+  names,
+}: {
+  previewBlock?: AdminPreviewBlock | null;
+  names?: readonly string[];
+} = {}) {
   const listened = useAdminPreviewBlock("team", "Team");
   const draft = previewBlock !== undefined ? previewBlock : listened;
   const published = usePublishedBlock("team");
@@ -41,6 +68,7 @@ export default function Team({ previewBlock }: { previewBlock?: AdminPreviewBloc
     experience: member.experience || "Add experience",
     bio: member.bio || "Add team member bio",
   }));
+  const visibleMembers = names ? membersInOrder(members, names) : members;
   const heading = draft
     ? previewText(draft, "heading", "Flawless Team") || "Flawless Team"
     : publishedString(published?.props, "heading", "Flawless Team");
@@ -50,7 +78,7 @@ export default function Team({ previewBlock }: { previewBlock?: AdminPreviewBloc
   const note = draft
     ? previewText(draft, "note", "") || ""
     : publishedString(published?.props, "note", "");
-  const slideKey = members.map((member) => `${member.name}|${member.role}|${member.bio}|${member.image}`).join(";");
+  const slideKey = visibleMembers.map((member) => `${member.name}|${member.role}|${member.bio}|${member.image}`).join(";");
   const sliderRef = useRef<SwiperRef>(null);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
@@ -138,7 +166,7 @@ export default function Team({ previewBlock }: { previewBlock?: AdminPreviewBloc
                   1200: { slidesPerView: 4, spaceBetween: 24 },
                 }}
               >
-                {members.map((member, index) => (
+                {visibleMembers.map((member, index) => (
                   <SwiperSlide
                     key={`${member.name}-${index}`}
                     data-admin-list="members"

@@ -34,6 +34,14 @@ describe("custom assessment enrollment", () => {
     expect(html).toContain("grid-cols-1");
     expect(html).toContain("overflow-x-hidden");
     expect(html.indexOf("Athletes Assessed")).toBeLessThan(html.indexOf("Enroll now"));
+    expect(html.indexOf("I run an academy")).toBeLessThan(html.indexOf("I&#x27;m a player"));
+  });
+
+  test("opens the academy form by default", () => {
+    const html = renderToStaticMarkup(<CustomAssessmentEnrollment />);
+    expect(html).toContain("Academy name");
+    expect(html).not.toContain("Player full name");
+    expect(html.indexOf('aria-pressed="true"')).toBeLessThan(html.indexOf('aria-pressed="false"'));
   });
 
   test("renders the academy form when that mode is selected", () => {

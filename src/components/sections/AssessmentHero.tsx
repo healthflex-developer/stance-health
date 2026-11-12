@@ -1,9 +1,28 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { PreviewCta } from "@/components/preview/PreviewCta";
 import { usePreviewProps } from "@/components/preview/usePreviewDraft";
 import { VIDEO_ASSETS } from "@/lib/constants";
 import { previewAsset, previewJoinedPrefix, previewList, previewString } from "@/lib/preview-draft";
+
+const PHONE_VIDEO_QUERY = "(max-width: 779px)";
+
+function useScreenVideo(desktopUrl: string, mobileUrl: string) {
+  const [src, setSrc] = useState(mobileUrl ? "" : desktopUrl);
+  useEffect(() => {
+    if (!mobileUrl) {
+      setSrc(desktopUrl);
+      return;
+    }
+    const query = window.matchMedia(PHONE_VIDEO_QUERY);
+    const apply = () => setSrc(query.matches ? mobileUrl : desktopUrl);
+    apply();
+    query.addEventListener("change", apply);
+    return () => query.removeEventListener("change", apply);
+  }, [desktopUrl, mobileUrl]);
+  return src;
+}
 
 const DEFAULT_EYEBROW = "Stance Objective Assessment";
 const DEFAULT_PREFIX = "Technology That Makes Progress";
@@ -85,14 +104,18 @@ export default function AssessmentHero() {
     .filter((item) => item.label);
   const explicitVideo = typeof hero?.videoUrl === "string" ? hero.videoUrl.trim() : "";
   const videoUrl = resolveVideoUrl(explicitVideo, hero?.videoUrl);
+  const explicitMobile = typeof hero?.videoUrlMobile === "string" ? hero.videoUrlMobile.trim() : "";
+  const mobileVideoUrl = explicitMobile ? resolveVideoUrl(explicitMobile, hero?.videoUrlMobile) : "";
   const still = isStillMedia(videoUrl);
-  const videoType = /\.mov(\?|$)/i.test(videoUrl) ? "video/quicktime" : "video/mp4";
+  const activeUrl = useScreenVideo(videoUrl, still ? "" : mobileVideoUrl);
+  const activeType = /\.mov(\?|$)/i.test(activeUrl) ? "video/quicktime" : "video/mp4";
 
   const mediaClass = "absolute inset-0 h-full w-full object-cover";
   const media = still ? (
     <img className={mediaClass} src={videoUrl} alt="" />
-  ) : (
+  ) : activeUrl ? (
     <video
+      key={activeUrl}
       width="100%"
       height="100%"
       className={mediaClass}
@@ -102,8 +125,10 @@ export default function AssessmentHero() {
       playsInline
       preload="auto"
     >
-      <source src={videoUrl} type={videoType} />
+      <source src={activeUrl} type={activeType} />
     </video>
+  ) : (
+    <div className={mediaClass} />
   );
 
   if (left) {

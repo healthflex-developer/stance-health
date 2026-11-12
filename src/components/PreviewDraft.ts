@@ -98,6 +98,7 @@ const ASSET_FIELDS = new Set([
   "ogImage",
   "logo",
   "videoUrl",
+  "videoUrlMobile",
 ]);
 
 function normalizeDraftAssetFields(value: unknown): unknown {
