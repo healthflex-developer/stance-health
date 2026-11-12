@@ -28,7 +28,7 @@
             "description": "Evaluate your MSK health comprehensively with Stance's advanced diagnostic tools and expert tests, gaining insights into your body's needs while discovering root causes for conditions. Our experienced team supports your assessment and recommends personalised treatment plans tailored to your unique requirements...",
             "icon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/assess.png",
             "id": "assess",
-            "label": "Asses"
+            "label": "Assess"
           },
           {
             "description": "Start your personalised recovery journey with expert support, integrating evidence-based practices and technology to address your MSK conditions, enhance physical performance, and achieve your health goals.",
@@ -57,12 +57,6 @@
       "props": {
         "heading": "Technology",
         "items": [
-          {
-            "description": "This is the demo desciptionnnn",
-            "icon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/run.svg",
-            "id": "gait-analysis",
-            "name": "Testingg name"
-          },
           {
             "description": "Wearable sensor technology for objective running analysis — measuring foot strike, cadence, braking, and symmetry across every step",
             "icon": "https://res.cloudinary.com/fxhi8rmk/image/upload/f_auto,q_auto/stance-health/images/run.svg",

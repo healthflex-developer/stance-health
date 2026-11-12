@@ -12,6 +12,7 @@ const ASSET_FIELDS = new Set([
   "ogImage",
   "logo",
   "videoUrl",
+  "videoUrlMobile",
 ]);
 
 const IDENTITY_KEYS = ["name", "title", "label", "id", "slug"] as const;

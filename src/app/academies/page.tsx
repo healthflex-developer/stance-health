@@ -18,6 +18,33 @@ import { PublishedPage } from "@/components/published/PublishedPage";
 import { OG_ASSETS } from "@/lib/constants";
 import { fixedPageMetadataFor } from "@/lib/page-metadata";
 
+const ACADEMY_CONSULTANTS = [
+  "Harini Bidari",
+  "Keerthana S",
+  "Erica DCosta",
+  "Anmol Khanna",
+  "Chandra Mohan K",
+  "Ashir Thansen P",
+  "Sanket Sharma",
+  "Vignesh Seetharaman",
+  "Pooja Khandelwal",
+  "Kiandra Fernandes",
+  "Rajath M",
+  "Ashay Mulik",
+  "Kesava Vishal",
+  "Rima Karmakar",
+  "Harsh Thapa",
+  "Khemraj Kale",
+  "Vaishak Venkatesh",
+  "Rithani K S",
+  "Atul Prem Singh",
+  "Pandeshwari Pandian",
+  "Parvez Khan",
+  "Vikram Iyappan",
+  "Shabeena Taj",
+  "Catherine",
+];
+
 export async function generateMetadata(): Promise<Metadata> {
   return fixedPageMetadataFor("academies", {
     title: "Stance Health Academies",
@@ -42,7 +69,7 @@ export default function AcademiesPage() {
         <AcademiesReportSection />
         <div className="bg-[#0c1b30]">
           <Testimonials />
-          <Team />
+          <Team names={ACADEMY_CONSULTANTS} />
           <Centers hidePhone whatsappPhone="+91 9019410049" />
         </div>
         <section className="bg-[#0c1b30] pt-16 pb-4">
